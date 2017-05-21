@@ -18,6 +18,13 @@ number of program paths covered (the `cov` value in the output) will be small.
 To seed the corpus, copy a few raw files into `fuzz/corpus/decode`. Now running
 `cargo +nightly fuzzer run decode` should quickly discover more paths.
 
+In debug mode the fuzzing target it quite slow. Because of the low throughput,
+fuzzing will not be effective. To get better throughput, fuzz in release mode
+with `--release`. To detect hangs, reduce the timeout from the default 1200
+seconds to 2 seconds:
+
+    RUSTFLAGS="-Cpanic=unwind" cargo +nightly fuzzer run --release --sanitizer=leak decode -- -max_len=1024 -timeout=2
+
 It can be useful to have small inputs to reproduce a hang. To do so, limit the
 input length:
 
