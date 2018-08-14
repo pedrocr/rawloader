@@ -73,7 +73,7 @@ impl CFA {
           b'Y' => 3,
           _    => {
               let unknown_char = patname[i..].chars().next().unwrap();
-              panic!("Unknown CFA color \"{}\" in pattern \"{}\"", unknown_char, patname);
+              panic!("Unknown CFA color \"{}\" in pattern \"{}\"", unknown_char, patname)
           },
         };
       }
@@ -135,7 +135,7 @@ impl CFA {
           1 => "G",
           2 => "B",
           3 => "E",
-          x => panic!("Unknown CFA color \"{}\"", x), // should only happen when deserializing an invalid cfa
+          x => panic!("Unknown CFA color \"{}\"", x),
         });
       }
     }
