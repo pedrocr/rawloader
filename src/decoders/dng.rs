@@ -111,7 +111,7 @@ impl<'a> DngDecoder<'a> {
 
   fn get_cfa(&self, raw: &TiffIFD) -> Result<CFA,String> {
     let pattern = fetch_tag!(raw, Tag::CFAPattern);
-    Ok(CFA::new_from_tag(pattern))
+    CFA::new_from_tag(pattern)
   }
 
   fn get_crops(&self, raw: &TiffIFD, width: usize, height: usize) -> Result<[usize;4],String> {
