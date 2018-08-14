@@ -17,6 +17,7 @@ use std::fmt;
 /// initialized and ready to be used in processing. The color_at() implementation is
 /// designed to be fast so it can be called inside the inner loop of demosaic or other
 /// color-aware algorithms that work on pre-demosaic data
+#[derive(Clone)]
 pub struct CFA {
   pub name: String,
   pub width: usize,
@@ -26,17 +27,17 @@ pub struct CFA {
 }
 
 impl CFA {
-  #[doc(hidden)] pub fn new_from_tag(pat: &TiffEntry) -> CFA {
+  #[doc(hidden)] pub fn new_from_tag(pat: &TiffEntry) -> Result<CFA, String> {
     let mut patname = String::new();
     for i in 0..pat.count() {
       patname.push(match pat.get_u32(i as usize) {
         0 => 'R',
         1 => 'G',
         2 => 'B',
-        _ => 'U',
+        unknown => return Err(format!("Unknown CFA color \"{}\" in tiff tag", unknown)),
       });
     }
-    CFA::new(&patname)
+    Ok(CFA::new(&patname))
   }
 
   /// Create a new CFA from a string describing it. For simplicity the pattern is specified
@@ -47,6 +48,8 @@ impl CFA {
   /// lead to confusion between different pattern sizes but in practice there are only
   /// a few oddball cameras no one cares about that do anything but 2x2 and 6x6 (and those
   /// work fine with this as well).
+  ///
+  /// Panics if the pattern contains anything but R, G, B, E, M, or Y.
   pub fn new(patname: &str) -> CFA {
     let (width, height) = match patname.len() {
       0 => (0,0),
@@ -90,6 +93,7 @@ impl CFA {
       height: height,
     }
   }
+
 
   /// Get the color index at the given position. Designed to be fast so it can be called
   /// from inner loops without performance issues.
@@ -178,22 +182,5 @@ impl CFA {
 impl fmt::Debug for CFA {
   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
     write!(f, "CFA {{ {} }}", self.name)
-  }
-}
-
-impl Clone for CFA {
-  fn clone(&self) -> CFA {
-    let mut cpattern: [[usize;48];48] = [[0;48];48];
-    for row in 0..48 {
-      for col in 0..48 {
-        cpattern[row][col] = self.pattern[row][col];
-      }
-    }
-    CFA {
-      name: self.name.clone(),
-      pattern: cpattern,
-      width: self.width,
-      height: self.height,
-    }
   }
 }
