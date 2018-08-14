@@ -4,7 +4,7 @@ use imageops::*;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct OpDemosaic {
-  cfa: String,
+  cfa: String, // it's a string because of simpler serialization
 }
 
 impl OpDemosaic {
