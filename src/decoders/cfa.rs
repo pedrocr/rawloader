@@ -4,19 +4,20 @@ use std::fmt;
 /// Representation of the color filter array pattern in raw cameras
 ///
 /// # Example
-/// ```
+/// ```rust
 /// use rawloader::CFA;
 /// let cfa = CFA::new("RGGB");
-/// assert_eq!(cfa.color_at(0,0), 0);
-/// assert_eq!(cfa.color_at(0,1), 1);
-/// assert_eq!(cfa.color_at(1,0), 1);
-/// assert_eq!(cfa.color_at(1,1), 2);
+/// assert_eq!(cfa.color_at(0,0), 0); // 0 = R
+/// assert_eq!(cfa.color_at(0,1), 1); // 1 = G
+/// assert_eq!(cfa.color_at(1,0), 1); // 1 = G
+/// assert_eq!(cfa.color_at(1,1), 2); // 2 = B
 /// ```
 ///
 /// You will almost always get your CFA struct from a RawImage decode, already fully
 /// initialized and ready to be used in processing. The color_at() implementation is
 /// designed to be fast so it can be called inside the inner loop of demosaic or other
 /// color-aware algorithms that work on pre-demosaic data
+#[derive(Clone)]
 pub struct CFA {
   /// CFA pattern as a String
   pub name: String,
@@ -59,7 +60,7 @@ impl CFA {
       144 => (12,12),
       _ => panic!("Unknown CFA size \"{}\"", patname),
     };
-    let mut pattern: [[usize;48];48] = [[0;48];48];
+    let mut pattern = [[0;48];48];
 
     if width > 0 {
       // copy the pattern into the top left
@@ -88,9 +89,9 @@ impl CFA {
 
     CFA {
       name: patname.to_string(),
-      pattern: pattern,
-      width: width,
-      height: height,
+      pattern,
+      width,
+      height,
     }
   }
 
@@ -119,7 +120,7 @@ impl CFA {
   /// assert_eq!(shifted.color_at(1,1), 0);
   /// ```
   pub fn shift(&self, x: usize, y: usize) -> CFA {
-    let mut pattern: [[usize;48];48] = [[0;48];48];
+    let mut pattern = [[0;48];48];
     for row in 0..48 {
       for col in 0..48 {
         pattern[row][col] = self.color_at(row+y,col+x);
@@ -140,10 +141,10 @@ impl CFA {
     }
 
     CFA {
-      name: name,
-      pattern: pattern,
-      width: self.width,
+      name,
+      pattern,
       height: self.height,
+      width: self.width,
     }
   }
 
@@ -181,22 +182,5 @@ impl CFA {
 impl fmt::Debug for CFA {
   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
     write!(f, "CFA {{ {} }}", self.name)
-  }
-}
-
-impl Clone for CFA {
-  fn clone(&self) -> CFA {
-    let mut cpattern: [[usize;48];48] = [[0;48];48];
-    for row in 0..48 {
-      for col in 0..48 {
-        cpattern[row][col] = self.pattern[row][col];
-      }
-    }
-    CFA {
-      name: self.name.clone(),
-      pattern: cpattern,
-      width: self.width,
-      height: self.height,
-    }
   }
 }

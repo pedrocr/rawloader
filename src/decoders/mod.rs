@@ -202,7 +202,7 @@ impl Camera {
 ///
 /// Values are taken from the IFD tag Orientation (0x0112) in most cases but they can be
 /// obtained from other metadata in the file.
-#[derive(Debug, Copy, Clone, PartialEq, Serialize, Deserialize, Hash)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Serialize, Deserialize, Hash)]
 #[allow(missing_docs)]
 pub enum Orientation {
   Normal,
@@ -257,6 +257,21 @@ impl Orientation {
       Orientation::Rotate90 => (true, false, true),
       Orientation::Rotate270 => (true, true, false),
       Orientation::Transverse => (true, true, true),
+    }
+  }
+
+  /// Convert orientation to the Tiff Orientation value
+  pub fn to_u16(&self) -> u16 {
+    match *self {
+      Orientation::Unknown =>        0,
+      Orientation::Normal =>         1,
+      Orientation::HorizontalFlip => 2,
+      Orientation::Rotate180 =>      3,
+      Orientation::VerticalFlip =>   4,
+      Orientation::Transpose =>      5,
+      Orientation::Rotate90 =>       6,
+      Orientation::Transverse =>     7,
+      Orientation::Rotate270 =>      8,
     }
   }
 }
