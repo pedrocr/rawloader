@@ -97,9 +97,11 @@ impl Buffer {
 pub struct Camera {
   pub make: String,
   pub model: String,
+  pub canonical_model: String,
   pub mode: String,
   pub clean_make: String,
   pub clean_model: String,
+  pub clean_canonical_model: String,
   pub filesize: usize,
   pub raw_width: usize,
   pub raw_height: usize,
@@ -126,10 +128,18 @@ impl Camera {
     for (name, val) in ct {
       match name.as_ref() {
         "make" => {self.make = val.as_str().unwrap().to_string().clone();},
-        "model" => {self.model = val.as_str().unwrap().to_string().clone();},
+        "model" => {
+          let model = val.as_str().unwrap().to_string();
+          self.model = model.clone();
+          self.canonical_model = model.clone();
+        },
         "mode" => {self.mode = val.as_str().unwrap().to_string().clone();},
         "clean_make" => {self.clean_make = val.as_str().unwrap().to_string().clone();},
-        "clean_model" => {self.clean_model = val.as_str().unwrap().to_string().clone();},
+        "clean_model" => {
+          let model = val.as_str().unwrap().to_string();
+          self.clean_model = model.clone();
+          self.clean_canonical_model = model.clone();
+        },
         "whitepoint" => {let white = val.as_integer().unwrap() as u16; self.whitelevels = [white, white, white, white];},
         "blackpoint" => {let black = val.as_integer().unwrap() as u16; self.blacklevels = [black, black, black, black];},
         "blackareah" => {
@@ -176,9 +186,11 @@ impl Camera {
     Camera {
       make: "".to_string(),
       model: "".to_string(),
+      canonical_model: "".to_string(),
       mode: "".to_string(),
       clean_make: "".to_string(),
       clean_model: "".to_string(),
+      clean_canonical_model: "".to_string(),
       filesize: 0,
       raw_width: 0,
       raw_height: 0,

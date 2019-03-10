@@ -68,8 +68,10 @@ impl<'a> Decoder for RafDecoder<'a> {
       Ok(RawImage {
         make: camera.make.clone(),
         model: camera.model.clone(),
+        canonical_model: camera.canonical_model.clone(),
         clean_make: camera.clean_make.clone(),
         clean_model: camera.clean_model.clone(),
+        clean_canonical_model: camera.canonical_model.clone(),
         width: width,
         height: height,
         cpp: 1,

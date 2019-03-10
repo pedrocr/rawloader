@@ -63,9 +63,11 @@ impl<'a> Decoder for DngDecoder<'a> {
 
     Ok(RawImage {
       make: make,
-      model: model,
+      model: model.clone(),
+      canonical_model: model,
       clean_make: clean_make,
-      clean_model: clean_model,
+      clean_model: clean_model.clone(),
+      clean_canonical_model: clean_model,
       width: width,
       height: height,
       cpp: cpp,
