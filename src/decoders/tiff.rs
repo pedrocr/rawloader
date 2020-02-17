@@ -1,11 +1,11 @@
-use enum_primitive::{enum_from_primitive, enum_from_primitive_impl, enum_from_primitive_impl_ty};
 use num::FromPrimitive;
+use enum_repr::EnumRepr;
 use std::collections::HashMap;
 use std::str;
 
 use crate::decoders::basics::*;
 
-enum_from_primitive! {
+#[EnumRepr(type = "u16")]
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Tag {
   PanaWidth        = 0x0002,
@@ -95,7 +95,6 @@ pub enum Tag {
   KdcLength        = 0xFD01,
   KdcOffset        = 0xFD04,
   KdcIFD           = 0xFE00,
-}
 }
 
                           // 0-1-2-3-4-5-6-7-8-9-10-11-12-13
@@ -202,7 +201,7 @@ impl<'a> TiffIFD<'a> {
     }
     for i in 0..num {
       let entry_offset: usize = offset + 2 + (i as usize)*12;
-      if Tag::from_u16(e.ru16(buf, entry_offset)).is_none() {
+      if Tag::from_repr(e.ru16(buf, entry_offset)).is_none() {
         // Skip entries we don't know about to speedup decoding
         continue;
       }
