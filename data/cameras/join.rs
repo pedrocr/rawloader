@@ -25,7 +25,7 @@ fn main() {
     {
       match toml.parse::<Value>() {
         Ok(_) => {},
-        Err(e) => panic!(format!("Error parsing {:?}: {:?}", path, e)),
+        Err(e) => panic!("Error parsing {:?}: {:?}", path, e),
       };
     }
 
