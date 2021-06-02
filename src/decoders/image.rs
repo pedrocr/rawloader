@@ -114,29 +114,13 @@ impl RawImage {
   /// Outputs the inverted matrix that converts pixels in the camera colorspace into
   /// XYZ components.
   pub fn cam_to_xyz(&self) -> [[f32;4];3] {
-    self.pseudoinverse(self.xyz_to_cam)
+    Self::pseudoinverse(self.xyz_to_cam)
   }
 
   /// Outputs the inverted matrix that converts pixels in the camera colorspace into
   /// XYZ components normalized to be easily used to convert to Lab or a RGB output space
   pub fn cam_to_xyz_normalized(&self) -> [[f32;4];3] {
-    let mut xyz_to_cam = self.xyz_to_cam;
-    // Normalize xyz_to_cam so that xyz_to_cam * (1,1,1) is (1,1,1,1)
-    for i in 0..4 {
-      let mut num = 0.0;
-      for j in 0..3 {
-        num += xyz_to_cam[i][j];
-      }
-      for j in 0..3 {
-        xyz_to_cam[i][j] = if num == 0.0 {
-          0.0
-        }  else {
-          xyz_to_cam[i][j] / num
-        };
-      }
-    }
-
-    self.pseudoinverse(xyz_to_cam)
+    Self::normalized_pseudoinverse(self.xyz_to_cam)
   }
 
   /// Not all cameras encode a whitebalance so in those cases just using a 6500K neutral one
@@ -175,7 +159,29 @@ impl RawImage {
      neutralwb[3]/neutralwb[1]]
   }
 
-  fn pseudoinverse(&self, inm: [[f32;3];4]) -> [[f32;4];3] {
+  /// Normalize matrix so that inm * (1,1,1) is (1,1,1,1) and then invert
+  pub fn normalized_pseudoinverse(inm: [[f32;3];4]) -> [[f32;4];3] {
+    let mut xyz_to_cam = inm;
+    // Normalize xyz_to_cam so that xyz_to_cam * (1,1,1) is (1,1,1,1)
+    for i in 0..4 {
+      let mut num = 0.0;
+      for j in 0..3 {
+        num += xyz_to_cam[i][j];
+      }
+      for j in 0..3 {
+        xyz_to_cam[i][j] = if num == 0.0 {
+          0.0
+        }  else {
+          xyz_to_cam[i][j] / num
+        };
+      }
+    }
+
+    Self::pseudoinverse(xyz_to_cam)
+  }
+
+  /// Matrix inversion that deals with 4x3 matrices
+  pub fn pseudoinverse(inm: [[f32;3];4]) -> [[f32;4];3] {
     let mut temp: [[f32;6];3] = [[0.0; 6];3];
 
     for i in 0..3 {
