@@ -14,7 +14,7 @@ notifications:
     on_failure: always
   irc:
     channels:
-      - "irc.freenode.net#chimper"
+      - "irc.libera.chat#chimper"
     on_success: change
     on_failure: always
     skip_join: true
