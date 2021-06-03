@@ -1,4 +1,3 @@
-use serde_derive::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::io::{Read, BufReader};
 use std::fs::File;
@@ -237,7 +236,7 @@ impl Camera {
 ///
 /// Values are taken from the IFD tag Orientation (0x0112) in most cases but they can be
 /// obtained from other metadata in the file.
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Serialize, Deserialize, Hash)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[allow(missing_docs)]
 pub enum Orientation {
   Normal,
