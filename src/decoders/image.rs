@@ -1,4 +1,5 @@
 use crate::decoders::*;
+use crate::decoders::exif::*;
 use crate::decoders::cfa::*;
 
 /// All the data needed to process this raw image, including the image data itself as well
@@ -38,6 +39,26 @@ pub struct RawImage {
 
   /// orientation of the image as indicated by the image metadata
   pub orientation: Orientation,
+
+  /// Exif data. Supported only for some camera models
+  /// ## Example
+  /// ```no_run
+  /// if let Some(exif) = raw.exif {
+  ///     let iso = exif.get_uint(rawloader::Tag::ISOSpeed);
+  ///     println!("ISO = {:?}", iso);
+  ///     let exp_time = exif.get_rational(rawloader::Tag::ExposureTime);
+  ///     println!("Exposure time = {:?} seconds", exp_time);
+  ///
+  ///     let tags = exif.get_tags();
+  ///     for tag in tags {
+  ///         if let Some(tag_str) = exif.to_string(tag) {
+  ///             println!("{:?} = {}", tag, tag_str);
+  ///         }
+  ///     }
+  /// }
+  /// ```
+  pub exif: Option<Box<dyn ExifInfo>>,
+
   /// image data itself, has `width`\*`height`\*`cpp` elements
   pub data: RawImageData,
 }
@@ -108,6 +129,7 @@ impl RawImage {
       crops: camera.crops,
       blackareas: blackareas,
       orientation: camera.orientation,
+      exif: None,
     }
   }
 

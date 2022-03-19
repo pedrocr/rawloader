@@ -52,6 +52,8 @@ pub use decoders::RawImage;
 pub use decoders::RawImageData;
 pub use decoders::Orientation;
 pub use decoders::cfa::CFA;
+pub use decoders::tiff::Tag;
+
 #[doc(hidden)] pub use decoders::Buffer;
 #[doc(hidden)] pub use decoders::RawLoader;
 

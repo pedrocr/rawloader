@@ -9,7 +9,7 @@ macro_rules! fetch_tag {
   ($tiff:expr, $tag:expr) => (
     $tiff.find_entry($tag).ok_or(
       format!("Couldn't find tag {}",stringify!($tag)).to_string()
-    )?;
+    )?
   );
 }
 
@@ -17,7 +17,7 @@ macro_rules! fetch_ifd {
   ($tiff:expr, $tag:expr) => (
     $tiff.find_first_ifd($tag).ok_or(
       format!("Couldn't find ifd with tag {}",stringify!($tag)).to_string()
-    )?;
+    )?
   );
 }
 
@@ -66,7 +66,7 @@ mod packed;
 mod pumps;
 mod ljpeg;
 pub mod cfa;
-mod tiff;
+pub mod tiff;
 mod ciff;
 mod mrw;
 mod arw;
@@ -91,6 +91,7 @@ mod nrw;
 mod cr2;
 mod ari;
 mod x3f;
+pub mod exif;
 use self::tiff::*;
 pub use self::image::*;
 mod unwrapped;
@@ -376,7 +377,7 @@ impl RawLoader {
       camnames.push((cam.model.clone(), cam.clean_model.clone()));
       if let Some(val) = ct.get("model_aliases") {
         for alias in val.as_array().unwrap() {
-          camnames.push((alias[0].as_str().unwrap().to_string().clone(), 
+          camnames.push((alias[0].as_str().unwrap().to_string().clone(),
                          alias[1].as_str().unwrap().to_string().clone()));
         }
       }

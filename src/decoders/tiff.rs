@@ -3,114 +3,149 @@ use std::str;
 
 use crate::decoders::basics::*;
 
+#[doc(hidden)]
 #[derive(Debug, Copy, Clone, PartialEq, enumn::N)]
 #[repr(u16)]
 pub enum Tag {
-  PanaWidth        = 0x0002,
-  PanaLength       = 0x0003,
-  NefWB0           = 0x000C,
-  PanaWBsR         = 0x0011,
-  PanaWBsB         = 0x0012,
-  NrwWB            = 0x0014,
-  NefSerial        = 0x001d,
-  PanaWBs2R        = 0x0024,
-  PanaWBs2G        = 0x0025,
-  PanaWBs2B        = 0x0026,
-  Cr2PowerShotWB   = 0x0029,
-  NewSubFileType   = 0x00FE,
-  Cr2OldOffset     = 0x0081,
-  NefMeta1         = 0x008c,
-  NefMeta2         = 0x0096,
-  NefWB1           = 0x0097,
-  Cr2OldWB         = 0x00A4,
-  NefKey           = 0x00a7,
-  ImageWidth       = 0x0100,
-  ImageLength      = 0x0101,
-  BitsPerSample    = 0x0102,
-  Compression      = 0x0103,
-  PhotometricInt   = 0x0106,
-  Make             = 0x010F,
-  Model            = 0x0110,
-  StripOffsets     = 0x0111,
-  Orientation      = 0x0112,
-  SamplesPerPixel  = 0x0115,
-  StripByteCounts  = 0x0117,
-  PanaOffsets      = 0x0118,
-  GrayResponse     = 0x0123,
-  Software         = 0x0131,
-  TileWidth        = 0x0142,
-  TileLength       = 0x0143,
-  TileOffsets      = 0x0144,
-  SubIFDs          = 0x014A,
-  PefBlackLevels   = 0x0200,
-  PefWB            = 0x0201,
-  PefHuffman       = 0x0220,
-  Xmp              = 0x02BC,
-  DcrWB            = 0x03FD,
-  OrfBlackLevels   = 0x0600,
-  DcrLinearization = 0x090D,
-  EpsonWB          = 0x0E80,
-  KodakWB          = 0x0F00,
-  OlympusRedMul    = 0x1017,
-  OlympusBlueMul   = 0x1018,
-  OlympusImgProc   = 0x2040,
-  RafOldWB         = 0x2ff0,
-  Cr2ColorData     = 0x4001,
-  SonyCurve        = 0x7010,
-  SonyOffset       = 0x7200,
-  SonyLength       = 0x7201,
-  SonyKey          = 0x7221,
-  SonyGRBG         = 0x7303,
-  SonyRGGB         = 0x7313,
-  CFAPattern       = 0x828E,
-  KodakIFD         = 0x8290,
-  LeafMetadata     = 0x8606,
-  ExifIFDPointer   = 0x8769,
-  Makernote        = 0x927C,
-  SrwSensorAreas   = 0xA010,
-  SrwRGGBLevels    = 0xA021,
-  SrwRGGBBlacks    = 0xA028,
-  Cr2Id            = 0xc5d8,
-  DNGVersion       = 0xC612,
-  Linearization    = 0xC618,
-  BlackLevels      = 0xC61A,
-  WhiteLevel       = 0xC61D,
-  ColorMatrix1     = 0xC621,
-  ColorMatrix2     = 0xC622,
-  AsShotNeutral    = 0xC628,
-  DNGPrivateArea   = 0xC634,
-  Cr2StripeWidths  = 0xC640,
-  ActiveArea       = 0xC68D,
-  MaskedAreas      = 0xC68E,
-  RafRawSubIFD     = 0xF000,
-  RafImageWidth    = 0xF001,
-  RafImageLength   = 0xF002,
-  RafBitsPerSample = 0xF003,
-  RafOffsets       = 0xF007,
-  RafWBGRB         = 0xF00E,
-  KdcWB            = 0xFA2A,
-  KdcWidth         = 0xFD00,
-  KdcLength        = 0xFD01,
-  KdcOffset        = 0xFD04,
-  KdcIFD           = 0xFE00,
+  PanaWidth         = 0x0002,
+  PanaLength        = 0x0003,
+  NefWB0            = 0x000C,
+  PanaWBsR          = 0x0011,
+  PanaWBsB          = 0x0012,
+  NrwWB             = 0x0014,
+  NefSerial         = 0x001d,
+  PanaWBs2R         = 0x0024,
+  PanaWBs2G         = 0x0025,
+  PanaWBs2B         = 0x0026,
+  Cr2PowerShotWB    = 0x0029,
+  NewSubFileType    = 0x00FE,
+  Cr2OldOffset      = 0x0081,
+  NefMeta1          = 0x008c,
+  NefMeta2          = 0x0096,
+  NefWB1            = 0x0097,
+  Cr2OldWB          = 0x00A4,
+  NefKey            = 0x00a7,
+  ImageWidth        = 0x0100,
+  ImageLength       = 0x0101,
+  BitsPerSample     = 0x0102,
+  Compression       = 0x0103,
+  PhotometricInt    = 0x0106,
+  Make              = 0x010F,
+  Model             = 0x0110,
+  StripOffsets      = 0x0111,
+  Orientation       = 0x0112,
+  SamplesPerPixel   = 0x0115,
+  StripByteCounts   = 0x0117,
+  PanaOffsets       = 0x0118,
+  GrayResponse      = 0x0123,
+  Software          = 0x0131,
+  TileWidth         = 0x0142,
+  TileLength        = 0x0143,
+  TileOffsets       = 0x0144,
+  SubIFDs           = 0x014A,
+  PefBlackLevels    = 0x0200,
+  PefWB             = 0x0201,
+  PefHuffman        = 0x0220,
+  Xmp               = 0x02BC,
+  DcrWB             = 0x03FD,
+  OrfBlackLevels    = 0x0600,
+  DcrLinearization  = 0x090D,
+  EpsonWB           = 0x0E80,
+  KodakWB           = 0x0F00,
+  OlympusRedMul     = 0x1017,
+  OlympusBlueMul    = 0x1018,
+  OlympusImgProc    = 0x2040,
+  RafOldWB          = 0x2ff0,
+  Cr2ColorData      = 0x4001,
+  SonyCurve         = 0x7010,
+  SonyOffset        = 0x7200,
+  SonyLength        = 0x7201,
+  SonyKey           = 0x7221,
+  SonyGRBG          = 0x7303,
+  SonyRGGB          = 0x7313,
+  CFAPattern        = 0x828E,
+  KodakIFD          = 0x8290,
+  LeafMetadata      = 0x8606,
+  ExifIFDPointer    = 0x8769,
+  Makernote         = 0x927C,
+  SrwSensorAreas    = 0xA010,
+  SrwRGGBLevels     = 0xA021,
+  SrwRGGBBlacks     = 0xA028,
+  Cr2Id             = 0xc5d8,
+  DNGVersion        = 0xC612,
+  Linearization     = 0xC618,
+  BlackLevels       = 0xC61A,
+  WhiteLevel        = 0xC61D,
+  ColorMatrix1      = 0xC621,
+  ColorMatrix2      = 0xC622,
+  AsShotNeutral     = 0xC628,
+  DNGPrivateArea    = 0xC634,
+  Cr2StripeWidths   = 0xC640,
+  ActiveArea        = 0xC68D,
+  MaskedAreas       = 0xC68E,
+  RafRawSubIFD      = 0xF000,
+  RafImageWidth     = 0xF001,
+  RafImageLength    = 0xF002,
+  RafBitsPerSample  = 0xF003,
+  RafOffsets        = 0xF007,
+  RafWBGRB          = 0xF00E,
+  KdcWB             = 0xFA2A,
+  KdcWidth          = 0xFD00,
+  KdcLength         = 0xFD01,
+  KdcOffset         = 0xFD04,
+  KdcIFD            = 0xFE00,
+
+  ExifVersion       = 0x9000,
+  Artist            = 0x013B,
+  ExposureTime      = 0x829a,
+  ISOSpeed          = 0x8827,
+  FNumber           = 0x829d,
+  ExposureProgram   = 0x8822,
+  DateTime          = 0x0132,
+  DateTimeOriginal  = 0x9003,
+  DateTimeDigitized = 0x9004,
+  MeteringMode      = 0x9207,
+  Flash             = 0x9209,
+  FocalLength       = 0x920a,
+  Copyright         = 0x8298,
+  UserComment       = 0x9286,
+  ShutterSpeedValue = 0x9201,
+  ApertureValue     = 0x9202,
+  ExposureBiasValue = 0x9204,
+  LensMake          = 0xA433,
+  LensModel         = 0xA434,
+  LensSerialNumber  = 0xA435,
 }
 
                           // 0-1-2-3-4-5-6-7-8-9-10-11-12-13
 const DATASHIFTS: [u8;14] = [0,0,0,1,2,3,0,0,1,2, 3, 2, 3, 2];
 
+const T_BYTE:      u16 = 1;
+const T_ASCII:     u16 = 2;
+const T_SHORT:     u16 = 3;
+const T_LONG:      u16 = 4;
+const T_RATIONAL:  u16 = 5;
+const T_SBYTE:     u16 = 6;
+const T_UNDEFINE:  u16 = 7;
+const T_SSHORT:    u16 = 8;
+const T_SLONG:     u16 = 9;
+const T_SRATIONAL: u16 = 10;
+const T_FLOAT:     u16 = 11;
+const T_DOUBLE:    u16 = 12;
+
 fn t (tag: Tag) -> u16 {
   tag as u16
 }
 
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Clone)]
 pub struct TiffEntry<'a> {
   tag: u16,
-  typ: u16,
+  pub (crate) typ: u16,
   count: usize,
   parent_offset: usize,
   doffset: usize,
-  data: &'a [u8],
-  endian: Endian,
+  pub (crate) data: &'a [u8],
+  pub (crate) endian: Endian,
 }
 
 #[derive(Debug, Clone)]
@@ -136,7 +171,7 @@ impl<'a> TiffIFD<'a> {
         Err(_) => {
           entries.insert(Tag::RafOffsets as u16, TiffEntry{
             tag: t(Tag::RafOffsets),
-            typ: 4, // Long
+            typ: T_LONG,
             count: 1,
             parent_offset: 0,
             doffset: 100,
@@ -214,8 +249,13 @@ impl<'a> TiffIFD<'a> {
           for i in 0..entry.count {
             let ifd = TiffIFD::new(buf, entry.get_u32(i as usize) as usize, base_offset, start_offset, depth+1, e);
             match ifd {
-              Ok(val) => {subifds.push(val);},
-              Err(_) => {entries.insert(entry.tag, entry);}, // Ignore unparsable IFDs
+              Ok(val) => {
+                subifds.push(val);
+              },
+              Err(_) => {
+                entries.insert(entry.tag, entry);
+                break;
+              }, // Ignore unparsable IFDs
             }
           }
         }
@@ -317,7 +357,7 @@ impl<'a> TiffIFD<'a> {
       if tag == t(Tag::ImageWidth) {
         entries.insert(t(Tag::ImageWidth), TiffEntry {
           tag: t(Tag::ImageWidth),
-          typ: 3, // Short
+          typ: T_SHORT,
           count: 2,
           parent_offset: 0,
           doffset: off+4,
@@ -327,7 +367,7 @@ impl<'a> TiffIFD<'a> {
       } else if tag == t(Tag::RafOldWB) {
         entries.insert(t(Tag::RafOldWB), TiffEntry {
           tag: t(Tag::RafOldWB),
-          typ: 3, // Short
+          typ: T_SHORT,
           count: 4,
           parent_offset: 0,
           doffset: off+4,
@@ -371,9 +411,6 @@ impl<'a> TiffIFD<'a> {
       ifds.push(self);
     }
     for ifd in &self.subifds {
-      if ifd.entries.contains_key(&t(tag)) {
-        ifds.push(ifd);
-      }
       ifds.extend(ifd.find_ifds_with_tag(tag));
     }
     ifds
@@ -401,7 +438,7 @@ impl<'a> TiffEntry<'a> {
 
     // If we don't know the type assume byte data
     if typ == 0 || typ > 13 {
-      typ = 1;
+      typ = T_BYTE;
     }
 
     let bytesize: usize = count << DATASHIFTS[typ as usize];
@@ -438,58 +475,146 @@ impl<'a> TiffEntry<'a> {
   //pub fn typ(&self) -> u16 { self.typ }
 
   pub fn get_u16(&self, idx: usize) -> u16 {
-    match self.typ {
-      1                  => self.data[idx] as u16,
-      3 | 8              => self.get_force_u16(idx),
-      _ => panic!("Trying to read typ {} for a u32", self.typ),
-    }
+    get_u16_entry_val(self.typ, self.data, self.endian, idx)
   }
 
   pub fn get_u32(&self, idx: usize) -> u32 {
-    match self.typ {
-      1 | 3 | 8          => self.get_u16(idx) as u32,
-      4 | 7 | 9 | 13     => self.get_force_u32(idx),
-      _ => panic!("Trying to read typ {} for a u32", self.typ),
-    }
+    get_u32_entry_val(self.typ, self.data, self.endian, idx)
   }
 
-  pub fn get_usize(&self, idx: usize) -> usize { self.get_u32(idx) as usize }
+  pub fn get_usize(&self, idx: usize) -> usize {
+    get_u32_entry_val(self.typ, self.data, self.endian, idx) as usize
+  }
 
   pub fn get_force_u32(&self, idx: usize) -> u32 {
-    self.endian.ru32(self.data, idx*4)
+    get_force_u32(self.data, self.endian, idx)
   }
 
   pub fn get_force_u16(&self, idx: usize) -> u16 {
-    self.endian.ru16(self.data, idx*2)
+    get_force_u16(self.data, self.endian, idx)
   }
 
   pub fn get_f32(&self, idx: usize) -> f32 {
-    if self.typ == 5 { // Rational
-      let a = self.endian.ru32(self.data, idx*8) as f32;
-      let b = self.endian.ru32(self.data, idx*8+4) as f32;
-      a / b
-    } else if self.typ == 10 { // Signed Rational
-      let a = self.endian.ri32(self.data, idx*8) as f32;
-      let b = self.endian.ri32(self.data, idx*8+4) as f32;
-      a / b
-    } else {
-      self.get_u32(idx) as f32
-    }
+    get_f32_entry_val(self.typ, self.data, self.endian, idx)
   }
 
   pub fn get_str(&self) -> &str {
-    // Truncate the string when there are \0 bytes
-    let len = match self.data.iter().position(|&x| x == 0) {
-      Some(p) => p,
-      None => self.data.len(),
-    };
-    match str::from_utf8(&self.data[0..len]) {
-      Ok(val) => val.trim(),
-      Err(err) => std::panic::panic_any(err),
-    }
+    get_str_entry_val(self.typ, self.data)
   }
 
   pub fn get_data(&self) -> &[u8] {
     self.data
+  }
+}
+
+pub fn get_f32_entry_val(typ: u16, data: &[u8], endian: Endian, idx: usize) -> f32 {
+  match typ {
+    T_RATIONAL => {
+      let a = endian.ru32(data, idx*8) as f64;
+      let b = endian.ru32(data, idx*8+4) as f64;
+      (a / b) as f32
+    },
+
+    T_SRATIONAL => {
+      let a = endian.ri32(data, idx*8) as f64;
+      let b = endian.ri32(data, idx*8+4) as f64;
+      (a / b) as f32
+    },
+
+    T_FLOAT =>
+      endian.rf32(data, idx*4),
+
+    T_DOUBLE =>
+      endian.rf64(data, idx*8) as f32,
+
+    _ =>
+      get_u32_entry_val(typ, data, endian, idx) as f32,
+  }
+}
+
+pub fn get_u32_entry_val(typ: u16, data: &[u8], endian: Endian, idx: usize) -> u32 {
+  match typ {
+    T_BYTE => data[idx] as u32,
+
+    T_SHORT =>
+      get_force_u16(data, endian, idx) as u32,
+
+    T_SSHORT =>
+      get_force_i16(data, endian, idx) as u32,
+
+    T_LONG | T_UNDEFINE/*???*/ | 13/*???*/ =>
+      get_force_u32(data, endian, idx),
+
+    T_SLONG =>
+      get_force_i32(data, endian, idx) as u32,
+
+    _ => panic!("Trying to read typ {} for a u32", typ),
+  }
+}
+
+pub fn get_u16_entry_val(typ: u16, data: &[u8], endian: Endian, idx: usize) -> u16 {
+  match typ {
+    T_BYTE =>
+      data[idx] as u16,
+
+    T_SHORT =>
+      get_force_u16(data, endian, idx),
+
+    T_SSHORT =>
+      get_force_i16(data, endian, idx) as u16,
+
+    _ => panic!("Trying to read typ {} for a u16", typ),
+  }
+}
+
+fn get_force_i32(data: &[u8], endian: Endian, idx: usize) -> i32 {
+  endian.ri32(data, idx*4)
+}
+
+fn get_force_u32(data: &[u8], endian: Endian, idx: usize) -> u32 {
+  endian.ru32(data, idx*4)
+}
+
+fn get_force_i16(data: &[u8], endian: Endian, idx: usize) -> i16 {
+  endian.ri16(data, idx*2)
+}
+
+fn get_force_u16(data: &[u8], endian: Endian, idx: usize) -> u16 {
+  endian.ru16(data, idx*2)
+}
+
+pub fn get_str_entry_val(typ: u16, data: &[u8]) -> &str {
+  if typ != T_ASCII && typ != T_UNDEFINE {
+    panic!("Trying to read typ {} for a &str", typ);
+  }
+  // Truncate the string when there are \0 bytes
+  let len = match data.iter().position(|&x| x == 0) {
+    Some(p) => p,
+    None => data.len(),
+  };
+  match str::from_utf8(&data[0..len]) {
+    Ok(val) => val.trim(),
+    Err(err) => std::panic::panic_any(err),
+  }
+}
+
+pub fn get_entry_val_as_string(typ: u16, data: &[u8], endian: Endian, idx: usize) -> String {
+  match typ {
+    T_BYTE | T_SHORT | T_LONG  =>
+      get_u32_entry_val(typ, data, endian, idx).to_string(),
+
+    T_SSHORT =>
+      get_force_i16(data, endian, idx).to_string(),
+
+    T_SLONG =>
+      get_force_i32(data, endian, idx).to_string(),
+
+    T_RATIONAL | T_SRATIONAL | T_FLOAT | T_DOUBLE =>
+      get_f32_entry_val(typ, data, endian, idx).to_string(),
+
+    T_ASCII | T_UNDEFINE =>
+      get_str_entry_val(typ, data).to_string(),
+
+    _ => panic!("Can't convert type {} to String", typ),
   }
 }

@@ -4,6 +4,7 @@ use crate::decoders::*;
 use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 use crate::decoders::ljpeg::*;
+use crate::decoders::exif::*;
 
 #[derive(Debug, Clone)]
 pub struct Cr2Decoder<'a> {
@@ -154,6 +155,7 @@ impl<'a> Decoder for Cr2Decoder<'a> {
       img.blacklevels = [0,0,0,0];
       img.whitelevels = [65535,65535,65535,65535];
     }
+    img.exif = Some(NativeExifInfo::new(&self.tiff));
     Ok(img)
   }
 }

@@ -6,6 +6,7 @@ use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 use crate::decoders::ljpeg::*;
 use crate::decoders::cfa::*;
+use crate::decoders::exif::*;
 
 #[derive(Debug, Clone)]
 pub struct DngDecoder<'a> {
@@ -79,6 +80,7 @@ impl<'a> Decoder for DngDecoder<'a> {
       crops: self.get_crops(raw, width, height)?,
       blackareas: self.get_masked_areas(raw),
       orientation: orientation,
+      exif: Some(NativeExifInfo::new(&self.tiff)),
     })
   }
 }

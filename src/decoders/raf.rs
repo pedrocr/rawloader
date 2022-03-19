@@ -83,6 +83,7 @@ impl<'a> Decoder for RafDecoder<'a> {
         crops: [0,0,0,0],
         blackareas: Vec::new(),
         orientation: camera.orientation,
+        exif: None,
       })
     } else {
       ok_image(camera, width, height, self.get_wb()?, image)

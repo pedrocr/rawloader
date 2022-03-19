@@ -22,6 +22,10 @@ pub struct Endian {
 }
 
 impl Endian {
+  pub fn new(big: bool) -> Endian {
+    Endian { big }
+  }
+
   pub fn ri32(&self, buf: &[u8], pos: usize) -> i32 {
     if self.big {
       BEi32(buf,pos)
@@ -43,6 +47,30 @@ impl Endian {
       BEu16(buf,pos)
     } else {
       LEu16(buf,pos)
+    }
+  }
+
+  pub fn ri16(&self, buf: &[u8], pos: usize) -> i16 {
+    if self.big {
+      BEi16(buf,pos)
+    } else {
+      LEi16(buf,pos)
+    }
+  }
+
+  pub fn rf32(&self, buf: &[u8], pos: usize) -> f32 {
+    if self.big {
+      BEf32(buf,pos)
+    } else {
+      LEf32(buf,pos)
+    }
+  }
+
+  pub fn rf64(&self, buf: &[u8], pos: usize) -> f64 {
+    if self.big {
+      BEf64(buf,pos)
+    } else {
+      LEf64(buf,pos)
     }
   }
 
@@ -68,8 +96,20 @@ pub static LITTLE_ENDIAN: Endian = Endian{big: false};
   LittleEndian::read_u32(&buf[pos..pos+4])
 }
 
+#[allow(non_snake_case)] #[inline] pub fn BEf32(buf: &[u8], pos: usize) -> f32 {
+  BigEndian::read_f32(&buf[pos..pos+4])
+}
+
 #[allow(non_snake_case)] #[inline] pub fn LEf32(buf: &[u8], pos: usize) -> f32 {
   LittleEndian::read_f32(&buf[pos..pos+4])
+}
+
+#[allow(non_snake_case)] #[inline] pub fn BEf64(buf: &[u8], pos: usize) -> f64 {
+  BigEndian::read_f64(&buf[pos..pos+8])
+}
+
+#[allow(non_snake_case)] #[inline] pub fn LEf64(buf: &[u8], pos: usize) -> f64 {
+  LittleEndian::read_f64(&buf[pos..pos+8])
 }
 
 #[allow(non_snake_case)] #[inline] pub fn BEu16(buf: &[u8], pos: usize) -> u16 {
@@ -78,6 +118,14 @@ pub static LITTLE_ENDIAN: Endian = Endian{big: false};
 
 #[allow(non_snake_case)] #[inline] pub fn LEu16(buf: &[u8], pos: usize) -> u16 {
   LittleEndian::read_u16(&buf[pos..pos+2])
+}
+
+#[allow(non_snake_case)] #[inline] pub fn BEi16(buf: &[u8], pos: usize) -> i16 {
+  BigEndian::read_i16(&buf[pos..pos+2])
+}
+
+#[allow(non_snake_case)] #[inline] pub fn LEi16(buf: &[u8], pos: usize) -> i16 {
+  LittleEndian::read_i16(&buf[pos..pos+2])
 }
 
 pub fn decode_threaded<F>(width: usize, height: usize, dummy: bool, closure: &F) -> Vec<u16>
