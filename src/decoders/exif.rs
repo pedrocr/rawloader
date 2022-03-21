@@ -10,11 +10,11 @@ pub trait ExifInfo {
   fn get_tags(&self) -> Vec<Tag>;
 
   fn make_clone(&self) -> Box<dyn ExifInfo>;
-  fn make_fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result;
+  fn make_fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result;
 }
 
-impl core::fmt::Debug for dyn ExifInfo {
-  fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+impl std::fmt::Debug for dyn ExifInfo {
+  fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
     self.make_fmt(f)
   }
 }
@@ -122,7 +122,7 @@ impl ExifInfo for NativeExifInfo {
     })
   }
 
-  fn make_fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-    writeln!(f, "{:?}", self.items)
+  fn make_fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    std::fmt::Debug::fmt(&self.items, f)
   }
 }
