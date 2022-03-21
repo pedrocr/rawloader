@@ -44,13 +44,12 @@ pub struct RawImage {
   /// ## Example
   /// ```no_run
   /// if let Some(exif) = raw.exif {
-  ///     let iso = exif.get_uint(rawloader::Tag::ISOSpeed);
-  ///     println!("ISO = {:?}", iso);
-  ///     let exp_time = exif.get_rational(rawloader::Tag::ExposureTime);
-  ///     println!("Exposure time = {:?} seconds", exp_time);
+  ///     let iso = exif.get_uint(rawloader::Tag::ISOSpeed).unwrap();
+  ///     println!("ISO = {}", iso);
+  ///     let exp_time = exif.get_rational(rawloader::Tag::ExposureTime).unwrap();
+  ///     println!("Exposure time = {} seconds", exp_time);
   ///
-  ///     let tags = exif.get_tags();
-  ///     for tag in tags {
+  ///     for tag in exif.get_tags() {
   ///         if let Some(tag_str) = exif.to_string(tag) {
   ///             println!("{:?} = {}", tag, tag_str);
   ///         }
