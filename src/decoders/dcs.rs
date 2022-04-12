@@ -42,6 +42,6 @@ impl<'a> Decoder for DcsDecoder<'a> {
     };
 
     let image = decode_8bit_wtable(src, &table, width, height, dummy);
-    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image)
+    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }

@@ -68,7 +68,7 @@ impl<'a> Decoder for SrwDecoder<'a> {
       x => return Err(format!("SRW: Don't know how to handle compression {}", x).to_string()),
     };
 
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

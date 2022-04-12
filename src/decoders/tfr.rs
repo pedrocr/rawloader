@@ -37,7 +37,7 @@ impl<'a> Decoder for TfrDecoder<'a> {
       self.decode_compressed(src, width, height, dummy)?
     };
 
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

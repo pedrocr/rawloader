@@ -18,7 +18,7 @@ use crate::decoders::tiff::*;
 /// initialized and ready to be used in processing. The color_at() implementation is
 /// designed to be fast so it can be called inside the inner loop of demosaic or other
 /// color-aware algorithms that work on pre-demosaic data
-#[derive(Clone)]
+#[derive(Clone, PartialEq)]
 pub struct CFA {
   /// CFA pattern as a String
   pub name: String,

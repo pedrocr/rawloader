@@ -86,7 +86,16 @@ impl<'a> Decoder for ArwDecoder<'a> {
       _ => return Err(format!("ARW: Don't know how to decode type {}", compression).to_string()),
     };
 
-    ok_image_with_black_white(camera, width, height, self.get_wb()?, black, white, image)
+    ok_image_with_black_white(
+      camera,
+      width,
+      height,
+      self.get_wb()?,
+      black,
+      white,
+      image,
+      Some(NativeExifInfo::new(&self.tiff))
+    )
   }
 }
 
@@ -125,7 +134,7 @@ impl<'a> ArwDecoder<'a> {
       currpos += len+8;
     }
 
-    ok_image(camera, width, height, wb_coeffs, image)
+    ok_image(camera, width, height, wb_coeffs, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 
   fn image_srf(&self, camera: Camera, dummy: bool) -> Result<RawImage,String> {
@@ -159,7 +168,7 @@ impl<'a> ArwDecoder<'a> {
       decode_16be(&image_data, width, height, dummy)
     };
 
-    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image)
+    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image, Some(NativeExifInfo::new(&self.tiff)))
   }
 
   pub(crate) fn decode_arw1(buf: &[u8], width: usize, height: usize, dummy: bool) -> Vec<u16> {

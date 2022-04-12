@@ -53,6 +53,7 @@ pub use decoders::RawImageData;
 pub use decoders::Orientation;
 pub use decoders::cfa::CFA;
 pub use decoders::tiff::Tag;
+pub use decoders::exif::ExifInfo;
 
 #[doc(hidden)] pub use decoders::Buffer;
 #[doc(hidden)] pub use decoders::RawLoader;
@@ -118,6 +119,11 @@ pub fn decode_file<P: AsRef<Path>>(path: P) -> Result<RawImage,RawLoaderError> {
 /// ```
 pub fn decode(reader: &mut dyn Read) -> Result<RawImage,RawLoaderError> {
   LOADER.decode(reader, false).map_err(|err| RawLoaderError::new(err))
+}
+
+/// Similar `decode` but rear EXIF data only
+pub fn decode_exif_only(reader: &mut dyn Read) -> Result<RawImage,RawLoaderError> {
+  LOADER.decode(reader, true).map_err(|err| RawLoaderError::new(err))
 }
 
 // Used to force lazy_static initializations. Useful for fuzzing.

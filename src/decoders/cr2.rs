@@ -4,7 +4,6 @@ use crate::decoders::*;
 use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 use crate::decoders::ljpeg::*;
-use crate::decoders::exif::*;
 
 #[derive(Debug, Clone)]
 pub struct Cr2Decoder<'a> {
@@ -147,7 +146,7 @@ impl<'a> Decoder for Cr2Decoder<'a> {
     };
 
     let wb = self.get_wb(&camera)?;
-    let mut img = RawImage::new(camera, width, height, wb, image, dummy);
+    let mut img = RawImage::new(camera, width, height, wb, image);
     if cpp == 3 {
       img.cpp = 3;
       img.width /= 3;

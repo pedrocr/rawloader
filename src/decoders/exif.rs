@@ -3,13 +3,25 @@ use std::collections::*;
 
 /// EXIF information access interface
 pub trait ExifInfo {
+  /// return u32 value of tag or None if value not found
   fn get_uint(&self, tag: Tag) -> Option<u32>;
+
+  /// return f32 value of tag or None if value not found
   fn get_rational(&self, tag: Tag) -> Option<f32>;
+
+  /// return &str value of tag or None if value not found
   fn get_str(&self, tag: Tag) -> Option<&str>;
+
+  /// return String value of tag or None if value not found
   fn to_string(&self, tag: Tag) -> Option<String>;
+
+  /// return all non empty tags
   fn get_tags(&self) -> Vec<Tag>;
 
+  #[doc(hidden)]
   fn make_clone(&self) -> Box<dyn ExifInfo>;
+
+  #[doc(hidden)]
   fn make_fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result;
 }
 

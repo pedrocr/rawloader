@@ -34,7 +34,7 @@ impl<'a> MrwDecoder<'a> {
     while currpos+20 < data_offset {
       let tag: u32 = BEu32(buf,currpos);
       let len: u32 = BEu32(buf,currpos+4);
-      
+
       match tag {
         0x505244 => { // PRD
           raw_height = BEu16(buf,currpos+16) as usize;
@@ -47,7 +47,7 @@ impl<'a> MrwDecoder<'a> {
           }
         }
         0x545457 => { // TTW
-          // Base value for offsets needs to be at the beginning of the 
+          // Base value for offsets needs to be at the beginning of the
           // TIFF block, not the file
           tiffpos = currpos+8;
         }
@@ -56,7 +56,7 @@ impl<'a> MrwDecoder<'a> {
       currpos += (len+8) as usize;
     }
 
-    MrwDecoder { 
+    MrwDecoder {
       buffer: buf,
       data_offset: data_offset,
       raw_width: raw_width,
@@ -93,6 +93,6 @@ impl<'a> Decoder for MrwDecoder<'a> {
        f32::NAN]
     };
 
-    ok_image(camera, self.raw_width, self.raw_height, wb_coeffs, buffer)
+    ok_image(camera, self.raw_width, self.raw_height, wb_coeffs, buffer, Some(NativeExifInfo::new(&self.tiff)))
   }
 }

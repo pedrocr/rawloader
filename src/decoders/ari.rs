@@ -33,7 +33,7 @@ impl<'a> Decoder for AriDecoder<'a> {
 
     let image = decode_12be_msb32(src, width, height, dummy);
 
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, None)
   }
 }
 

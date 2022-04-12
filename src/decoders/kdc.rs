@@ -36,7 +36,7 @@ impl<'a> Decoder for KdcDecoder<'a> {
         c => return Err(format!("KDC: DC120: Don't know how to handle compression type {}", c).to_string())
       };
 
-      return ok_image(camera, width, height, [NAN, NAN, NAN, NAN], image)
+      return ok_image(camera, width, height, [NAN, NAN, NAN, NAN], image, Some(NativeExifInfo::new(&self.tiff)))
     }
 
     let width = fetch_tag!(self.tiff, Tag::KdcWidth).get_usize(0)+80;
@@ -55,7 +55,7 @@ impl<'a> Decoder for KdcDecoder<'a> {
     let src = &self.buffer[off..];
     let image = decode_12be(src, width, height, dummy);
 
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

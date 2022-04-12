@@ -44,7 +44,7 @@ impl<'a> Decoder for NrwDecoder<'a> {
     };
 
     let wb = self.get_wb(&camera)?;
-    ok_image(camera, width, height, wb, image)
+    ok_image(camera, width, height, wb, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

@@ -65,7 +65,7 @@ impl<'a> Decoder for Rw2Decoder<'a> {
     };
     let camera = self.rawloader.check_supported_with_mode(&self.tiff, mode)?;
 
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

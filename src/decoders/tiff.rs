@@ -584,7 +584,7 @@ fn get_force_u16(data: &[u8], endian: Endian, idx: usize) -> u16 {
 }
 
 pub fn get_str_entry_val(typ: u16, data: &[u8]) -> &str {
-  if typ != T_ASCII && typ != T_UNDEFINE {
+  if typ != T_ASCII && typ != T_UNDEFINE && typ != T_BYTE {
     panic!("Trying to read typ {} for a &str", typ);
   }
   // Truncate the string when there are \0 bytes

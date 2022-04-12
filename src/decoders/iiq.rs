@@ -56,7 +56,15 @@ impl<'a> Decoder for IiqDecoder<'a> {
 
     let image = Self::decode_compressed(self.buffer, data_offset, strip_offset, width, height, dummy);
 
-    ok_image_with_blacklevels(camera, width, height, self.get_wb(wb_offset)?, [black, black, black, black], image)
+    ok_image_with_blacklevels(
+      camera,
+      width,
+      height,
+      self.get_wb(wb_offset)?,
+      [black, black, black, black],
+      image,
+      Some(NativeExifInfo::new(&self.tiff))
+    )
   }
 }
 

@@ -30,6 +30,6 @@ impl<'a> Decoder for MefDecoder<'a> {
     let src = &self.buffer[offset..];
 
     let image = decode_12be(src, width, height, dummy);
-    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image)
+    ok_image(camera, width, height, [NAN,NAN,NAN,NAN], image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }

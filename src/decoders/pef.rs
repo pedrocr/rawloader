@@ -39,7 +39,15 @@ impl<'a> Decoder for PefDecoder<'a> {
     };
 
     let blacklevels = self.get_blacklevels().unwrap_or(camera.blacklevels);
-    ok_image_with_blacklevels(camera, width, height, self.get_wb()?, blacklevels, image)
+    ok_image_with_blacklevels(
+      camera,
+      width,
+      height,
+      self.get_wb()?,
+      blacklevels,
+      image,
+      Some(NativeExifInfo::new(&self.tiff))
+    )
   }
 }
 

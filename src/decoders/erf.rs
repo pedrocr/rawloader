@@ -31,7 +31,7 @@ impl<'a> Decoder for ErfDecoder<'a> {
     let src = &self.buffer[offset..];
 
     let image = decode_12be_wcontrol(src, width, height, dummy);
-    ok_image(camera, width, height, self.get_wb()?, image)
+    ok_image(camera, width, height, self.get_wb()?, image, Some(NativeExifInfo::new(&self.tiff)))
   }
 }
 

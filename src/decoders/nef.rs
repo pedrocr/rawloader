@@ -143,12 +143,13 @@ impl<'a> Decoder for NefDecoder<'a> {
       }
     };
 
-    let mut img = RawImage::new(camera, width, height, coeffs, image, false);
+    let mut img = RawImage::new(camera, width, height, coeffs, image);
     if cpp == 3 {
       img.cpp = 3;
       img.blacklevels = [0,0,0,0];
       img.whitelevels = [65535,65535,65535,65535];
     }
+    img.exif = Some(NativeExifInfo::new(&self.tiff));
     Ok(img)
   }
 }
