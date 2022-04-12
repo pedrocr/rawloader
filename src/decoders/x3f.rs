@@ -10,14 +10,14 @@ pub fn is_x3f(buf: &[u8]) -> bool {
 
 #[derive(Debug, Clone)]
 struct X3fFile {
-  dirs: Vec<X3fDirectory>,
+  _dirs: Vec<X3fDirectory>,
   images: Vec<X3fImage>,
 }
 
 #[derive(Debug, Clone)]
 struct X3fDirectory {
   offset: usize,
-  len: usize,
+  _len: usize,
   id: String,
 }
 
@@ -27,7 +27,7 @@ struct X3fImage {
   format: usize,
   width: usize,
   height: usize,
-  pitch: usize,
+  _pitch: usize,
   doffset: usize,
 }
 
@@ -52,7 +52,7 @@ impl X3fFile {
     }
 
     Ok(X3fFile{
-      dirs: dirs,
+      _dirs: dirs,
       images: images,
     })
   }
@@ -67,7 +67,7 @@ impl X3fDirectory {
 
     Ok(X3fDirectory {
       offset: off,
-      len: len,
+      _len: len,
       id: name,
     })
   }
@@ -82,7 +82,7 @@ impl X3fImage {
       format:  LEu32(data, 12) as usize,
       width:   LEu32(data, 16) as usize,
       height:  LEu32(data, 20) as usize,
-      pitch:   LEu32(data, 24) as usize,
+      _pitch:   LEu32(data, 24) as usize,
       doffset: offset+28,
     })
   }

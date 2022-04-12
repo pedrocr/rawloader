@@ -5,7 +5,7 @@ use std::f32::NAN;
 #[derive(Debug, Clone)]
 pub struct NakedDecoder<'a> {
   buffer: &'a [u8],
-  rawloader: &'a RawLoader,
+  _rawloader: &'a RawLoader,
   camera: Camera,
 }
 
@@ -14,7 +14,7 @@ impl<'a> NakedDecoder<'a> {
     NakedDecoder {
       buffer: buf,
       camera: cam,
-      rawloader: rawloader,
+      _rawloader: rawloader,
     }
   }
 }
