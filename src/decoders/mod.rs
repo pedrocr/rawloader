@@ -9,7 +9,7 @@ macro_rules! fetch_tag {
   ($tiff:expr, $tag:expr) => (
     $tiff.find_entry($tag).ok_or(
       format!("Couldn't find tag {}",stringify!($tag)).to_string()
-    )?;
+    )?
   );
 }
 
@@ -17,7 +17,7 @@ macro_rules! fetch_ifd {
   ($tiff:expr, $tag:expr) => (
     $tiff.find_first_ifd($tag).ok_or(
       format!("Couldn't find ifd with tag {}",stringify!($tag)).to_string()
-    )?;
+    )?
   );
 }
 
