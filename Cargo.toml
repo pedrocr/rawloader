@@ -22,7 +22,7 @@ rayon = "1"
 [build-dependencies]
 glob = "0.3"
 toml = "0.5"
-rustc_version = "0.3"
+rustc_version = "0.4"
 
 [profile.release]
 panic = "unwind"
