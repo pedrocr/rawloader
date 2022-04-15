@@ -8,26 +8,26 @@ pub fn is_x3f(buf: &[u8]) -> bool {
   buf[0..4] == b"FOVb"[..]
 }
 
-#[derive(Debug, Clone)]
+//#[derive(Debug, Clone)]
 struct X3fFile {
-  dirs: Vec<X3fDirectory>,
+  //dirs: Vec<X3fDirectory>,
   images: Vec<X3fImage>,
 }
 
-#[derive(Debug, Clone)]
+//#[derive(Debug, Clone)]
 struct X3fDirectory {
   offset: usize,
-  len: usize,
+  //len: usize,
   id: String,
 }
 
-#[derive(Debug, Clone)]
+//#[derive(Debug, Clone)]
 struct X3fImage {
   typ: usize,
   format: usize,
   width: usize,
   height: usize,
-  pitch: usize,
+  //pitch: usize,
   doffset: usize,
 }
 
@@ -52,7 +52,7 @@ impl X3fFile {
     }
 
     Ok(X3fFile{
-      dirs: dirs,
+      //dirs: dirs,
       images: images,
     })
   }
@@ -62,12 +62,12 @@ impl X3fDirectory {
   fn new(buf: &[u8], offset: usize) -> Result<X3fDirectory, String> {
     let data = &buf[offset..];
     let off = LEu32(data, 0) as usize;
-    let len = LEu32(data, 4) as usize;
+    //let len = LEu32(data, 4) as usize;
     let name = String::from_utf8_lossy(&data[8..12]).to_string();
 
     Ok(X3fDirectory {
       offset: off,
-      len: len,
+      //len: len,
       id: name,
     })
   }
@@ -82,13 +82,13 @@ impl X3fImage {
       format:  LEu32(data, 12) as usize,
       width:   LEu32(data, 16) as usize,
       height:  LEu32(data, 20) as usize,
-      pitch:   LEu32(data, 24) as usize,
+      //pitch:   LEu32(data, 24) as usize,
       doffset: offset+28,
     })
   }
 }
 
-#[derive(Debug, Clone)]
+//#[derive(Debug, Clone)]
 pub struct X3fDecoder<'a> {
   buffer: &'a [u8],
   rawloader: &'a RawLoader,

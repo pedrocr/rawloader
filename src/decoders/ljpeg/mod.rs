@@ -24,7 +24,7 @@ fn m(marker: Marker) -> u8 {
 struct JpegComponentInfo {
   // These values are fixed over the whole image, read from the SOF marker.
   id: usize,    // identifier for this component (0..255)
-  index: usize, // its index in SOF or cPtr->compInfo[]
+  //index: usize, // its index in SOF or cPtr->compInfo[]
 
   // Huffman table selector (0..3). The value may vary between scans.
   // It is read from the SOS marker.
@@ -72,14 +72,14 @@ impl SOFInfo {
       return Err("ljpeg: Header size mismatch.".to_string())
     }
 
-    for i in 0..self.cps {
+    for _ in 0..self.cps {
       let id = input.get_u8() as usize;
       let subs = input.get_u8() as usize;
       input.get_u8(); // Skip info about quantized
 
       self.components.push(JpegComponentInfo {
         id: id,
-        index: i,
+        //index: i,
         dc_tbl_num: 0,
         super_v: subs & 0xf,
         super_h: subs >> 4,

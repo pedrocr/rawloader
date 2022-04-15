@@ -2,19 +2,17 @@ use crate::decoders::*;
 use crate::decoders::basics::*;
 use std::f32::NAN;
 
-#[derive(Debug, Clone)]
+//#[derive(Debug, Clone)]
 pub struct NakedDecoder<'a> {
   buffer: &'a [u8],
-  rawloader: &'a RawLoader,
   camera: Camera,
 }
 
 impl<'a> NakedDecoder<'a> {
-  pub fn new(buf: &'a [u8], cam: Camera, rawloader: &'a RawLoader) -> NakedDecoder<'a> {
+  pub fn new(buf: &'a [u8], cam: Camera, _rawloader: &'a RawLoader) -> NakedDecoder<'a> {
     NakedDecoder {
       buffer: buf,
       camera: cam,
-      rawloader: rawloader,
     }
   }
 }
