@@ -86,10 +86,10 @@ impl HuffTable {
 
   pub fn new(bits: [u32;17], huffval: [u32;256], dng_bug: bool) -> Result<HuffTable,String> {
     let mut tbl = HuffTable {
-      bits: bits,
-      huffval: huffval,
+      bits,
+      huffval,
       shiftval: [0;256],
-      dng_bug: dng_bug,
+      dng_bug,
       disable_cache: false,
 
       nbits: 0,

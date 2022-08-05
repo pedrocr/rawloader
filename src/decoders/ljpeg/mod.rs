@@ -5,6 +5,7 @@ use crate::decoders::ljpeg::decompressors::*;
 pub mod huffman;
 mod decompressors;
 
+#[allow(clippy::upper_case_acronyms)]
 enum Marker {
   Stuff        = 0x00,
   SOF3         = 0xc3, // lossless
@@ -51,7 +52,7 @@ impl SOFInfo {
       cps: 0,
       precision: 0,
       components: Vec::new(),
-      csfix: csfix,
+      csfix,
     }
   }
 
@@ -78,7 +79,7 @@ impl SOFInfo {
       input.get_u8(); // Skip info about quantized
 
       self.components.push(JpegComponentInfo {
-        id: id,
+        id,
         //index: i,
         dc_tbl_num: 0,
         super_v: subs & 0xf,
@@ -103,7 +104,7 @@ impl SOFInfo {
       let cs = if self.csfix {cs} else {readcs};
       let component = match self.components.iter_mut().find(|&&mut c| c.id == cs) {
         Some(val) => val,
-        None => return Err(format!("ljpeg: invalid component selector {}", cs).to_string())
+        None => return Err(format!("ljpeg: invalid component selector {}", cs))
       };
       let td = (input.get_u8() as usize) >> 4;
       if td > 3 {
@@ -140,8 +141,8 @@ impl<'a> LjpegDecompressor<'a> {
 
     let mut sof = SOFInfo::empty(csfix);
     let mut dht_init = [false;4];
-    let mut dht_bits = [[0 as u32;17];4];
-    let mut dht_huffval = [[0 as u32;256];4];
+    let mut dht_bits = [[0_u32;17];4];
+    let mut dht_huffval = [[0_u32;256];4];
     let pred;
     let pt;
     loop {
@@ -150,7 +151,7 @@ impl<'a> LjpegDecompressor<'a> {
         // Start of the frame, giving us the basic info
         sof.parse_sof(&mut input)?;
         if sof.precision > 16 || sof.precision < 12 {
-          return Err(format!("ljpeg: sof.precision {}", sof.precision).to_string())
+          return Err(format!("ljpeg: sof.precision {}", sof.precision))
         }
       } else if marker == m(Marker::DHT) {
         // Huffman table settings
@@ -180,10 +181,10 @@ impl<'a> LjpegDecompressor<'a> {
     let offset = input.get_pos();
     Ok(LjpegDecompressor {
       buffer: &src[offset..],
-      sof: sof,
+      sof,
       predictor: pred,
       point_transform: pt,
-      dhts: dhts,
+      dhts,
     })
   }
 
@@ -215,7 +216,7 @@ impl<'a> LjpegDecompressor<'a> {
         return Err("ljpeg: unsuported table class in DHT".to_string())
       }
       if th > 3 {
-        return Err(format!("ljpeg: unsuported table id {}", th).to_string())
+        return Err(format!("ljpeg: unsuported table id {}", th))
       }
 
       let mut acc: usize = 0;
@@ -261,35 +262,30 @@ impl<'a> LjpegDecompressor<'a> {
           2 => decode_ljpeg_2components(self, out, x, stripwidth, width, height),
           3 => decode_ljpeg_3components(self, out, x, stripwidth, width, height),
           4 => decode_ljpeg_4components(self, out, width, height),
-          c => return Err(format!("ljpeg: {} component files not supported", c).to_string()),
+          c => return Err(format!("ljpeg: {} component files not supported", c)),
         }
       },
       8 => decode_hasselblad(self, out, width),
-      p => return Err(format!("ljpeg: predictor {} not supported", p).to_string()),
+      p => return Err(format!("ljpeg: predictor {} not supported", p)),
     }
   }
 
   pub fn decode_leaf(&self, width: usize, height: usize) -> Result<Vec<u16>,String> {
-    let mut offsets = vec![0 as usize; 1];
+    let mut offsets = vec![0_usize; 1];
     let mut input = ByteStream::new(self.buffer, BIG_ENDIAN);
-    loop {
-      match LjpegDecompressor::get_next_marker(&mut input, true) {
-        Ok(marker) => {
-          if marker == m(Marker::EOI) {
-            break;
-          }
-          offsets.push(input.get_pos());
-        },
-        Err(_) => { break },
+    while let Ok(marker) = LjpegDecompressor::get_next_marker(&mut input, true) {
+      if marker == m(Marker::EOI) {
+        break;
       }
+      offsets.push(input.get_pos());
     }
     let nstrips = (height-1)/8 + 1;
     if offsets.len() != nstrips {
-      return Err(format!("MOS: expecting {} strips found {}", nstrips, offsets.len()).to_string())
+      return Err(format!("MOS: expecting {} strips found {}", nstrips, offsets.len()))
     }
 
-    let ref htable1 = self.dhts[self.sof.components[0].dc_tbl_num];
-    let ref htable2 = self.dhts[self.sof.components[1].dc_tbl_num];
+    let htable1 = &self.dhts[self.sof.components[0].dc_tbl_num];
+    let htable2 = &self.dhts[self.sof.components[1].dc_tbl_num];
     let bpred = 1 << (self.sof.precision - self.point_transform -1);
     Ok(decode_threaded_multiline(width, height, 8, false, &(|strip: &mut [u16], block| {
       let block = block / 8;

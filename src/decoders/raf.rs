@@ -15,8 +15,8 @@ impl<'a> RafDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> RafDecoder<'a> {
     RafDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -60,7 +60,7 @@ impl<'a> Decoder for RafDecoder<'a> {
             decode_16be(src, width, height, dummy)
           }
         },
-        _ => {return Err(format!("RAF: Don't know how to decode bps {}", bps).to_string());},
+        _ => {return Err(format!("RAF: Don't know how to decode bps {}", bps));},
       }
     };
 
@@ -71,8 +71,8 @@ impl<'a> Decoder for RafDecoder<'a> {
         model: camera.model.clone(),
         clean_make: camera.clean_make.clone(),
         clean_model: camera.clean_model.clone(),
-        width: width,
-        height: height,
+        width,
+        height,
         cpp: 1,
         wb_coeffs: self.get_wb()?,
         data: RawImageData::Integer(image),

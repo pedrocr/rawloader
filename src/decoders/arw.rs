@@ -16,8 +16,8 @@ impl<'a> ArwDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> ArwDecoder<'a> {
     ArwDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -26,7 +26,7 @@ impl<'a> Decoder for ArwDecoder<'a> {
   fn image(&self, dummy: bool) -> Result<RawImage,String> {
     let camera = self.rawloader.check_supported(&self.tiff)?;
     let data = self.tiff.find_ifds_with_tag(Tag::StripOffsets);
-    if data.len() == 0 {
+    if data.is_empty() {
       if camera.model == "DSLR-A100" {
         return self.image_a100(camera, dummy)
       } else { // try decoding as SRF
@@ -83,7 +83,7 @@ impl<'a> Decoder for ArwDecoder<'a> {
           }
         }
       },
-      _ => return Err(format!("ARW: Don't know how to decode type {}", compression).to_string()),
+      _ => return Err(format!("ARW: Don't know how to decode type {}", compression)),
     };
 
     ok_image_with_black_white(camera, width, height, self.get_wb()?, black, white, image)
@@ -96,7 +96,7 @@ impl<'a> ArwDecoder<'a> {
     // between the simple sanity of the MRW custom format and the wordly
     // wonderfullness of the Tiff-based ARW format, let's shoot from the hip
     let data = self.tiff.find_ifds_with_tag(Tag::SubIFDs);
-    if data.len() == 0 {
+    if data.is_empty() {
       return Err("ARW: Couldn't find the data IFD!".to_string())
     }
     let raw = data[0];
@@ -130,7 +130,7 @@ impl<'a> ArwDecoder<'a> {
 
   fn image_srf(&self, camera: Camera, dummy: bool) -> Result<RawImage,String> {
     let data = self.tiff.find_ifds_with_tag(Tag::ImageWidth);
-    if data.len() == 0 {
+    if data.is_empty() {
       return Err("ARW: Couldn't find the data IFD!".to_string())
     }
     let raw = data[0];
@@ -237,11 +237,9 @@ impl<'a> ArwDecoder<'a> {
     let decrypted_tiff = TiffIFD::new(&decrypted_buf, 0, sony_offset, 0, 0, LITTLE_ENDIAN).unwrap();
     let grgb_levels = decrypted_tiff.find_entry(Tag::SonyGRBG);
     let rggb_levels = decrypted_tiff.find_entry(Tag::SonyRGGB);
-    if grgb_levels.is_some() {
-      let levels = grgb_levels.unwrap();
+    if let Some(levels) = grgb_levels {
       Ok([levels.get_u32(1) as f32, levels.get_u32(0) as f32, levels.get_u32(2) as f32, NAN])
-    } else if rggb_levels.is_some() {
-      let levels = rggb_levels.unwrap();
+    } else if let Some(levels) = rggb_levels {
       Ok([levels.get_u32(0) as f32, levels.get_u32(1) as f32, levels.get_u32(3) as f32, NAN])
     } else {
       Err("ARW: Couldn't find GRGB or RGGB levels".to_string())
@@ -260,7 +258,7 @@ impl<'a> ArwDecoder<'a> {
   }
 
   pub(crate) fn calculate_curve(curve: [usize;6]) -> LookupTable {
-    let mut out = vec![0 as u16; curve[5]+1];
+    let mut out = vec![0_u16; curve[5]+1];
     for i in 0..5 {
       for j in (curve[i]+1)..(curve[i+1]+1) {
         out[j] = out[(j-1)] + (1<<i);
@@ -271,7 +269,7 @@ impl<'a> ArwDecoder<'a> {
   }
 
   pub(crate) fn sony_decrypt(buf: &[u8], offset: usize, length: usize, key: u32) -> Vec<u8>{
-    let mut pad: [u32; 128] = [0 as u32; 128];
+    let mut pad: [u32; 128] = [0_u32; 128];
     let mut mkey = key;
     // Initialize the decryption pad from the key
     for p in 0..4 {
@@ -291,7 +289,7 @@ impl<'a> ArwDecoder<'a> {
       let p = i + 127;
       pad[p & 127] = pad[(p+1) & 127] ^ pad[(p+1+64) & 127];
       let output = LEu32(buf, offset+i*4) ^ pad[p & 127];
-      out.push(((output >>  0) & 0xff) as u8);
+      out.push(((output) & 0xff) as u8);
       out.push(((output >>  8) & 0xff) as u8);
       out.push(((output >> 16) & 0xff) as u8);
       out.push(((output >> 24) & 0xff) as u8);

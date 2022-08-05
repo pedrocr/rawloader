@@ -16,8 +16,8 @@ impl<'a> Cr2Decoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> Cr2Decoder<'a> {
     Cr2Decoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -52,7 +52,7 @@ impl<'a> Decoder for Cr2Decoder<'a> {
       if camera.find_hint("linearization") {
         let table = {
           let linearization = fetch_tag!(self.tiff, Tag::GrayResponse);
-          let mut t = [0 as u16;4096];
+          let mut t = [0_u16;4096];
           for i in 0..t.len() {
             t[i] = linearization.get_u32(i) as u16;
           }

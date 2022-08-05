@@ -15,8 +15,8 @@ impl<'a> IiqDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> IiqDecoder<'a> {
     IiqDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -50,7 +50,7 @@ impl<'a> Decoder for IiqDecoder<'a> {
       }
     }
 
-    if width <= 0 || height <= 0 {
+    if width == 0 || height == 0 {
       return Err("IIQ: couldn't find width and height".to_string())
     }
 
@@ -73,8 +73,8 @@ impl<'a> IiqDecoder<'a> {
     decode_threaded(width, height, dummy, &(|out: &mut [u16], row| {
       let offset = data_offset + LEu32(buffer, strip_offset+row*4) as usize;
       let mut pump = BitPumpMSB32::new(&buffer[offset..]);
-      let mut pred = [0 as u32; 2];
-      let mut len = [0 as u32; 2];
+      let mut pred = [0_u32; 2];
+      let mut len = [0_u32; 2];
       for (col, pixout) in out.chunks_exact_mut(1).enumerate() {
         if col >= (width & 0xfffffff8) {
           len[0] = 14;

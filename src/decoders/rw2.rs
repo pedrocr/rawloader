@@ -15,8 +15,8 @@ impl<'a> Rw2Decoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> Rw2Decoder<'a> {
     Rw2Decoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -27,7 +27,7 @@ impl<'a> Decoder for Rw2Decoder<'a> {
     let height: usize;
     let image = {
       let data = self.tiff.find_ifds_with_tag(Tag::PanaOffsets);
-      if data.len() > 0 {
+      if !data.is_empty() {
         let raw = data[0];
         width = fetch_tag!(raw, Tag::PanaWidth).get_usize(0);
         height = fetch_tag!(raw, Tag::PanaLength).get_usize(0);
@@ -141,7 +141,7 @@ impl<'a> BitPumpPanasonic<'a> {
       buffer: src,
       pos: 0,
       nbits: 0,
-      split: split,
+      split,
     }
   }
 }

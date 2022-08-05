@@ -37,7 +37,7 @@ impl X3fFile {
     let data = &buf.buf[offset..];
     let version = LEu32(data, 4);
     if version < 0x00020000 {
-      return Err(format!("X3F: Directory version too old {}", version).to_string())
+      return Err(format!("X3F: Directory version too old {}", version))
     }
     let entries = LEu32(data, 8) as usize;
     let mut dirs = Vec::new();
@@ -53,7 +53,7 @@ impl X3fFile {
 
     Ok(X3fFile{
       //dirs: dirs,
-      images: images,
+      images,
     })
   }
 }
@@ -101,8 +101,8 @@ impl<'a> X3fDecoder<'a> {
 
     X3fDecoder {
       buffer: &buf.buf,
-      rawloader: rawloader,
-      dir: dir,
+      rawloader,
+      dir,
     }
   }
 }
@@ -112,7 +112,7 @@ impl<'a> Decoder for X3fDecoder<'a> {
     let caminfo = self.dir.images
         .iter()
         .find(|i| i.typ == 2 && i.format == 0x12)
-        .ok_or("X3F: Couldn't find camera info".to_string())?;
+        .ok_or_else(|| "X3F: Couldn't find camera info".to_string())?;
     let data = &self.buffer[caminfo.doffset+6..];
     if data[0..4] != b"Exif"[..] {
       return Err("X3F: Couldn't find EXIF info".to_string())
@@ -123,7 +123,7 @@ impl<'a> Decoder for X3fDecoder<'a> {
     let imginfo = self.dir.images
         .iter()
         .find(|i| i.typ == 1 || i.typ == 3)
-        .ok_or("X3F: Couldn't find image".to_string())?;
+        .ok_or_else(|| "X3F: Couldn't find image".to_string())?;
     let width = imginfo.width;
     let height = imginfo.height;
     let offset = imginfo.doffset;
@@ -131,7 +131,7 @@ impl<'a> Decoder for X3fDecoder<'a> {
 
     let image = match imginfo.format {
       35 => self.decode_compressed(src, width, height, dummy)?,
-      x => return Err(format!("X3F Don't know how to decode format {}", x).to_string())
+      x => return Err(format!("X3F Don't know how to decode format {}", x))
     };
 
     let mut img = RawImage::new(camera, width, height, self.get_wb()?, image, dummy);
@@ -146,6 +146,6 @@ impl<'a> X3fDecoder<'a> {
   }
 
   fn decode_compressed(&self, _buf: &[u8], _width: usize, _height: usize, _dummy: bool) -> Result<Vec<u16>, String> {
-    return Err("X3F decoding not implemented yet".to_string())
+    Err("X3F decoding not implemented yet".to_string())
   }
 }

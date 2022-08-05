@@ -73,8 +73,8 @@ impl<'a> CrwDecoder<'a> {
   pub fn new(buf: &'a [u8], ciff: CiffIFD<'a>, rawloader: &'a RawLoader) -> CrwDecoder<'a> {
     CrwDecoder {
       buffer: buf,
-      ciff: ciff,
-      rawloader: rawloader,
+      ciff,
+      rawloader,
     }
   }
 }
@@ -105,7 +105,7 @@ impl<'a> CrwDecoder<'a> {
   fn get_wb(&self, cam: &Camera) -> Result<[f32;4], String> {
     if let Some(levels) = self.ciff.find_entry(CiffTag::WhiteBalance) {
       let offset = cam.wb_offset;
-      return Ok([levels.get_f32(offset+0), levels.get_f32(offset+1), levels.get_f32(offset+3), NAN])
+      return Ok([levels.get_f32(offset), levels.get_f32(offset+1), levels.get_f32(offset+3), NAN])
     }
     if !cam.find_hint("nocinfo2") {
       if let Some(cinfo) = self.ciff.find_entry(CiffTag::ColorInfo2) {
@@ -126,7 +126,7 @@ impl<'a> CrwDecoder<'a> {
       let off = cam.wb_offset;
       let key: [u16;2] = if cam.find_hint("wb_mangle") {[0x410, 0x45f3]} else {[0,0]};
       return Ok([(cinfo.get_force_u16(off+1)^key[1]) as f32,
-                 (cinfo.get_force_u16(off+0)^key[0]) as f32,
+                 (cinfo.get_force_u16(off)^key[0]) as f32,
                  (cinfo.get_force_u16(off+2)^key[0]) as f32, NAN])
     }
     Ok([NAN,NAN,NAN,NAN])
@@ -158,9 +158,9 @@ impl<'a> CrwDecoder<'a> {
     let lowbits = !cam.find_hint("nolowbits");
     let dectable = fetch_tag!(self.ciff, CiffTag::DecoderTable).get_usize(0);
     if dectable > 2 {
-      return Err(format!("CRW: Unknown decoder table {}", dectable).to_string())
+      return Err(format!("CRW: Unknown decoder table {}", dectable))
     }
-    Ok(Self::do_decode(&self.buffer, lowbits, dectable, width, height, dummy))
+    Ok(Self::do_decode(self.buffer, lowbits, dectable, width, height, dummy))
   }
 
   pub(crate) fn do_decode(buffer: &[u8], lowbits: bool, dectable: usize, width: usize, height: usize, dummy: bool) -> Vec<u16> {
@@ -171,14 +171,14 @@ impl<'a> CrwDecoder<'a> {
     let mut pump = BitPumpJPEG::new(&buffer[offset..]);
 
     let mut carry: i32 = 0;
-    let mut base = [0 as i32;2];
+    let mut base = [0_i32;2];
     let mut pnum = 0;
     for pixout in out.chunks_exact_mut(64) {
       // Decode a block of 64 differences
-      let mut diffbuf = [0 as i32; 64];
+      let mut diffbuf = [0_i32; 64];
       let mut i: usize = 0;
       while i < 64 {
-        let ref tbl = htables[(i > 0) as usize];
+        let tbl = &htables[(i > 0) as usize];
         let leaf = tbl.huff_get_bits(&mut pump);
         if leaf == 0 && i != 0 { break; }
         if leaf == 0xff { i+= 1; continue; }

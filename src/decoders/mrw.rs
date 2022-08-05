@@ -58,13 +58,13 @@ impl<'a> MrwDecoder<'a> {
 
     MrwDecoder { 
       buffer: buf,
-      data_offset: data_offset,
-      raw_width: raw_width,
-      raw_height: raw_height,
-      packed: packed,
-      wb_vals: wb_vals,
+      data_offset,
+      raw_width,
+      raw_height,
+      packed,
+      wb_vals,
       tiff: TiffIFD::new(&buf[tiffpos..], 8, 0, 0, 0, BIG_ENDIAN).unwrap(),
-      rawloader: rawloader,
+      rawloader,
     }
   }
 }

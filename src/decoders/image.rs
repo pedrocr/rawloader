@@ -96,17 +96,17 @@ impl RawImage {
       model: camera.model.clone(),
       clean_make: camera.clean_make.clone(),
       clean_model: camera.clean_model.clone(),
-      width: width,
-      height: height,
+      width,
+      height,
       cpp: 1,
-      wb_coeffs: wb_coeffs,
+      wb_coeffs,
       data: RawImageData::Integer(image),
       blacklevels: blacks,
       whitelevels: camera.whitelevels,
       xyz_to_cam: camera.xyz_to_cam,
       cfa: camera.cfa.clone(),
       crops: camera.crops,
-      blackareas: blackareas,
+      blackareas,
       orientation: camera.orientation,
     }
   }
@@ -154,7 +154,7 @@ impl RawImage {
     }
 
     [neutralwb[0]/neutralwb[1],
-     neutralwb[1]/neutralwb[1],
+     1.0_f32, // neutralwb[1]/neutralwb[1],
      neutralwb[2]/neutralwb[1],
      neutralwb[3]/neutralwb[1]]
   }

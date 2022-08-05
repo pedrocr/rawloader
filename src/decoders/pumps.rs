@@ -179,7 +179,7 @@ impl<'a> BitPump for BitPumpJPEG<'a> {
   fn peek_bits(&mut self, num: u32) -> u32 {
     if num > self.nbits && !self.finished {
       if self.pos < self.buffer.len()-4 &&
-         self.buffer[self.pos+0] != 0xff &&
+         self.buffer[self.pos] != 0xff &&
          self.buffer[self.pos+1] != 0xff &&
          self.buffer[self.pos+2] != 0xff &&
          self.buffer[self.pos+3] != 0xff {
@@ -243,7 +243,7 @@ impl<'a> ByteStream<'a> {
     ByteStream {
       buffer: src,
       pos: 0,
-      endian: endian,
+      endian,
     }
   }
 

@@ -16,8 +16,8 @@ impl<'a> MosDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> MosDecoder<'a> {
     MosDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -25,9 +25,9 @@ impl<'a> MosDecoder<'a> {
 impl<'a> Decoder for MosDecoder<'a> {
   fn image(&self, dummy: bool) -> Result<RawImage,String> {
     let make = self.xmp_tag("Make")?;
-    let model_full = self.xmp_tag("Model")?.to_string();
-    let model = model_full.split_terminator("(").next().unwrap();
-    let camera = self.rawloader.check_supported_with_everything(&make, &model, "")?;
+    let model_full = self.xmp_tag("Model")?;
+    let model = model_full.split_terminator('(').next().unwrap();
+    let camera = self.rawloader.check_supported_with_everything(&make, model, "")?;
 
     let raw = fetch_ifd!(&self.tiff, Tag::TileOffsets);
     let width = fetch_tag!(raw, Tag::ImageWidth).get_usize(0);
@@ -46,7 +46,7 @@ impl<'a> Decoder for MosDecoder<'a> {
       7 | 99 => {
         self.decode_compressed(&camera, src, width, height, dummy)?
       },
-      x => return Err(format!("MOS: unsupported compression {}", x).to_string())
+      x => return Err(format!("MOS: unsupported compression {}", x))
     };
 
     ok_image(camera, width, height, self.get_wb()?, image)
@@ -63,7 +63,7 @@ impl<'a> MosDecoder<'a> {
         let data = &meta[pos+44..];
         if let Some(endpos) = data.iter().position(|&x| x == 0) {
           let nums = String::from_utf8_lossy(&data[0..endpos])
-                       .split_terminator("\n")
+                       .split_terminator('\n')
                        .map(|x| x.parse::<f32>().unwrap_or(NAN))
                        .collect::<Vec<f32>>();
           if nums.len() == 4 {
@@ -79,9 +79,9 @@ impl<'a> MosDecoder<'a> {
 
   fn xmp_tag(&self, tag: &str) -> Result<String, String> {
     let xmp = fetch_tag!(self.tiff, Tag::Xmp).get_str();
-    let error = format!("MOS: Couldn't find XMP tag {}", tag).to_string();
-    let start = xmp.find(&format!("<tiff:{}>",tag)).ok_or(error.clone())?;
-    let end   = xmp.find(&format!("</tiff:{}>",tag)).ok_or(error.clone())?;
+    let error = format!("MOS: Couldn't find XMP tag {}", tag);
+    let start = xmp.find(&format!("<tiff:{}>",tag)).ok_or_else(|| error.clone())?;
+    let end   = xmp.find(&format!("</tiff:{}>",tag)).ok_or(error)?;
 
     Ok(xmp[start+tag.len()+7..end].to_string())
   }

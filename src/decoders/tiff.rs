@@ -145,17 +145,14 @@ impl<'a> TiffIFD<'a> {
           });
         },
       }
-      match TiffIFD::new_fuji(buf, BEu32(buf, 92) as usize) {
-        Ok(val) => subifds.push(val),
-        Err(_) => {}
-      }
+      if let Ok(val) = TiffIFD::new_fuji(buf, BEu32(buf, 92) as usize) { subifds.push(val) }
 
       Ok(TiffIFD {
-        entries: entries,
-        subifds: subifds,
+        entries,
+        subifds,
         nextifd: 0,
         start_offset: 0,
-        endian: endian,
+        endian,
       })
     } else {
       TiffIFD::new_root(buf, 0)
@@ -168,7 +165,7 @@ impl<'a> TiffIFD<'a> {
     let endian = match LEu16(buf, offset) {
       0x4949 => LITTLE_ENDIAN,
       0x4d4d => BIG_ENDIAN,
-      x => {return Err(format!("TIFF: don't know marker 0x{:x}", x).to_string())},
+      x => {return Err(format!("TIFF: don't know marker 0x{:x}", x))},
     };
     let mut nextifd = endian.ru32(buf, offset+4) as usize;
     for _ in 0..100 { // Never read more than 100 IFDs
@@ -182,10 +179,10 @@ impl<'a> TiffIFD<'a> {
 
     Ok(TiffIFD {
       entries: HashMap::new(),
-      subifds: subifds,
+      subifds,
       nextifd: 0,
       start_offset: offset,
-      endian: endian,
+      endian,
     })
   }
 
@@ -195,7 +192,7 @@ impl<'a> TiffIFD<'a> {
 
     let num = e.ru16(buf, offset); // Directory entries in this IFD
     if num > 4000 {
-      return Err(format!("too many entries in IFD ({})", num).to_string())
+      return Err(format!("too many entries in IFD ({})", num))
     }
     for i in 0..num {
       let entry_offset: usize = offset + 2 + (i as usize)*12;
@@ -233,10 +230,10 @@ impl<'a> TiffIFD<'a> {
     }
 
     Ok(TiffIFD {
-      entries: entries,
-      subifds: subifds,
+      entries,
+      subifds,
       nextifd: e.ru32(buf, offset + (2+num*12) as usize) as usize,
-      start_offset: start_offset,
+      start_offset,
       endian: e,
     })
   }
@@ -296,7 +293,7 @@ impl<'a> TiffIFD<'a> {
     if data[off..off+2] == b"II"[..] {
       off +=2;
       endian = LITTLE_ENDIAN;
-    } if data[off..off+2] == b"MM"[..] {
+    } else if data[off..off+2] == b"MM"[..] {
       off +=2;
       endian = BIG_ENDIAN;
     }
@@ -308,7 +305,7 @@ impl<'a> TiffIFD<'a> {
     let mut entries = HashMap::new();
     let num = BEu32(buf, offset); // Directory entries in this IFD
     if num > 4000 {
-      return Err(format!("too many entries in IFD ({})", num).to_string())
+      return Err(format!("too many entries in IFD ({})", num))
     }
     let mut off = offset+4;
     for _ in 0..num {
@@ -339,7 +336,7 @@ impl<'a> TiffIFD<'a> {
     }
 
     Ok(TiffIFD {
-      entries: entries,
+      entries,
       subifds: Vec::new(),
       nextifd: 0,
       start_offset: 0,
@@ -381,7 +378,7 @@ impl<'a> TiffIFD<'a> {
 
   pub fn find_first_ifd(&self, tag: Tag) -> Option<&TiffIFD> {
     let ifds = self.find_ifds_with_tag(tag);
-    if ifds.len() == 0 {
+    if ifds.is_empty() {
       None
     } else {
       Some(ifds[0])
@@ -412,18 +409,18 @@ impl<'a> TiffEntry<'a> {
     };
 
     TiffEntry {
-      tag: tag,
-      typ: typ,
-      count: count,
-      parent_offset: parent_offset,
-      doffset: doffset,
+      tag,
+      typ,
+      count,
+      parent_offset,
+      doffset,
       data: &buf[doffset .. doffset+bytesize],
       endian: e,
     }
   }
 
   pub fn copy_with_new_data(&self, data: &'a[u8]) -> TiffEntry<'a> {
-    let mut copy = self.clone();
+    let mut copy = *self;
     copy.data = data;
     copy
   }

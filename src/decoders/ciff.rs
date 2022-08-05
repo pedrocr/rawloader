@@ -73,8 +73,8 @@ impl<'a> CiffIFD<'a> {
     }
 
     Ok(CiffIFD {
-      entries: entries,
-      subifds: subifds,
+      entries,
+      subifds,
     })
   }
 
@@ -105,18 +105,18 @@ impl<'a> CiffEntry<'a> {
       0x0000 => (LEu32(buf, offset+2) as usize, LEu32(buf, offset+6) as usize + value_data),
       // Data is stored directly in entry
       0x4000 => (8, offset+2),
-      val => return Err(format!("CIFF: Don't know about data location {:x}", val).to_string()),
+      val => return Err(format!("CIFF: Don't know about data location {:x}", val)),
     };
     let data = &buf[data_offset..data_offset+bytesize];
     let count = bytesize >> CiffEntry::element_shift(typ);
 
     Ok(CiffEntry {
-      tag: tag,
-      typ: typ,
-      count: count,
-      bytesize: bytesize,
-      data_offset: data_offset,
-      data: data,
+      tag,
+      typ,
+      count,
+      bytesize,
+      data_offset,
+      data,
     })
   }
 
@@ -134,7 +134,7 @@ impl<'a> CiffEntry<'a> {
   }
 
   pub fn get_strings(&self) -> Vec<String> {
-    String::from_utf8_lossy(self.data).split_terminator("\0").map(|x| x.to_string()).collect()
+    String::from_utf8_lossy(self.data).split_terminator('\0').map(|x| x.to_string()).collect()
   }
 
   pub fn get_u32(&self, idx: usize) -> u32 {

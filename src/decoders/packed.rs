@@ -182,7 +182,7 @@ pub fn decode_12be_wcontrol(buf: &[u8], width: usize, height: usize, dummy: bool
 pub fn decode_12be_interlaced(buf: &[u8], width: usize, height: usize, dummy: bool) -> Vec<u16> {
   let half = (height+1) >> 1;
   // Second field is 2048 byte aligned
-  let second_field_offset = ((half*width*3/2 >> 11) + 1) << 11;
+  let second_field_offset = (((half*width*3/2) >> 11) + 1) << 11;
   let second_field = &buf[second_field_offset..];
 
   decode_threaded(width, height, dummy,&(|out: &mut [u16], row| {

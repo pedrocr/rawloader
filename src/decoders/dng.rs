@@ -18,8 +18,8 @@ impl<'a> DngDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> DngDecoder<'a> {
     DngDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -43,7 +43,7 @@ impl<'a> Decoder for DngDecoder<'a> {
     let image = match fetch_tag!(raw, Tag::Compression).get_u32(0) {
       1 => self.decode_uncompressed(raw, width*cpp, height, dummy)?,
       7 => self.decode_compressed(raw, width*cpp, height, cpp, dummy)?,
-      c => return Err(format!("Don't know how to read DNGs with compression {}", c).to_string()),
+      c => return Err(format!("Don't know how to read DNGs with compression {}", c)),
     };
 
     let (make, model, clean_make, clean_model, orientation) = {
@@ -63,13 +63,13 @@ impl<'a> Decoder for DngDecoder<'a> {
     };
 
     Ok(RawImage {
-      make: make,
-      model: model,
-      clean_make: clean_make,
-      clean_model: clean_model,
-      width: width,
-      height: height,
-      cpp: cpp,
+      make,
+      model,
+      clean_make,
+      clean_model,
+      width,
+      height,
+      cpp,
       wb_coeffs: self.get_wb()?,
       data: RawImageData::Integer(image),
       blacklevels: self.get_blacklevels(raw)?,
@@ -78,7 +78,7 @@ impl<'a> Decoder for DngDecoder<'a> {
       cfa: if linear {CFA::new("")} else {self.get_cfa(raw)?},
       crops: self.get_crops(raw, width, height)?,
       blackareas: self.get_masked_areas(raw),
-      orientation: orientation,
+      orientation,
     })
   }
 }
@@ -161,7 +161,7 @@ impl<'a> DngDecoder<'a> {
       }
     };
     if cmatrix.count() > 12 {
-      Err(format!("color matrix supposedly has {} components",cmatrix.count()).to_string())
+      Err(format!("color matrix supposedly has {} components",cmatrix.count()))
     } else {
       for i in 0..cmatrix.count() {
         matrix[i/3][i%3] = cmatrix.get_f32(i);
@@ -182,7 +182,7 @@ impl<'a> DngDecoder<'a> {
         // It's 8 bit so there will be linearization involved surely!
         let linearization = fetch_tag!(self.tiff, Tag::Linearization);
         let curve = {
-          let mut points = vec![0 as u16; 256];
+          let mut points = vec![0_u16; 256];
           for i in 0..256 {
             points[i] = linearization.get_u32(i) as u16;
           }
@@ -190,7 +190,7 @@ impl<'a> DngDecoder<'a> {
         };
         Ok(decode_8bit_wtable(src, &curve, width, height, dummy))
       },
-      bps => Err(format!("DNG: Don't know about {} bps images", bps).to_string()),
+      bps => Err(format!("DNG: Don't know about {} bps images", bps)),
     }
   }
 
@@ -213,7 +213,7 @@ impl<'a> DngDecoder<'a> {
       let rowtiles = (height-1)/tlength + 1;
       if coltiles*rowtiles != offsets.count() {
         return Err(format!("DNG: trying to decode {} tiles from {} offsets",
-                           coltiles*rowtiles, offsets.count()).to_string())
+                           coltiles*rowtiles, offsets.count()))
       }
 
       Ok(decode_threaded_multiline(width, height, tlength, dummy, &(|strip: &mut [u16], row| {

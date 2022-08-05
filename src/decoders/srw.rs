@@ -16,8 +16,8 @@ impl<'a> SrwDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> SrwDecoder<'a> {
     SrwDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -37,7 +37,7 @@ impl<'a> Decoder for SrwDecoder<'a> {
       32769 => match bits {
         12 => decode_12le_unpacked(src, width, height, dummy),
         14 => decode_14le_unpacked(src, width, height, dummy),
-         x => return Err(format!("SRW: Don't know how to handle bps {}", x).to_string()),
+         x => return Err(format!("SRW: Don't know how to handle bps {}", x)),
       },
       32770 => {
         match raw.find_entry(Tag::SrwSensorAreas) {
@@ -50,7 +50,7 @@ impl<'a> Decoder for SrwDecoder<'a> {
               }
             },
             14 => decode_14le_unpacked(src, width, height, dummy),
-             x => return Err(format!("SRW: Don't know how to handle bps {}", x).to_string()),
+             x => return Err(format!("SRW: Don't know how to handle bps {}", x)),
           },
           Some(x) => {
             let coffset = x.get_usize(0);
@@ -65,7 +65,7 @@ impl<'a> Decoder for SrwDecoder<'a> {
       32773 => {
        SrwDecoder::decode_srw3(src, width, height, dummy)
       }
-      x => return Err(format!("SRW: Don't know how to handle compression {}", x).to_string()),
+      x => return Err(format!("SRW: Don't know how to handle compression {}", x)),
     };
 
     ok_image(camera, width, height, self.get_wb()?, image)
@@ -380,8 +380,8 @@ impl<'a> SrwDecoder<'a> {
     if rggb_levels.count() != 4 || rggb_blacks.count() != 4 {
       Err("SRW: RGGB Levels and Blacks don't have 4 elements".to_string())
     } else {
-      let nlevels = &rggb_levels.copy_offset_from_parent(&self.buffer);
-      let nblacks = &rggb_blacks.copy_offset_from_parent(&self.buffer);
+      let nlevels = &rggb_levels.copy_offset_from_parent(self.buffer);
+      let nblacks = &rggb_blacks.copy_offset_from_parent(self.buffer);
       Ok([nlevels.get_u32(0) as f32 - nblacks.get_u32(0) as f32,
           nlevels.get_u32(1) as f32 - nblacks.get_u32(1) as f32,
           nlevels.get_u32(3) as f32 - nblacks.get_u32(3) as f32,

@@ -17,7 +17,7 @@ impl<'a> AriDecoder<'a> {
   pub fn new(buf: &'a [u8], rawloader: &'a RawLoader) -> AriDecoder<'a> {
     AriDecoder {
       buffer: buf,
-      rawloader: rawloader,
+      rawloader,
     }
   }
 }
@@ -27,7 +27,7 @@ impl<'a> Decoder for AriDecoder<'a> {
     let offset = LEu32(self.buffer, 8) as usize;
     let width = LEu32(self.buffer, 20) as usize;
     let height = LEu32(self.buffer, 24) as usize;
-    let model = String::from_utf8_lossy(&self.buffer[668..]).split_terminator("\0").next().unwrap_or("").to_string();
+    let model = String::from_utf8_lossy(&self.buffer[668..]).split_terminator('\0').next().unwrap_or("").to_string();
     let camera = self.rawloader.check_supported_with_everything("ARRI", &model, "")?;
     let src = &self.buffer[offset..];
 

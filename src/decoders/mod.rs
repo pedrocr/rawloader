@@ -95,9 +95,9 @@ use self::tiff::*;
 pub use self::image::*;
 mod unwrapped;
 
-pub static CAMERAS_TOML: &'static str = include_str!(concat!(env!("OUT_DIR"), "/all.toml"));
-pub static SAMPLE: &'static str = "\nPlease submit samples at https://raw.pixls.us/";
-pub static BUG: &'static str = "\nPlease file a bug with a sample file at https://github.com/pedrocr/rawloader/issues/new";
+pub static CAMERAS_TOML: &str = include_str!(concat!(env!("OUT_DIR"), "/all.toml"));
+pub static SAMPLE: &str = "\nPlease submit samples at https://raw.pixls.us/";
+pub static BUG: &str = "\nPlease file a bug with a sample file at https://github.com/pedrocr/rawloader/issues/new";
 
 pub trait Decoder {
   fn image(&self, dummy: bool) -> Result<RawImage, String>;
@@ -115,13 +115,13 @@ impl Buffer {
   pub fn new(reader: &mut dyn Read) -> Result<Buffer, String> {
     let mut buffer = Vec::new();
     if let Err(err) = reader.read_to_end(&mut buffer) {
-      return Err(format!("IOError: {}", err).to_string())
+      return Err(format!("IOError: {}", err))
     }
     let size = buffer.len();
     buffer.extend([0;16].iter().cloned());
     Ok(Buffer {
       buf: buffer,
-      size: size,
+      size,
     })
   }
 }
@@ -178,17 +178,17 @@ impl Camera {
         },
         "color_matrix" => {
           let matrix = val.as_array().unwrap();
-          for (i, val) in matrix.into_iter().enumerate() {
+          for (i, val) in matrix.iter().enumerate() {
             self.xyz_to_cam[i/3][i%3] = val.as_integer().unwrap() as f32;
           }
         },
         "crops" => {
           let crop_vals = val.as_array().unwrap();
-          for (i, val) in crop_vals.into_iter().enumerate() {
+          for (i, val) in crop_vals.iter().enumerate() {
             self.crops[i] = val.as_integer().unwrap() as usize;
           }
         },
-        "color_pattern" => {self.cfa = cfa::CFA::new(&val.as_str().unwrap().to_string());},
+        "color_pattern" => {self.cfa = cfa::CFA::new(val.as_str().unwrap());},
         "bps" => {self.bps = val.as_integer().unwrap() as usize;},
         "wb_offset" => {self.wb_offset = val.as_integer().unwrap() as usize;},
         "filesize" => {self.filesize = val.as_integer().unwrap() as usize;},
@@ -230,6 +230,12 @@ impl Camera {
       orientation: Orientation::Unknown,
     }
   }
+}
+
+impl Default for Camera {
+  fn default() -> Self {
+    Self::new()
+   }
 }
 
 /// Possible orientations of an image
@@ -372,8 +378,7 @@ impl RawLoader {
       let mut cam = Camera::new();
       cam.update_from_toml(cammodes[0]);
       // Create a list of alias names including the base one
-      let mut camnames = Vec::new();
-      camnames.push((cam.model.clone(), cam.clean_model.clone()));
+      let mut camnames = vec![(cam.model.clone(), cam.clean_model.clone())];
       if let Some(val) = ct.get("model_aliases") {
         for alias in val.as_array().unwrap() {
           camnames.push((alias[0].as_str().unwrap().to_string().clone(), 
@@ -404,7 +409,7 @@ impl RawLoader {
 
     RawLoader{
       cameras: map,
-      naked: naked,
+      naked,
     }
   }
 
@@ -413,23 +418,23 @@ impl RawLoader {
     let buffer = &buf.buf;
 
     if mrw::is_mrw(buffer) {
-      let dec = Box::new(mrw::MrwDecoder::new(buffer, &self));
+      let dec = Box::new(mrw::MrwDecoder::new(buffer, self));
       return Ok(dec as Box<dyn Decoder>);
     }
 
     if ciff::is_ciff(buffer) {
       let ciff = ciff::CiffIFD::new_file(buf)?;
-      let dec = Box::new(crw::CrwDecoder::new(buffer, ciff, &self));
+      let dec = Box::new(crw::CrwDecoder::new(buffer, ciff, self));
       return Ok(dec as Box<dyn Decoder>);
     }
 
     if ari::is_ari(buffer) {
-      let dec = Box::new(ari::AriDecoder::new(buffer, &self));
+      let dec = Box::new(ari::AriDecoder::new(buffer, self));
       return Ok(dec as Box<dyn Decoder>);
     }
 
     if x3f::is_x3f(buffer) {
-      let dec = Box::new(x3f::X3fDecoder::new(buf, &self));
+      let dec = Box::new(x3f::X3fDecoder::new(buf, self));
       return Ok(dec as Box<dyn Decoder>);
     }
 
@@ -472,7 +477,7 @@ impl RawLoader {
           "NIKON"                       => use_decoder!(nrw::NrwDecoder, buffer, tiff, self),
           "Canon"                       => use_decoder!(cr2::Cr2Decoder, buffer, tiff, self),
           "Phase One A/S"               => use_decoder!(iiq::IiqDecoder, buffer, tiff, self),
-          make => Err(format!("Couldn't find a decoder for make \"{}\".{}", make, SAMPLE).to_string()),
+          make => Err(format!("Couldn't find a decoder for make \"{}\".{}", make, SAMPLE)),
         };
       } else if tiff.has_entry(Tag::Software) {
         // Last ditch effort to identify Leaf cameras without Make and Model
@@ -487,7 +492,7 @@ impl RawLoader {
       return Ok(Box::new(nkd::NakedDecoder::new(buffer, cam.clone(), self)))
     }
 
-    Err(format!("Couldn't find a decoder for this file.{}", SAMPLE).to_string())
+    Err(format!("Couldn't find a decoder for this file.{}", SAMPLE))
   }
 
   fn check_supported_with_everything<'a>(&'a self, make: &str, model: &str, mode: &str) -> Result<Camera, String> {
@@ -515,7 +520,7 @@ impl RawLoader {
   }
 
   fn decode_unsafe(&self, buffer: &Buffer, dummy: bool) -> Result<RawImage,String> {
-    let decoder = self.get_decoder(&buffer)?;
+    let decoder = self.get_decoder(buffer)?;
     decoder.image(dummy)
   }
 
@@ -527,7 +532,7 @@ impl RawLoader {
       self.decode_unsafe(&buffer, dummy)
     }) {
       Ok(val) => val,
-      Err(_) => Err(format!("Caught a panic while decoding.{}", BUG).to_string()),
+      Err(_) => Err(format!("Caught a panic while decoding.{}", BUG)),
     }
   }
 
@@ -551,7 +556,13 @@ impl RawLoader {
       unwrapped::decode_unwrapped(&buffer)
     }) {
       Ok(val) => val,
-      Err(_) => Err(format!("Caught a panic while decoding.{}", BUG).to_string()),
+      Err(_) => Err(format!("Caught a panic while decoding.{}", BUG)),
     }
   }
+}
+
+impl Default for RawLoader {
+  fn default() -> Self {
+    Self::new()
+   }
 }

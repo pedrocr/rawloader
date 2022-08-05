@@ -16,8 +16,8 @@ impl<'a> PefDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> PefDecoder<'a> {
     PefDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -35,7 +35,7 @@ impl<'a> Decoder for PefDecoder<'a> {
       1 => decode_16be(src, width, height, dummy),
       32773 => decode_12be(src, width, height, dummy),
       65535 => self.decode_compressed(src, width, height, dummy)?,
-      c => return Err(format!("PEF: Don't know how to read compression {}", c).to_string()),
+      c => return Err(format!("PEF: Don't know how to read compression {}", c)),
     };
 
     let blacklevels = self.get_blacklevels().unwrap_or(camera.blacklevels);
@@ -50,13 +50,8 @@ impl<'a> PefDecoder<'a> {
   }
 
   fn get_blacklevels(&self) -> Option<[u16;4]> {
-    match self.tiff.find_entry(Tag::PefBlackLevels) {
-      Some(levels) => {
-        Some([levels.get_f32(0) as u16,levels.get_f32(1) as u16,
+    self.tiff.find_entry(Tag::PefBlackLevels).map(|levels| [levels.get_f32(0) as u16,levels.get_f32(1) as u16,
              levels.get_f32(2) as u16,levels.get_f32(3) as u16])
-      },
-      None => None,
-    }
   }
 
   fn decode_compressed(&self, src: &[u8], width: usize, height: usize, dummy: bool) -> Result<Vec<u16>,String> {
@@ -135,12 +130,12 @@ impl<'a> PefDecoder<'a> {
       pred_up2[row & 1] += htable.huff_decode(&mut pump)?;
       pred_left1 = pred_up1[row & 1];
       pred_left2 = pred_up2[row & 1];
-      out[row*width+0] = pred_left1 as u16;
+      out[row*width] = pred_left1 as u16;
       out[row*width+1] = pred_left2 as u16;
       for col in (2..width).step_by(2) {
         pred_left1 += htable.huff_decode(&mut pump)?;
         pred_left2 += htable.huff_decode(&mut pump)?;
-        out[row*width+col+0] = pred_left1 as u16;
+        out[row*width+col] = pred_left1 as u16;
         out[row*width+col+1] = pred_left2 as u16;
       }
     }

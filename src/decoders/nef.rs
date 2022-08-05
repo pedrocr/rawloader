@@ -91,8 +91,8 @@ impl<'a> NefDecoder<'a> {
   pub fn new(buf: &'a [u8], tiff: TiffIFD<'a>, rawloader: &'a RawLoader) -> NefDecoder<'a> {
     NefDecoder {
       buffer: buf,
-      tiff: tiff,
-      rawloader: rawloader,
+      tiff,
+      rawloader,
     }
   }
 }
@@ -106,7 +106,7 @@ impl<'a> Decoder for NefDecoder<'a> {
     let compression = fetch_tag!(raw, Tag::Compression).get_usize(0);
 
     // Make sure we always use a 12/14 bit mode to get correct white/blackpoints
-    let mode = format!("{}bit", bps).to_string();
+    let mode = format!("{}bit", bps);
     let camera = self.rawloader.check_supported_with_mode(&self.tiff, &mode)?;
 
     let offset = fetch_tag!(raw, Tag::StripOffsets).get_usize(0);
@@ -118,29 +118,27 @@ impl<'a> Decoder for NefDecoder<'a> {
     let image = if camera.model == "NIKON D100" {
       width = 3040;
       decode_12be_wcontrol(src, width, height, dummy)
-    } else {
-      if compression == 1 || size == width*height*bps/8 {
-        match bps {
-          14 => if self.tiff.little_endian() {
-            decode_14le_unpacked(src, width, height, dummy)
-          } else {
-            decode_14be_unpacked(src, width, height, dummy)
-          },
-          12 => if self.tiff.little_endian() {
-            decode_12le(src, width, height, dummy)
-          } else {
-            decode_12be(src, width, height, dummy)
-          },
-          x => return Err(format!("Don't know uncompressed bps {}", x).to_string()),
-        }
-      } else if size == width*height*3 {
-        cpp = 3;
-        Self::decode_snef_compressed(src, coeffs, width, height, dummy)
-      } else if compression == 34713 {
-        self.decode_compressed(src, width, height, bps, dummy)?
-      } else {
-        return Err(format!("NEF: Don't know compression {}", compression).to_string())
+    } else if compression == 1 || size == width*height*bps/8 {
+      match bps {
+        14 => if self.tiff.little_endian() {
+          decode_14le_unpacked(src, width, height, dummy)
+        } else {
+          decode_14be_unpacked(src, width, height, dummy)
+        },
+        12 => if self.tiff.little_endian() {
+          decode_12le(src, width, height, dummy)
+        } else {
+          decode_12be(src, width, height, dummy)
+        },
+        x => return Err(format!("Don't know uncompressed bps {}", x)),
       }
+    } else if size == width*height*3 {
+      cpp = 3;
+      Self::decode_snef_compressed(src, coeffs, width, height, dummy)
+    } else if compression == 34713 {
+      self.decode_compressed(src, width, height, bps, dummy)?
+    } else {
+      return Err(format!("NEF: Don't know compression {}", compression))
     };
 
     let mut img = RawImage::new(camera, width, height, coeffs, image, false);
@@ -170,7 +168,7 @@ impl<'a> NefDecoder<'a> {
         0x204 | 0x205 => {
           let serial = fetch_tag!(self.tiff, Tag::NefSerial);
           let data = serial.get_data();
-          let mut serialno = 0 as usize;
+          let mut serialno = 0_usize;
           for i in 0..serial.count() {
             if data[i] == 0 { break }
             serialno = serialno*10 + if data[i] >= 48 && data[i] <= 57 { // "0" to "9"
@@ -192,8 +190,8 @@ impl<'a> NefDecoder<'a> {
 
           let ci = WB_SERIALMAP[serialno & 0xff] as u32;
           let mut cj = WB_KEYMAP[keyno & 0xff] as u32;
-          let mut ck = 0x60 as u32;
-          let mut buf = [0 as u8; 280];
+          let mut ck = 0x60_u32;
+          let mut buf = [0_u8; 280];
           for i in 0..280 {
             cj += ci * ck;
             ck += 1;
@@ -204,7 +202,7 @@ impl<'a> NefDecoder<'a> {
           Ok([BEu16(&buf, off) as f32, BEu16(&buf, off+2) as f32,
               BEu16(&buf, off+6) as f32, NAN])
         },
-        x => Err(format!("NEF: Don't know about WB version 0x{:x}", x).to_string()),
+        x => Err(format!("NEF: Don't know about WB version 0x{:x}", x)),
       }
     } else {
       Err("NEF: Don't know how to fetch WB".to_string())
@@ -258,13 +256,13 @@ impl<'a> NefDecoder<'a> {
     let mut pred_up2: [i32;2] = [stream.get_u16() as i32, stream.get_u16() as i32];
 
     // Get the linearization curve
-    let mut points = [0 as u16; 1<<16];
+    let mut points = [0_u16; 1<<16];
     for i in 0..points.len() {
       points[i] = i as u16;
     }
     let mut max = 1 << bps;
     let csize = stream.get_u16() as usize;
-    let mut split = 0 as usize;
+    let mut split = 0_usize;
     let step = if csize > 1 {
       max / (csize - 1)
     } else {
@@ -304,7 +302,7 @@ impl<'a> NefDecoder<'a> {
           pred_left1 += htable.huff_decode(&mut pump)?;
           pred_left2 += htable.huff_decode(&mut pump)?;
         }
-        out[row*width+col+0] = curve.dither(clampbits(pred_left1,bps), &mut random);
+        out[row*width+col] = curve.dither(clampbits(pred_left1,bps), &mut random);
         out[row*width+col+1] = curve.dither(clampbits(pred_left2,bps), &mut random);
       }
     }
