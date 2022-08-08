@@ -72,7 +72,7 @@ fn main() {
     for pix in data {
       // Do an extremely crude "demosaic" by setting R=G=B
       let pixhigh = (pix>>8) as u8;
-      let pixlow  = (pix&0x0f) as u8;
+      let pixlow  = (pix&0x0ff) as u8;
       f.write_all(&[pixhigh, pixlow, pixhigh, pixlow, pixhigh, pixlow]).unwrap()
     }
   } else {
