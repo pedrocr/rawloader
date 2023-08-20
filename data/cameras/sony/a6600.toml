@@ -1,0 +1,10 @@
+make = "SONY"
+model = "ILCE-6600"
+clean_make = "SONY"
+clean_model = "ILCE-6600"
+blackpoint = 512
+whitepoint = 16383
+color_matrix = [7657, -2847, -607, -4083, 11966, 2389, -684, 1418, 5844]
+color_pattern = "RGGB"
+crops = [0, 0, 0, 0]
+bps = 8
