@@ -263,7 +263,7 @@ impl<'a> ArwDecoder<'a> {
     let mut out = vec![0 as u16; curve[5]+1];
     for i in 0..5 {
       for j in (curve[i]+1)..(curve[i+1]+1) {
-        out[j] = out[(j-1)] + (1<<i);
+        out[j] = out[j-1] + (1<<i);
       }
     }
 
