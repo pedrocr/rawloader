@@ -4,17 +4,23 @@ require 'fileutils'
 
 BASE = File.dirname(__FILE__)
 RAWBASE="https://raw.pixls.us/data/"
+FILELIST = File.expand_path('filelist.sha1', BASE)
+FILENUM = File.open(FILELIST).each.count
+
+$stderr.puts "== There are #{FILENUM} total files"
 
 def each_sample
-  base = File.dirname(__FILE__)
-  File.open(File.expand_path('filelist.sha1', base)).each do |line|
+  File.open(FILELIST).each_with_index do |line, i|
+    $stderr.write "\r"
+    $stderr.write "Processing #{i+1} of #{FILENUM}"
     lineparts = line.split("*")
     hash = lineparts[0].strip
     location = lineparts[1].strip
-    filedir = File.expand_path("files", base)
+    filedir = File.expand_path("files", BASE)
     file = File.expand_path(hash, filedir)
     yield hash,file,location
   end
+  $stderr.write "\n"
 end
 
 $stderr.puts "== Fetching raw file samples from https://raw.pixls.us"
@@ -39,6 +45,7 @@ system "cargo build --release --examples"
 rawinfo = File.expand_path('../target/release/examples/rawinfo', BASE)
 
 $stderr.puts "== Preparing dirs"
+
 good = File.expand_path("good", BASE)
 bad = File.expand_path("bad", BASE)
 good_output = File.expand_path("good_output", BASE)
@@ -49,6 +56,8 @@ bad_output = File.expand_path("bad_output", BASE)
 end
 
 $stderr.puts "== Testing samples"
+ngood = 0
+nbad = 0
 each_sample do |hash, file, location|
   run = IO.popen("#{rawinfo} \"#{file}\" 2>&1")
   results = run.read
@@ -56,8 +65,11 @@ each_sample do |hash, file, location|
   if $? == 0
     FileUtils.ln_s file, good
     File.write(File.expand_path(hash, good_output), results)
+    ngood += 1
   else
     FileUtils.ln_s file, bad
     File.write(File.expand_path(hash, bad_output), results)
+    nbad += 1
   end
+  $stderr.write " -- good #{ngood} bad #{nbad}"
 end
