@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+BASE = File.dirname(__FILE__)
+RAWBASE="https://raw.pixls.us/data/"
+
+def each_sample
+  base = File.dirname(__FILE__)
+  File.open(File.expand_path('filelist.sha1', base)).each do |line|
+    lineparts = line.split("*")
+    hash = lineparts[0].strip
+    location = lineparts[1].strip
+    filedir = File.expand_path("files", base)
+    file = File.expand_path(hash, filedir)
+    yield hash,file,location
+  end
+end
+
+$stderr.puts "== Fetching raw file samples from https://raw.pixls.us"
+each_sample do |hash, file, location|
+  existhash = nil
+  if File.exists?(file)
+    existhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
+  end
+  if existhash != hash
+    puts "Downloading file \"#{file}\"!"
+    system "curl -g -f -# \"#{RAWBASE+location.gsub(" ","%20")}\" --create-dirs -o \"#{file}\""
+    newhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
+    if newhash != hash
+      $stderr.puts "== Download checksum failed, aborting run"
+      exit 2
+    end
+  end
+end
+
+$stderr.puts "== Compiling rawloader"
+system "cargo build --release --examples"
+rawinfo = File.expand_path('../target/release/examples/rawinfo', BASE)
+
+$stderr.puts "== Preparing dirs"
+good = File.expand_path("good", BASE)
+bad = File.expand_path("bad", BASE)
+good_output = File.expand_path("good_output", BASE)
+bad_output = File.expand_path("bad_output", BASE)
+[good, bad, good_output, bad_output].each do |dir|
+  FileUtils.rm_rf dir
+  FileUtils.mkdir_p dir
+end
+
+$stderr.puts "== Testing samples"
+each_sample do |hash, file, location|
+  run = IO.popen("#{rawinfo} \"#{file}\" 2>&1")
+  results = run.read
+  run.close
+  if $? == 0
+    FileUtils.ln_s file, good
+    File.write(File.expand_path(hash, good_output), results)
+  else
+    FileUtils.ln_s file, bad
+    File.write(File.expand_path(hash, bad_output), results)
+  end
+end
