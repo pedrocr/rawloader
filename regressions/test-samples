@@ -3,7 +3,35 @@
 require 'fileutils'
 
 BASE = File.dirname(__FILE__)
-require File.expand_path("util.rb", BASE)
+RAWBASE="https://raw.pixls.us/data/"
+FILELIST = File.expand_path('filelist.sha1', File.dirname(__FILE__))
+FILENUM = File.open(FILELIST).each.count
+
+def download_file(hash, file, location)
+  existhash = nil
+  if File.exists?(file)
+    existhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
+  end
+  if existhash != hash
+    puts "Downloading file \"#{file}\"!"
+    system "curl -g -f -# \"#{RAWBASE+location.gsub(" ","%20")}\" --create-dirs -o \"#{file}\""
+    newhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
+    if newhash != hash
+      $stderr.puts "== Download checksum failed, aborting run"
+      exit 2
+    end
+  end
+end
+
+FILES = {}
+File.open(FILELIST).each_with_index do |line, i|
+  lineparts = line.split("*")
+  hash = lineparts[0].strip
+  location = lineparts[1].strip
+  filedir = File.expand_path("files", File.dirname(__FILE__))
+  file = File.expand_path(hash, filedir)
+  FILES[hash] = [file,location]
+end
 
 def each_sample
   FILES.each_with_index do |vals, i|
@@ -31,7 +59,9 @@ good = File.expand_path("good", BASE)
 bad = File.expand_path("bad", BASE)
 good_output = File.expand_path("good_output", BASE)
 bad_output = File.expand_path("bad_output", BASE)
-[good, bad, good_output, bad_output].each do |dir|
+diff_output = File.expand_path("diff_output", BASE)
+known_good_output = File.expand_path("known_good_output", BASE)
+[good, bad, good_output, bad_output, diff_output].each do |dir|
   FileUtils.rm_rf dir
   FileUtils.mkdir_p dir
 end
@@ -54,3 +84,27 @@ each_sample do |hash, file, location|
   end
   $stderr.write " -- good #{ngood} bad #{nbad}"
 end
+
+$stderr.puts "== Testing known good files"
+ngood = 0
+nbad = 0
+numfiles = Dir["#{known_good_output}/*"].count
+Dir["#{known_good_output}/*"].each_with_index do |output, i|
+  hash = File.basename(output)
+  new_output = File.expand_path("good_output/#{hash}", BASE)
+  if !File.exists? new_output
+    $stderr.puts "\n!! BAD file #{hash} !!\n"
+    new_output = "/dev/null"
+  end
+  known_output_content = File.read(output)
+  new_output_content = File.read(new_output)
+  if new_output_content != known_output_content
+    nbad +=1
+    $stderr.puts "\n!! DIFFERENT file #{hash} !!\n"
+    diff_file = File.expand_path(hash, diff_output)
+    system "diff -u \"#{output}\" \"#{new_output}\" > \"#{diff_file}\""
+  end
+  $stderr.write "\r"
+  $stderr.write "Processed file #{i+1} of #{numfiles} -- good #{ngood} bad #{nbad}"
+end
+$stderr.write "\n"
