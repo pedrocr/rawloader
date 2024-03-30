@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GH2
+clean_make: Panasonic
+clean_model: DMC-GH2
+width: 4760
+height: 3472
+cpp: 1
+wb_coeffs: [624.0, 263.0, 440.0, NaN]
+whitelevels: [3800, 3800, 3800, 3800]
+blacklevels: [15, 15, 15, 15]
+xyz_to_cam: [[7780.0, -2410.0, -806.0], [-3913.0, 11724.0, 2484.0], [-1018.0, 2390.0, 5298.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 136, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4465e852e3eb8c0863346438bc0a00c7fd59e56bd5f4be84c27f833b3df136ec

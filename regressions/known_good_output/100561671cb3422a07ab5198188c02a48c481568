@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D700
+clean_make: Nikon
+clean_model: D700
+width: 4288
+height: 2844
+cpp: 1
+wb_coeffs: [1.8085938, 1.0, 1.328125, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8139.0, -2171.0, -663.0], [-8747.0, 16541.0, 2295.0], [-1925.0, 2008.0, 8093.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 2]
+blackareas: []
+orientation: Normal
+sha256data: 721fee04b9dd9810b61bb2ecce15f1562124dd8936e75c54b2bef19ad868f9ea

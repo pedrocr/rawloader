@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX510 HS
+clean_make: Canon
+clean_model: Canon PowerShot SX510 HS
+width: 4168
+height: 3062
+cpp: 1
+wb_coeffs: [1.508, 0.96800005, 1.6750001, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.4052, -0.5229, -0.1156], [-0.1325, 0.942, 0.2252], [-0.0498, 0.1957, 0.4116], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 2525d73c8eafe9d013c7508d3565b3a3d51b3e385381b6ad5efa5355b958595e

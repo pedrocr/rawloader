@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A540
+clean_make: Canon
+clean_model: Canon PowerShot A540
+width: 2888
+height: 2136
+cpp: 1
+wb_coeffs: [1.527, 0.96000004, 1.676, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.687147, -0.201964, -0.125024], [-0.148403, 0.56681, 0.045401], [-0.009472, 0.063186, 0.208602], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 4, 0, 44]
+blackareas: []
+orientation: Normal
+sha256data: 1a32bbc32125692dc606c84be30ec8907ab30f7e4f8939d736c97c83e21e96bf

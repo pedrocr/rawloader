@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G12
+clean_make: Canon
+clean_model: PowerShot G12
+width: 3744
+height: 2784
+cpp: 1
+wb_coeffs: [1483.0, 889.0, 1922.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [128, 128, 127, 0]
+xyz_to_cam: [[13244.0, -5501.0, -1248.0], [-1508.0, 9858.0, 1935.0], [-270.0, 1083.0, 4366.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 12, 18, 54]
+blackareas: [(0, 50, 2784, 0)]
+orientation: Normal
+sha256data: f52cdb2661f63421bfa177dd329585ef01b48598869365e7dc84c9a578a94414

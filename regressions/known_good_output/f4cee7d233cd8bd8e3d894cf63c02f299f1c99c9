@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-30
+clean_make: PENTAX
+clean_model: PENTAX K-30
+width: 4960
+height: 3300
+cpp: 1
+wb_coeffs: [2.5039063, 1.0, 1.6445311, NaN]
+whitelevels: [4078, 4078, 4078, 4078]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.93634033, -0.28295898, -0.12539673], [-0.39953613, 1.2301178, 0.18806458], [-0.10307312, 0.18066406, 0.6868439], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 16, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 48e59f255b492c843ea619d351b478208f122bbb3f2b93b6f38fac9009ad5184

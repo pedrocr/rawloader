@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G16
+clean_make: Canon
+clean_model: PowerShot G16
+width: 4192
+height: 3062
+cpp: 1
+wb_coeffs: [1854.0, 881.0, 1555.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [127, 127, 126, 0]
+xyz_to_cam: [[8020.0, -2687.0, -682.0], [-3704.0, 11879.0, 2052.0], [-965.0, 1921.0, 5556.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 24, 0, 96]
+blackareas: [(0, 80, 3062, 0)]
+orientation: Normal
+sha256data: 3f014a4349fecc50971004070d55a7c2d6f312ee01034e6094e9be37ac8aeb9a

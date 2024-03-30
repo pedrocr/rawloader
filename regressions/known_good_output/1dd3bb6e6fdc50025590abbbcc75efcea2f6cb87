@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX160 IS
+clean_make: Canon
+clean_model: Canon PowerShot SX160 IS
+width: 4704
+height: 3504
+cpp: 1
+wb_coeffs: [1.6819999, 0.94200003, 1.553, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.301431, -0.469837, -0.102652], [-0.200195, 0.961551, 0.238645], [-0.016441, 0.142319, 0.375979], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [10, 36, 14, 12]
+blackareas: []
+orientation: Normal
+sha256data: 4d57581a7132463ee9a829f7d234a7135b2101b4d531139ba9ccb75b6ac58df3

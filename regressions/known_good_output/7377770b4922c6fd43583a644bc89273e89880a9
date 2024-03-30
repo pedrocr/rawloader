@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ60
+clean_make: Panasonic
+clean_model: DMC-TZ60
+width: 5040
+height: 3280
+cpp: 1
+wb_coeffs: [380.0, 264.0, 526.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [145, 145, 145, 145]
+xyz_to_cam: [[8607.0, -2822.0, -808.0], [-3755.0, 11930.0, 2049.0], [-820.0, 2060.0, 5224.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 128, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 3a2038fc86b9894a7797231493c2f567bb54201f1f03a2e0c55e1998ea17e6f3

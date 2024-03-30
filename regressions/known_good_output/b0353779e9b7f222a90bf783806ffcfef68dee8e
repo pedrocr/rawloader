@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P7800
+clean_make: Nikon
+clean_model: Coolpix P7800
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.28125, 1.0, 1.3398438, NaN]
+whitelevels: [65000, 65000, 65000, 65000]
+blacklevels: [3195, 3195, 3195, 3195]
+xyz_to_cam: [[10321.0, -3920.0, -931.0], [-2750.0, 11146.0, 1824.0], [-442.0, 1545.0, 5539.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4e95cbf6a45fc2fe48e23312bdaf9da187848a25211abf84282fdf8140e64db5

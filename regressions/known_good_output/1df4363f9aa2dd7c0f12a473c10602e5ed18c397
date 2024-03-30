@@ -1,0 +1,16 @@
+make: Kodak
+model: DCS560C
+clean_make: Kodak
+clean_model: DCS560C
+width: 3048
+height: 2016
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[20482.0, -7172.0, -3125.0], [-1033.0, 10410.0, -285.0], [2542.0, 226.0, 3136.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: aeff88a5ca3593bddd0e9b68888b911e6a5f8d5d5636afa8bea36ebc42c9bdba

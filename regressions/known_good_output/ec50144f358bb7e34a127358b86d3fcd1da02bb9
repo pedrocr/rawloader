@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 2 XL
+clean_make: Google
+clean_model: Pixel 2 XL
+width: 4032
+height: 3032
+cpp: 1
+wb_coeffs: [1.8550725, 1.0, 1.7777778, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[1.5, -0.7265625, -0.1875], [-0.7109375, 1.8671875, -0.2265625], [-0.0859375, 0.25, 0.5703125], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [8, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: aa3c857a01736e1adcfe782d9993f2eabce9c65eaf2dd691d21c84701c659666

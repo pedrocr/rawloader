@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX2
+clean_make: Panasonic
+clean_model: DMC-LX2
+width: 4290
+height: 2391
+cpp: 1
+wb_coeffs: [622.0, 263.0, 404.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8048.0, -2810.0, -623.0], [-6450.0, 13519.0, 3272.0], [-1700.0, 2146.0, 7049.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 38, 3, 4]
+blackareas: []
+orientation: Normal
+sha256data: dd361b5006f2b13a7bb67a94cedf9cc88b3db180a8ce054e064725c4f29fc298

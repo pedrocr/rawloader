@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 50D
+clean_make: Canon
+clean_model: EOS 50D
+width: 3344
+height: 2178
+cpp: 3
+wb_coeffs: [2016.0, 1024.0, 1565.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[4920.0, 616.0, -593.0], [-6493.0, 13964.0, 2784.0], [-1774.0, 3178.0, 7005.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: [(2, 10032, 48, 0), (0, 60, 2178, 0)]
+orientation: Normal
+sha256data: faade03a952d7bd1237b0e82a83b45968b727b5d1b44596e1dd68680eb954698

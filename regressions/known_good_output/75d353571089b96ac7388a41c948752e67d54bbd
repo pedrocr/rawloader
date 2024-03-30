@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX50 HS
+clean_make: Canon
+clean_model: PowerShot SX50 HS
+width: 4176
+height: 3062
+cpp: 1
+wb_coeffs: [1613.0, 951.0, 1605.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[12432.0, -4753.0, -1247.0], [-2110.0, 10691.0, 1629.0], [-412.0, 1623.0, 4926.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 10, 0, 100]
+blackareas: [(0, 76, 3062, 6)]
+orientation: Normal
+sha256data: b1dfc375037ce114d5f75cb8dd481c6833f1bee071ff4d29c31e37c6da9d2599

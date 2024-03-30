@@ -1,0 +1,16 @@
+make: Mamiya-OP Co.,Ltd.
+model: MAMIYA ZD
+clean_make: Mamiya
+clean_model: ZD
+width: 4016
+height: 5344
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7645.0, 2579.0, -1363.0], [-8689.0, 16717.0, 2015.0], [-3712.0, 5941.0, 5961.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 3daa5dcb996733310dc06971f75066c74ded92d2f645cc25fc61878dd574eb1b

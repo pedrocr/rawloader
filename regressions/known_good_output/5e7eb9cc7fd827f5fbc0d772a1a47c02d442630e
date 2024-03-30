@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-PL1
+clean_make: Olympus
+clean_model: E-PL1
+width: 4100
+height: 3084
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [3604, 3604, 3604, 3604]
+blacklevels: [65, 64, 65, 64]
+xyz_to_cam: [[11408.0, -4289.0, -1215.0], [-4286.0, 12385.0, 2118.0], [-387.0, 1467.0, 7787.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 6, 2, 0]
+blackareas: []
+orientation: Normal
+sha256data: bed35b5255cd86cf68a97ae17998c791b4eaf3b5b0df67114c7fb37c7f08ca08

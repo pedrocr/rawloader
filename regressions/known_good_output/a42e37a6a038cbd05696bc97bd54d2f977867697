@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot A650
+clean_make: Canon
+clean_model: PowerShot A650
+width: 4104
+height: 3048
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 0]
+xyz_to_cam: [[9427.0, -3036.0, -959.0], [-2581.0, 10671.0, 1911.0], [-1039.0, 1982.0, 4430.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 24, 12, 48]
+blackareas: [(0, 45, 3048, 0)]
+orientation: Unknown
+sha256data: f8fb39ccce10ec97d9f2396c4c22b0a80ba31e93df2f31ecb1589aa6964e85e9

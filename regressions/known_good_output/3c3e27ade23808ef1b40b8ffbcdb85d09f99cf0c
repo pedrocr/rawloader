@@ -1,0 +1,16 @@
+make: SONY
+model: NEX-6
+clean_make: Sony
+clean_model: NEX-6
+width: 4928
+height: 3276
+cpp: 1
+wb_coeffs: [2404.0, 1024.0, 1708.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6129.0, -1545.0, -418.0], [-4930.0, 12490.0, 2743.0], [-977.0, 1693.0, 6615.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 16, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5c2f136cb79192579b92dfaab5077187e9fed905f3ca96c5e5e950da38b40e9b

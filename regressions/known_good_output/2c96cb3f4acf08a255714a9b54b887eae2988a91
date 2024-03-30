@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: XQ1
+clean_make: Fujifilm
+clean_model: XQ1
+width: 4096
+height: 3012
+cpp: 1
+wb_coeffs: [572.0, 302.0, 595.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [257, 257, 257, 257]
+xyz_to_cam: [[9252.0, -2704.0, -1064.0], [-5893.0, 14265.0, 1717.0], [-1101.0, 2341.0, 4349.0], [0.0, 0.0, 0.0]]
+cfa: GBGGRGRGRBGBGBGGRGGRGGBGBGBRGRGRGGBG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 29c4a0ef50a0e3b08dbec6d568480eb8bd7bbca3b6a88a3cbf076e6b6e087b85

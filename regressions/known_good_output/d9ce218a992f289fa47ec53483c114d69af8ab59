@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D3
+clean_make: Nikon
+clean_model: D3
+width: 4288
+height: 2844
+cpp: 1
+wb_coeffs: [1.6875, 1.0, 1.4648438, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8139.0, -2171.0, -663.0], [-8747.0, 16541.0, 2295.0], [-1925.0, 2008.0, 8093.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 2]
+blackareas: []
+orientation: Normal
+sha256data: badea99517839ca91baf1209c3e27ef80a4571883b3453b95fc0e2b5e9446ca2

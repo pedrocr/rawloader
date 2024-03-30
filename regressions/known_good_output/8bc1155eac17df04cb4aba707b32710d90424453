@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G5 X
+clean_make: Canon
+clean_model: PowerShot G5 X
+width: 5632
+height: 3710
+cpp: 1
+wb_coeffs: [1937.0, 939.0, 1704.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [2047, 2047, 2047, 2047]
+xyz_to_cam: [[9602.0, -3823.0, -937.0], [-2984.0, 11495.0, 1675.0], [-407.0, 1415.0, 5049.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [17, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 9a39714d6885d1ebd2059e34053a5f1d8c0d6182a00d94f72ceb0cc9c0141f09

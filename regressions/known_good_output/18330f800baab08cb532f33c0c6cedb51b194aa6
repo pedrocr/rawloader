@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-70
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: PENTAX K-70
+width: 6080
+height: 4064
+cpp: 1
+wb_coeffs: [2.109375, 1.0, 1.765625, NaN]
+whitelevels: [16319, 16319, 16319, 16319]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.7999115, -0.20478821, -0.12562561], [-0.4358673, 1.2953339, 0.15145874], [-0.109054565, 0.19551086, 0.60435486], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [28, 0, 12, 58]
+blackareas: []
+orientation: Normal
+sha256data: 5ddbbfd857a8ee08186dba17ae500ee21e603169ffc2c3e167e888161e3b6d87

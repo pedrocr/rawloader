@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: COOLPIX A
+clean_make: Nikon
+clean_model: Coolpix A
+width: 4992
+height: 3280
+cpp: 1
+wb_coeffs: [1.96875, 1.0, 1.4375, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8198.0, -2239.0, -724.0], [-4871.0, 12389.0, 2798.0], [-1043.0, 2050.0, 7181.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 12e98ecfff87f1295ca8917873a7553e6213fc9c36a181a644edc5fa4885be85

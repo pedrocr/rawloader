@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX10M4
+clean_make: Sony
+clean_model: DSC-RX10M4
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2424.0, 1024.0, 1820.0, NaN]
+whitelevels: [16380, 16380, 16380, 16380]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[7699.0, -2566.0, -629.0], [-2967.0, 11270.0, 1928.0], [-378.0, 1286.0, 4807.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 09d4a4209cacf38868004b0da65f2c648f7477fd5c28f0d34c47cdc52602c13b

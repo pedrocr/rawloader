@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D5300
+clean_make: Nikon
+clean_model: D5300
+width: 6016
+height: 4016
+cpp: 1
+wb_coeffs: [2.0546875, 1.0, 1.3945313, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [600, 600, 600, 600]
+xyz_to_cam: [[6988.0, -1384.0, -714.0], [-5631.0, 13410.0, 2447.0], [-1485.0, 2204.0, 7318.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a5448b0b2351dc4a85dd35701922783bf0fc4a339fbaac9f4b6afcec468eeb65

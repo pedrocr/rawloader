@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX100M5
+clean_make: SONY
+clean_model: DSC-RX100M5
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2464.0, 1024.0, 1684.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[6596.0, -2079.0, -562.0], [-4782.0, 13016.0, 1933.0], [-970.0, 1581.0, 5181.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e2705900d1bd506c866d57216ac333702d3c8202a9d468d5697d52a62098babb

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon DIGITAL IXUS 60
+clean_make: Canon
+clean_model: Canon DIGITAL IXUS 60
+width: 2888
+height: 2136
+cpp: 1
+wb_coeffs: [1.605, 0.985, 1.5450001, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.767398, -0.227658, -0.144213], [-0.217466, 0.669319, 0.03818], [-0.023152, 0.077743, 0.238669], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 4, 0, 44]
+blackareas: []
+orientation: Normal
+sha256data: 737485caebde55ad6a824c08b1f617f30461bb30a43af492c94b7c27f1093d17

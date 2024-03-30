@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S100 CRW
+clean_make: Canon
+clean_model: PowerShot S100
+width: 4160
+height: 3124
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[7968.0, -2565.0, -636.0], [-2873.0, 10697.0, 2513.0], [180.0, 667.0, 4211.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [12, 10, 66, 104]
+blackareas: [(3062, 4160, 3122, 0), (0, 100, 3124, 0)]
+orientation: Unknown
+sha256data: 30114355ea716460893d505d80235d9f80605d9485be07f48c97b76f2666f78f

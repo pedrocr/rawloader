@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G998B
+clean_make: samsung
+clean_model: SM-G998B
+width: 4000
+height: 3000
+cpp: 3
+wb_coeffs: [1.5283582, 1.0, 1.7414966, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.7939453, -1.0087891, -0.022460938], [-0.053710938, 0.98339844, 0.21191406], [0.1015625, 0.076171875, 0.47265625], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate180
+sha256data: c4d325c652181861862bfb4d1c3a9e05df9c539f6cdf9bf507390401140699cb

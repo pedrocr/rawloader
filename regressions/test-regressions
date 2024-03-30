@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+BASE = File.dirname(__FILE__)
+require File.expand_path("util.rb", BASE)
+known_good = File.expand_path("known_good_output", BASE)
+numfiles = Dir["#{known_good}/*"].count
+
+$stderr.puts "== Fetching raw file samples"
+Dir["#{known_good}/*"].each_with_index do |file, i|
+  $stderr.write "\r"
+  $stderr.write "Processing #{i+1} of #{numfiles}"
+  hash = File.basename(file)
+  file, location = FILES[hash]
+  download_file(hash, file, location)
+end
+$stderr.write "\n"
+
+$stderr.puts "== Compiling rawloader"
+system "cargo build --release --examples"
+rawinfo = File.expand_path('../target/release/examples/rawinfo', BASE)
+
+$stderr.puts "== Testing known good files"
+ngood = 0
+nbad = 0
+Dir["#{known_good}/*"].each_with_index do |output, i|
+  hash = File.basename(output)
+  file = File.expand_path("files/#{hash}", BASE)
+  run = IO.popen("#{rawinfo} \"#{file}\" 2>&1")
+  results = run.read
+  run.close
+  if $? == 0
+    old_results = File.read(output)
+    if old_results != results
+      nbad +=1
+      $stderr.puts "\n!! DIFFERENT file #{hash} !!\n"
+    else
+      ngood += 1
+    end
+  else
+    nbad += 1
+    $stderr.puts "\n!! BAD file #{hash} !!\n"
+  end
+  $stderr.write "\r"
+  $stderr.write "Processed file #{i+1} of #{numfiles} -- good #{ngood} bad #{nbad}"
+end
+$stderr.write "\n"

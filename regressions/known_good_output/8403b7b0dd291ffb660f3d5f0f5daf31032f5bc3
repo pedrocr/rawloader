@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X20
+clean_make: Fujifilm
+clean_model: X20
+width: 4096
+height: 3012
+cpp: 1
+wb_coeffs: [524.0, 302.0, 573.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [257, 257, 257, 257]
+xyz_to_cam: [[11768.0, -4971.0, -1133.0], [-4904.0, 12927.0, 2183.0], [-480.0, 1723.0, 4605.0], [0.0, 0.0, 0.0]]
+cfa: GBGGRGRGRBGBGBGGRGGRGGBGBGBRGRGRGGBG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0dc59a985811561dbf8704046be91aa4ab4ee5dfdcc878fc50f84473cb844cb5

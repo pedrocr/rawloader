@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A37
+clean_make: Sony
+clean_model: SLT-A37
+width: 4928
+height: 3276
+cpp: 1
+wb_coeffs: [2300.0, 1024.0, 2112.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1456.0, -455.0], [-4764.0, 12135.0, 2980.0], [-707.0, 1425.0, 6701.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: fa7d211a6f77e9d149dfd8648c110f686236acf72b396ce53662b698f21cf624

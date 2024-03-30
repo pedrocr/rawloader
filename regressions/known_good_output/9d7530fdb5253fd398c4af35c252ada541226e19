@@ -1,0 +1,16 @@
+make: HUAWEI
+model: VTR-L09
+clean_make: HUAWEI
+clean_model: VTR-L09
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [2.1300366, 1.0, 1.7967032, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 41f7b648fe59ecdbc2ab234cff296b0457e404521ea50fba51f5202b547ba33a

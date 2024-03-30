@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 40D
+clean_make: Canon
+clean_model: EOS 40D
+width: 3944
+height: 2622
+cpp: 1
+wb_coeffs: [1921.0, 1171.0, 2241.0, NaN]
+whitelevels: [13600, 13600, 13600, 13600]
+blacklevels: [1031, 1028, 1026, 0]
+xyz_to_cam: [[6071.0, -747.0, -856.0], [-7653.0, 15365.0, 2441.0], [-2025.0, 2553.0, 7315.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 6, 2, 30]
+blackareas: [(0, 28, 2622, 0)]
+orientation: Normal
+sha256data: d16b75257b95bab402a386749255eb0bc0c802fa526185bffbebdc3095e7fc95

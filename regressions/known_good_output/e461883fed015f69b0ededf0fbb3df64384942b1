@@ -1,0 +1,16 @@
+make: LEICA
+model: V-LUX 1
+clean_make: Leica
+clean_model: V-LUX 1
+width: 3690
+height: 2439
+cpp: 1
+wb_coeffs: [528.0, 263.0, 428.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7906.0, -2709.0, -594.0], [-6231.0, 13351.0, 3220.0], [-1922.0, 2631.0, 6537.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 14, 3, 4]
+blackareas: []
+orientation: Normal
+sha256data: c5992577bcb256740158ad9d15c0fb526ca6a6cd4002f0492700bf56a52ccc1e

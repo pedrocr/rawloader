@@ -1,0 +1,16 @@
+make: KONICA MINOLTA
+model: DYNAX 7D
+clean_make: Minolta
+clean_model: Dynax 7D
+width: 3016
+height: 2008
+cpp: 1
+wb_coeffs: [435.0, 256.0, 435.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10239.0, -3104.0, -1099.0], [-8037.0, 15727.0, 2451.0], [-927.0, 925.0, 6871.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 298e41b6e446b984dffcf2e8006d1991f5f7720c66a3b2059752c0dff78cdb10

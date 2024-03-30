@@ -1,0 +1,16 @@
+make: Leica Camera AG
+model: M8 Digital Camera
+clean_make: Leica Camera AG
+clean_model: M8 Digital Camera
+width: 3920
+height: 2638
+cpp: 1
+wb_coeffs: [2.0458984, 1.0, 1.2905273, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.7675, -0.2195, -0.0305], [-0.586, 1.4118, 0.1857], [-0.2425, 0.4007, 0.6578], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 470a5fc310ed115d98e5c87922882d52ecfc6163e1da947cf2d6fbdf6e41dc38

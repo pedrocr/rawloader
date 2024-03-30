@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P7000
+clean_make: Nikon
+clean_model: Coolpix P7000
+width: 3664
+height: 2742
+cpp: 1
+wb_coeffs: [1720.0, 1022.0, 2268.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11432.0, -3679.0, -1111.0], [-3169.0, 11239.0, 2202.0], [-791.0, 1380.0, 4455.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 71ad193ff91b3a0bad45bf65a026781734f87f189b8b6f88b2bfd3595cb9be00

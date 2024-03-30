@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: XZ-10
+clean_make: Olympus
+clean_model: XZ-10
+width: 3984
+height: 2990
+cpp: 1
+wb_coeffs: [507.0, 256.0, 438.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[9777.0, -3483.0, -925.0], [-2886.0, 11297.0, 1800.0], [-602.0, 1663.0, 5134.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 96e57e497f18092664831bb4d9d11d1bdbc1d97f841d4c1e5be91fff464fe697

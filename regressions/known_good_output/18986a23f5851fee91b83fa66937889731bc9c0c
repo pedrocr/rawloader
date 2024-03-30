@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ101
+clean_make: Panasonic
+clean_model: DMC-TZ101
+width: 5488
+height: 3664
+cpp: 1
+wb_coeffs: [627.0, 256.0, 484.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [141, 141, 141, 141]
+xyz_to_cam: [[7790.0, -2736.0, -755.0], [-3452.0, 11870.0, 1769.0], [-628.0, 1647.0, 4898.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: eea941943976e4aa1c83c9d224a82a6d41d551ebb3fc454423f6374bb4301b37

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot ELPH 130 IS
+clean_make: Canon
+clean_model: Canon PowerShot ELPH 130 IS
+width: 4704
+height: 3504
+cpp: 1
+wb_coeffs: [1.7320001, 0.94, 1.5059999, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.4052, -0.5229, -0.1156], [-0.1325, 0.942, 0.2252], [-0.0498, 0.1957, 0.4116], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [10, 38, 12, 12]
+blackareas: []
+orientation: Normal
+sha256data: 1f03f6d6458c88ba8eff0662401755522c8edfee417739da5630fb2ff517f809

@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON 1 S2
+clean_make: Nikon
+clean_model: 1 S2
+width: 4608
+height: 3080
+cpp: 1
+wb_coeffs: [2.515625, 1.0, 1.4179688, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[6612.0, -1342.0, -618.0], [-3338.0, 11055.0, 2623.0], [-174.0, 1792.0, 5075.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 84b718f960c283fd468447ff48a4414506674426d4fb83ac0f8fb41000ac55f2

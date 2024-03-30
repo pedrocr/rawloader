@@ -1,0 +1,16 @@
+make: Canon
+model: EOS D2000C
+clean_make: Canon
+clean_model: EOS D2000C
+width: 1736
+height: 1160
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[24542.0, -10860.0, -3401.0], [-1490.0, 11370.0, -297.0], [2858.0, -605.0, 3225.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: 431266609d96d1d9c9e088c5c5010ec17f69b65b90acc6ec57e879976fc15559

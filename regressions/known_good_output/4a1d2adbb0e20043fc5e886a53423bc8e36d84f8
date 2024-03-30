@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad H6D-100cMS
+clean_make: Hasselblad
+clean_model: H6D-100cMS
+width: 12000
+height: 8816
+cpp: 1
+wb_coeffs: [3.5569065, 1.0, 1.2767085, NaN]
+whitelevels: [62914, 62914, 62914, 62914]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[5656.0, -659.0, -346.0], [-3923.0, 12306.0, 1791.0], [-1602.0, 3509.0, 5442.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [108, 328, 0, 64]
+blackareas: []
+orientation: Normal
+sha256data: e29a30c5c9edf3fd5bde84ab91dffacaa6c262fb26d9b16b9259f40ef5129bea

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 100D
+clean_make: Canon
+clean_model: EOS 100D
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [2040.0, 1024.0, 1727.0, NaN]
+whitelevels: [12277, 12277, 12277, 12277]
+blacklevels: [2050, 2051, 2051, 0]
+xyz_to_cam: [[6602.0, -841.0, -939.0], [-4472.0, 12458.0, 2247.0], [-975.0, 2039.0, 6148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [52, 0, 0, 72]
+blackareas: [(8, 5280, 52, 0), (0, 72, 3528, 0)]
+orientation: Normal
+sha256data: c924d84d7443623af74c73201d5f1e4c915f4858f8b4da32a3142a83246bc74c

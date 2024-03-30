@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ1000
+clean_make: Panasonic
+clean_model: DMC-FZ1000
+width: 5040
+height: 3664
+cpp: 1
+wb_coeffs: [387.0, 256.0, 768.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7830.0, -2696.0, -763.0], [-3325.0, 11667.0, 1866.0], [-641.0, 1712.0, 4824.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 160, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 719f5985b85e95f5b5a1bcbd309f96b85822c80a09f18ca455d0a9c4b949f5b6

@@ -1,0 +1,16 @@
+make: Konica Minolta Camera, Inc.
+model: DiMAGE A2
+clean_make: Minolta
+clean_model: DiMAGE A2
+width: 3272
+height: 2456
+cpp: 1
+wb_coeffs: [513.0, 256.0, 368.0, NaN]
+whitelevels: [3965, 3965, 3965, 3965]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9097.0, -2726.0, -1053.0], [-8073.0, 15506.0, 2762.0], [-966.0, 981.0, 7763.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6a6a893968432f5ef27364ca7a5087553563f749e5eb11cbb50d10f5942739a7

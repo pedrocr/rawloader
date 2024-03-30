@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX10M3
+clean_make: SONY
+clean_model: DSC-RX10M3
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2628.0, 1024.0, 1780.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[6679.0, -1825.0, -745.0], [-5047.0, 13256.0, 1953.0], [-1580.0, 2422.0, 5183.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2edf1b79bf798d8b930db16672331a39dc118f72b171459f8ba02897c5761752

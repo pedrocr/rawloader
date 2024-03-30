@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S110
+clean_make: Canon
+clean_model: PowerShot S110
+width: 4160
+height: 3124
+cpp: 1
+wb_coeffs: [1988.0, 745.0, 1641.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[8039.0, -2643.0, -654.0], [-3783.0, 11230.0, 2930.0], [-206.0, 690.0, 4194.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [12, 10, 66, 106]
+blackareas: [(3062, 4160, 3122, 0), (0, 100, 3124, 0)]
+orientation: Normal
+sha256data: 6227c82a5f559ee88c1209991ab2ef1a6de4b969ac83425f037dfd1be8871fc4

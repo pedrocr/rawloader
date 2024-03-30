@@ -1,0 +1,16 @@
+make: OnePlus
+model: ONEPLUS A5000
+clean_make: OnePlus
+clean_model: ONEPLUS A5000
+width: 4656
+height: 3496
+cpp: 1
+wb_coeffs: [2.4150944, 1.0, 1.6202532, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.3046875, -1.59375, -0.40625], [-1.0703125, 2.1796875, -0.0078125], [0.046875, -0.1171875, 1.046875], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f378fbd32df552f7d0b9d661a7b614884a6c34bc2c8f1e04f87357fc67157fd5

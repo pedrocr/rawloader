@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS D60
+clean_make: Canon
+clean_model: EOS D60
+width: 3152
+height: 2068
+cpp: 1
+wb_coeffs: [1989.0, 758.0, 832.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [127, 127, 126, 0]
+xyz_to_cam: [[6188.0, -1341.0, -890.0], [-7168.0, 14489.0, 2937.0], [-2640.0, 3228.0, 8483.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 0, 0, 64]
+blackareas: [(0, 60, 2068, 0)]
+orientation: Unknown
+sha256data: e01a6bc5cb8f67cd066f68863a04050f183c41e45395e8d4bc3b5ba4393561bb

@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A58
+clean_make: Sony
+clean_model: SLT-A58
+width: 5504
+height: 3656
+cpp: 1
+wb_coeffs: [2796.0, 1024.0, 1588.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1456.0, -455.0], [-4764.0, 12135.0, 2980.0], [-707.0, 1425.0, 6701.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 36, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: a1a73b8dcfb3e823e720a4ab2e8ee3fd33a188bac0bc20cf3089da29e9b28d1f

@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 6 Pro
+clean_make: Google
+clean_model: Pixel 6 Pro
+width: 4080
+height: 3072
+cpp: 1
+wb_coeffs: [2.2163267, 1.0, 1.4759037, NaN]
+whitelevels: [16368, 16368, 16368, 16368]
+blacklevels: [1023, 1023, 1023, 1023]
+xyz_to_cam: [[1.2093, -0.5736, -0.186], [-0.9935, 1.9229, 0.0426], [0.0425, -0.1558, 0.8076], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 19eb22b33793fa3aceed80d1eef531380d7e90a061308766591be852a06e3309

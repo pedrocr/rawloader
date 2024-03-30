@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 1100D
+clean_make: Canon
+clean_model: EOS 1100D
+width: 4352
+height: 2874
+cpp: 1
+wb_coeffs: [2897.0, 1024.0, 1283.0, NaN]
+whitelevels: [15000, 15000, 15000, 15000]
+blacklevels: [2049, 2048, 2046, 0]
+xyz_to_cam: [[6444.0, -904.0, -893.0], [-4563.0, 12308.0, 2535.0], [-903.0, 2016.0, 6728.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 0, 0, 64]
+blackareas: [(0, 58, 2874, 0)]
+orientation: Normal
+sha256data: 71d4588eb3509dc986cb99396973abf156afdca6bd669e9c616875b1ca859d82

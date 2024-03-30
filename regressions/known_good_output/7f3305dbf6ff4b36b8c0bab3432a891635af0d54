@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix E900
+clean_make: Fujifilm
+clean_model: FinePix E900
+width: 4292
+height: 4291
+cpp: 1
+wb_coeffs: [526.0, 320.0, 368.0, NaN]
+whitelevels: [15564, 15564, 15564, 15564]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9183.0, -2526.0, -1078.0], [-7461.0, 15071.0, 2574.0], [-2022.0, 2440.0, 8639.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2edb45f854d78631205dff89b02fb445102fcaffa2b4f86ec21d8a6c084d3736

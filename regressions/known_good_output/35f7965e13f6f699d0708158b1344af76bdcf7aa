@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-7M2
+clean_make: Sony
+clean_model: ILCE-7M2
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [1416.0, 1024.0, 2952.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5271.0, -712.0, -347.0], [-6153.0, 13653.0, 2763.0], [-1601.0, 2366.0, 7242.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 26, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5ac7f4f1111e90d497c359734bc3e468c1f02081f1d7d2a855d9fe75cedef06d

@@ -1,0 +1,16 @@
+make: KONICA MINOLTA
+model: DYNAX 5D
+clean_make: Minolta
+clean_model: Dynax 5D
+width: 3016
+height: 2008
+cpp: 1
+wb_coeffs: [406.0, 290.0, 782.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10284.0, -3283.0, -1086.0], [-7957.0, 15762.0, 2316.0], [-829.0, 882.0, 6644.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 95dac88ef61c69105b5847146022876b3190506df6f921e1f9cbcf375d121290

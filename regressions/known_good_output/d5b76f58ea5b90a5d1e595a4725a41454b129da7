@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ45
+clean_make: Panasonic
+clean_model: DMC-FZ45
+width: 4396
+height: 2898
+cpp: 1
+wb_coeffs: [369.0, 263.0, 548.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[13639.0, -5535.0, -1371.0], [-1698.0, 9633.0, 2430.0], [316.0, 1152.0, 4108.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 62, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f7e7d04cc5b6d615481511ebc4c20cf955b1a3f18ded4b5af8a54fc496707b3d

@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix F700
+clean_make: Fujifilm
+clean_model: FinePix F700
+width: 2524
+height: 2523
+cpp: 1
+wb_coeffs: [146.0, 80.0, 110.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10004.0, -3219.0, -1201.0], [-7036.0, 15047.0, 2107.0], [-1863.0, 2565.0, 7736.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0e389ef1cecb7549877308251cbe8fdb6a50b80a57d8ca1d0c30a625ff1069c5

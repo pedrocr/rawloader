@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 7 Pro
+clean_make: Google
+clean_model: Pixel 7 Pro
+width: 3882
+height: 2924
+cpp: 1
+wb_coeffs: [1.5560908, 1.0, 1.7886688, NaN]
+whitelevels: [16368, 16368, 16368, 16368]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[2.7546, -1.3066, -0.4238], [-0.824, 1.5947, 0.0354], [0.0473, -0.1734, 0.8987], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate180
+sha256data: eb6d1a0159c5fe1a72669d5b200de83d196b38a65962cb491abeec5a7f8907e7

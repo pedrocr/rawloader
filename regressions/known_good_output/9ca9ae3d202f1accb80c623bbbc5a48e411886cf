@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON 1 J5
+clean_make: Nikon
+clean_model: 1 J5
+width: 5584
+height: 3726
+cpp: 1
+wb_coeffs: [2.1835938, 1.0, 1.5195313, NaN]
+whitelevels: [3800, 3800, 3800, 3800]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[7520.0, -2518.0, -645.0], [-3844.0, 12102.0, 1945.0], [-913.0, 2249.0, 6835.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9ea439e6187f20798c7e62e3d9c8b2fabd07be1160a1352c9b4b8ab83d27bee4

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T3
+clean_make: Canon
+clean_model: EOS Rebel T3
+width: 4352
+height: 2874
+cpp: 1
+wb_coeffs: [2024.0, 1024.0, 1780.0, NaN]
+whitelevels: [15000, 15000, 15000, 15000]
+blacklevels: [2048, 2047, 2045, 0]
+xyz_to_cam: [[6444.0, -904.0, -893.0], [-4563.0, 12308.0, 2535.0], [-903.0, 2016.0, 6728.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 0, 0, 64]
+blackareas: [(0, 58, 2874, 0)]
+orientation: Normal
+sha256data: f74a82b3957e7e741d6844fb5e89530c68bd58c8caf4886784a8c2386a4f0f17

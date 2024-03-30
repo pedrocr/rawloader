@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-5 II
+clean_make: Pentax
+clean_model: K-5 II
+width: 4992
+height: 3284
+cpp: 1
+wb_coeffs: [12416.0, 8192.0, 20736.0, NaN]
+whitelevels: [16124, 16124, 16124, 16124]
+blacklevels: [256, 257, 258, 258]
+xyz_to_cam: [[8170.0, -2725.0, -639.0], [-4440.0, 12017.0, 2744.0], [-771.0, 1465.0, 6599.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 34, 0, 12]
+blackareas: []
+orientation: Normal
+sha256data: bc4d8edaad6652a6b91d2a9ed85e3fd6ca632d4159b0de9636c40c18e9b85f86

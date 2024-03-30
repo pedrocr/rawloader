@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-M5MarkII
+clean_make: Olympus
+clean_model: E-M5 Mark II
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [438.0, 256.0, 636.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[9422.0, -3258.0, -711.0], [-2655.0, 10898.0, 2015.0], [-512.0, 1354.0, 5512.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 036fcd4de8f14b1b084919f528d1203f71c87569b24810751b45da5a0dc99967

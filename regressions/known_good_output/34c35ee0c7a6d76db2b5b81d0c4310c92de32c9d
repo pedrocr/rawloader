@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX240 HS
+clean_make: Canon
+clean_model: Canon PowerShot SX240 HS
+width: 4176
+height: 3060
+cpp: 1
+wb_coeffs: [1.5059999, 0.96800005, 1.676, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.544808, -0.174047, -0.080399], [-0.075055, 0.440444, 0.011367], [-0.005801, 0.071589, 0.118914], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [24, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: abb933edcb41baac7e4733c2ce30349c3264c93df6361d441f955c8d8ad863b4

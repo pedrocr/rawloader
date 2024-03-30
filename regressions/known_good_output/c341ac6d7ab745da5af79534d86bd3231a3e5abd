@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-7
+clean_make: Pentax
+clean_model: K-7
+width: 4736
+height: 3136
+cpp: 1
+wb_coeffs: [10464.0, 8192.0, 27968.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9142.0, -2947.0, -678.0], [-8648.0, 16967.0, 1663.0], [-2224.0, 2898.0, 8615.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 64, 32, 0]
+blackareas: []
+orientation: Normal
+sha256data: 95d65324afc12c2d4f4b0ee1d2027f1fe435ba296946cf4b136be6212a5772a8

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GF1
+clean_make: Panasonic
+clean_model: DMC-GF1
+width: 3052
+height: 3008
+cpp: 1
+wb_coeffs: [410.0, 263.0, 539.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [15, 15, 15, 15]
+xyz_to_cam: [[7888.0, -1902.0, -1011.0], [-8106.0, 16085.0, 2099.0], [-2353.0, 2866.0, 7330.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e696c82959c92300315c7ec4d091c8e5eeed64d861c9eee8d8583fdca22e7a86

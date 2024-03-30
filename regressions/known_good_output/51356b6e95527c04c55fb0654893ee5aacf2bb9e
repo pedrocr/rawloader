@@ -1,0 +1,16 @@
+make: Minolta Co., Ltd.
+model: DiMAGE A1
+clean_make: Minolta
+clean_model: DiMAGE A1
+width: 2568
+height: 1928
+cpp: 1
+wb_coeffs: [341.0, 256.0, 539.0, NaN]
+whitelevels: [3965, 3965, 3965, 3965]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9274.0, -2547.0, -1167.0], [-8220.0, 16323.0, 1943.0], [-2273.0, 2720.0, 8340.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: 2b761568b1d28a2d6fffae58aa368eff29e20dd784d465dbd12e90d9e08761a0

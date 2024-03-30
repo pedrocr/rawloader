@@ -1,0 +1,16 @@
+make: Eastman Kodak Company
+model: Kodak DC120 ZOOM Digital Camera
+clean_make: Kodak
+clean_model: DC120
+width: 848
+height: 976
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [255, 255, 255, 255]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[324045.0, -153713.0, -49853.0], [-96926.0, 187601.0, 4155.0], [5564.0, -20402.0, 105722.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 57b575b15e485cc7538dfc69f621e28ef5dbfe7543654ecfe66f682e4d6150c0

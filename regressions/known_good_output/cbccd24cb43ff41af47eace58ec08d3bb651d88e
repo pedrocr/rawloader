@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: GFX 50S
+clean_make: Fujifilm
+clean_model: GFX 50S
+width: 9216
+height: 6210
+cpp: 1
+wb_coeffs: [513.0, 302.0, 518.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1023, 1023, 1023, 1023]
+xyz_to_cam: [[11756.0, -4754.0, -874.0], [-3056.0, 11045.0, 2305.0], [-381.0, 1457.0, 6006.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 311f0c3ea3278705282003e5df2150878f82564286ce92ab65db249dafdcb7d4

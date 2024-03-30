@@ -1,0 +1,16 @@
+make: HUAWEI
+model: EML-L29
+clean_make: HUAWEI
+clean_model: EML-L29
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [1.5018314, 1.0, 2.9340658, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b6644555ffae402a84dd838697b711ea550e4b3a12bef695a1a378be015e3e50

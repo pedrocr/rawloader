@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 500D
+clean_make: Canon
+clean_model: EOS 500D
+width: 4832
+height: 3204
+cpp: 1
+wb_coeffs: [2351.0, 1024.0, 1382.0, NaN]
+whitelevels: [15600, 15600, 15600, 15600]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[4763.0, 712.0, -646.0], [-6821.0, 14399.0, 2640.0], [-1921.0, 3276.0, 6561.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [30, 48, 32, 62]
+blackareas: []
+orientation: Normal
+sha256data: 0d732fc63e0735762738378ecfdac19df735d9caae6f67b0761b0ecc9e9aa30b

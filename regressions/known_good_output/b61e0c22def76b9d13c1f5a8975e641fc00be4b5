@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ200
+clean_make: Panasonic
+clean_model: DMC-FZ200
+width: 4144
+height: 3016
+cpp: 1
+wb_coeffs: [569.0, 265.0, 444.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8112.0, -2563.0, -740.0], [-3730.0, 11784.0, 2197.0], [-941.0, 2075.0, 4933.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 128, 4, 0]
+blackareas: []
+orientation: Normal
+sha256data: 11e3d921dab25e409c704d887de1bc37f752995273d247674290c5e25a434b4e

@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S5500
+clean_make: Fujifilm
+clean_model: FinePix S5500
+width: 2304
+height: 1740
+cpp: 1
+wb_coeffs: [148.0, 80.0, 118.0, NaN]
+whitelevels: [15880, 15880, 15880, 15880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11940.0, -4431.0, -1255.0], [-6766.0, 14428.0, 2542.0], [-993.0, 1165.0, 7421.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c3a251334345c2282dfcbaac292ed48adfb092837c1d365d81d992bfafdbbc0f

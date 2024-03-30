@@ -1,0 +1,16 @@
+make: Xiaomi
+model: MI MAX
+clean_make: Xiaomi
+clean_model: MI MAX
+width: 4672
+height: 3504
+cpp: 1
+wb_coeffs: [2.3703704, 1.0, 1.3617021, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.4375, -0.6796875, -0.21875], [-0.96875, 1.8749999, 0.0390625], [0.0390625, -0.15625, 0.8046875], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 02715d56a94070615433a4aeff7eb6b23b30d689df9d14538f44893fde244f3c

@@ -1,0 +1,16 @@
+make: Apple
+model: iPhone 8
+clean_make: Apple
+clean_model: iPhone 8
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.5522461, 1.0, 2.8405762, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [528, 528, 528, 528]
+xyz_to_cam: [[0.8299484, -0.27388653, -0.09710302], [-0.57290846, 1.3635043, 0.17090093], [-0.08633873, 0.13636419, 0.5364223], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 41f8f57ecc7a3d31f9ada0b0abbeb3202c523d227bc3bb363e790e1ee6fde414

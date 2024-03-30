@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-510
+clean_make: Olympus
+clean_model: E-510
+width: 3720
+height: 2800
+cpp: 1
+wb_coeffs: [484.0, 256.0, 360.0, NaN]
+whitelevels: [3500, 3500, 3500, 3500]
+blacklevels: [73, 73, 73, 74]
+xyz_to_cam: [[8785.0, -2529.0, -1033.0], [-7639.0, 15624.0, 2112.0], [-1783.0, 2300.0, 7817.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 04bc6a9ba70a6c3dd6be307c593ed95384db0f42cee882bf55768038b6863d55

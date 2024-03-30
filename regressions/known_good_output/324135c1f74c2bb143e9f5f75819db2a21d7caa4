@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D5
+clean_make: Nikon
+clean_model: D5
+width: 5584
+height: 3728
+cpp: 1
+wb_coeffs: [2.3779297, 1.0, 1.3662109, NaN]
+whitelevels: [15520, 15520, 15520, 15520]
+blacklevels: [400, 400, 400, 400]
+xyz_to_cam: [[9200.0, -3522.0, -992.0], [-5755.0, 13803.0, 2117.0], [-753.0, 1486.0, 6338.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ed932fdf41b44cf011bc8a8809c5d8cf1446638bb7d20ea9fc756954180b9b6a

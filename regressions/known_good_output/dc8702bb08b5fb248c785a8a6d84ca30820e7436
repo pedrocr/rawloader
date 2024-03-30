@@ -1,0 +1,16 @@
+make: HUAWEI
+model: DLI-L22
+clean_make: HUAWEI
+clean_model: DLI-L22
+width: 4208
+height: 3120
+cpp: 1
+wb_coeffs: [1.8550725, 0.99224806, 1.7777778, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.2265625, -0.4296875, -0.2578125], [-0.4609375, 1.5, 0.015625], [-0.0390625, 0.1953125, 0.5546875], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0bbd91ab9d440ed53d82851b4429755b790fb0fa12aaf30f725864030ece4967

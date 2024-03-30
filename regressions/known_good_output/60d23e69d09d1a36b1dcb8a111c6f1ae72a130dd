@@ -1,0 +1,16 @@
+make: Apple
+model: iPhone SE
+clean_make: Apple
+clean_model: iPhone SE
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.197998, 1.0, 2.0290527, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [528, 528, 528, 528]
+xyz_to_cam: [[0.709328, -0.22757721, -0.021302035], [-0.6051969, 1.248974, 0.30108008], [-0.112681285, 0.13170287, 0.5886504], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b829d0aa0936632d88c2d773a2223aad55c2a720683e87969d92cf69aea729f3

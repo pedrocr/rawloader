@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T4i
+clean_make: Canon
+clean_model: Rebel T4i
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [2028.0, 1024.0, 1657.0, NaN]
+whitelevels: [12277, 12277, 12277, 12277]
+blacklevels: [2049, 2049, 2049, 0]
+xyz_to_cam: [[6602.0, -841.0, -939.0], [-4472.0, 12458.0, 2247.0], [-975.0, 2039.0, 6148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [56, 0, 0, 76]
+blackareas: [(4, 5280, 48, 0), (0, 70, 3528, 0)]
+orientation: Normal
+sha256data: 0e3a8ffd2ca463da4f5e4232f8517c71dab4b8ffede567e496668af5a84f2205

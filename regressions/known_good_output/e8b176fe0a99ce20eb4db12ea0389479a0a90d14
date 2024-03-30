@@ -1,0 +1,16 @@
+make: MADV
+model: QJXJ01FJ
+clean_make: MADV
+clean_model: QJXJ01FJ
+width: 6912
+height: 3456
+cpp: 1
+wb_coeffs: [1.3857422, 1.0, 1.9562987, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[3.133856, -1.6168667, -0.4906146], [-0.9787684, 1.9161416, 0.033454], [0.0719453, -0.2289914, 1.4052427], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 3e2b65f55565c6d5d95a31e47383ecf47bde70333c586ef4a01bf5920ba1c3cb

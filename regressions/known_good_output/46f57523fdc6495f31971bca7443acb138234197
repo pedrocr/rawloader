@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D850
+clean_make: NIKON CORPORATION
+clean_model: NIKON D850
+width: 7104
+height: 4728
+cpp: 1
+wb_coeffs: [1.9003906, 1.0, 1.3754883, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [100, 100, 100, 100]
+xyz_to_cam: [[10405.0, -3755.0, -1270.0], [-5461.0, 13787.0, 1793.0], [-1040.0, 2015.0, 6785.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5f64b2d205f5f3a819edb32025e0348fd069341d130ecf83198d707698af0640

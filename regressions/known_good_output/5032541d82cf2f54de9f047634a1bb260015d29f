@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A3100 IS
+clean_make: Canon
+clean_model: Canon PowerShot A3100 IS
+width: 4080
+height: 3048
+cpp: 1
+wb_coeffs: [1.6930001, 0.891, 1.7220001, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 24, 10, 20]
+blackareas: []
+orientation: Normal
+sha256data: 2d39e6a9aa5541a26e6c975619b94908429fa469f35ac7f5617f4b8242f8be6b

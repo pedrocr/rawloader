@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T1i
+clean_make: Canon
+clean_model: EOS Rebel T1i
+width: 4832
+height: 3204
+cpp: 1
+wb_coeffs: [2180.0, 1024.0, 1389.0, NaN]
+whitelevels: [15600, 15600, 15600, 15600]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[4763.0, 712.0, -646.0], [-6821.0, 14399.0, 2640.0], [-1921.0, 3276.0, 6561.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [30, 48, 32, 62]
+blackareas: []
+orientation: Normal
+sha256data: 7c25c2116d665f591a217d691e0734768bfa3db6645f20d6f49f81157e9a02cf

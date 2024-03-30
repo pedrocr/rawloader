@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GF3
+clean_make: Panasonic
+clean_model: DMC-GF3
+width: 4088
+height: 2264
+cpp: 1
+wb_coeffs: [587.0, 265.0, 327.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[9051.0, -2468.0, -1204.0], [-5212.0, 13276.0, 2121.0], [-1197.0, 2510.0, 6890.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 72, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0bd4edd6f48c288fdac5bbaade0af19a213be8c66167b22ad7c6ddb40688a32b

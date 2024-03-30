@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A500
+clean_make: Sony
+clean_model: DSLR-A500
+width: 4288
+height: 2858
+cpp: 1
+wb_coeffs: [2212.0, 1024.0, 1416.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6046.0, -1127.0, -278.0], [-5574.0, 13076.0, 2786.0], [-691.0, 1419.0, 7625.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1e44385efde48bb3e91771cba8d3f6f2190d5a28312f300cf2f15039a95c8a87

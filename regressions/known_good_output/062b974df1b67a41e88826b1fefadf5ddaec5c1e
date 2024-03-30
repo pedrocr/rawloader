@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SD450
+clean_make: Canon
+clean_model: Canon PowerShot SD450
+width: 2672
+height: 1968
+cpp: 1
+wb_coeffs: [1.201, 0.988, 2.8470001, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.536034, -0.173429, -0.089823], [-0.290416, 0.735807, 0.047894], [-0.071455, 0.114314, 0.274533], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 44, 0, 12]
+blackareas: []
+orientation: Normal
+sha256data: 6f6edcaf916d34dfe1d06e46efd431ad48ee801018227f139eb040da4e90a04d

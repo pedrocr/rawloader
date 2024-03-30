@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G920F
+clean_make: samsung
+clean_model: SM-G920F
+width: 5328
+height: 3000
+cpp: 1
+wb_coeffs: [1.6650406, 1.0, 1.281602, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4193a358af10cf9b7d6146a4dba1fcf09a4ff88e82d891dffc4a669a17965004

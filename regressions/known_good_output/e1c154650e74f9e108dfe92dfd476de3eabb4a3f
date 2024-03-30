@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-5000
+clean_make: Sony
+clean_model: ILCE-5000
+width: 5504
+height: 3656
+cpp: 1
+wb_coeffs: [2768.0, 1024.0, 1444.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1456.0, -455.0], [-4764.0, 12135.0, 2980.0], [-707.0, 1425.0, 6701.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 34, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c5f141504a44f0e7025ad9206637715f9e675c2600c830eea64f22ada6e53526

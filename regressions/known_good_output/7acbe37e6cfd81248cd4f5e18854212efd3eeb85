@@ -1,0 +1,16 @@
+make: HUAWEI
+model: CLT-L09
+clean_make: HUAWEI
+clean_model: CLT-L09
+width: 7296
+height: 5472
+cpp: 1
+wb_coeffs: [2.10989, 1.0, 1.6053113, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5ed153bbb6912be9c01fdcb7b39b1034274481dd1626b1442115ccfeabfe5c4f

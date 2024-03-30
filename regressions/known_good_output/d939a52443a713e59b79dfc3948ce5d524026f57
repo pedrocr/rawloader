@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-3 II
+clean_make: Pentax
+clean_model: K-3 II
+width: 6080
+height: 4032
+cpp: 1
+wb_coeffs: [2.1914063, 1.0, 1.4414063, NaN]
+whitelevels: [16317, 16317, 16317, 16317]
+blacklevels: [1, 1, 1, 1]
+xyz_to_cam: [[0.86172485, -0.2604065, -0.11540222], [-0.39953613, 1.2301178, 0.18806458], [-0.103515625, 0.18151855, 0.690094], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [4, 42, 4, 10]
+blackareas: []
+orientation: Normal
+sha256data: f19acfcf3bdaecfd2196054c7989063d96bab0d1be6dbdaf8bf48d2053ffa6ba

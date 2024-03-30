@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D2X
+clean_make: Nikon
+clean_model: D2X
+width: 4320
+height: 2868
+cpp: 1
+wb_coeffs: [336.0, 256.0, 503.0, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10231.0, -2769.0, -1255.0], [-8301.0, 15900.0, 2552.0], [-797.0, 680.0, 7148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 32, 8, 0]
+blackareas: []
+orientation: Normal
+sha256data: 22d9226a991eb715676cea4d9dd3a2bd2810a18fab06f858aa502ad757c90ff6

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M2
+clean_make: Canon
+clean_model: EOS M2
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [1556.0, 1024.0, 2752.0, NaN]
+whitelevels: [12277, 12277, 12277, 12277]
+blacklevels: [2050, 2048, 2047, 0]
+xyz_to_cam: [[6400.0, -480.0, -888.0], [-5294.0, 13416.0, 2047.0], [-1296.0, 2203.0, 6137.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [52, 0, 0, 72]
+blackareas: [(4, 5280, 48, 0), (0, 70, 3528, 0)]
+orientation: Normal
+sha256data: ae783ac09c8a4ae9481b3d51f3c6d1413fd056d8ae02f8a33d04133eaceed30d

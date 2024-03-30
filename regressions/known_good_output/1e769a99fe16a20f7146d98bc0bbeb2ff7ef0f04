@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad H5D-50c
+clean_make: Hasselblad
+clean_model: H5D-50c
+width: 8374
+height: 6304
+cpp: 1
+wb_coeffs: [2.5829773, 1.0, 1.4042816, NaN]
+whitelevels: [62914, 62914, 62914, 62914]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[4932.0, -835.0, 141.0], [-4878.0, 11868.0, 3437.0], [-1138.0, 1961.0, 7067.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [96, 46, 0, 48]
+blackareas: []
+orientation: Normal
+sha256data: 59a801de5157445c460015b7362de61eee145305de10a9a56d95b7aea68561c1

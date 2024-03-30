@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A640
+clean_make: Canon
+clean_model: Canon PowerShot A640
+width: 3736
+height: 2772
+cpp: 1
+wb_coeffs: [1.761, 0.917, 1.6370001, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[1.3124, -0.5329, -0.139], [-0.3602, 1.1658, 0.1944], [-0.1612, 0.2863, 0.4885], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 54, 8, 14]
+blackareas: []
+orientation: Normal
+sha256data: 239d98dc70b7bd184432e7260a3bd91dd6a1be7d2a967f3f2856f8d47563f8bd

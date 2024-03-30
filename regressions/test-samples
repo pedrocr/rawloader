@@ -3,41 +3,22 @@
 require 'fileutils'
 
 BASE = File.dirname(__FILE__)
-RAWBASE="https://raw.pixls.us/data/"
-FILELIST = File.expand_path('filelist.sha1', BASE)
-FILENUM = File.open(FILELIST).each.count
-
-$stderr.puts "== There are #{FILENUM} total files"
+require File.expand_path("util.rb", BASE)
 
 def each_sample
-  File.open(FILELIST).each_with_index do |line, i|
+  FILES.each_with_index do |vals, i|
+    hash, others = vals
+    file, location = others
     $stderr.write "\r"
     $stderr.write "Processing #{i+1} of #{FILENUM}"
-    lineparts = line.split("*")
-    hash = lineparts[0].strip
-    location = lineparts[1].strip
-    filedir = File.expand_path("files", BASE)
-    file = File.expand_path(hash, filedir)
     yield hash,file,location
   end
   $stderr.write "\n"
 end
 
-$stderr.puts "== Fetching raw file samples from https://raw.pixls.us"
+$stderr.puts "== Fetching raw file samples"
 each_sample do |hash, file, location|
-  existhash = nil
-  if File.exists?(file)
-    existhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
-  end
-  if existhash != hash
-    puts "Downloading file \"#{file}\"!"
-    system "curl -g -f -# \"#{RAWBASE+location.gsub(" ","%20")}\" --create-dirs -o \"#{file}\""
-    newhash = IO.popen("sha1sum \"#{file}\"").read.split(" ")[0]
-    if newhash != hash
-      $stderr.puts "== Download checksum failed, aborting run"
-      exit 2
-    end
-  end
+  download_file(hash, file, location)
 end
 
 $stderr.puts "== Compiling rawloader"

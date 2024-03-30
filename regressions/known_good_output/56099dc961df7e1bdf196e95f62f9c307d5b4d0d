@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Rebel T6i
+clean_make: Canon
+clean_model: EOS Rebel T6i
+width: 6096
+height: 4056
+cpp: 1
+wb_coeffs: [2485.0, 1024.0, 1586.0, NaN]
+whitelevels: [14580, 14580, 14580, 14580]
+blacklevels: [2048, 2048, 2048, 2048]
+xyz_to_cam: [[6362.0, -823.0, -847.0], [-4426.0, 12109.0, 2616.0], [-743.0, 1857.0, 5635.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 0, 0, 72]
+blackareas: []
+orientation: Normal
+sha256data: 691d7ad49df398be28e894d077eb80d7e646277b85b1c5e9573d3614fc490895

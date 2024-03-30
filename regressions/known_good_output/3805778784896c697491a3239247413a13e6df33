@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M3
+clean_make: Canon
+clean_model: EOS M3
+width: 6096
+height: 4056
+cpp: 1
+wb_coeffs: [1354.0, 971.0, 2535.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [2051, 2052, 2052, 0]
+xyz_to_cam: [[6362.0, -823.0, -847.0], [-4426.0, 12109.0, 2616.0], [-743.0, 1857.0, 5635.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 0, 0, 72]
+blackareas: [(2, 6096, 32, 0), (0, 70, 4056, 2)]
+orientation: Normal
+sha256data: 5b333960e662080435d4d70bbc1fcb1171c95ee8a9093cb82f95f92b2b4e0380

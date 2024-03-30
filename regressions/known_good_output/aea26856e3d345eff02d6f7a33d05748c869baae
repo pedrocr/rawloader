@@ -1,0 +1,16 @@
+make: Phase One A/S
+model: P65+
+clean_make: Phase One A/S
+clean_model: P65+
+width: 9036
+height: 6784
+cpp: 1
+wb_coeffs: [1.27644, 1.0, 1.41328, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[8035.0, 435.0, -962.0], [-6001.0, 13872.0, 2320.0], [-1159.0, 3065.0, 5434.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 16, 32, 46]
+blackareas: []
+orientation: Unknown
+sha256data: 2c89e1f9158791271588b7fb9ec673469b56fef85dca3eee1c2648bfb714a9c4

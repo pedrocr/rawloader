@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 1000D
+clean_make: Canon
+clean_model: EOS 1000D
+width: 3948
+height: 2622
+cpp: 1
+wb_coeffs: [2503.0, 1024.0, 1407.0, NaN]
+whitelevels: [3600, 3600, 3600, 3600]
+blacklevels: [258, 256, 255, 0]
+xyz_to_cam: [[6771.0, -1139.0, -977.0], [-7818.0, 15123.0, 2928.0], [-1244.0, 1437.0, 7533.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 42]
+blackareas: [(0, 41, 2622, 0)]
+orientation: Normal
+sha256data: dd354d309e2c7662ea4dd4715550fee9a923f58b8113c9261ca02152c4b6bc8e

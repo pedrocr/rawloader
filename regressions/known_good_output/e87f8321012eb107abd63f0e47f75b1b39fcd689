@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: C8080WZ
+clean_make: Olympus
+clean_model: C8080WZ
+width: 3280
+height: 2453
+cpp: 1
+wb_coeffs: [553.0, 256.0, 441.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8606.0, -2509.0, -1014.0], [-8238.0, 15714.0, 2703.0], [-942.0, 979.0, 7760.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 27684eb1d6704d8817f25f21c685f9168b6d49165fdf53d2987555de5deca98a

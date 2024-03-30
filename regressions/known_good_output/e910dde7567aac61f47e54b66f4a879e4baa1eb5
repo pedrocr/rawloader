@@ -1,0 +1,16 @@
+make: Xiaomi
+model: Mi 9 Lite
+clean_make: Xiaomi
+clean_model: Mi 9 Lite
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [1.8351254, 1.0, 1.7181208, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.4375, -0.6796875, -0.21875], [-0.96875, 1.875, 0.0390625], [0.0390625, -0.140625, 0.734375], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 3d075d481599a247498fceabe9cf0f98f6c80d2590cbd7c4540430056b4a3605

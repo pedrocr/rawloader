@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ28
+clean_make: Panasonic
+clean_model: DMC-FZ28
+width: 3724
+height: 2450
+cpp: 1
+wb_coeffs: [417.0, 263.0, 504.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [15, 15, 15, 15]
+xyz_to_cam: [[10109.0, -3488.0, -993.0], [-5412.0, 12812.0, 2916.0], [-1305.0, 2140.0, 5543.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 56, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8e6f50b4ca8945733a6167e090061927d7c4c662d0ba98fee90898685cbfd069

@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX 645Z
+clean_make: Pentax
+clean_model: 645Z
+width: 8384
+height: 6208
+cpp: 1
+wb_coeffs: [2.109375, 1.0, 1.4648438, NaN]
+whitelevels: [16316, 16316, 16316, 16316]
+blacklevels: [1, 1, 1, 0]
+xyz_to_cam: [[0.95510864, -0.30117798, -0.12348938], [-0.3684845, 1.2133331, 0.17208862], [-0.10192871, 0.1887207, 0.6544342], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [4, 64, 4, 52]
+blackareas: []
+orientation: Normal
+sha256data: 4461a310782005d91d01c8cec5a0329e50b2e30586414254fa4641172938feaf

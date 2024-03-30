@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: EK-GN120
+clean_make: Samsung
+clean_model: EK-GN120
+width: 5546
+height: 3714
+cpp: 1
+wb_coeffs: [10800.0, 4096.0, 7104.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7557.0, -2522.0, -739.0], [-4679.0, 12949.0, 1894.0], [-840.0, 1777.0, 5311.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [25, 11, 29, 45]
+blackareas: []
+orientation: Normal
+sha256data: 48846b43a1c84610c3e71e4b4516d5857b28506849989d8d67c3313b6f7542be

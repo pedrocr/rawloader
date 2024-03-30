@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-500
+clean_make: Olympus
+clean_model: E-500
+width: 3360
+height: 2504
+cpp: 1
+wb_coeffs: [542.0, 256.0, 300.0, NaN]
+whitelevels: [3967, 3967, 3967, 3967]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[8136.0, -1968.0, -299.0], [-5481.0, 13742.0, 1871.0], [-2556.0, 4205.0, 6630.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 20, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: bd231fd8c50e85f774fe142e9633c64f6844ae4b8758889f2befedf2ffc944f6

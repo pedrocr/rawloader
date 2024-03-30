@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T2i
+clean_make: Canon
+clean_model: EOS Rebel T2i
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [1886.0, 1024.0, 2162.0, NaN]
+whitelevels: [15831, 15831, 15831, 15831]
+blacklevels: [2048, 2049, 2051, 0]
+xyz_to_cam: [[6941.0, -1164.0, -857.0], [-3825.0, 11597.0, 2534.0], [-416.0, 1540.0, 6039.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [54, 0, 0, 148]
+blackareas: [(4, 5344, 48, 0), (0, 140, 3516, 0)]
+orientation: Normal
+sha256data: f985635fe48abec2a0fda854851fccf76f502590e688a2f6dc0a8658a369704a

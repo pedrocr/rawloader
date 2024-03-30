@@ -1,0 +1,16 @@
+make: KODAK
+model: EOSDCS1B        FILE VERSION 3
+clean_make: Kodak
+clean_model: EOS DCS 1
+width: 3072
+height: 2048
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [7638, 7638, 7638, 7638]
+blacklevels: [19, 19, 19, 19]
+xyz_to_cam: [[10592.0, -2206.0, -967.0], [-1944.0, 11685.0, 230.0], [2206.0, 670.0, 1273.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [3, 0, 3, 0]
+blackareas: []
+orientation: Unknown
+sha256data: aae8222a9d199989dbd01456797fa44245dadeb4df4305839ac900389d571a8c

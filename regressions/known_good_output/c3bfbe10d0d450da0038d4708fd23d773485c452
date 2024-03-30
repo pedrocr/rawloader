@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ81
+clean_make: Panasonic
+clean_model: DMC-TZ81
+width: 5040
+height: 3688
+cpp: 1
+wb_coeffs: [534.0, 256.0, 445.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [154, 154, 154, 154]
+xyz_to_cam: [[8550.0, -2908.0, -842.0], [-3195.0, 11529.0, 1881.0], [-338.0, 1603.0, 4631.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 126, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 79e6c5d18fb382e78c37cb2789b9b58c6ef16c2e3148f900b70f0849e73ef1cb

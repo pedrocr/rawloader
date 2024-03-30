@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot A620
+clean_make: Canon
+clean_model: PowerShot A620
+width: 3152
+height: 2340
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 0]
+xyz_to_cam: [[15265.0, -6193.0, -1558.0], [-4125.0, 12116.0, 2010.0], [-888.0, 1639.0, 5220.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 4, 0, 36]
+blackareas: [(0, 30, 2340, 0)]
+orientation: Unknown
+sha256data: c7f2b97db868ccfa2a74f60825d25ce79fcbaab62bc3742438acd9641223b91b

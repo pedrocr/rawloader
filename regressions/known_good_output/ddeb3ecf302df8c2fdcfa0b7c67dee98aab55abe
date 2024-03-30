@@ -1,0 +1,16 @@
+make: Eyedeas
+model: E1
+clean_make: Eyedeas
+clean_model: E1
+width: 4640
+height: 3480
+cpp: 1
+wb_coeffs: [2.4277737, 1.0, 1.5176809, NaN]
+whitelevels: [16380, 16380, 16380, 16380]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[0.677, -0.1895, -0.0744], [-0.5232, 1.3145, 0.2303], [-0.1664, 0.2691, 0.5703], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: bd0b168e4829cbc134e84be2caa6d635ec294fe482f1c762dccfa6b0a890f4d8

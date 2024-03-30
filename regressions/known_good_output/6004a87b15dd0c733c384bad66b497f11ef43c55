@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX1000
+clean_make: Samsung
+clean_model: NX1000
+width: 5632
+height: 3720
+cpp: 1
+wb_coeffs: [10480.0, 4096.0, 7664.0, NaN]
+whitelevels: [3750, 3750, 3750, 3750]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6933.0, -2268.0, -753.0], [-4921.0, 13387.0, 1647.0], [-803.0, 1641.0, 6096.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [17, 71, 55, 89]
+blackareas: []
+orientation: Normal
+sha256data: f8d04451eade7136fb51af4b5a612f8bd39a2d1b28fccad4e7dfc8dc45989bc6

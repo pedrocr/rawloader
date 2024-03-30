@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S6500fd
+clean_make: Fujifilm
+clean_model: FinePix S6500fd
+width: 3592
+height: 3591
+cpp: 1
+wb_coeffs: [511.0, 336.0, 469.0, NaN]
+whitelevels: [15564, 15564, 15564, 15564]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[12628.0, -4887.0, -1401.0], [-6861.0, 14996.0, 1962.0], [-2198.0, 2782.0, 7091.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ee61a73500915b3a9fc70d58ce7015a32a065464ac4c0a832d90328503f9e50c

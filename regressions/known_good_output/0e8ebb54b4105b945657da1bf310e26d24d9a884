@@ -1,0 +1,16 @@
+make: Panasonic
+model: DC-GH5
+clean_make: Panasonic
+clean_model: DC-GH5
+width: 5264
+height: 3904
+cpp: 1
+wb_coeffs: [606.0, 256.0, 456.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [144, 144, 144, 144]
+xyz_to_cam: [[7641.0, -2336.0, -605.0], [-3218.0, 11299.0, 2187.0], [-485.0, 1338.0, 5121.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 56, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 82720c65758567a56e0b7fe3e2d8a45856a9b3f84c9509a1f3dec75432342375

@@ -1,0 +1,16 @@
+make: SIGMA
+model: sd Quattro
+clean_make: SIGMA
+clean_model: sd Quattro
+width: 5888
+height: 3776
+cpp: 3
+wb_coeffs: [1.0128632, 1.0499878, 1.0541992, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.3013763, 0.04699707, -0.36528015], [0.2998047, 0.8083954, -0.11766052], [-0.010360718, 0.78533936, 0.27270508], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [80, 236, 80, 204]
+blackareas: []
+orientation: Normal
+sha256data: a71127580899ef988d01fcdf043b04de7bc868e1eca3a1400118a4ba975bccfb

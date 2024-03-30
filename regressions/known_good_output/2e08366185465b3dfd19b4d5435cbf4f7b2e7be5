@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S1
+clean_make: FUJIFILM
+clean_model: FinePix S1
+width: 4624
+height: 3470
+cpp: 1
+wb_coeffs: [456.0, 256.0, 403.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[12297.0, -4882.0, -1202.0], [-2106.0, 10691.0, 1623.0], [-88.0, 1312.0, 4790.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 68af255b57bc6cf19eede92caba15b1bb88b05ad3a312f61ce8234209ed0f379

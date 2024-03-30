@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P330
+clean_make: Nikon
+clean_model: Coolpix P330
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.8085938, 1.0, 1.7421875, NaN]
+whitelevels: [0, 0, 0, 0]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10321.0, -3920.0, -931.0], [-2750.0, 11146.0, 1824.0], [-442.0, 1545.0, 5539.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ff5b54021517d053d452b822aeb51a1c9702264eea8a53f8fbdc93aa9a0ff080

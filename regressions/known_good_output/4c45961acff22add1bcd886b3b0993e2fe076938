@@ -1,0 +1,16 @@
+make: NIKON
+model: E5700
+clean_make: Nikon
+clean_model: E5700
+width: 2576
+height: 1924
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[-5368.0, 11478.0, 2368.0], [5537.0, -113.0, 3148.0], [-4969.0, 10021.0, 5782.0], [778.0, 9028.0, 211.0]]
+cfa: RGEB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d474d277dcb36b98bb03f4aff11aa342c0c10e8697638b38996c800d8dc0d2c4

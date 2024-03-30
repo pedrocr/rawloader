@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M5
+clean_make: Canon
+clean_model: Canon EOS M5
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1588.0, 1024.0, 1343.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [511, 512, 512, 0]
+xyz_to_cam: [[8532.0, -701.0, -1167.0], [-4095.0, 11879.0, 2508.0], [-797.0, 2424.0, 7010.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: 43b894e709578613c3acc13922407e093238c4532b77c4b872e9f6e554aeb347

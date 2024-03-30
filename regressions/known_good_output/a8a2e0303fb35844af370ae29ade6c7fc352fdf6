@@ -1,0 +1,16 @@
+make: Nokia
+model: Lumia 1020
+clean_make: Nokia
+clean_model: Lumia 1020
+width: 7152
+height: 5360
+cpp: 1
+wb_coeffs: [1.5078408, 1.0, 1.1445576, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.939, -0.1511, -0.0964], [-0.3983, 1.2153, 0.1384], [-0.088, 0.412, 0.5662], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d602533607fa0a6ca2877ea0c9863cd6c57a6df8b09d1060ac442785fd22c611

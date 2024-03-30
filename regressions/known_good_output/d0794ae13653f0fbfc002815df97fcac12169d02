@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X30
+clean_make: Fujifilm
+clean_model: X30
+width: 4096
+height: 3012
+cpp: 1
+wb_coeffs: [526.0, 302.0, 582.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [257, 257, 257, 257]
+xyz_to_cam: [[12328.0, -5256.0, -1144.0], [-4469.0, 12927.0, 1675.0], [-87.0, 1291.0, 4351.0], [0.0, 0.0, 0.0]]
+cfa: GBGGRGRGRBGBGBGGRGGRGGBGBGBRGRGRGGBG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5c2d7b7cd20200bcad801f746e61ce16a3ec2571178deec13271db222b17253f

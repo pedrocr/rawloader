@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G9 X Mark II
+clean_make: Canon
+clean_model: PowerShot G9 X Mark II
+width: 5632
+height: 3710
+cpp: 1
+wb_coeffs: [2198.0, 1024.0, 1754.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [2048, 2048, 2048, 0]
+xyz_to_cam: [[10056.0, -4131.0, -944.0], [-2576.0, 11143.0, 1625.0], [-238.0, 1294.0, 5179.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [16, 0, 0, 96]
+blackareas: [(0, 5632, 15, 0), (0, 70, 3710, 0)]
+orientation: Normal
+sha256data: fa1767d5966828088c7fe4cfc6db923f0acbf400225ff270409d0541839774f4

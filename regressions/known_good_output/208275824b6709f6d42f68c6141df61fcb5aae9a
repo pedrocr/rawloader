@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX Q7
+clean_make: PENTAX
+clean_model: PENTAX Q7
+width: 4064
+height: 3000
+cpp: 1
+wb_coeffs: [1.5625, 1.0, 2.375, NaN]
+whitelevels: [3983, 3983, 3983, 3983]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.2994537, -0.5593262, -0.11071777], [-0.18788147, 1.0139465, 0.2026825], [-0.00642395, 0.123291016, 0.49188232], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6dbbb396f865c57b3aa057e762dd036567f34c6bfec45c8672ff092e2283c628

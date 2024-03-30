@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A57
+clean_make: Sony
+clean_model: SLT-A57
+width: 4928
+height: 3276
+cpp: 1
+wb_coeffs: [1836.0, 1024.0, 2576.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1456.0, -455.0], [-4764.0, 12135.0, 2980.0], [-707.0, 1425.0, 6701.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 54fb59ab81c589c50c8e18c25114d7c9183bebcdaf372d1c159ebdc93252525e

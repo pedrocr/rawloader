@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K200D
+clean_make: PENTAX
+clean_model: PENTAX K200D
+width: 3936
+height: 2624
+cpp: 1
+wb_coeffs: [1.8164063, 1.0, 1.2265625, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.0348053, -0.33732605, -0.10810852], [-0.48216248, 1.2209625, 0.21798706], [-0.026397705, 0.035125732, 0.75839233], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9340c004e60b13dba8a3133459b71fc688a2117c7096960edf4e981e32f2f23d

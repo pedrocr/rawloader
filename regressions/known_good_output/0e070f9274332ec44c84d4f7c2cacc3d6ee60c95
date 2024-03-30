@@ -1,0 +1,16 @@
+make: Pentax
+model: Optio S4
+clean_make: Pentax
+clean_model: Optio S4
+width: 2346
+height: 1737
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [3968, 3968, 3968, 3968]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[15591.0, -6402.0, -1592.0], [-5365.0, 13198.0, 2168.0], [-1300.0, 1824.0, 5075.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 22, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: fcb32db9890fac78d532546b58792f641dff94ef296190ee0697ffffc9b2673f

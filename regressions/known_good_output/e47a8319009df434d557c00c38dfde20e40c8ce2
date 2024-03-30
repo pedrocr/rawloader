@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-PM1
+clean_make: Olympus
+clean_model: E-PM1
+width: 4080
+height: 3040
+cpp: 1
+wb_coeffs: [594.0, 256.0, 350.0, NaN]
+whitelevels: [4011, 4011, 4011, 4011]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[7575.0, -2159.0, -571.0], [-3722.0, 11341.0, 2725.0], [-1434.0, 2819.0, 6271.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 24, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4623438eb1bbded8da572ef28e80badc0853e256b54d95a2c24b573ccdfb34a9

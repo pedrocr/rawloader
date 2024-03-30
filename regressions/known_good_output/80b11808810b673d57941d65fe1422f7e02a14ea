@@ -1,0 +1,16 @@
+make: SAMSUNG TECHWIN Co.
+model: SAMSUNG GX10
+clean_make: SAMSUNG TECHWIN Co.
+clean_model: SAMSUNG GX10
+width: 3936
+height: 2624
+cpp: 1
+wb_coeffs: [1.6367186, 1.0, 1.140625, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.0986023, -0.25726318, -0.038009644], [-0.56855774, 1.2591553, 0.2501526], [-0.0675354, 0.060775757, 0.9779358], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ef6f38dc09014e2344c79e4cb2f11f24ab0ab15dae7dc41607832605a787eb2c

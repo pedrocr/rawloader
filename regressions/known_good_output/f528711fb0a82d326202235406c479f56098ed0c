@@ -1,0 +1,16 @@
+make: HUAWEI
+model: ANE-LX1
+clean_make: HUAWEI
+clean_model: ANE-LX1
+width: 4608
+height: 3456
+cpp: 1
+wb_coeffs: [1.9963369, 1.0, 1.7252747, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e08fe969af7efc387dd143e17a2eeea0d47e4bf81d8222446a45cc227bbc5285

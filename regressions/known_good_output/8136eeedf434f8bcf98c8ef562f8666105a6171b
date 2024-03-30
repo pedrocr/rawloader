@@ -1,0 +1,16 @@
+make: SONY
+model: ILCA-77M2
+clean_make: Sony
+clean_model: ILCA-77M2
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2816.0, 1024.0, 1696.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1732.0, -443.0], [-4100.0, 11989.0, 2381.0], [-704.0, 1467.0, 5992.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 26, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0df60d363181ac6d3a0cbf260596020ee44520b02c601967c545e46aa2f668c5

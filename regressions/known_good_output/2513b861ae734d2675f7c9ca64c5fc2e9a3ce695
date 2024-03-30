@@ -1,0 +1,16 @@
+make: Phase One A/S
+model: IQ140
+clean_make: Phase One
+clean_model: IQ140
+width: 3712
+height: 2792
+cpp: 1
+wb_coeffs: [1.24968, 1.0, 1.4845599, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[8035.0, 435.0, -962.0], [-6001.0, 13872.0, 2320.0], [-1159.0, 3065.0, 5434.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 16, 46, 36]
+blackareas: []
+orientation: Unknown
+sha256data: c9de5d4bb11bf24446f3afe9835034aea03d5a0b5f6ee5eab53f20cce1c71b2c

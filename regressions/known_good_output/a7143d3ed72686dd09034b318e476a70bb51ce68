@@ -1,0 +1,16 @@
+make: Panasonic
+model: DC-TZ90
+clean_make: Panasonic
+clean_model: DC-TZ90
+width: 5264
+height: 3904
+cpp: 1
+wb_coeffs: [533.0, 256.0, 447.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [139, 139, 139, 139]
+xyz_to_cam: [[9052.0, -3117.0, -883.0], [-3045.0, 11346.0, 1927.0], [-205.0, 1520.0, 4730.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: bb7cf6dc6d973119ffb9ed487207593096edd73629f70f91268cfb3453ce70e2

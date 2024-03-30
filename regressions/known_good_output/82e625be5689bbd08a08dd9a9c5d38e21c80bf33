@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-A1
+clean_make: Fujifilm
+clean_model: X-A1
+width: 5120
+height: 3288
+cpp: 1
+wb_coeffs: [347.0, 302.0, 933.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[11086.0, -4555.0, -839.0], [-3512.0, 11310.0, 2517.0], [-815.0, 1341.0, 5940.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 168, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2dacc2160cb4f665c20357b9f36b7633bb34f0a0eb37333ad1a9bdc603fbfd4e

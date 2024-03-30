@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX100
+clean_make: Sony
+clean_model: DSC-RX100
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2264.0, 1024.0, 2036.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[8651.0, -2754.0, -1057.0], [-3464.0, 12207.0, 1373.0], [-568.0, 1398.0, 4434.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 12, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5620a4d8bedcb20711df526d02501378429683233935da08f7e5b81a5c794aa9

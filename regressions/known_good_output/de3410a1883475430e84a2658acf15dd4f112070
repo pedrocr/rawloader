@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON 1 J1
+clean_make: Nikon
+clean_model: 1 J1
+width: 3904
+height: 2606
+cpp: 1
+wb_coeffs: [1.65625, 1.0, 1.7070313, NaN]
+whitelevels: [3300, 3300, 3300, 3300]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8994.0, -2667.0, -865.0], [-4594.0, 12324.0, 2552.0], [-699.0, 1786.0, 6260.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 2, 0]
+blackareas: []
+orientation: Normal
+sha256data: 858bf183f77f05d8bfb0c6916320824aa2c81276903f9158718fdde9dcdc5f2a

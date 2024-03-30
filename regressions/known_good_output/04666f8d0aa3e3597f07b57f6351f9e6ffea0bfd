@@ -1,0 +1,16 @@
+make: bq
+model: Aquaris U Plus
+clean_make: bq
+clean_model: Aquaris U Plus
+width: 4640
+height: 3480
+cpp: 1
+wb_coeffs: [1.6842105, 1.007874, 2.1694915, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.8515625, -1.28125, -0.328125], [-1.0703125, 2.1796875, -0.0078125], [0.0625, -0.1484375, 1.3515625], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 9e541326fc95ab8630f5d6c8be3ad70722413b0f58c334f07e852b4a77806f73

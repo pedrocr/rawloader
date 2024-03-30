@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX100
+clean_make: Panasonic
+clean_model: DMC-LX100
+width: 3248
+height: 3104
+cpp: 1
+wb_coeffs: [592.0, 256.0, 406.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[8844.0, -3538.0, -768.0], [-3709.0, 11762.0, 2200.0], [-698.0, 1792.0, 5220.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 144, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 87905b8b2b4e5a1544af2599826f473c686cf51c57494875106dd4aabb1ae133

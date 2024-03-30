@@ -1,0 +1,16 @@
+make: XIAOYI
+model: YIAC 3
+clean_make: XIAOYI
+clean_model: YIAC 3
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [2.300781, 1.0, 1.3007808, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8489, -0.2583, -0.1036], [-0.8051, 1.5583, 0.2643], [-0.1307, 0.1407, 0.7354], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e9d909cb6c1718e59dfbc7c1207ce770cdbc153ebab36e1a44bfddfb5cfd2440

@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: RICOH GR III
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: RICOH GR III
+width: 6112
+height: 4064
+cpp: 1
+wb_coeffs: [2.6484375, 1.0, 1.7265624, NaN]
+whitelevels: [16314, 16314, 16314, 16314]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.6132965, -0.14167786, -0.077697754], [-0.46139526, 1.2727814, 0.20654297], [-0.06652832, 0.14855957, 0.5911255], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [28, 34, 12, 58]
+blackareas: []
+orientation: Normal
+sha256data: a2258ae700047b0aa2a51b94e11f09f19117cc397d883d8b9ed1626fe5cc33c7

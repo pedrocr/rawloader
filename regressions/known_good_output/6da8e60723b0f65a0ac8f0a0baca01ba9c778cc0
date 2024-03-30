@@ -1,0 +1,16 @@
+make: EASTMAN KODAK COMPANY
+model: KODAK P712 ZOOM DIGITAL CAMERA
+clean_make: Kodak
+clean_model: P712
+width: 3088
+height: 2310
+cpp: 1
+wb_coeffs: [169984.0, 65536.0, 86784.0, NaN]
+whitelevels: [4030, 4030, 4030, 4030]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9658.0, -3314.0, -823.0], [-5163.0, 12695.0, 2768.0], [-1342.0, 1843.0, 6044.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5b6e01f3254ae13426fb8d7c74e1fabdc71dd3cc66b67d90d1e01e70e8136a44

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-L10
+clean_make: Panasonic
+clean_model: DMC-L10
+width: 3710
+height: 2751
+cpp: 1
+wb_coeffs: [518.0, 263.0, 406.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8025.0, -1942.0, -1050.0], [-7920.0, 15904.0, 2100.0], [-2456.0, 3005.0, 7039.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 28, 1, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 70277f8ca372edc8d7f304a39194ac73bc8e0b330fdbe81ffe4ddc9a8f7b5416

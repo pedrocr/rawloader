@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GM1S
+clean_make: Panasonic
+clean_model: DMC-GM1S
+width: 4816
+height: 3464
+cpp: 1
+wb_coeffs: [584.0, 256.0, 427.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[6770.0, -1895.0, -744.0], [-5232.0, 13145.0, 2303.0], [-1664.0, 2691.0, 5703.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 208, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 81f08981eee51a1288dd0639d5ebf7695435b3b81f0fd491b6d89910023008c8

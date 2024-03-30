@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A230
+clean_make: Sony
+clean_model: DSLR-A230
+width: 3880
+height: 2608
+cpp: 1
+wb_coeffs: [1772.0, 1024.0, 1652.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9847.0, -3091.0, -929.0], [-8485.0, 16346.0, 2225.0], [-714.0, 595.0, 7103.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b0b7f8bfa9157e78b52b8442e5ee489e56b3549ea1a03871ce0dbb28f3eb810b

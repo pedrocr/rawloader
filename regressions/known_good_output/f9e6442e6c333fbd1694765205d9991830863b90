@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot SX110 IS
+clean_make: Canon
+clean_model: PowerShot SX110 IS
+width: 3720
+height: 2772
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 0]
+xyz_to_cam: [[14134.0, -5576.0, -1527.0], [-1991.0, 10719.0, 1273.0], [-1158.0, 1929.0, 3581.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 30, 0, 6]
+blackareas: [(0, 3720, 2772, 3690)]
+orientation: Unknown
+sha256data: 1952e8a23ffee0a8d0747e032b0f46f4f95c8e16ceed97a59317d24c0ebca4c0

@@ -1,0 +1,16 @@
+make: SONY
+model: NEX-3
+clean_make: Sony
+clean_model: NEX-3
+width: 4608
+height: 3072
+cpp: 1
+wb_coeffs: [1692.0, 1024.0, 2076.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6549.0, -1550.0, -436.0], [-4880.0, 12435.0, 2753.0], [-854.0, 1868.0, 6976.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 672f9b0faf86eb6212d8e0bcd2c44d39e8e906ffb3bbad414354032e27ce01df

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ2000
+clean_make: Panasonic
+clean_model: DMC-FZ2000
+width: 5488
+height: 3664
+cpp: 1
+wb_coeffs: [644.0, 256.0, 465.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [141, 141, 141, 141]
+xyz_to_cam: [[7386.0, -2443.0, -743.0], [-3437.0, 11864.0, 1757.0], [-608.0, 1660.0, 4766.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5e5de63b1318216ecddd59c8866c259de9f9c59f73f55ba355b325373380c4dc

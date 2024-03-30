@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D40X
+clean_make: Nikon
+clean_model: D40X
+width: 3904
+height: 2616
+cpp: 1
+wb_coeffs: [1.8359375, 1.0, 1.2578125, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8819.0, -2543.0, -911.0], [-9025.0, 16928.0, 2151.0], [-1329.0, 1213.0, 8449.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: 3b64a628e2c604c1599addf11e02814fa0ee2276bacda40a9ce179ab0a31b769

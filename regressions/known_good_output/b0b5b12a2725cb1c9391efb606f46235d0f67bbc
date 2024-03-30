@@ -1,0 +1,16 @@
+make: RICOH
+model: GR DIGITAL 2
+clean_make: RICOH
+clean_model: GR DIGITAL 2
+width: 3656
+height: 2744
+cpp: 1
+wb_coeffs: [1.6700011, 1.0, 1.9900023, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8846, -0.2704, -0.0729], [-0.5265, 1.2708, 0.2871], [-0.1471, 0.1955, 0.6218], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0c30d6853a8946a1e1441f78350a008f8b03e3ddfdba04354b3eac640192dc93

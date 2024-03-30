@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX200
+clean_make: Samsung
+clean_model: NX200
+width: 5632
+height: 3720
+cpp: 1
+wb_coeffs: [10528.0, 4096.0, 6736.0, NaN]
+whitelevels: [3750, 3750, 3750, 3750]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6933.0, -2268.0, -753.0], [-4921.0, 13387.0, 1647.0], [-803.0, 1641.0, 6096.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [17, 71, 55, 89]
+blackareas: []
+orientation: Rotate90
+sha256data: 42ef3ca0ada3805e8402525e87bd3036a879d041c06103d9dd7aed313bf1f822

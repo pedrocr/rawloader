@@ -1,0 +1,16 @@
+make: KanDao
+model: QooCam
+clean_make: KanDao
+clean_model: QooCam
+width: 4320
+height: 2160
+cpp: 1
+wb_coeffs: [1.6250017, 1.0, 2.16797, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.0515, -0.366, -0.0883], [-0.2018, 1.0655, 0.1565], [-0.0877, 0.2274, 0.5066], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cadda9ec86207d8c7a6de660d1ea165703d675a91d48d8e205e7baca0c3bc2f7

@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-330
+clean_make: Olympus
+clean_model: E-330
+width: 3280
+height: 2450
+cpp: 1
+wb_coeffs: [448.0, 256.0, 336.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [70, 70, 70, 70]
+xyz_to_cam: [[8961.0, -2473.0, -1084.0], [-7979.0, 15990.0, 2067.0], [-2319.0, 3035.0, 8249.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 30, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 36f8e058e2b1c6da64746254b7e9af8d5574d33867035382546a4764b54a548b

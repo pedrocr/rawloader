@@ -1,0 +1,16 @@
+make: SONY
+model: NEX-C3
+clean_make: Sony
+clean_model: NEX-C3
+width: 4928
+height: 3280
+cpp: 1
+wb_coeffs: [2656.0, 1024.0, 1572.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5991.0, -1456.0, -455.0], [-4764.0, 12135.0, 2980.0], [-707.0, 1425.0, 6701.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a61752b28cc86bb98976c63f95533cdb118ca68bb9d24ce791afd55b45ba340d

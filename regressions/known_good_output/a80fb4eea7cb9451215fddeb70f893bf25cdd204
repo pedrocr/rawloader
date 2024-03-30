@@ -1,0 +1,16 @@
+make: HUAWEI
+model: VOG-L29
+clean_make: HUAWEI
+clean_model: VOG-L29
+width: 3264
+height: 2448
+cpp: 1
+wb_coeffs: [2.0210624, 1.0, 1.6712453, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 74f1dcd2cc13148087cc0daed9c2eabedf7c09f62069986246615eb6d1045e16

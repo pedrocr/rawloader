@@ -1,0 +1,16 @@
+make: SEIKO EPSON CORP.
+model: R-D1
+clean_make: Epson
+clean_model: R-D1
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [1.6962839, 1.0, 2.2084317, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[6827.0, -1878.0, -732.0], [-8429.0, 16012.0, 2564.0], [-704.0, 592.0, 7145.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: aa1a582b1797db3f6295ddb8d5d65c8301a95de240aa9c88bfb330eb9e78fd45

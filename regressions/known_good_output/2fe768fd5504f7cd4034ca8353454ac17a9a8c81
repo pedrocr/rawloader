@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1D Mark IV
+clean_make: Canon
+clean_model: EOS-1D Mark IV
+width: 3672
+height: 2448
+cpp: 3
+wb_coeffs: [2175.0, 1024.0, 1670.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6014.0, -220.0, -795.0], [-4109.0, 12014.0, 2361.0], [-561.0, 1824.0, 5787.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: [(0, 140, 2448, 0)]
+orientation: Normal
+sha256data: b0de1ab20672d9eaf55c644242c9d9b209d6acf6d1b7b069da4f08578a160055

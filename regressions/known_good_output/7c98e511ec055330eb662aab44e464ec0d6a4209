@@ -1,0 +1,16 @@
+make: DJI
+model: FC350
+clean_make: DJI
+clean_model: FC350
+width: 4000
+height: 2250
+cpp: 1
+wb_coeffs: [1.993656, 1.0, 1.6088889, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[0.7497, -0.1964, -0.0483], [-0.3827, 1.1576, 0.2677], [-0.1083, 0.2348, 0.6001], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 02845340a7c980e82a3f497da8626903a8fff0f5d7ac8b37322a99186823a222

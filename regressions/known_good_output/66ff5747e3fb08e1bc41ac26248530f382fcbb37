@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S60
+clean_make: Canon
+clean_model: PowerShot S60
+width: 2672
+height: 1968
+cpp: 1
+wb_coeffs: [1247.0, 834.0, 1407.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [131, 130, 130, 0]
+xyz_to_cam: [[8795.0, -2482.0, -797.0], [-7804.0, 15403.0, 2573.0], [-1422.0, 1996.0, 7082.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 44, 2, 12]
+blackareas: [(0, 2672, 1968, 2632)]
+orientation: Unknown
+sha256data: a01f5dc852b47c5254defd4e1f650a04a5b17c5ab375e30d4b43fd34a1a2696e

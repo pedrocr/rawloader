@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A99V
+clean_make: Sony
+clean_model: SLT-A99V
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2476.0, 1024.0, 1444.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6344.0, -1612.0, -462.0], [-4863.0, 12477.0, 2681.0], [-865.0, 1786.0, 6899.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 28, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 733da83e21503b306bb044180a3b3a4f46ccf86186e3811e7a5820206c93a0c4

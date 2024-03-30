@@ -1,0 +1,16 @@
+make: OnePlus
+model: ONEPLUS A3003
+clean_make: OnePlus
+clean_model: ONEPLUS A3003
+width: 4656
+height: 3496
+cpp: 1
+wb_coeffs: [2.064516, 1.0, 1.5609756, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.078125, -1.4375, -0.3671875], [-1.0703125, 2.1796875, -0.0078125], [0.0546875, -0.1171875, 1.0859375], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b06c9646c7f67b2dccce934bea9687e169cac317b9a1578f74293a5a6148f13a

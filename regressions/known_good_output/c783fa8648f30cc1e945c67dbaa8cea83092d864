@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A700
+clean_make: Sony
+clean_model: DSLR-A700
+width: 4288
+height: 2856
+cpp: 1
+wb_coeffs: [2128.0, 1024.0, 1564.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5775.0, -805.0, -359.0], [-8574.0, 16295.0, 2391.0], [-1943.0, 2341.0, 7249.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 41d68e2824b9ec3d6a590cbc0c83897467069fb988c4060aa28615493fc5fe58

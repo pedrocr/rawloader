@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ300
+clean_make: Panasonic
+clean_model: DMC-FZ300
+width: 4144
+height: 3016
+cpp: 1
+wb_coeffs: [568.0, 256.0, 464.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[8378.0, -2798.0, -769.0], [-3068.0, 11410.0, 1877.0], [-538.0, 1792.0, 4623.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 128, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9855314d36e6702273103cf4d308ad2627d04e4de4def2ab0345b0f0c49ee56b

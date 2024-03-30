@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G1 X
+clean_make: Canon
+clean_model: PowerShot G1 X
+width: 4496
+height: 3366
+cpp: 1
+wb_coeffs: [1769.0, 934.0, 1539.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [511, 511, 511, 0]
+xyz_to_cam: [[7378.0, -1255.0, -1043.0], [-4088.0, 12251.0, 2048.0], [-876.0, 1946.0, 5805.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [52, 14, 0, 82]
+blackareas: [(0, 4496, 46, 0), (0, 68, 3366, 0)]
+orientation: Normal
+sha256data: e8cff38c7087f70a2174bcf59980c2e5a0c66c89a0c707d39c3779589218f217

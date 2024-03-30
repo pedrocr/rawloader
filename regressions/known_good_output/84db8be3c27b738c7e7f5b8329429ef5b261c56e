@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix E550
+clean_make: Fujifilm
+clean_model: FinePix E550
+width: 3588
+height: 3587
+cpp: 1
+wb_coeffs: [136.0, 80.0, 105.0, NaN]
+whitelevels: [15875, 15875, 15875, 15875]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11044.0, -3888.0, -1120.0], [-7248.0, 15168.0, 2208.0], [-1531.0, 2277.0, 8069.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 39c036e87bc4af7e785ad58b99ea85707cd179c20b107e0ec77e1f9cfa5451bf

@@ -1,0 +1,16 @@
+make: XIAOYI
+model: YDXJ 2
+clean_make: XIAOYI
+clean_model: YDXJ 2
+width: 3840
+height: 2160
+cpp: 1
+wb_coeffs: [2.300781, 1.0, 1.3007808, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8489, -0.2583, -0.1036], [-0.8051, 1.5583, 0.2643], [-0.1307, 0.1407, 0.7354], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0db1e193e6fbe2da1ff6b81f28ff083b3820a1142df2aa57283d694aea2586d4

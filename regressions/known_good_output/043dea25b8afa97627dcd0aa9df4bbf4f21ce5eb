@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 650D
+clean_make: Canon
+clean_model: EOS 650D
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [2158.0, 1024.0, 1702.0, NaN]
+whitelevels: [12277, 12277, 12277, 12277]
+blacklevels: [2050, 2050, 2050, 0]
+xyz_to_cam: [[6602.0, -841.0, -939.0], [-4472.0, 12458.0, 2247.0], [-975.0, 2039.0, 6148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [56, 0, 0, 76]
+blackareas: [(4, 5280, 48, 0), (0, 70, 3528, 0)]
+orientation: Normal
+sha256data: a7cb047c5f9e57060827ed8c6e0b8042fbe27828f962cea7de1ffb2f911cc448

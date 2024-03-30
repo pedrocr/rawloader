@@ -1,0 +1,16 @@
+make: LGE
+model: LG-D855
+clean_make: LGE
+clean_model: LG-D855
+width: 4164
+height: 3120
+cpp: 1
+wb_coeffs: [1.8549434, 1.0, 1.5057974, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.7228, -0.0893, -0.0975], [-0.4792, 1.3481, 0.1381], [-0.1137, 0.268, 0.5604], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1035ecaf40cc897c75c3607e6aa7c0d02949ca75e5997eaf6a3c2a19e42b3f77

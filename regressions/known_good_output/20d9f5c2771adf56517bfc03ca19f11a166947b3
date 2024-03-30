@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-420
+clean_make: Olympus
+clean_model: E-420
+width: 3720
+height: 2800
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [4015, 4015, 4015, 4015]
+blacklevels: [68, 69, 68, 68]
+xyz_to_cam: [[8746.0, -2425.0, -1095.0], [-7594.0, 15612.0, 2073.0], [-1780.0, 2309.0, 7416.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 861c3c5deb5fb7785cb00b544b8cc96b6c3dca6010782ed5f345b2ab4b26bba0

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GX8
+clean_make: Panasonic
+clean_model: DMC-GX8
+width: 5264
+height: 3904
+cpp: 1
+wb_coeffs: [656.0, 256.0, 417.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [144, 144, 144, 144]
+xyz_to_cam: [[7564.0, -2263.0, -606.0], [-3148.0, 11239.0, 2177.0], [-540.0, 1435.0, 4853.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a1cea0c198417a89231aa4d0ee8b3e5dbbecead661744e90f529ec86ab5d1a82

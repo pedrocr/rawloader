@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S2 IS
+clean_make: Canon
+clean_model: Canon PowerShot S2 IS
+width: 2672
+height: 1968
+cpp: 1
+wb_coeffs: [1.8790001, 0.92200005, 1.4369999, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.547708, -0.143462, -0.099243], [-0.186838, 0.663925, 0.05097], [-0.00581, 0.079162, 0.266988], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [10, 46, 2, 14]
+blackareas: []
+orientation: Normal
+sha256data: 09ce148f4f94509c8e5957b5369ccacc79d21a7b5c4f6b44d40ca299f03565e0

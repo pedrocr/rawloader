@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D3000
+clean_make: Nikon
+clean_model: D3000
+width: 3904
+height: 2616
+cpp: 1
+wb_coeffs: [1.8515625, 1.0, 1.3476563, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8736.0, -2458.0, -935.0], [-9075.0, 16894.0, 2251.0], [-1354.0, 1242.0, 8263.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 2, 3, 0]
+blackareas: []
+orientation: Normal
+sha256data: bf541db48f8b302bdb6e75568a94a7ae95d43194c789f7f7db4871aa833d976e

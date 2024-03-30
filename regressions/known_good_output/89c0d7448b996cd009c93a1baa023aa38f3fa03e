@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A77V
+clean_make: Sony
+clean_model: SLT-A77V
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2844.0, 1024.0, 1404.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5491.0, -1192.0, -363.0], [-4951.0, 12342.0, 2948.0], [-911.0, 1722.0, 7192.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 28, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7131809909a4379a0073d7d1955ea7664dca3313c704f9d16fbef6a56df4337d

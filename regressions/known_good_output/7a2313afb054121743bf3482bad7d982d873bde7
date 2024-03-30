@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: STYLUS1,1s
+clean_make: Olympus
+clean_model: Stylus1
+width: 4000
+height: 2992
+cpp: 1
+wb_coeffs: [484.0, 256.0, 470.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[8360.0, -2420.0, -880.0], [-3928.0, 12353.0, 1739.0], [-1381.0, 2416.0, 5173.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 14, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4d085068a8dd6cdef5cad531c62b0d833cd1536fbbf3ba461d963eae14bd0256

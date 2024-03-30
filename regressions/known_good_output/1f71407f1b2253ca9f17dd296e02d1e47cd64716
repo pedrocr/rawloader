@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A850
+clean_make: Sony
+clean_model: DSLR-A850
+width: 6080
+height: 4048
+cpp: 1
+wb_coeffs: [2892.0, 1024.0, 1268.0, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [32, 32, 32, 32]
+xyz_to_cam: [[5413.0, -1162.0, -365.0], [-5665.0, 13098.0, 2866.0], [-608.0, 1179.0, 8440.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 626c123dc708223b0d28e58ee359779a7c0d576ff71c60af9c9d15a5f530bef8

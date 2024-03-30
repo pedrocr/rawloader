@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-Pro2
+clean_make: Fujifilm
+clean_model: X-Pro2
+width: 6160
+height: 4032
+cpp: 1
+wb_coeffs: [541.0, 302.0, 665.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[11434.0, -4948.0, -1210.0], [-3746.0, 12042.0, 1903.0], [-666.0, 1479.0, 5235.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 128, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8b2f49998221ea248d326a70834d3c5f97ecb5bf8ed15c14e013e3d7f591a06f

@@ -1,0 +1,16 @@
+make: LEICA
+model: DIGILUX 2
+clean_make: Leica
+clean_model: Digilux 2
+width: 2568
+height: 1928
+cpp: 1
+wb_coeffs: [410.0, 256.0, 373.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11340.0, -4069.0, -1275.0], [-7555.0, 15266.0, 2448.0], [-2960.0, 3426.0, 7685.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a0a6b3c4ce22c34ab8ab0125b5b3b615b156ae2a7512653f9ecc7b0b7737c591

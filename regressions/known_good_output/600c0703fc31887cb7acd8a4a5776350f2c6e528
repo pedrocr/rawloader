@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A550
+clean_make: Canon
+clean_model: Canon PowerShot A550
+width: 3152
+height: 2340
+cpp: 1
+wb_coeffs: [1.736, 0.936, 1.508, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.673251, -0.200684, -0.09868], [-0.163638, 0.651247, 0.074004], [0.014221, 0.052979, 0.265291], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 4, 0, 36]
+blackareas: []
+orientation: Normal
+sha256data: a554f56b916f1d5addc837e781c99b7f63974fd935a9d2f0c1701559d2e83973

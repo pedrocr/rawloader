@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-7RM3
+clean_make: Sony
+clean_model: ILCE-7RM3
+width: 8000
+height: 5320
+cpp: 1
+wb_coeffs: [2260.0, 1024.0, 2020.0, NaN]
+whitelevels: [16380, 16380, 16380, 16380]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6640.0, -1847.0, -503.0], [-5238.0, 13010.0, 2474.0], [-993.0, 1673.0, 6527.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b77230b230576dc9914fde43483110643aa86e3ba8112a84b95a4eb6af488575

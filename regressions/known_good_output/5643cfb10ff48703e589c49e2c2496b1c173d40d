@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 1300D
+clean_make: Canon
+clean_model: Canon EOS 1300D
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2068.0, 1024.0, 1538.0, NaN]
+whitelevels: [12279, 12279, 12279, 12279]
+blacklevels: [2054, 2051, 2046, 0]
+xyz_to_cam: [[6939.0, -1016.0, -866.0], [-4428.0, 12473.0, 2177.0], [-1175.0, 2178.0, 6162.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [50, 0, 0, 142]
+blackareas: [(0, 140, 3516, 0)]
+orientation: Normal
+sha256data: e7ec50a1461c22c2bff4318a928dcc71b4eb52ca8970eafeccc3f2a3e289359e

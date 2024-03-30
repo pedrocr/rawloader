@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-PL6
+clean_make: Olympus
+clean_model: E-PL6
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [510.0, 256.0, 458.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [255, 255, 255, 255]
+xyz_to_cam: [[8380.0, -2630.0, -639.0], [-2887.0, 10725.0, 2496.0], [-627.0, 1427.0, 5438.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 24, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 1578b757660b308d9f45c154c400a5c4bd7e1ff9a17de69b0068326e02146951

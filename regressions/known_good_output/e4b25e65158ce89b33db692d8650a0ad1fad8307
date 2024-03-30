@@ -1,0 +1,16 @@
+make: Xiaomi
+model: M2010J19CG
+clean_make: Xiaomi
+clean_model: M2010J19CG
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [1.8123894, 1.0, 1.5444947, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.9140625, -0.078125, -0.1640625], [-0.5625, 1.5546875, 0.1640625], [-0.1328125, 0.3671875, 0.609375], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d585a7549103743a14f947527a5fc7a6f4cb2c13850c6bbe8500e7658806ffe2

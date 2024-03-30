@@ -1,0 +1,16 @@
+make: PARROT
+model: Bebop Drone
+clean_make: PARROT
+clean_model: Bebop Drone
+width: 4096
+height: 3320
+cpp: 1
+wb_coeffs: [1.4705882, 1.0, 1.5058824, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [42, 42, 42, 42]
+xyz_to_cam: [[1.247, -0.1485, -0.0653], [-0.4211, 1.3116, 0.1145], [0.0283, 0.246, 0.8806], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 1ec47217f47115d6a7a1d942ac6def308cce6a623d010d20bd94d772ea7f0c0e

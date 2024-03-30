@@ -1,0 +1,16 @@
+make: Realme
+model: RMX1851
+clean_make: Realme
+clean_model: RMX1851
+width: 4656
+height: 3496
+cpp: 1
+wb_coeffs: [2.0039139, 1.0, 1.8720293, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [63, 64, 64, 63]
+xyz_to_cam: [[0.890625, -0.2265625, -0.1640625], [-0.328125, 1.3125, 0.0], [-0.1015625, 0.328125, 0.3828125], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9855293a468f783b908fcde3dd9096b1afe024b8690a56003a6bba30ad534bf3

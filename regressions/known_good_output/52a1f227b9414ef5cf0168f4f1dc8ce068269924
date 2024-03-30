@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot ELPH 310 HS
+clean_make: Canon
+clean_model: Canon PowerShot ELPH 310 HS
+width: 4168
+height: 3060
+cpp: 1
+wb_coeffs: [1.487, 0.971, 1.6899999, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.544808, -0.174047, -0.080399], [-0.075055, 0.440444, 0.011367], [-0.005801, 0.071589, 0.118914], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [24, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 3ede00adfeb6634b1b2abd8b17dac0bd9da45055f2fbbe88cd237786ad418d5f

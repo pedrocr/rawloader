@@ -1,0 +1,16 @@
+make: SIGMA
+model: SIGMA fp L
+clean_make: SIGMA
+clean_model: SIGMA fp L
+width: 9536
+height: 6344
+cpp: 1
+wb_coeffs: [1.53125, 1.0, 2.5664063, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[0.8326, -0.2062, -0.1759], [-0.4961, 1.1648, 0.0631], [-0.1116, 0.1551, 0.3483], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1387c7e6d9dadbec868b0ab820761122d3bf92b6eba361759f0500e3704fa091

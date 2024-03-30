@@ -1,0 +1,16 @@
+make: YI TECHNOLOGY
+model: M1
+clean_make: YI TECHNOLOGY
+clean_model: M1
+width: 5200
+height: 3902
+cpp: 1
+wb_coeffs: [2.4765625, 0.9980469, 1.6054688, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[0.7158, -0.1911, -0.0606], [-0.3603, 1.0669, 0.253], [-0.0659, 0.1236, 0.553], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 27385354b851a59ab918bec0961be4cbef82131b073dc7d6757450aee9487d30

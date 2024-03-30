@@ -1,0 +1,16 @@
+make: LGE
+model: LG-H850
+clean_make: LGE
+clean_model: LG-H850
+width: 3264
+height: 2448
+cpp: 1
+wb_coeffs: [1.6623377, 1.0, 2.064516, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.8359375, -0.0390625, -0.390625], [-0.453125, 1.5078125, -0.03125], [-0.0859375, 0.28125, 0.5390625], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: d62c4181367dca2b89f9b9bec9a38693eada8ff244db98ca2e76243510cd479b

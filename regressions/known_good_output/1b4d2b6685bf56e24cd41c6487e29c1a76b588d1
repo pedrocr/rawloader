@@ -1,0 +1,16 @@
+make: Kodak
+model: DCS Pro SLR/n
+clean_make: Kodak
+clean_model: DCS Pro SLR/n
+width: 4516
+height: 3012
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [3700, 3700, 3700, 3700]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[5494.0, 2393.0, -232.0], [-6427.0, 13850.0, 2846.0], [-1876.0, 3997.0, 5445.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1d251d25cfcf27be1960658e931ebd333da9cad48af708490fec03a80e7c77f9

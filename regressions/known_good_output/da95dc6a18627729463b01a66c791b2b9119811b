@@ -1,0 +1,16 @@
+make: FIMI
+model: X8SE
+clean_make: FIMI
+clean_model: X8SE
+width: 3840
+height: 2160
+cpp: 1
+wb_coeffs: [1.7717303, 1.0, 1.8000504, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[0.7497, -0.1964, -0.0483], [-0.3827, 1.1576, 0.2677], [-0.1083, 0.2348, 0.6001], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: a9925f64c75a1ca71f27b25b3da8e05111273e79d5f428b9ac0840697dd76c8c

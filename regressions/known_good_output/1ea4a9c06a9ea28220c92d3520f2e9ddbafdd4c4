@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-Pro1
+clean_make: Fujifilm
+clean_model: X-Pro1
+width: 5120
+height: 3288
+cpp: 1
+wb_coeffs: [553.0, 302.0, 522.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[10413.0, -3996.0, -993.0], [-3721.0, 11640.0, 2361.0], [-733.0, 1540.0, 6011.0], [0.0, 0.0, 0.0]]
+cfa: GGRGGBGGBGGRBRGRBGGGBGGRGGRGGBRBGBRG
+crops: [0, 168, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d8a7542c288c9b4cd5e20dcb66c9a174bd2e028874cd82c7e44a86cadfc92a02

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M6
+clean_make: Canon
+clean_model: Canon EOS M6
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1498.0, 1024.0, 1429.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [511, 511, 512, 0]
+xyz_to_cam: [[8532.0, -701.0, -1167.0], [-4095.0, 11879.0, 2508.0], [-797.0, 2424.0, 7010.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: b3b852fbbf10b3a3443eda1f9d93c78f09e660707002de283f1a0ec4c8ff0fef

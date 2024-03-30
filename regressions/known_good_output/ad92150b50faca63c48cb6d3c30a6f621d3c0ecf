@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad H3D
+clean_make: Hasselblad
+clean_model: H3D
+width: 9044
+height: 6732
+cpp: 1
+wb_coeffs: [1.2478027, 1.0, 1.4938965, NaN]
+whitelevels: [31456, 31456, 31456, 31456]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[3857.0, 452.0, -46.0], [-6008.0, 14477.0, 1596.0], [-2627.0, 4481.0, 5718.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a9b710ea2850b580699b8e452f15a68fae0bcca4f686f8370142778dd2611de1

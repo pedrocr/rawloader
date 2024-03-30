@@ -1,0 +1,16 @@
+make: Panasonic
+model: DC-FZ80
+clean_make: Panasonic
+clean_model: DC-FZ80
+width: 5040
+height: 3688
+cpp: 1
+wb_coeffs: [400.0, 256.0, 485.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [170, 170, 170, 170]
+xyz_to_cam: [[8550.0, -2908.0, -842.0], [-3195.0, 11529.0, 1881.0], [-338.0, 1603.0, 4631.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 126, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f2753033524168eab608b4654eeb5506344dc42dbff18539344baedc3ece6768

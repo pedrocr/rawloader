@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 20D
+clean_make: Canon
+clean_model: EOS 20D
+width: 3596
+height: 2360
+cpp: 1
+wb_coeffs: [1774.0, 1144.0, 2487.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 127, 0]
+xyz_to_cam: [[6599.0, -537.0, -891.0], [-8071.0, 15783.0, 2424.0], [-1983.0, 2234.0, 7462.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 0, 0, 74]
+blackareas: [(0, 72, 2360, 0)]
+orientation: Normal
+sha256data: 7da90055eb3621ed4174abf1c059f15b96fbb392e0ed5fdf5459c676f6399590

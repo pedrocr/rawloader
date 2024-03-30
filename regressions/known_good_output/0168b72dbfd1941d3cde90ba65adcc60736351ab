@@ -1,0 +1,16 @@
+make: LG Mobile
+model: LG-H815
+clean_make: LG Mobile
+clean_model: LG-H815
+width: 5312
+height: 2988
+cpp: 1
+wb_coeffs: [1.939394, 1.0, 1.5802469, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.15625, -0.2890625, -0.3203125], [-0.53125, 1.5625, 0.0625], [-0.078125, 0.28125, 0.5625], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cd9180813a3e4e4917cbf50369451a537db1e594af707b3650520f6d0fbc9d62

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GF5
+clean_make: Panasonic
+clean_model: DMC-GF5
+width: 3024
+height: 3008
+cpp: 1
+wb_coeffs: [373.0, 265.0, 781.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[8228.0, -2945.0, -660.0], [-3938.0, 11792.0, 2430.0], [-1094.0, 2278.0, 5793.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 16, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e7610b3e66b13548d279afde70a790f7e3c795ec638f4002d114db0b91a18d1c

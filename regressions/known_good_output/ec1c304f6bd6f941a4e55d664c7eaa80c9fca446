@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A200
+clean_make: Sony
+clean_model: DSLR-A200
+width: 3880
+height: 2608
+cpp: 1
+wb_coeffs: [1380.0, 1024.0, 3200.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9847.0, -3091.0, -928.0], [-8485.0, 16345.0, 2225.0], [-715.0, 595.0, 7103.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 365528c2494bb2f7cc1cc5fe1c2acf30c605931cb2cc3d0f736eb2c55f21eef9

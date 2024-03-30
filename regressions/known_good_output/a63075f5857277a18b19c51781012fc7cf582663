@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX3000
+clean_make: Samsung
+clean_model: NX3000
+width: 5600
+height: 3714
+cpp: 1
+wb_coeffs: [10240.0, 4096.0, 6672.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8060.0, -2933.0, -761.0], [-4504.0, 12890.0, 1762.0], [-630.0, 1489.0, 5227.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [42, 32, 24, 96]
+blackareas: []
+orientation: Normal
+sha256data: 314b57f905795bd9d16017f5d55ab8bbf904fff989167aa01a35d62ebef8d714

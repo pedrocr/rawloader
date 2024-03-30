@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: EX2F
+clean_make: Samsung
+clean_model: EX2F
+width: 4176
+height: 3058
+cpp: 1
+wb_coeffs: [5184.0, 4096.0, 12576.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10648.0, -3897.0, -1055.0], [-2022.0, 10573.0, 1668.0], [-492.0, 1611.0, 4742.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 148, 18, 22]
+blackareas: []
+orientation: Normal
+sha256data: c7d7ce45d40b32bd099ca8252c7b32aec07bf8b6f1091cf8ebed8bf4cac56c4c

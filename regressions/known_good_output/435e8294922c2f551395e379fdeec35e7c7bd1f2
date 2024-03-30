@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-PL7
+clean_make: Olympus
+clean_model: E-PL7
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [514.0, 256.0, 486.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[9197.0, -3190.0, -659.0], [-2606.0, 10830.0, 2039.0], [-458.0, 1250.0, 5458.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 24, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: ecab62e4a1e15bc08e739bbf187dbbc6190bbee44120231d8abbcad8fa6431b6

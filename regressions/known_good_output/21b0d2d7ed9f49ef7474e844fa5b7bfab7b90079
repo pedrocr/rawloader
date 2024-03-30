@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Rebel T6
+clean_make: Canon
+clean_model: Canon EOS Rebel T6
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [1990.0, 1024.0, 1736.0, NaN]
+whitelevels: [12279, 12279, 12279, 12279]
+blacklevels: [2052, 2049, 2046, 0]
+xyz_to_cam: [[6939.0, -1016.0, -866.0], [-4428.0, 12473.0, 2177.0], [-1175.0, 2178.0, 6162.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [50, 0, 0, 142]
+blackareas: [(0, 140, 3516, 0)]
+orientation: Normal
+sha256data: 3d40cb0f9f00090edf2ea4962d794a73a727a85702d62ff8e90a6130a89024fd

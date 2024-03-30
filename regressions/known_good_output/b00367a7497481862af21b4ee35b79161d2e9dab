@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ35
+clean_make: Panasonic
+clean_model: DMC-FZ35
+width: 4060
+height: 3018
+cpp: 1
+wb_coeffs: [510.0, 263.0, 422.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[9938.0, -2780.0, -890.0], [-4604.0, 12393.0, 2480.0], [-1117.0, 2304.0, 4620.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0f6e6ff678dbdeeb7a22ae9c4d171e259cfa343134aa557f9f7f0f5e339e0881

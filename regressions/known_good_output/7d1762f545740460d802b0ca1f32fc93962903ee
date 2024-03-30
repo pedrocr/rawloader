@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G935F
+clean_make: samsung
+clean_model: SM-G935F
+width: 4032
+height: 2268
+cpp: 1
+wb_coeffs: [1.6623377, 1.0, 1.5058824, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.0078125, -0.16992188, -0.26953125], [-0.43164063, 1.4599609, 0.038085938], [-0.07421875, 0.3251953, 0.5996094], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e38444ec68eb924ca2a0590d9e979b2bca5ef481991ff36b80a02e84ce23811e

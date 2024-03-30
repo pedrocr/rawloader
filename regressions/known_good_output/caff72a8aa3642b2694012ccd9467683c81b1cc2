@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot ELPH 180
+clean_make: Canon
+clean_model: Canon PowerShot ELPH 180
+width: 5248
+height: 3920
+cpp: 1
+wb_coeffs: [1.201, 0.916, 2.086, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [16, 66, 16, 8]
+blackareas: []
+orientation: Normal
+sha256data: 881339b38f402b2e86f91e69f0492865a360fc4bf8eb7072d25d04222a93a03d

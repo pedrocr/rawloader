@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D5500
+clean_make: Nikon
+clean_model: D5500
+width: 6016
+height: 4016
+cpp: 1
+wb_coeffs: [1.4804688, 1.0, 1.7734375, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [600, 600, 600, 600]
+xyz_to_cam: [[8821.0, -2938.0, -785.0], [-4178.0, 12142.0, 2287.0], [-824.0, 1651.0, 6860.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 007c6bf1e17406a230e0b0a4a015124e76318ac6b5ef9ce22a95a16c25d0be36

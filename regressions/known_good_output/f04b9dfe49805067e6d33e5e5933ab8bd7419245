@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G965F
+clean_make: samsung
+clean_model: SM-G965F
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.0, 1.0, 1.4202497, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.1787109, -0.44433594, -0.16796875], [-0.4765625, 1.4863281, 0.10449219], [-0.080078125, 0.30664063, 0.69628906], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c5192afbbd88922a376084e657fe1a44777f5e9aee67b75b206ca954ad31d43e

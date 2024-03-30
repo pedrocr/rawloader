@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D3400
+clean_make: Nikon
+clean_model: D3400
+width: 6016
+height: 4016
+cpp: 1
+wb_coeffs: [2.2070313, 1.0, 1.7070313, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [150, 150, 150, 150]
+xyz_to_cam: [[6988.0, -1384.0, -714.0], [-5631.0, 13410.0, 2447.0], [-1485.0, 2204.0, 7318.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8a471c910d50920efdea741dc80e62e5c1ff370c0e4402610a3be1e55feff2e2

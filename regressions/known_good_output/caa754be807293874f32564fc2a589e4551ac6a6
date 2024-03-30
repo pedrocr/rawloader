@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1D
+clean_make: Canon
+clean_model: EOS-1D
+width: 2496
+height: 1662
+cpp: 1
+wb_coeffs: [829.0, 512.0, 700.0, NaN]
+whitelevels: [3588, 3588, 3588, 3588]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6806.0, -179.0, -1020.0], [-8097.0, 16415.0, 1687.0], [-3267.0, 4236.0, 7690.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ae88c83cbedb7ae0a1b2134a394074a4289e3696afef5c79e4cec7f5e597ee2d

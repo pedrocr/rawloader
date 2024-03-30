@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D750
+clean_make: Nikon
+clean_model: D750
+width: 6032
+height: 4032
+cpp: 1
+wb_coeffs: [2.078125, 1.0, 1.2070313, NaN]
+whitelevels: [15520, 15520, 15520, 15520]
+blacklevels: [600, 600, 600, 600]
+xyz_to_cam: [[9020.0, -2890.0, -715.0], [-4535.0, 12436.0, 2348.0], [-934.0, 1919.0, 7086.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1e95d9203b356758e786a932f5011dd752753e2f2a858947cf0259017ea98578

@@ -1,0 +1,16 @@
+make: Autel
+model: Model 323
+clean_make: Autel
+clean_model: Model 323
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [2.317627, 1.0, 1.5446777, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[0.841, -0.2496, -0.067], [-0.1439, 0.9705, 0.1527], [0.0112, 0.0951, 0.4376], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 412890584f7f3f2c6017ea2c89a2a5bf2331df13d1c0c546305a5def2accc862

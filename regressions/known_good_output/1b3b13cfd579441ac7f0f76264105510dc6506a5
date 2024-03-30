@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-300
+clean_make: Olympus
+clean_model: E-300
+width: 3360
+height: 2504
+cpp: 1
+wb_coeffs: [490.0, 256.0, 306.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[7828.0, -1761.0, -348.0], [-5788.0, 14071.0, 1830.0], [-2853.0, 4518.0, 6557.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 20, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 09736a0cc45c4834a89b3b606e58d80caa3772549e2dabe3bb1a8a6304b04315

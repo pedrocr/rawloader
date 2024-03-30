@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-E1
+clean_make: Fujifilm
+clean_model: X-E1
+width: 5120
+height: 3288
+cpp: 1
+wb_coeffs: [409.0, 302.0, 708.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[10413.0, -3996.0, -993.0], [-3721.0, 11640.0, 2361.0], [-733.0, 1540.0, 6011.0], [0.0, 0.0, 0.0]]
+cfa: GGRGGBGGBGGRBRGRBGGGBGGRGGRGGBRBGBRG
+crops: [0, 168, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cec30e8f5d7346c2a27a71cbd4bf27551e6b797100c52b4f67681a1d5aa05d88

@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Flash Sync
+clean_make: Hasselblad
+clean_model: CF132
+width: 4096
+height: 5456
+cpp: 1
+wb_coeffs: [2.1987305, 1.0, 1.1636963, NaN]
+whitelevels: [62914, 62914, 62914, 62914]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8519.0, -3260.0, -280.0], [-5081.0, 13459.0, 1738.0], [-1449.0, 2960.0, 7809.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: b4fa3d4ef9a4cff4b4d7122648319c27ca0a62a8458e3a75268de341274b5af6

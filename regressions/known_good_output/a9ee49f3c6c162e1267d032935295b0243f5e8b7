@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS DIGITAL REBEL XT
+clean_make: Canon
+clean_model: Rebel XT
+width: 3516
+height: 2328
+cpp: 1
+wb_coeffs: [1736.0, 1048.0, 2204.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [255, 256, 257, 0]
+xyz_to_cam: [[6018.0, -617.0, -965.0], [-8645.0, 15881.0, 2975.0], [-1530.0, 1719.0, 7642.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 0, 0, 42]
+blackareas: [(0, 40, 2328, 0)]
+orientation: Rotate270
+sha256data: 29f020448207b8283fab983dc6e200d7acf569883940524003973edfc1015756

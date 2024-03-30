@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 350D DIGITAL
+clean_make: Canon
+clean_model: EOS 350D
+width: 3516
+height: 2328
+cpp: 1
+wb_coeffs: [2170.0, 1018.0, 1755.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [256, 256, 256, 0]
+xyz_to_cam: [[6018.0, -617.0, -965.0], [-8645.0, 15881.0, 2975.0], [-1530.0, 1719.0, 7642.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 0, 0, 42]
+blackareas: [(0, 40, 2328, 0)]
+orientation: Normal
+sha256data: bcaa2532c1336bffb1c0cfede546c6bd23621b8a0db754fdd9d7591bb5f6840c

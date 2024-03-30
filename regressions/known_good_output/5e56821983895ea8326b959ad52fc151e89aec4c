@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad CFV-50
+clean_make: Hasselblad
+clean_model: CFV-50
+width: 8282
+height: 6240
+cpp: 1
+wb_coeffs: [2.3007813, 1.0, 1.4595946, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[5656.0, -659.0, -346.0], [-3923.0, 12306.0, 1791.0], [-1602.0, 3509.0, 5442.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [4, 40, 80, 42]
+blackareas: []
+orientation: Normal
+sha256data: e55818567f47067b6fa1daa2d79cff21522699db0d42193d3c5f3d6202d15b8f

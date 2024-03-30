@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D7200
+clean_make: Nikon
+clean_model: D7200
+width: 6016
+height: 4016
+cpp: 1
+wb_coeffs: [1.5429688, 1.0, 2.8007813, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [600, 600, 600, 600]
+xyz_to_cam: [[8322.0, -3112.0, -1047.0], [-6367.0, 14342.0, 2179.0], [-988.0, 1638.0, 6394.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f6eb6b940c1a3b314b2f0dbb524fb109ca35b7520f429c18efa99533801efde6

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-CM1
+clean_make: Panasonic
+clean_model: DMC-CM1
+width: 5488
+height: 3096
+cpp: 1
+wb_coeffs: [530.0, 256.0, 516.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8770.0, -3194.0, -820.0], [-2871.0, 11281.0, 1803.0], [-513.0, 1552.0, 4434.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ff05d06489cf3a2b2f9399f72b0b2f1a593c6631fe5a330ac08102f56ff59497

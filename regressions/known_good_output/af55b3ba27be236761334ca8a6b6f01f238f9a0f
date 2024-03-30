@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 30D
+clean_make: Canon
+clean_model: EOS 30D
+width: 3596
+height: 2360
+cpp: 1
+wb_coeffs: [2009.0, 1024.0, 1783.0, NaN]
+whitelevels: [4071, 4071, 4071, 4071]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[6257.0, -303.0, -1000.0], [-7880.0, 15621.0, 2396.0], [-1714.0, 1904.0, 7046.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 0, 0, 74]
+blackareas: [(0, 72, 2360, 0)]
+orientation: Normal
+sha256data: e0f682886bcbbbc355781c9d6453ba933ad8b4bc14d8aea3837dc376dcba2029

@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S9500
+clean_make: Fujifilm
+clean_model: FinePix S9500
+width: 4292
+height: 4291
+cpp: 1
+wb_coeffs: [520.0, 320.0, 351.0, NaN]
+whitelevels: [16115, 16115, 16115, 16115]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10491.0, -3423.0, -1145.0], [-7385.0, 15027.0, 2538.0], [-1809.0, 2275.0, 8692.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 954a3f55d595c9b1cd2fa21efc59a9567899eefde7eec8193843993b8e040cb4

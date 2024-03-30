@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A410
+clean_make: Canon
+clean_model: Canon PowerShot A410
+width: 2144
+height: 1560
+cpp: 1
+wb_coeffs: [1.735, 0.9940001, 1.458, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.270041, -0.110546, -0.043914], [-0.121712, 0.256251, 0.012623], [-0.027956, 0.036119, 0.104654], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 54, 2, 2]
+blackareas: []
+orientation: Normal
+sha256data: 473da8713c3a0c4eb066412959555a9256d39efe8930c72c9b2f75db8193fd32

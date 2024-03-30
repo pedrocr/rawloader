@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: TG-5
+clean_make: OLYMPUS CORPORATION
+clean_model: TG-5
+width: 4040
+height: 3016
+cpp: 1
+wb_coeffs: [442.0, 256.0, 458.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[10899.0, -3833.0, -1082.0], [-2112.0, 10736.0, 1575.0], [-267.0, 1452.0, 5269.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0584ef2e0beb97bbadd3208e3aecce64dfcb32f574b3b066aa4ed62d19f373ac

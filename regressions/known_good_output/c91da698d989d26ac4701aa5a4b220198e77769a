@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-7M3
+clean_make: Sony
+clean_model: ILCE-7M3
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2340.0, 1024.0, 1664.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[7374.0, -2389.0, -551.0], [-5435.0, 13162.0, 2519.0], [-1006.0, 1795.0, 6552.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d135a2f7f1c9dc0987ce1703a15b07bf4b9f48f754ef7bbd6a1d56b7f10ca158

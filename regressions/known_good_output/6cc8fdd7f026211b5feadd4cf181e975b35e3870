@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ72
+clean_make: Panasonic
+clean_model: DMC-FZ72
+width: 4816
+height: 3088
+cpp: 1
+wb_coeffs: [435.0, 265.0, 505.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [144, 144, 144, 144]
+xyz_to_cam: [[11532.0, -4324.0, -1066.0], [-2375.0, 10847.0, 1749.0], [-564.0, 1699.0, 4351.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 182, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7840a159fd35cd82e05a99872a685069827df2dfbf7929bb8bc777a8c1c6e2c3

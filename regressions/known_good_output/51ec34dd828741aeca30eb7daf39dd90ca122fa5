@@ -1,0 +1,16 @@
+make: OLYMPUS OPTICAL CO.,LTD
+model: E-20,E-20N,E-20P
+clean_make: Olympus
+clean_model: E-20
+width: 2576
+height: 1924
+cpp: 1
+wb_coeffs: [396.0, 256.0, 368.0, NaN]
+whitelevels: [4092, 4092, 4092, 4092]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[13173.0, -4732.0, -1499.0], [-5807.0, 14036.0, 1895.0], [-2045.0, 2452.0, 7142.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2c4bc6793dbcf640182cfacab1da94267c3cb3ce3901f1894d4862cc803fed05

@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: SP510UZ
+clean_make: OLYMPUS IMAGING CORP.
+clean_model: SP510UZ
+width: 3088
+height: 2309
+cpp: 1
+wb_coeffs: [460.0, 256.0, 393.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10593.0, -3607.0, -1010.0], [-5881.0, 13127.0, 3084.0], [-1200.0, 1805.0, 6721.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cfca8bfd4489355e98a9acd3ca40ba83e89b60267d5ef6197e9f14e758cd9f3d

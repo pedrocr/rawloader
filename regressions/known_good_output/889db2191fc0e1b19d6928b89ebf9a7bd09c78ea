@@ -1,0 +1,16 @@
+make: PENTAX Corporation
+model: PENTAX K110D
+clean_make: Pentax
+clean_model: K110D
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [12192.0, 8192.0, 8000.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 127, 127, 128]
+xyz_to_cam: [[11095.0, -3157.0, -1324.0], [-8377.0, 15834.0, 2720.0], [-1108.0, 947.0, 11688.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 57e305f6722195d7a33c537aac119355e72b2f625573baa11a6173d73883f448

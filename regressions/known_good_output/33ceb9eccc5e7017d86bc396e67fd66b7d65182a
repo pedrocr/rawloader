@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX10
+clean_make: Sony
+clean_model: DSC-RX10
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2976.0, 1024.0, 1584.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[6679.0, -1825.0, -745.0], [-5047.0, 13256.0, 1953.0], [-1580.0, 2422.0, 5183.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 8, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1f0ba3edc4fbef868980fb5539aa1c66e0cb7a3db29ef5c18c858bc107fd5f54

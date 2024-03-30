@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix HS50EXR
+clean_make: Fujifilm
+clean_model: FinePix HS50EXR
+width: 3328
+height: 2464
+cpp: 1
+wb_coeffs: [573.0, 336.0, 617.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[12085.0, -4727.0, -953.0], [-3257.0, 11489.0, 2002.0], [-511.0, 2046.0, 4592.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 57367508210bbe4aaf325ceb2bc290629f144dc48e2156fc6d22e638b83dd1a8

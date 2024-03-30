@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A35
+clean_make: Sony
+clean_model: SLT-A35
+width: 4928
+height: 3280
+cpp: 1
+wb_coeffs: [2692.0, 1024.0, 1600.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5986.0, -1618.0, -415.0], [-4557.0, 11820.0, 3120.0], [-681.0, 1404.0, 6971.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: df58a022652206ddb90c88188bfa6db3af0a409f2cc8d94c9a0ed91bf4d50beb

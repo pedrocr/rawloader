@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 7D
+clean_make: Canon
+clean_model: EOS 7D
+width: 2592
+height: 1728
+cpp: 3
+wb_coeffs: [2166.0, 1024.0, 1524.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6844.0, -996.0, -856.0], [-3876.0, 11761.0, 2396.0], [-593.0, 1772.0, 6198.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: [(0, 164, 1728, 8)]
+orientation: Normal
+sha256data: 28399eccad6435e4e3c182eca5048b64d1e32c2cb73c5a123a7a08431240bce0

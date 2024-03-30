@@ -1,0 +1,16 @@
+make: RICOH
+model: RICOH GX200
+clean_make: RICOH
+clean_model: RICOH GX200
+width: 4096
+height: 3014
+cpp: 1
+wb_coeffs: [1.9200011, 1.0, 1.9300027, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8228, -0.2425, -0.0657], [-0.4568, 1.2501, 0.2308], [-0.1124, 0.1566, 0.5543], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e2fe78ad7409b22c4c59e4a14c6b03d906bf38535dc47d0f03d93bcaad56998f

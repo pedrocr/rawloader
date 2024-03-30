@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad X1D
+clean_make: Hasselblad
+clean_model: X1D
+width: 8384
+height: 6304
+cpp: 1
+wb_coeffs: [1.573761, 1.0, 2.5855408, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[4932.0, -835.0, 141.0], [-4878.0, 11868.0, 3437.0], [-1138.0, 1961.0, 7067.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [96, 58, 0, 46]
+blackareas: []
+orientation: Normal
+sha256data: ff7dc3a6a4081c974cbedcf035e2012e4004d130451f8b6d00c978410166d9e6

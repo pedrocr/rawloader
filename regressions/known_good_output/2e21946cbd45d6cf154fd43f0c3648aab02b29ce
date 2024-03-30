@@ -1,0 +1,16 @@
+make: asus
+model: ASUS_Z01KD
+clean_make: asus
+clean_model: ASUS_Z01KD
+width: 3916
+height: 2936
+cpp: 1
+wb_coeffs: [2.3272727, 0.99224806, 1.6842105, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.90625, -2.015625, -0.5078125], [-1.0703125, 2.1796875, -0.0078125], [0.15625, -0.375, 3.3671875], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: e0d84573ddf6212162680be2a66b474d0fceca46f01fefa1818d34a941b4d864

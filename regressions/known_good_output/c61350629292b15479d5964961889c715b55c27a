@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX3
+clean_make: Panasonic
+clean_model: DMC-LX3
+width: 3836
+height: 2538
+cpp: 1
+wb_coeffs: [312.0, 263.0, 702.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [15, 15, 15, 15]
+xyz_to_cam: [[8128.0, -2668.0, -655.0], [-6134.0, 13307.0, 3161.0], [-1782.0, 2568.0, 6083.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 077ef281fa221c71c2939f8322be82f8798db69fb70e577147bbadddf19a208a

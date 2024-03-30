@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-520
+clean_make: Olympus
+clean_model: E-520
+width: 3720
+height: 2800
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [4015, 4015, 4015, 4015]
+blacklevels: [69, 69, 69, 68]
+xyz_to_cam: [[8344.0, -2322.0, -1020.0], [-7596.0, 15635.0, 2048.0], [-1748.0, 2269.0, 7287.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7035eb47d6499d300b896b3f867f1d0f8eddfb0ba1fc73fd9c22ae6fd7d5378f

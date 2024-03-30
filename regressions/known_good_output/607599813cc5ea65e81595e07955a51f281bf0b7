@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D600
+clean_make: Nikon
+clean_model: D600
+width: 6080
+height: 4028
+cpp: 1
+wb_coeffs: [1.296875, 1.0, 2.4765625, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8178.0, -2245.0, -609.0], [-4857.0, 12394.0, 2776.0], [-1207.0, 2086.0, 7298.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 50, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e5ef6fcd64aa0cc4e22e67cf83e0f9342d64d232223f1d56bc0ea87cc8b45366

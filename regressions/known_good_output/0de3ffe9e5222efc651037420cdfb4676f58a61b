@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M10
+clean_make: Canon
+clean_model: EOS M10
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [1878.0, 897.0, 1447.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [1997, 2030, 2063, 0]
+xyz_to_cam: [[6400.0, -480.0, -888.0], [-5294.0, 13416.0, 2047.0], [-1296.0, 2203.0, 6137.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [50, 0, 2, 72]
+blackareas: [(0, 5280, 40, 0), (0, 60, 3528, 0)]
+orientation: Normal
+sha256data: df8275e1f40f5f5edfa90557988a92a6e1a58c8c445ad39a1fdee96d49078476

@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: C5060WZ
+clean_make: Olympus
+clean_model: C5060WZ
+width: 2608
+height: 1949
+cpp: 1
+wb_coeffs: [437.0, 256.0, 411.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10445.0, -3362.0, -1307.0], [-7662.0, 15690.0, 2058.0], [-1135.0, 1176.0, 7602.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1e6a220bfa5fbdced0bc9acf6c62cecc3cf287ad3df527e3fe980f154534ab37

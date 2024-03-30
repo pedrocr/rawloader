@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX15
+clean_make: Panasonic
+clean_model: DMC-LX15
+width: 5488
+height: 3664
+cpp: 1
+wb_coeffs: [624.0, 256.0, 491.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7790.0, -2736.0, -755.0], [-3452.0, 11870.0, 1769.0], [-628.0, 1647.0, 4898.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8cedbb479027c99481de7e51c97df4d12935d0a0e2bfa5ff27b7d2dcf27d6ea4

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot D10
+clean_make: Canon
+clean_model: PowerShot D10
+width: 4104
+height: 3048
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 127, 0]
+xyz_to_cam: [[9427.0, -3036.0, -959.0], [-2581.0, 10671.0, 1911.0], [-1039.0, 1982.0, 4430.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [22, 80, 8, 25]
+blackareas: [(0, 4104, 3048, 4074)]
+orientation: Unknown
+sha256data: 30c28c93443e24c1d41f7019eb17c80e6468538aa75e7e3f19aad049ba0b8ff7

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 800D
+clean_make: Canon
+clean_model: EOS 800D
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1993.0, 1024.0, 1567.0, NaN]
+whitelevels: [11892, 11892, 11892, 11892]
+blacklevels: [510, 511, 511, 0]
+xyz_to_cam: [[6970.0, -512.0, -968.0], [-4425.0, 12161.0, 2553.0], [-739.0, 1982.0, 5601.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 250, 4056, 0)]
+orientation: Normal
+sha256data: c495922add52367f8e79d7d6535a2088777f7e9951c45d3dace2d2ba4d4f4fdf

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX7
+clean_make: Panasonic
+clean_model: DMC-LX7
+width: 4144
+height: 2248
+cpp: 1
+wb_coeffs: [518.0, 264.0, 479.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[10148.0, -3743.0, -991.0], [-2837.0, 11366.0, 1659.0], [-701.0, 1893.0, 4899.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 160, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1f4d6028b466f58f8d14f64993eb98593a8cfa0e3c8699598609407aa142c282

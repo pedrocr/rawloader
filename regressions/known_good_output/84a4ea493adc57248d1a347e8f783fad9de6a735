@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot Pro70
+clean_make: Canon
+clean_model: PowerShot Pro70
+width: 1552
+height: 1024
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [990, 990, 990, 990]
+blacklevels: [34, 34, 34, 34]
+xyz_to_cam: [[-4155.0, 9818.0, 1529.0], [3939.0, -25.0, 4522.0], [-5521.0, 9870.0, 6610.0], [-2238.0, 10873.0, 1342.0]]
+cfa: EBGRBERGEBRGBEGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: a9f3705510744ae73db28b5db1a821b1218df6ebc5ecc970de86bf7687bcc2c6

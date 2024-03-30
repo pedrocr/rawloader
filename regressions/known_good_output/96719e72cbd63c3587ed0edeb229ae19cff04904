@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-PL3
+clean_make: Olympus
+clean_model: E-PL3
+width: 4080
+height: 3040
+cpp: 1
+wb_coeffs: [546.0, 256.0, 404.0, NaN]
+whitelevels: [3700, 3700, 3700, 3700]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[7575.0, -2159.0, -571.0], [-3722.0, 11341.0, 2725.0], [-1434.0, 2819.0, 6271.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 30, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8cdd5957ab0035834227a8f2757815699fc7c5f6122758e2163d96f4dfdbfaf6

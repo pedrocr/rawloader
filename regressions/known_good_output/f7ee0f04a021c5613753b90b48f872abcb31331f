@@ -1,0 +1,16 @@
+make: OnePlus
+model: ONEPLUS A6003
+clean_make: OnePlus
+clean_model: ONEPLUS A6003
+width: 4656
+height: 3496
+cpp: 1
+wb_coeffs: [1.946768, 1.0, 1.8550725, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[1.4609375, -0.6953125, -0.2265625], [-0.96875, 1.875, 0.0390625], [0.0390625, -0.1328125, 0.6796875], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d8768f12ad5fdb067025a88747b8b180fd49dc0afacb2a4a791da45199975222

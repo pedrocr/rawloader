@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GX7
+clean_make: Panasonic
+clean_model: DMC-GX7
+width: 3472
+height: 3440
+cpp: 1
+wb_coeffs: [527.0, 265.0, 525.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7610.0, -2780.0, -576.0], [-4614.0, 12195.0, 2733.0], [-1375.0, 2393.0, 6490.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 32, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a06d280e4a35a00501c6465373f745ceb1c4e4ffe40668f8389f006822dffc89

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS DIGITAL REBEL XSi
+clean_make: Canon
+clean_model: Rebel XSi
+width: 4312
+height: 2876
+cpp: 1
+wb_coeffs: [2001.0, 1024.0, 1719.0, NaN]
+whitelevels: [14500, 14500, 14500, 14500]
+blacklevels: [1020, 1020, 1020, 1020]
+xyz_to_cam: [[5784.0, -262.0, -821.0], [-7539.0, 15064.0, 2672.0], [-1982.0, 2681.0, 7427.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 22]
+blackareas: []
+orientation: Normal
+sha256data: 1c8a99eb6189ed3e068a5e24e397dd95c5863a92bf076d89201a40ac0f549356

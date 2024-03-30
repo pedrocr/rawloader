@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix F600EXR
+clean_make: Fujifilm
+clean_model: FinePix F600EXR
+width: 3328
+height: 2464
+cpp: 1
+wb_coeffs: [503.0, 336.0, 666.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[13690.0, -5358.0, -1474.0], [-3369.0, 11600.0, 1998.0], [-132.0, 1554.0, 4395.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 32, 0, 34]
+blackareas: []
+orientation: Normal
+sha256data: 3cf5b76a89fe4a4af3e5561012e8ad981a8b1cb4feb7806f5e2ff3a600dfc299

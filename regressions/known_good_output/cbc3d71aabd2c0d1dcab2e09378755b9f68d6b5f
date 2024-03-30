@@ -1,0 +1,16 @@
+make: OnePlus
+model: One A0001
+clean_make: OnePlus
+clean_model: One A0001
+width: 4212
+height: 3120
+cpp: 1
+wb_coeffs: [2.2099447, 1.0, 1.641497, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.84004, -0.19591, -0.06722], [-0.37852, 1.17735, 0.20117], [-0.05178, 0.20784, 0.51022], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 4, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: a67cebc782faf55b410e298c712242713f1c132f56c3ac755a58ee54d0847305

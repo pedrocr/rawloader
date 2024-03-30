@@ -1,0 +1,16 @@
+make: Phase One A/S
+model: P30
+clean_make: Phase One A/S
+clean_model: P30
+width: 6588
+height: 4954
+cpp: 1
+wb_coeffs: [2.46, 1.0, 1.25, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[4516.0, -245.0, -37.0], [-7020.0, 14976.0, 2173.0], [-3206.0, 4671.0, 7087.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [22, 20, 28, 40]
+blackareas: []
+orientation: Unknown
+sha256data: b48264ef889babad2e0a08be6eae21a3327d4130e5c40bf8387c227239508e3e

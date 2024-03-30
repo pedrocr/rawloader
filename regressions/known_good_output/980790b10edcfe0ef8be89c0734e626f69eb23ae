@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D60
+clean_make: Nikon
+clean_model: D60
+width: 3904
+height: 2616
+cpp: 1
+wb_coeffs: [1.8789063, 1.0, 1.34375, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8736.0, -2458.0, -935.0], [-9075.0, 16894.0, 2251.0], [-1354.0, 1242.0, 8263.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a2f1f4abbbc247637c63dafecf9be5c401b27f62935dd2961143ac13e52c951b

@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-9
+clean_make: Sony
+clean_model: ILCE-9
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2516.0, 1024.0, 1600.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6389.0, -1703.0, -378.0], [-4562.0, 12265.0, 2587.0], [-670.0, 1489.0, 6550.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 946cd70f2bcb6a653cec8f3f4f05fd5b999d9d35f6c57c703ba76e823099092c

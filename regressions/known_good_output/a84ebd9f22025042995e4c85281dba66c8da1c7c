@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-F828
+clean_make: Sony
+clean_model: DSC-F828
+width: 3360
+height: 2460
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [495, 495, 495, 495]
+xyz_to_cam: [[7924.0, -1910.0, -777.0], [-8226.0, 15459.0, 2998.0], [-1517.0, 2199.0, 6818.0], [-7242.0, 11401.0, 3481.0]]
+cfa: ERBG
+crops: [0, 67, 0, 5]
+blackareas: []
+orientation: Normal
+sha256data: b3fc3d395950407a35d33392a97181fa51aac1afb0aa6b96d94a7eba00e95d42

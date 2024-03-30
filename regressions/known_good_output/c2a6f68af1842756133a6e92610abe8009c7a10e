@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 4a
+clean_make: Google
+clean_model: Pixel 4a
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.137789, 1.0, 1.7534232, NaN]
+whitelevels: [16368, 16368, 16368, 16368]
+blacklevels: [1023, 1023, 1022, 1022]
+xyz_to_cam: [[1.0626, -0.4466, -0.1116], [-0.4205, 1.2766, 0.1562], [-0.0739, 0.2132, 0.5474], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2cd9915665ee78570976816a844da9c813f5428a15cf606bfae22bc7da037a02

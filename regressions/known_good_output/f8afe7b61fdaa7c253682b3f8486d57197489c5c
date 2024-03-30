@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX11
+clean_make: Samsung
+clean_model: NX11
+width: 4704
+height: 3124
+cpp: 1
+wb_coeffs: [7207.0, 4724.0, 4093.0, NaN]
+whitelevels: [3750, 3750, 3750, 3750]
+blacklevels: [3, 3, 3, 3]
+xyz_to_cam: [[10332.0, -3234.0, -1168.0], [-6111.0, 14639.0, 1520.0], [-1352.0, 2647.0, 8331.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [8, 85, 48, 17]
+blackareas: []
+orientation: Normal
+sha256data: 786d2ce4d74af1366db83b47552e0e2a5d9a9282521702ec9a664e81026441bd

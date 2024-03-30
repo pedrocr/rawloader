@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS D30
+clean_make: Canon
+clean_model: EOS D30
+width: 2224
+height: 1456
+cpp: 1
+wb_coeffs: [1.5802469, 1.0128585, 1.1570622, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[9805.0, -2689.0, -1312.0], [-5803.0, 13064.0, 3068.0], [-2438.0, 3075.0, 8775.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 0, 2, 48]
+blackareas: [(0, 46, 1456, 0)]
+orientation: Unknown
+sha256data: 8ac62f45a4ee04efebed7900eb46dd263dc4a03a96c4fe711dc41b6bec6078fe

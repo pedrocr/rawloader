@@ -1,0 +1,16 @@
+make: Apple
+model: iPhone 6s Plus
+clean_make: Apple
+clean_model: iPhone 6s Plus
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.1572266, 1.0, 1.6535645, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [528, 528, 528, 528]
+xyz_to_cam: [[0.709328, -0.22757721, -0.021302035], [-0.6051969, 1.248974, 0.30108008], [-0.112681285, 0.13170287, 0.5886504], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d1ce3d661f51cd27d77485f18fa38907a7064705636539f0c3f4f241edcf2e7b

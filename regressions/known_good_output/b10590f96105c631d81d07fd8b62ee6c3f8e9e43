@@ -1,0 +1,16 @@
+make: motorola
+model: Nexus 6
+clean_make: motorola
+clean_model: Nexus 6
+width: 4208
+height: 3120
+cpp: 1
+wb_coeffs: [1.8550725, 1.0, 1.5802469, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.1953125, -0.421875, -0.25], [-0.4609375, 1.5, 0.015625], [-0.046875, 0.2109375, 0.6015625], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1b1c9ae471da849fb2734dc8734637596a2f39c0a6f4ce984da4bd2a1a9ea6ec

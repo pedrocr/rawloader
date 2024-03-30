@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 300D DIGITAL
+clean_make: Canon
+clean_model: EOS 300D
+width: 3152
+height: 2068
+cpp: 1
+wb_coeffs: [1816.0, 832.0, 891.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [125, 124, 124, 0]
+xyz_to_cam: [[8197.0, -2000.0, -1118.0], [-6714.0, 14335.0, 2592.0], [-2536.0, 3178.0, 8266.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 0, 0, 64]
+blackareas: [(0, 60, 2068, 0)]
+orientation: Unknown
+sha256data: 87848353618212be07370d659ceaa2ab349ba79b29c73702368233be2371de65

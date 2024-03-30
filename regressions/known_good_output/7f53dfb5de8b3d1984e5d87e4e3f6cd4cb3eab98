@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S5Pro
+clean_make: Fujifilm
+clean_model: FinePix S5Pro
+width: 3584
+height: 3583
+cpp: 1
+wb_coeffs: [587.0, 384.0, 726.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[12300.0, -5110.0, -1304.0], [-9117.0, 17143.0, 1998.0], [-1947.0, 2448.0, 8100.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c8f2c566f3b8b05277800c8ae76bf2721ca9b3c1d5add35b2d02592eec8b46ad

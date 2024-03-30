@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1Ds Mark II
+clean_make: Canon
+clean_model: EOS-1Ds Mark II
+width: 5108
+height: 3349
+cpp: 1
+wb_coeffs: [1771.0, 1144.0, 2476.0, NaN]
+whitelevels: [4060, 4060, 4060, 4060]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[6517.0, -602.0, -867.0], [-8180.0, 15926.0, 2378.0], [-1618.0, 1771.0, 7633.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [13, 0, 0, 98]
+blackareas: [(0, 96, 3349, 0)]
+orientation: Rotate270
+sha256data: 9efa9e754ea2ff781f0a465706ccfe7e57146dc9107a82f42de8e42c17e9e176

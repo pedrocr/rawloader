@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-500
+clean_make: PENTAX
+clean_model: PENTAX K-500
+width: 4960
+height: 3300
+cpp: 1
+wb_coeffs: [2.2382813, 1.0, 1.6132811, NaN]
+whitelevels: [4078, 4078, 4078, 4078]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.89897156, -0.27166748, -0.120391846], [-0.39953613, 1.2301178, 0.18806458], [-0.09902954, 0.17359924, 0.65997314], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 16, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 11c97a44080525cb0eb275c154c55ea1e7c0ae1a562d12895ca2aaac9587c515

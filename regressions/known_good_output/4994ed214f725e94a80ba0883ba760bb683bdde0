@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G15
+clean_make: Canon
+clean_model: PowerShot G15
+width: 4160
+height: 3124
+cpp: 1
+wb_coeffs: [1718.0, 754.0, 1929.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [127, 127, 127, 0]
+xyz_to_cam: [[7474.0, -2301.0, -567.0], [-4056.0, 11456.0, 2975.0], [-222.0, 716.0, 4181.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [12, 10, 66, 106]
+blackareas: [(3062, 4160, 3122, 0), (0, 100, 3124, 0)]
+orientation: Normal
+sha256data: 592bde901072fe413ca73101629528be5191b46d26b20fca47e32443fc5c9fb9

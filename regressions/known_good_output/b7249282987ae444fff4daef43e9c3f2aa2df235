@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-E2S
+clean_make: Fujifilm
+clean_model: X-E2S
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [563.0, 302.0, 459.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[11562.0, -5118.0, -961.0], [-3022.0, 11007.0, 2311.0], [-525.0, 1569.0, 6097.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: 91034d0dca49f9c611bdd150b61b2c0901a6c7c910cf0c951f341f0d60d784ed

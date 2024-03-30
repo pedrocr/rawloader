@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX0
+clean_make: Sony
+clean_model: DSC-RX0
+width: 4832
+height: 3224
+cpp: 1
+wb_coeffs: [2056.0, 1024.0, 1908.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[9396.0, -3507.0, -843.0], [-2497.0, 11111.0, 1572.0], [-343.0, 1355.0, 5089.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 698c9b8a1ad764ab679c749bb5ec8c7ac94a1da33622fc439a5abf8288611f15

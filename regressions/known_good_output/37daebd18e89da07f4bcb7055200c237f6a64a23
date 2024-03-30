@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShotS3IS
+clean_make: Canon
+clean_model: Canon PowerShotS3IS
+width: 2888
+height: 2136
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[1.4062, -0.5199, -0.1446], [-0.4712, 1.247, 0.2243], [-0.1286, 0.2028, 0.4836], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 4, 0, 44]
+blackareas: [(8, 0, 2136, 40)]
+orientation: Normal
+sha256data: 651b97e0c42d35cde3256e5b45397fb39a30b3a7417d92499edaca0604c90984

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot Pro1
+clean_make: Canon
+clean_model: PowerShot Pro1
+width: 3344
+height: 2484
+cpp: 1
+wb_coeffs: [1368.0, 823.0, 1337.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [129, 129, 129, 0]
+xyz_to_cam: [[10062.0, -3522.0, -999.0], [-7643.0, 15117.0, 2730.0], [-765.0, 817.0, 7323.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 52, 6, 4]
+blackareas: [(0, 3344, 2484, 3294)]
+orientation: Unknown
+sha256data: 13eff10422d007556dfe32963fbf40a72649ebbf7987ab95a7e79c2245ff2375

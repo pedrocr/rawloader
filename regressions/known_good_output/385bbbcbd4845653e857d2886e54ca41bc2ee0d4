@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-G10
+clean_make: Panasonic
+clean_model: DMC-G10
+width: 4060
+height: 3016
+cpp: 1
+wb_coeffs: [499.0, 263.0, 375.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [15, 15, 15, 15]
+xyz_to_cam: [[10113.0, -3400.0, -1114.0], [-4765.0, 12683.0, 2317.0], [-377.0, 1437.0, 6710.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 539c6e7c9c953a0c99df0d71e6ae08729c34108864072eb3fd5c056b1720d268

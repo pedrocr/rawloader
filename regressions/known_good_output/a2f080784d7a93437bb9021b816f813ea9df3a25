@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G930F
+clean_make: samsung
+clean_model: SM-G930F
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.068687, 1.0, 1.4361851, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.2050781, -0.4580078, -0.17773438], [-0.47851563, 1.4892578, 0.1015625], [-0.05859375, 0.22167969, 0.6269531], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 928c4b8f2e869b755b9d25c4c024dc6f361b109300206c54960d8a840a0caf97

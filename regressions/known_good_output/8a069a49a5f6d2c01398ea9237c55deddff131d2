@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ61
+clean_make: Panasonic
+clean_model: DMC-TZ61
+width: 3696
+height: 3688
+cpp: 1
+wb_coeffs: [570.0, 264.0, 468.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [145, 145, 145, 145]
+xyz_to_cam: [[8607.0, -2822.0, -808.0], [-3755.0, 11930.0, 2049.0], [-820.0, 2060.0, 5224.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 8, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e040c14f783ee7fb7b4086f94599927880029aad8d423fdab2697de0681d3f11

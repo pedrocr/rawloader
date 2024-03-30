@@ -1,0 +1,16 @@
+make: HUAWEI
+model: SNE-LX1
+clean_make: HUAWEI
+clean_model: SNE-LX1
+width: 5120
+height: 3840
+cpp: 1
+wb_coeffs: [1.7957877, 1.0, 1.6886448, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 6e7fd5f1bafc1c310d32c1fbbd99759e4407b0a5f5f371a15150f517edbc0430

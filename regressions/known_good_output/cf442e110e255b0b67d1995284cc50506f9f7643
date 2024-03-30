@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A300
+clean_make: Sony
+clean_model: DSLR-A300
+width: 3880
+height: 2608
+cpp: 1
+wb_coeffs: [1972.0, 1024.0, 1632.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9847.0, -3091.0, -928.0], [-8485.0, 16345.0, 2225.0], [-715.0, 595.0, 7103.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 10a5f6f5f9d4a839d56c95d2cddc8fb5345ac4a5e2df22b897cc7adfb3a3ae84

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S70
+clean_make: Canon
+clean_model: PowerShot S70
+width: 3160
+height: 2344
+cpp: 1
+wb_coeffs: [1339.0, 814.0, 1419.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 129, 0]
+xyz_to_cam: [[9976.0, -3810.0, -832.0], [-7115.0, 14463.0, 2906.0], [-901.0, 989.0, 7889.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 4, 4, 44]
+blackareas: [(0, 40, 2344, 0)]
+orientation: Unknown
+sha256data: b2a9d7cd05418af0451847f52a9b40eddef1ea5b0158d11418c0f9bf99eb6aea

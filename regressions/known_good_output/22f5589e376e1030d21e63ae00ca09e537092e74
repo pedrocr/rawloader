@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1D Mark II
+clean_make: Canon
+clean_model: EOS-1D Mark II
+width: 3596
+height: 2360
+cpp: 1
+wb_coeffs: [2024.0, 1024.0, 1452.0, NaN]
+whitelevels: [3700, 3700, 3700, 3700]
+blacklevels: [129, 129, 128, 0]
+xyz_to_cam: [[6264.0, -582.0, -724.0], [-8312.0, 15948.0, 2504.0], [-1744.0, 1919.0, 8664.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 0, 0, 74]
+blackareas: [(0, 72, 2360, 0)]
+orientation: Normal
+sha256data: 1955f3f021ddfe0cbb2bb013af866c16d0cfd2bf8110ced51264dbfbad818063

@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-S1
+clean_make: Pentax
+clean_model: K-S1
+width: 5504
+height: 3664
+cpp: 1
+wb_coeffs: [17952.0, 8192.0, 13536.0, NaN]
+whitelevels: [4062, 4062, 4062, 4062]
+blacklevels: [16, 16, 16, 16]
+xyz_to_cam: [[8512.0, -3211.0, -787.0], [-4167.0, 11966.0, 2487.0], [-638.0, 1288.0, 6054.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 766de7edfb733c674b51ebd3f179a73301ffb1626590ee7b9759640e5e99b4c1

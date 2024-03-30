@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D610
+clean_make: Nikon
+clean_model: D610
+width: 6080
+height: 4028
+cpp: 1
+wb_coeffs: [1.8632813, 1.0, 1.4335938, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8178.0, -2245.0, -609.0], [-4857.0, 12394.0, 2776.0], [-1207.0, 2086.0, 7298.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 50, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 03286e1988b4d62e0e484916f95d4a7ab7c11a39b1c3b0ccbfc9012680bece80

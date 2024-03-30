@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ71
+clean_make: Panasonic
+clean_model: DMC-TZ71
+width: 4144
+height: 2688
+cpp: 1
+wb_coeffs: [551.0, 264.0, 482.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8802.0, -3135.0, -789.0], [-3151.0, 11468.0, 1904.0], [-550.0, 1745.0, 4810.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 128, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7d2671ad359d00ef7d6edc21b947f7ef09f64bca6c6648342e5b16c8cbcbc5d4

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss X9
+clean_make: Canon
+clean_model: EOS Kiss X9
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1549.0, 1024.0, 2180.0, NaN]
+whitelevels: [11892, 11892, 11892, 11892]
+blacklevels: [2048, 2047, 2047, 0]
+xyz_to_cam: [[7377.0, -742.0, -998.0], [-4235.0, 11981.0, 2549.0], [-673.0, 1918.0, 5538.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: 2c8e130532dc8c57fe3c8b36b3948a4403b8443fe9dd30ba5290ba9cc74d526c

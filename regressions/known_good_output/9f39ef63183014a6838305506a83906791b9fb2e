@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot A630
+clean_make: Canon
+clean_model: PowerShot A630
+width: 3344
+height: 2484
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [59, 92, 89, 0]
+xyz_to_cam: [[14201.0, -5308.0, -1757.0], [-6087.0, 14472.0, 1617.0], [-2191.0, 3105.0, 5348.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 44, 6, 12]
+blackareas: [(0, 30, 2484, 0)]
+orientation: Unknown
+sha256data: 402911b9b31f76183b14f4182c958f462a6b3b95cf7a8791f0f60b219a3d5f90

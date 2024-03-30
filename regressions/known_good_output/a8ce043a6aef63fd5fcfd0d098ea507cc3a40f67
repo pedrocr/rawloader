@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: SP500UZ
+clean_make: Olympus
+clean_model: SP500UZ
+width: 2832
+height: 2117
+cpp: 1
+wb_coeffs: [527.0, 256.0, 380.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9493.0, -3415.0, -666.0], [-5211.0, 12334.0, 3260.0], [-1548.0, 2262.0, 6482.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b5b483f6825ca9d5723e930c1b3dc1ef1211c4aaf43a566376dac9a654014b92

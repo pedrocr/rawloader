@@ -1,0 +1,16 @@
+make: LG Mobile
+model: LG-H870
+clean_make: LG Mobile
+clean_model: LG-H870
+width: 4160
+height: 3120
+cpp: 1
+wb_coeffs: [2.1333334, 1.0, 1.7066667, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.125, -0.265625, -0.390625], [-0.40625, 1.453125, -0.0390625], [-0.0546875, 0.2734375, 0.46875], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8ca69cca81d9fc276af68a644bb822e6e5f9c28a7036748ad4cc34c3576cb9e5

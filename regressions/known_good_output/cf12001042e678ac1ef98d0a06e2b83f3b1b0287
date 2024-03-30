@@ -1,0 +1,16 @@
+make: RICOH
+model: GXR
+clean_make: RICOH
+clean_model: GXR
+width: 3672
+height: 2748
+cpp: 1
+wb_coeffs: [2.0100017, 1.0, 2.1200006, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8963, -0.2926, -0.0754], [-0.4881, 1.2921, 0.2164], [-0.1464, 0.1944, 0.4901], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 94ff01783d35e4b753b1e30ee7d384de5953ffde1875ea22f504dc57e1b90f96

@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePixS2Pro
+clean_make: Fujifilm
+clean_model: FinePix S2Pro
+width: 3568
+height: 3567
+cpp: 1
+wb_coeffs: [147.0, 102.0, 160.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [126, 126, 126, 126]
+xyz_to_cam: [[12492.0, -4690.0, -1402.0], [-7033.0, 15423.0, 1647.0], [-1507.0, 2111.0, 7697.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b03343eb915272e513caabd62d579af4bdfa0186982ea6eda6c6eafba743d157

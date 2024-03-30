@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss F
+clean_make: Canon
+clean_model: Kiss F
+width: 3948
+height: 2622
+cpp: 1
+wb_coeffs: [1777.0, 1041.0, 1888.0, NaN]
+whitelevels: [3600, 3600, 3600, 3600]
+blacklevels: [258, 256, 255, 0]
+xyz_to_cam: [[6771.0, -1139.0, -977.0], [-7818.0, 15123.0, 2928.0], [-1244.0, 1437.0, 7533.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 42]
+blackareas: [(0, 41, 2622, 0)]
+orientation: Normal
+sha256data: e8c49bc22fc9b941b69a2923f20343eb2f64bf61fa3a2f8fdb80667af01fd39b

@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-3
+clean_make: Olympus
+clean_model: E-3
+width: 3720
+height: 2800
+cpp: 1
+wb_coeffs: [82.0, 256.0, 0.0, NaN]
+whitelevels: [4015, 4015, 4015, 4015]
+blacklevels: [65, 65, 65, 65]
+xyz_to_cam: [[9487.0, -2875.0, -1115.0], [-7533.0, 15606.0, 2010.0], [-1618.0, 2100.0, 7389.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 557f4496f7b31596e05ccf6ebaa656dec6ab223dd8ed6ef55442cd1b18c3a9a7

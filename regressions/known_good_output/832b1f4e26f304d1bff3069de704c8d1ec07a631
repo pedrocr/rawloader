@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX 645D
+clean_make: Pentax
+clean_model: 645D
+width: 7424
+height: 5552
+cpp: 1
+wb_coeffs: [15200.0, 8192.0, 10240.0, NaN]
+whitelevels: [15767, 15767, 15767, 15767]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10646.0, -3593.0, -1158.0], [-3329.0, 11699.0, 1831.0], [-667.0, 2874.0, 6287.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a90ab332a86450c3b2026d3d19005c7204eb94690a87e74b132636f2ee55ef1e

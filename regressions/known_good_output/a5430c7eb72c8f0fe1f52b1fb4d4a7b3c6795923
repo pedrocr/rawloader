@@ -1,0 +1,16 @@
+make: EASTMAN KODAK COMPANY
+model: KODAK EASYSHARE Z1015 IS DIGITAL CAMERA
+clean_make: Kodak
+clean_model: EasyShare Z1015 IS
+width: 3664
+height: 2742
+cpp: 1
+wb_coeffs: [119296.0, 65536.0, 117248.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11265.0, -4286.0, -992.0], [-4694.0, 12343.0, 2647.0], [-1090.0, 1523.0, 5447.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4e2e1675cdde81fa514f50e98882d04d4ecd023e39a17087cf1d3aa8df1b782d

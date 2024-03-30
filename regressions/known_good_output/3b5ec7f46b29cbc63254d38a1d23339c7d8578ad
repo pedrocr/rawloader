@@ -1,0 +1,16 @@
+make: Panasonic
+model: DC-G9
+clean_make: Panasonic
+clean_model: DC-G9
+width: 5264
+height: 3904
+cpp: 1
+wb_coeffs: [577.0, 256.0, 485.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7685.0, -2375.0, -634.0], [-3687.0, 11700.0, 2249.0], [-748.0, 1546.0, 5111.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 06832227d2a9251f284ed1a50f4886391d6fe3e68a989da52590925baa83f5f9

@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX100M2
+clean_make: Sony
+clean_model: DSC-RX100M2
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2984.0, 1024.0, 1892.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[6596.0, -2079.0, -562.0], [-4782.0, 13016.0, 1933.0], [-970.0, 1581.0, 5181.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 12, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a8f8ab5a862507dbc988b4678d8242b79eeb5b4527e6b52d9c70805786e7a94e

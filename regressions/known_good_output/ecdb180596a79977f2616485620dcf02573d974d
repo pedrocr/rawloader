@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: E-M10MarkII
+clean_make: Olympus
+clean_model: E-M10 Mark II
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [512.0, 256.0, 450.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [253, 254, 254, 253]
+xyz_to_cam: [[8380.0, -2630.0, -639.0], [-2887.0, 10725.0, 2496.0], [-627.0, 1427.0, 5438.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6dcf32acb310ce99d2bdff4b2c19b264b4cedc61d7c550651c407e8f74d24852

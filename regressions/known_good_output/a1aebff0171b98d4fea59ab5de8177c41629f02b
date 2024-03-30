@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix F900EXR
+clean_make: Fujifilm
+clean_model: FinePix F900EXR
+width: 3328
+height: 2464
+cpp: 1
+wb_coeffs: [387.0, 336.0, 774.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[12085.0, -4727.0, -953.0], [-3257.0, 11489.0, 2002.0], [-511.0, 2046.0, 4592.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: dcdfb54d5ce057cc6f6d51d6cbf79ecded3f39aba64b10040964e6c6bf7d2925

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 760D
+clean_make: Canon
+clean_model: EOS 760D
+width: 6096
+height: 4056
+cpp: 1
+wb_coeffs: [2089.0, 1024.0, 1799.0, NaN]
+whitelevels: [11765, 11765, 11765, 11765]
+blacklevels: [2047, 2047, 2047, 2047]
+xyz_to_cam: [[6362.0, -823.0, -847.0], [-4426.0, 12109.0, 2616.0], [-743.0, 1857.0, 5635.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 0, 0, 72]
+blackareas: []
+orientation: Normal
+sha256data: 2189a7a7dd2dd6d901b49e180186eb156d9acb71779c19ef86636830dafa0954

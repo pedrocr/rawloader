@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P6000
+clean_make: Nikon
+clean_model: Coolpix P6000
+width: 4240
+height: 3174
+cpp: 1
+wb_coeffs: [1792.0, 1025.0, 1760.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9698.0, -3367.0, -914.0], [-4706.0, 12584.0, 2368.0], [-837.0, 968.0, 5801.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b39edf102d15b5d2e1f2d5e6da0dd099276b24990e8706380470cc7feba68a56

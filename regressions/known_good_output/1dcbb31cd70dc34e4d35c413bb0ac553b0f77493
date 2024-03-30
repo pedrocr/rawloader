@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX130 IS
+clean_make: Canon
+clean_model: Canon PowerShot SX130 IS
+width: 4080
+height: 3048
+cpp: 1
+wb_coeffs: [0.908, 0.87499994, 3.3639998, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 44, 28, 36]
+blackareas: []
+orientation: Normal
+sha256data: d84f30b556dd30641a52a7e97c030ba66bc5714848ac0d5aaebcd6ac7903e50f

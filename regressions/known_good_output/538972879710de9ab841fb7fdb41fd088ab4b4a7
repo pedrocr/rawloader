@@ -1,0 +1,16 @@
+make: LEICA
+model: D-LUX 3
+clean_make: Leica
+clean_model: D-LUX 3
+width: 4330
+height: 2439
+cpp: 1
+wb_coeffs: [458.0, 263.0, 593.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8048.0, -2810.0, -623.0], [-6450.0, 13519.0, 3272.0], [-1700.0, 2146.0, 7049.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [17, 65, 24, 17]
+blackareas: []
+orientation: Rotate90
+sha256data: 5e352b24ce69c5d2420ca52e48d0fdfb2a49c76241cc653b915b42c6aca92563

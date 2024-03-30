@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot A610
+clean_make: Canon
+clean_model: PowerShot A610
+width: 2672
+height: 1968
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [32, 32, 32, 0]
+xyz_to_cam: [[15591.0, -6402.0, -1592.0], [-5365.0, 13198.0, 2168.0], [-1300.0, 1824.0, 5075.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 44, 0, 12]
+blackareas: [(0, 2672, 1968, 2632)]
+orientation: Unknown
+sha256data: e6a1e2d27d55b4f0ec55c19bd84591754c98eb806a413dc00030d21668ef26a9

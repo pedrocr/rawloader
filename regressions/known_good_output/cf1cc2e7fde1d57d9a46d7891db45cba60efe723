@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 4 XL
+clean_make: Google
+clean_model: Pixel 4 XL
+width: 3700
+height: 2774
+cpp: 1
+wb_coeffs: [1.910446, 1.0, 1.6925628, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[2.4646, -1.7047, -0.4313], [-0.9379, 1.9101, -0.0068], [0.0479, -0.1232, 1.0885], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 02de42f4c626a8a39b18088b79c2387ea12df597f5c7e940f4c5a61acd5e6194

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 5DS
+clean_make: Canon
+clean_model: EOS 5DS
+width: 8896
+height: 5920
+cpp: 1
+wb_coeffs: [2068.0, 1024.0, 2265.0, NaN]
+whitelevels: [14466, 14466, 14466, 14466]
+blacklevels: [2046, 2046, 2047, 0]
+xyz_to_cam: [[6250.0, -711.0, -808.0], [-5153.0, 12794.0, 2636.0], [-1249.0, 2198.0, 5610.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [64, 2, 0, 160]
+blackareas: [(2, 8896, 62, 0), (0, 150, 5920, 0)]
+orientation: Normal
+sha256data: 4912246d203ac51a2bc59fddd5b5b5cb17b622e53514f3f38b2a8946e4257457

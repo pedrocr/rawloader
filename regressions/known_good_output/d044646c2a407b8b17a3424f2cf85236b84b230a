@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Rebel SL2
+clean_make: Canon
+clean_model: EOS Rebel SL2
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1830.0, 1024.0, 1739.0, NaN]
+whitelevels: [11892, 11892, 11892, 11892]
+blacklevels: [2047, 2047, 2047, 0]
+xyz_to_cam: [[7377.0, -742.0, -998.0], [-4235.0, 11981.0, 2549.0], [-673.0, 1918.0, 5538.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: 765bd526b5013fa8ace07958408d1c74b1a8960c1c84fb9fd00bc4f0c07c8b8b

@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D100
+clean_make: Nikon
+clean_model: D100
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [744.0, 256.0, 368.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[5902.0, -933.0, -782.0], [-8983.0, 16719.0, 2354.0], [-1402.0, 1455.0, 6464.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 2]
+blackareas: []
+orientation: Unknown
+sha256data: 03442feb6fff06a73368d84eb63e2791a51cd02ebe12c54a734f572462aff8a8

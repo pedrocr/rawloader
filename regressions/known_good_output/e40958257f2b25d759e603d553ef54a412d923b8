@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G3 X
+clean_make: Canon
+clean_model: PowerShot G3 X
+width: 5632
+height: 3710
+cpp: 1
+wb_coeffs: [1838.0, 875.0, 1531.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [2053, 2053, 2052, 0]
+xyz_to_cam: [[9701.0, -3857.0, -921.0], [-3149.0, 11537.0, 1817.0], [-786.0, 1817.0, 5147.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [17, 0, 0, 96]
+blackareas: [(0, 90, 3710, 0)]
+orientation: Normal
+sha256data: ead9d67f3d10b16a66595c938973f740a877c387cd3f293bd6ab86d322f95cc0

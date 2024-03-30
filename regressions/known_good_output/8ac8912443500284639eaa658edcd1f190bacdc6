@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D3X
+clean_make: Nikon
+clean_model: D3X
+width: 6080
+height: 4044
+cpp: 1
+wb_coeffs: [1.8085938, 1.0, 1.546875, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7171.0, -1986.0, -648.0], [-8085.0, 15555.0, 2718.0], [-2170.0, 2512.0, 7457.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 7af1b4e2c21266bbf924c3a95e18b09a4d79b9b04ccaaf0201efc98c10fa7c12

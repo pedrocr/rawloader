@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ150
+clean_make: Panasonic
+clean_model: DMC-FZ150
+width: 3024
+height: 3008
+cpp: 1
+wb_coeffs: [472.0, 265.0, 486.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[11904.0, -4541.0, -1189.0], [-2355.0, 10899.0, 1662.0], [-296.0, 1586.0, 4289.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 16, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2ddbf5e20aa57242cd78f8e98a8ef496b1756251ce9388490e67501969c0988a

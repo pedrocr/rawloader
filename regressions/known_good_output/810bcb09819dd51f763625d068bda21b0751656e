@@ -1,0 +1,16 @@
+make: google
+model: MI 8
+clean_make: google
+clean_model: MI 8
+width: 4032
+height: 2268
+cpp: 1
+wb_coeffs: [2.2131386, 1.0, 1.3985016, NaN]
+whitelevels: [16368, 16368, 16368, 16368]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[1.397, -0.6584, -0.2168], [-0.9956, 1.9269, 0.0401], [0.0401, -0.1525, 0.7868], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8f4fc95654d7ded2e90027f81dead7e798f851eb49c4882ee2ddb2706d53603d

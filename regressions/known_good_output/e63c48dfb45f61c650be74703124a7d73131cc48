@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-S1
+clean_make: Fujifilm
+clean_model: X-S1
+width: 2944
+height: 2144
+cpp: 1
+wb_coeffs: [526.0, 321.0, 632.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[13509.0, -6199.0, -1254.0], [-4430.0, 12733.0, 1865.0], [-331.0, 1441.0, 5022.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 48, 0, 48]
+blackareas: []
+orientation: Normal
+sha256data: e2116e8aa50b1ea3bb03570ff4592001d50ddd76b130a0f57f3ab5469f331473

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss Digital N
+clean_make: Canon
+clean_model: Kiss N
+width: 3516
+height: 2328
+cpp: 1
+wb_coeffs: [2488.0, 1019.0, 1501.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [257, 257, 256, 0]
+xyz_to_cam: [[6018.0, -617.0, -965.0], [-8645.0, 15881.0, 2975.0], [-1530.0, 1719.0, 7642.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 0, 0, 42]
+blackareas: [(0, 40, 2328, 0)]
+orientation: Rotate270
+sha256data: 5a46fad1ec347ff12a22f18e0ec112bb29268a463202c6967deec22b7918a6a1

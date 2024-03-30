@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON 1 V3
+clean_make: Nikon
+clean_model: 1 V3
+width: 5248
+height: 3504
+cpp: 1
+wb_coeffs: [2.8398438, 1.0, 1.6953125, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[5958.0, -1559.0, -571.0], [-4021.0, 11453.0, 2939.0], [-634.0, 1548.0, 5087.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: b20fd69c7670c7ea484a1d2f8afe00fe5fc8bd798c09bcde3bce884bdd7eb149

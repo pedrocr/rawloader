@@ -1,0 +1,16 @@
+make: Leaf
+model: Leaf Aptus 75
+clean_make: Leaf
+clean_model: Aptus 75
+width: 4992
+height: 6666
+cpp: 1
+wb_coeffs: [1.2634116, 1.0, 1.3908427, NaN]
+whitelevels: [16191, 16191, 16191, 16191]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7914.0, 1414.0, -1190.0], [-8777.0, 16582.0, 2280.0], [-2811.0, 4605.0, 5562.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: c067763b311a0680ed9773d07f7829e385d14847fd46c6060c2cbbc0e5a1937c

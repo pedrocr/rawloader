@@ -1,0 +1,16 @@
+make: DJI
+model: FC6310
+clean_make: DJI
+clean_model: FC6310
+width: 5472
+height: 3648
+cpp: 1
+wb_coeffs: [2.1513705, 1.0, 2.067628, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [3198, 3193, 3193, 3198]
+xyz_to_cam: [[0.7122, -0.2108, -0.0512], [-0.3155, 1.1201, 0.2231], [-0.0541, 0.1423, 0.5045], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c7cb57edc902a1e79c9e723f25f205077c39eaeeb9c2553085835a6aba7a2e40

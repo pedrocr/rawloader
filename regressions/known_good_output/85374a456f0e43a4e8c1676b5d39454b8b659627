@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G7 X
+clean_make: Canon
+clean_model: PowerShot G7 X
+width: 5632
+height: 3710
+cpp: 1
+wb_coeffs: [1.853, 0.878, 1.5059999, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [511, 511, 511, 511]
+xyz_to_cam: [[0.9602, -0.3823, -0.0937], [-0.2984, 1.1495, 0.1675], [-0.0407, 0.1415, 0.5049], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [40, 28, 22, 132]
+blackareas: []
+orientation: Normal
+sha256data: 3e804d74da99aefd8dfd1306093aff4b20ee18eaf4112839dc38e12a2b0d8107

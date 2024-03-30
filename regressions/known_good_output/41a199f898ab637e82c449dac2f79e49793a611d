@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: PEN-F
+clean_make: Olympus
+clean_model: PEN-F
+width: 10400
+height: 7796
+cpp: 1
+wb_coeffs: [422.0, 256.0, 532.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[9476.0, -3182.0, -765.0], [-2613.0, 10958.0, 1893.0], [-449.0, 1315.0, 5268.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 32c3bc92092bc11e7d854d08dc9c151bd5525262072a3dc32f88b4b941ad80c6

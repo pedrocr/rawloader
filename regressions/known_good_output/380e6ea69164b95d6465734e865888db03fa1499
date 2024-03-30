@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D40
+clean_make: Nikon
+clean_model: D40
+width: 3040
+height: 2014
+cpp: 1
+wb_coeffs: [2.2734375, 1.0, 1.2890625, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6992.0, -1668.0, -806.0], [-8138.0, 15748.0, 2543.0], [-874.0, 850.0, 7897.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 2, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 34f8296a0faec31ecd6ed93f8ee443cce3411000b357ce6cb182389cbd3914e6

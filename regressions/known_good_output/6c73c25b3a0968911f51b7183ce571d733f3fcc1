@@ -1,0 +1,16 @@
+make: PENTAX Corporation
+model: PENTAX *ist DL2
+clean_make: Pentax
+clean_model: *ist DL2
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [12896.0, 8192.0, 7616.0, NaN]
+whitelevels: [3950, 3950, 3950, 3950]
+blacklevels: [127, 128, 128, 127]
+xyz_to_cam: [[10504.0, -2438.0, -1189.0], [-8603.0, 16207.0, 2531.0], [-1022.0, 863.0, 12242.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: def31590c96e69e05f6ed7d39d40f61ac505826c011a9e9559138c5fdb6227be

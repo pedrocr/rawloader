@@ -1,0 +1,16 @@
+make: Hasselblad
+model: L2D-20c
+clean_make: Hasselblad
+clean_model: L2D-20c
+width: 5376
+height: 3956
+cpp: 1
+wb_coeffs: [2.2712402, 1.0, 1.9516602, NaN]
+whitelevels: [65472, 65472, 65472, 65472]
+blacklevels: [4096, 4096, 4096, 4096]
+xyz_to_cam: [[0.8575, -0.3219, -0.0868], [-0.3351, 1.1451, 0.1593], [0.0207, 0.0468, 0.4876], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 96, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ad41d7bb089a3d5ebfe7d790ae4f31431b0ad4496b88a056221eeb917322609b

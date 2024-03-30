@@ -1,0 +1,16 @@
+make: HUAWEI
+model: BLA-L29
+clean_make: HUAWEI
+clean_model: BLA-L29
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [2.0265567, 1.0, 2.5338829, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 150f6b4d101eaea1768a33738b03a6dcdd7b5e97281c03f34c63fb37ea05d76f

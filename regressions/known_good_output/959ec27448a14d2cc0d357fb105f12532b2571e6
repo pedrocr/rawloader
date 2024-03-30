@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-30
+clean_make: Olympus
+clean_model: E-30
+width: 4100
+height: 3084
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [4015, 4015, 4015, 4015]
+blacklevels: [64, 65, 65, 65]
+xyz_to_cam: [[8144.0, -1861.0, -1111.0], [-7763.0, 15894.0, 1929.0], [-1865.0, 2542.0, 7607.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 6, 2, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 69f236e48a5f188b75a0a44b81036ded1dc452bb4dc46659a4220492db1d7fba

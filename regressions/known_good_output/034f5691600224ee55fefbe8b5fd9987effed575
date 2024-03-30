@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX260 HS
+clean_make: Canon
+clean_model: Canon PowerShot SX260 HS
+width: 4176
+height: 3060
+cpp: 1
+wb_coeffs: [1.6420001, 0.97499996, 1.528, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.544808, -0.174047, -0.080399], [-0.075055, 0.440444, 0.011367], [-0.005801, 0.071589, 0.118914], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [24, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: d7c54bf143904fa4564ace6967cf5fc77d71f4a65d6213437d39c15dbf5243e5

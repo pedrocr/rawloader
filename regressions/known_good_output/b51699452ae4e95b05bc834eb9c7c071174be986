@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: EX1
+clean_make: Samsung
+clean_model: EX1
+width: 3688
+height: 2780
+cpp: 1
+wb_coeffs: [7792.0, 4096.0, 8256.0, NaN]
+whitelevels: [15600, 15600, 15600, 15600]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8898.0, -2498.0, -994.0], [-3144.0, 11328.0, 2066.0], [-760.0, 1381.0, 4576.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [2, 8, 22, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9e8314320cb45a9581d71fa93cb874bfc1ce5524a144961104f0572f55f41a00

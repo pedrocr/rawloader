@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX Q
+clean_make: PENTAX
+clean_model: PENTAX Q
+width: 4064
+height: 3000
+cpp: 1
+wb_coeffs: [1.6015625, 1.0, 1.734375, NaN]
+whitelevels: [4056, 4056, 4056, 4056]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.2994537, -0.5593262, -0.11071777], [-0.18788147, 1.0139465, 0.2026825], [-0.00642395, 0.123291016, 0.49188232], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 30ef380cffcce04f746f615e1ea39c5875949e4ea4523faed55040076401b854

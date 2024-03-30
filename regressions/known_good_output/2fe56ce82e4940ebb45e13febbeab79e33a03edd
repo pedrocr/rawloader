@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX mini
+clean_make: Samsung
+clean_model: NX mini
+width: 5664
+height: 3710
+cpp: 1
+wb_coeffs: [8208.0, 4096.0, 12064.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[5222.0, -1196.0, -550.0], [-6540.0, 14649.0, 2009.0], [-1666.0, 2819.0, 5657.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [16, 56, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 2de3b3b235ed14f869e52d110316311a27120b2bc22ac123eb669ad64cc6df79

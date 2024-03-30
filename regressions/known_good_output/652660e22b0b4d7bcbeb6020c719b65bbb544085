@@ -1,0 +1,16 @@
+make: Leica Camera AG
+model: M9 Digital Camera
+clean_make: Leica Camera AG
+clean_model: M9 Digital Camera
+width: 5216
+height: 3472
+cpp: 1
+wb_coeffs: [1.3800049, 1.0, 2.0039063, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [165, 165, 165, 165]
+xyz_to_cam: [[0.626, -0.1019, -0.047], [-0.373, 1.145, 0.193], [-0.1409, 0.295, 0.621], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 482b4ebe11bd111fceac71ce934514c43d082540eac5620b42754826cc1d791c

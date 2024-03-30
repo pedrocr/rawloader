@@ -1,0 +1,16 @@
+make: LEICA
+model: V-LUX 4
+clean_make: LEICA
+clean_model: V-LUX 4
+width: 4144
+height: 3016
+cpp: 1
+wb_coeffs: [549.0, 265.0, 484.0, NaN]
+whitelevels: [3956, 3956, 3956, 3956]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[8112.0, -2563.0, -740.0], [-3730.0, 11784.0, 2197.0], [-941.0, 2075.0, 4933.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 128, 3, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8e1e6e17bcc850b37f715ee129d7d578465850cd0aea99130636352b91f41d36

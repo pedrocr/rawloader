@@ -1,0 +1,16 @@
+make: PENTAX Corporation
+model: PENTAX K10D
+clean_make: Pentax
+clean_model: K10D
+width: 3936
+height: 2624
+cpp: 1
+wb_coeffs: [1.5625, 1.0, 1.0351563, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.0986023, -0.25726318, -0.038009644], [-0.56855774, 1.2591553, 0.2501526], [-0.0675354, 0.060775757, 0.9779358], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9062558cd60968b6dd538abb7f3eff54997f5f723064b7fc86979b1951bcfc2b

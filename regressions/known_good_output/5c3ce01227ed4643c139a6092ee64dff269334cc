@@ -1,0 +1,16 @@
+make: Leica Camera AG
+model: LEICA M (Typ 240)
+clean_make: Leica Camera AG
+clean_model: LEICA M (Typ 240)
+width: 5984
+height: 4000
+cpp: 1
+wb_coeffs: [2.1484375, 1.0, 1.3046875, NaN]
+whitelevels: [15000, 15000, 15000, 15000]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.6653, -0.1486, -0.0611], [-0.4221, 1.3303, 0.0929], [-0.0881, 0.2416, 0.7226], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d421af580ff100f32f4e6ff91efba979329bd4995018e4fae23a73563b30465e

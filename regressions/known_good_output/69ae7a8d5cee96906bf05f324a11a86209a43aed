@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G10
+clean_make: Canon
+clean_model: PowerShot G10
+width: 4480
+height: 3348
+cpp: 1
+wb_coeffs: [1830.0, 993.0, 1549.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 128, 128]
+xyz_to_cam: [[11093.0, -3906.0, -1028.0], [-5047.0, 12492.0, 2879.0], [-1003.0, 1750.0, 5561.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [13, 36, 12, 12]
+blackareas: []
+orientation: Normal
+sha256data: 2acc3ae72fe869c587bb87f38192117685ab3bf8bb8cfc311a8787a17106d2da

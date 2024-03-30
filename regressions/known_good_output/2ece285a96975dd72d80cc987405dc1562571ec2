@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-G6
+clean_make: Panasonic
+clean_model: DMC-G6
+width: 4816
+height: 3472
+cpp: 1
+wb_coeffs: [536.0, 264.0, 470.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8294.0, -2891.0, -651.0], [-3869.0, 11590.0, 2595.0], [-1183.0, 2267.0, 5352.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 194, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8f76114f1a3e1aa38190621e426bdab0819801e81a819e91f849001a777c22c7

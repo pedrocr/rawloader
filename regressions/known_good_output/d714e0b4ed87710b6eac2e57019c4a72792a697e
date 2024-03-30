@@ -1,0 +1,16 @@
+make: HUAWEI
+model: PRA-LX1
+clean_make: HUAWEI
+clean_model: PRA-LX1
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [2.1263738, 1.0, 1.6794872, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d10c4fce58952dfe228e3c0720387fbed5484232ddfea80fa9e43f6a100453aa

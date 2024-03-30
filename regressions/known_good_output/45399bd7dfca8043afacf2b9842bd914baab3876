@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: C7070WZ
+clean_make: Olympus
+clean_model: C7070WZ
+width: 3088
+height: 2309
+cpp: 1
+wb_coeffs: [476.0, 256.0, 443.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10252.0, -3531.0, -1095.0], [-7114.0, 14850.0, 2436.0], [-1451.0, 1723.0, 6365.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 3b0807cf04a79b9740e912702eb043dd738e442f39098f9e3584f712e05c51f5

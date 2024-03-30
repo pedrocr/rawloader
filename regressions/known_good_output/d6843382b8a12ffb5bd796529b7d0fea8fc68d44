@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D3100
+clean_make: Nikon
+clean_model: D3100
+width: 4672
+height: 3084
+cpp: 1
+wb_coeffs: [2.2734375, 1.0, 1.2070313, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7911.0, -2167.0, -813.0], [-5327.0, 13150.0, 2408.0], [-1288.0, 2483.0, 7968.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [2, 24, 2, 8]
+blackareas: []
+orientation: Normal
+sha256data: 50611ca312023516bc9f0a174ba49e5c90bcc50ab48d51e050f4db3a638013fe

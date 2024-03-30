@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX40 HS
+clean_make: Canon
+clean_model: PowerShot SX40 HS
+width: 4176
+height: 3060
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[12432.0, -4753.0, -1247.0], [-2110.0, 10691.0, 1629.0], [-412.0, 1623.0, 4926.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [16, 8, 0, 96]
+blackareas: [(0, 94, 3060, 0)]
+orientation: Unknown
+sha256data: 829294ffe841543783e8a71b0a875ffbcc0932378f72dec0deeb07827b6b19cf

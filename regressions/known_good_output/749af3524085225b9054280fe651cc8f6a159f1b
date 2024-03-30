@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S9600
+clean_make: Fujifilm
+clean_model: FinePix S9600
+width: 4292
+height: 4291
+cpp: 1
+wb_coeffs: [494.0, 320.0, 384.0, NaN]
+whitelevels: [15564, 15564, 15564, 15564]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[12343.0, -4515.0, -1285.0], [-7165.0, 14899.0, 2435.0], [-1895.0, 2496.0, 8800.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1fd5596c9c12b5d19ada96c56d793a2ec0f204421512072ae9bf013e71b5fe17

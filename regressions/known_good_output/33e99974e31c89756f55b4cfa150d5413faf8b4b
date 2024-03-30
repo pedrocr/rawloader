@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-x
+clean_make: Pentax
+clean_model: K-x
+width: 4352
+height: 2868
+cpp: 1
+wb_coeffs: [1.3007813, 1.03125, 3.09375, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [1, 9, 9, 0]
+xyz_to_cam: [[1.0441437, -0.3325348, -0.11477661], [-0.5571289, 1.3599396, 0.21488953], [-0.12062073, 0.17541504, 0.7448883], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d759e7b57a563bbcbc2b591bb0ec6ea448d337f9386c18368b5b428339777bb1

@@ -1,0 +1,16 @@
+make: samsung
+model: SM-S901U
+clean_make: samsung
+clean_model: SM-S901U
+width: 3648
+height: 2736
+cpp: 3
+wb_coeffs: [2.0237155, 1.0, 1.6489533, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.6181641, -0.91503906, -0.13476563], [-0.38964844, 1.4287109, -0.0009765625], [-0.028320313, 0.20214844, 0.5292969], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 602714ad6ee5824253133a8b7d86e7a7548f78db7428fbca5162ffa760e4a966

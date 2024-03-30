@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D90
+clean_make: Nikon
+clean_model: D90
+width: 4352
+height: 2868
+cpp: 1
+wb_coeffs: [1.9765625, 1.0, 1.1445313, NaN]
+whitelevels: [3767, 3767, 3767, 3767]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7309.0, -1403.0, -519.0], [-8474.0, 16008.0, 2622.0], [-2434.0, 2826.0, 8064.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2323c30d579023236a263fbe7c5cfad82b1bd77e5cf9dba7cfec7059f4414981

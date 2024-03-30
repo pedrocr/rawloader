@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A560
+clean_make: Canon
+clean_model: Canon PowerShot A560
+width: 3152
+height: 2340
+cpp: 1
+wb_coeffs: [1.549, 0.92999995, 1.8169999, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[15265.0, -6193.0, -1558.0], [-4125.0, 12116.0, 2010.0], [-888.0, 1639.0, 5220.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 6, 2, 38]
+blackareas: []
+orientation: Normal
+sha256data: 1007dbbb165c8cfec8aa95cfe862f6e16a2e02eaac17a4f7babe02d7ae17e458

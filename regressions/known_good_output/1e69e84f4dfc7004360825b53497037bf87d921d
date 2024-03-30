@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: E-PL8
+clean_make: OLYMPUS CORPORATION
+clean_model: E-PL8
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [512.0, 256.0, 396.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[9197.0, -3190.0, -659.0], [-2606.0, 10830.0, 2039.0], [-458.0, 1250.0, 5458.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: bd568de99ae993ff559ce32f845520ff2e355dbf26cd68acf0822f2dee555abf

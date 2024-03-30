@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: XQ2
+clean_make: Fujifilm
+clean_model: XQ2
+width: 4096
+height: 3012
+cpp: 1
+wb_coeffs: [522.0, 302.0, 623.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [257, 257, 257, 257]
+xyz_to_cam: [[9252.0, -2704.0, -1064.0], [-5893.0, 14265.0, 1717.0], [-1101.0, 2341.0, 4349.0], [0.0, 0.0, 0.0]]
+cfa: GBGGRGRGRBGBGBGGRGGRGGBGBGBRGRGRGGBG
+crops: [0, 64, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ee5984ec2ffd1cc46d922565b0f35cdba33eceee0819b9b39a016db2eb4a3251

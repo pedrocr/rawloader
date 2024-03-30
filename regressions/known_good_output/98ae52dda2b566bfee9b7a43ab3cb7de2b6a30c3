@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-E2
+clean_make: Fujifilm
+clean_model: X-E2
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [613.0, 302.0, 428.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[8458.0, -2451.0, -855.0], [-4597.0, 12447.0, 2407.0], [-1475.0, 2482.0, 6526.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: d8c247dda6515b411644cce4b413385e2eefac21bc56aa04edce68f56c9c4cd0

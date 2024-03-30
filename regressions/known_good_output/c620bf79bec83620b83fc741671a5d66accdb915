@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-A2
+clean_make: Fujifilm
+clean_model: X-A2
+width: 5120
+height: 3288
+cpp: 1
+wb_coeffs: [542.0, 302.0, 535.0, NaN]
+whitelevels: [4094, 4094, 4094, 4094]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[10763.0, -4560.0, -917.0], [-3346.0, 11311.0, 2322.0], [-475.0, 1135.0, 5843.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 168, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 522a48c3b44e563cfc91be64c045a8b2b2e9e8e430247e1e7b28dc5fa9df62e2

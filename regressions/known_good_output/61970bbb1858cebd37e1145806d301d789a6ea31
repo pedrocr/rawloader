@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: SH-2
+clean_make: OLYMPUS IMAGING CORP.
+clean_model: SH-2
+width: 4624
+height: 3470
+cpp: 1
+wb_coeffs: [456.0, 256.0, 485.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[10156.0, -3425.0, -1077.0], [-2611.0, 11177.0, 1624.0], [-385.0, 1592.0, 5080.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 21fe65f6975d951b83aba92818339d915c9b76d927810d35b7f7f05fc5b89752

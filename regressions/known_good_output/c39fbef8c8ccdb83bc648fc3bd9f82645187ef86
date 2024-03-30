@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss X4
+clean_make: Canon
+clean_model: Kiss X4
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2265.0, 1024.0, 1547.0, NaN]
+whitelevels: [15831, 15831, 15831, 15831]
+blacklevels: [2048, 2049, 2052, 0]
+xyz_to_cam: [[6941.0, -1164.0, -857.0], [-3825.0, 11597.0, 2534.0], [-416.0, 1540.0, 6039.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [54, 0, 0, 148]
+blackareas: [(4, 5344, 48, 0), (0, 140, 3516, 0)]
+orientation: Normal
+sha256data: 8d4632ac7d65577c1583801a63c14bd9b93588d5465ca14a9761d6ad05c8317c

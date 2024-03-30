@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-410
+clean_make: Olympus
+clean_model: E-410
+width: 3720
+height: 2800
+cpp: 1
+wb_coeffs: [492.0, 256.0, 364.0, NaN]
+whitelevels: [3601, 3601, 3601, 3601]
+blacklevels: [73, 73, 73, 73]
+xyz_to_cam: [[8856.0, -2582.0, -1026.0], [-7761.0, 15766.0, 2082.0], [-2009.0, 2575.0, 7469.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6fd3d64305d4be04759d9ba0599a7ae1d8b07a287171c4f58df837580243f3fd

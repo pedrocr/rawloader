@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A3300 IS
+clean_make: Canon
+clean_model: Canon PowerShot A3300 IS
+width: 4704
+height: 3504
+cpp: 1
+wb_coeffs: [1.386, 0.867, 2.18, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [26, 64, 18, 16]
+blackareas: []
+orientation: Normal
+sha256data: 176eb5d88c75d36b9c50f52807df9b526442aed09416e3729fb0996b08cba0aa

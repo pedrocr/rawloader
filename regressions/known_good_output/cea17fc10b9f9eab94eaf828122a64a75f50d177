@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-P5
+clean_make: Olympus
+clean_model: E-P5
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [504.0, 256.0, 474.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[8380.0, -2630.0, -639.0], [-2887.0, 10725.0, 2496.0], [-627.0, 1427.0, 5438.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 24, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 1125e4ca5b7c07bd6053f5613659a3e26bd50f9c768700b6ed80c2988e8d1225

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ330
+clean_make: Panasonic
+clean_model: DMC-FZ330
+width: 4144
+height: 3016
+cpp: 1
+wb_coeffs: [520.0, 256.0, 508.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8378.0, -2798.0, -769.0], [-3068.0, 11410.0, 1877.0], [-538.0, 1792.0, 4623.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 126, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 64ad4a741511ccfe4a93ca2c0460976b726b6749e73f7996d2dba262bb84b246

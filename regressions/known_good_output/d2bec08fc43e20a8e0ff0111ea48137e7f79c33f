@@ -1,0 +1,16 @@
+make: samsung
+model: SM-S908U1
+clean_make: samsung
+clean_model: SM-S908U1
+width: 4000
+height: 3000
+cpp: 3
+wb_coeffs: [1.5125554, 1.0, 1.7444633, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.7568359, -0.953125, -0.13378906], [-0.3125, 1.3408203, 0.0078125], [0.0068359375, 0.16210938, 0.51953125], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 90297a6f6b9c37efb806f9d68af8452a5afe7ca65ec6d95e4e69a0e6afa15f18

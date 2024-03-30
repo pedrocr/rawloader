@@ -1,0 +1,16 @@
+make: Hasselblad
+model: Hasselblad H5D-40
+clean_make: Hasselblad
+clean_model: H5D-40
+width: 7410
+height: 5586
+cpp: 1
+wb_coeffs: [2.4660797, 1.0, 1.2957764, NaN]
+whitelevels: [62914, 62914, 62914, 62914]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[6159.0, -1402.0, -177.0], [-5439.0, 12762.0, 3007.0], [-955.0, 2200.0, 7104.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [4, 40, 80, 42]
+blackareas: []
+orientation: Normal
+sha256data: 8dc13f6bb467715e3787c6f323a5457c007c715b6dc6b6eb1b2683c91d920c74

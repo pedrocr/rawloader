@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S95
+clean_make: Canon
+clean_model: PowerShot S95
+width: 3744
+height: 2784
+cpp: 1
+wb_coeffs: [1672.0, 900.0, 1647.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [128, 128, 128, 128]
+xyz_to_cam: [[13440.0, -5896.0, -1279.0], [-1236.0, 9598.0, 1931.0], [-180.0, 1001.0, 4651.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [24, 20, 24, 66]
+blackareas: []
+orientation: Normal
+sha256data: 8cb51ea86e10e46d19e9a5dca9744493f9436ede08ed82cf359d34532473e968

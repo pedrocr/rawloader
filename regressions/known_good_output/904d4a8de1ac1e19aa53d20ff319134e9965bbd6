@@ -1,0 +1,16 @@
+make: DJI
+model: FC7303
+clean_make: DJI
+clean_model: FC7303
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [2.2771003, 1.0, 1.6337893, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1020, 1020, 1020, 1020]
+xyz_to_cam: [[0.6883, -0.1326, -0.0981], [-0.4557, 1.3643, 0.0632], [-0.1285, 0.2585, 0.4512], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 348ae9cca45292de151d402e9d32293acd37f4a45ef9e2c8b88dc8db1c1dbbd9

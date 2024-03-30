@@ -1,0 +1,16 @@
+make: Yuneec
+model: CGO3P
+clean_make: Yuneec
+clean_model: CGO3P
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [1.892578, 1.0, 1.7675782, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[0.9318, -0.2532, -0.1047], [-0.2905, 1.147, 0.1614], [-0.052, 0.1735, 0.4719], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c34f0e601037e47a32fb621e4061a3cf343f0f9a6f86164a6c090aa8e10f22fa

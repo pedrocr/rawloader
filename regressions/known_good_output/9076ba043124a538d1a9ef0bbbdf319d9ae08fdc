@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D7000
+clean_make: Nikon
+clean_model: D7000
+width: 4992
+height: 3280
+cpp: 1
+wb_coeffs: [1.9609375, 1.0, 1.5078125, NaN]
+whitelevels: [3972, 3972, 3972, 3972]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8198.0, -2239.0, -724.0], [-4871.0, 12389.0, 2798.0], [-1043.0, 2050.0, 7181.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 46, 2, 0]
+blackareas: []
+orientation: Normal
+sha256data: 12844fcc5248ef3388f3092086c05b7f8076285c63d4af2d5b48f97b95ccb9fb

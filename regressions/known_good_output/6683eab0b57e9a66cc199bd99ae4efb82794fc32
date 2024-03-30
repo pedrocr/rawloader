@@ -1,0 +1,16 @@
+make: PENTAX Corporation
+model: PENTAX K100D Super
+clean_make: Pentax
+clean_model: K100D Super
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [13056.0, 8192.0, 8224.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[11095.0, -3157.0, -1324.0], [-8377.0, 15834.0, 2720.0], [-1108.0, 947.0, 11688.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1a6f192b95ab962e761cd55da9a1d89617e0a0035ffc2fa7167202e14805b891

@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-400
+clean_make: Olympus
+clean_model: E-400
+width: 3768
+height: 2840
+cpp: 1
+wb_coeffs: [588.0, 256.0, 314.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [95, 95, 95, 95]
+xyz_to_cam: [[6169.0, -1483.0, -21.0], [-7107.0, 14761.0, 2536.0], [-2904.0, 3580.0, 8568.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2e675bd36bcfbe5de7d9afa1cc4fc8cd2aeb74d9f96f38ca30010918031fe2e3

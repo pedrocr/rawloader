@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-T10
+clean_make: Fujifilm
+clean_model: X-T10
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [576.0, 302.0, 438.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[8458.0, -2451.0, -855.0], [-4597.0, 12447.0, 2407.0], [-1475.0, 2482.0, 6526.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: b28f6f26103c3fdd4e7557666611a58b9f20debc26910d694983b0fa7b5d0bc3

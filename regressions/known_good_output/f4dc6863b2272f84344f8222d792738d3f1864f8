@@ -1,0 +1,16 @@
+make: samsung
+model: Galaxy S23 Ultra
+clean_make: samsung
+clean_model: Galaxy S23 Ultra
+width: 8160
+height: 6120
+cpp: 3
+wb_coeffs: [1.9320755, 1.0, 1.5058824, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.4267578, -0.7841797, -0.13574219], [-0.2841797, 1.3359375, -0.06640625], [-0.0234375, 0.23535156, 0.54003906], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0165e9b9de2cb232a9dec0fcade0a55e2cd4f4a992ec4e51a1dc5849c57e6ee8

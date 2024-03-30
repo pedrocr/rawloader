@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: SP350
+clean_make: Olympus
+clean_model: SP350
+width: 3280
+height: 2453
+cpp: 1
+wb_coeffs: [426.0, 256.0, 457.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[12078.0, -4836.0, -1069.0], [-6671.0, 14306.0, 2578.0], [-786.0, 939.0, 7418.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 132757d40e32988ea11b0679f6078fb73c4afcbadaa5af13e862886582c4f264

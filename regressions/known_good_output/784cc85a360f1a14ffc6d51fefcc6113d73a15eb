@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 77D
+clean_make: Canon
+clean_model: Canon EOS 77D
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1975.0, 1024.0, 1675.0, NaN]
+whitelevels: [14338, 14338, 14338, 14338]
+blacklevels: [2048, 2048, 2048, 0]
+xyz_to_cam: [[7377.0, -742.0, -998.0], [-4235.0, 11981.0, 2549.0], [-673.0, 1918.0, 5538.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: 42f22a8c38081338c06c63b97be17f7b612bfd18370c33e7aeecea35b3310cc6

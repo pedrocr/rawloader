@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX210
+clean_make: Samsung
+clean_model: NX210
+width: 5632
+height: 3720
+cpp: 1
+wb_coeffs: [9776.0, 4096.0, 7232.0, NaN]
+whitelevels: [3750, 3750, 3750, 3750]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6933.0, -2268.0, -753.0], [-4921.0, 13387.0, 1647.0], [-803.0, 1641.0, 6096.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [17, 71, 55, 89]
+blackareas: []
+orientation: Normal
+sha256data: 3b750eef6acdeada844e42785479b89022dc1b5862de05eb0a1488f6cf626174

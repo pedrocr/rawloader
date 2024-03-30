@@ -1,0 +1,16 @@
+make: DJI
+model: DJI Osmo Action
+clean_make: DJI
+clean_model: DJI Osmo Action
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [2.1950717, 1.0, 1.7331562, NaN]
+whitelevels: [65520, 65520, 65520, 65520]
+blacklevels: [4095, 4095, 4095, 4095]
+xyz_to_cam: [[0.8257, -0.2417, -0.1016], [-0.4478, 1.3209, 0.1344], [-0.064, 0.1694, 0.5385], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 3e7cbdb934ab04186c2c2b4278e8ec9cc63e33a26761956b9c8c73d90c4356a4

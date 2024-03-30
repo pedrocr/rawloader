@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-7S
+clean_make: Sony
+clean_model: ILCE-7S
+width: 2816
+height: 1872
+cpp: 1
+wb_coeffs: [2932.0, 1024.0, 1372.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5838.0, -1430.0, -246.0], [-3497.0, 11477.0, 2297.0], [-748.0, 1885.0, 5778.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 32, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 818d88cf76103f02954c8c81fa05dfcc3b1350ef81e2a3bc937f9a6d4d2aaff7

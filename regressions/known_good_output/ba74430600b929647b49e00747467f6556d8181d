@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-M1
+clean_make: Olympus
+clean_model: E-M1
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [528.0, 256.0, 386.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [255, 255, 255, 255]
+xyz_to_cam: [[7687.0, -1984.0, -606.0], [-4327.0, 11928.0, 2721.0], [-1381.0, 2339.0, 6452.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f66855309d3a6b19598952649c382dfbaaf92eea1581142d8a693f1988b17433

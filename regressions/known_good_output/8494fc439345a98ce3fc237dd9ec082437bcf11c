@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS DIGITAL REBEL XTi
+clean_make: Canon
+clean_model: Rebel XTi
+width: 3948
+height: 2622
+cpp: 1
+wb_coeffs: [2372.0, 1024.0, 1475.0, NaN]
+whitelevels: [4058, 4058, 4058, 4058]
+blacklevels: [257, 257, 256, 0]
+xyz_to_cam: [[7054.0, -1501.0, -990.0], [-8156.0, 15544.0, 2812.0], [-1278.0, 1414.0, 7796.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 42]
+blackareas: [(0, 40, 2622, 0)]
+orientation: Normal
+sha256data: af54d381f748bacc2b74bd607ea1646f7bbcae59386d1e070aaab1c3dc6197a2

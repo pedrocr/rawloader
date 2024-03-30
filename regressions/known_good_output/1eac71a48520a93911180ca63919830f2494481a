@@ -1,0 +1,16 @@
+make: Kandao
+model: QooCam 8K
+clean_make: Kandao
+clean_model: QooCam 8K
+width: 3840
+height: 7680
+cpp: 1
+wb_coeffs: [2.3593752, 1.0, 1.753909, NaN]
+whitelevels: [32760, 32760, 32760, 32760]
+blacklevels: [1600, 1600, 1600, 1600]
+xyz_to_cam: [[0.6395, -0.1602, -0.01], [-0.3233, 1.0318, 0.3394], [-0.0645, 0.1768, 0.5939], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e29b8f5bc26dc3aaf8737a440c5e1706cada074d538f883b47a8f6a8370aa5ff

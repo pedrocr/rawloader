@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: GR
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: GR
+width: 4960
+height: 3280
+cpp: 1
+wb_coeffs: [2.77, 1.0, 1.6700001, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.5329, -0.1459, -0.039], [-0.5407, 1.293, 0.2768], [-0.1119, 0.1772, 0.6046], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 16, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 31be2e15b7c5b5f925993932bedb92dc79dcb41cce4bac552b5fba830c76c1fa

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GH4
+clean_make: Panasonic
+clean_model: DMC-GH4
+width: 3472
+height: 3472
+cpp: 1
+wb_coeffs: [643.0, 256.0, 470.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7122.0, -2108.0, -512.0], [-3155.0, 11201.0, 2231.0], [-541.0, 1423.0, 5045.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6ad6ff6a6c65a57359f01cb99870ccceb713371f383e66b3db446c660accdecf

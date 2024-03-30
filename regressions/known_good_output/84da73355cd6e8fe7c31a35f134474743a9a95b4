@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A720 IS
+clean_make: Canon
+clean_model: Canon PowerShot A720 IS
+width: 3336
+height: 2480
+cpp: 1
+wb_coeffs: [1.7800001, 0.838, 1.661, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.640019, -0.220031, -0.096241], [-0.077419, 0.639766, 0.044009], [0.017965, 0.078396, 0.231868], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [8, 34, 6, 10]
+blackareas: []
+orientation: Normal
+sha256data: b5536873d5ad3bdf1967a7fad0770abdd87e0e03febcc8021b9446f151384d54

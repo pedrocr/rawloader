@@ -1,0 +1,16 @@
+make: Arashi Vision
+model: Insta360 One2
+clean_make: Arashi Vision
+clean_model: Insta360 One2
+width: 3040
+height: 6080
+cpp: 1
+wb_coeffs: [1.9699707, 1.0, 1.8940428, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1026, 1026, 1026, 1026]
+xyz_to_cam: [[0.9312, -0.1238, -0.0846], [-0.5823, 1.4648, 0.3586], [-0.0969, 0.179, 0.856], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5623fa612f9f3130569bf4bf4214ec5c22a0a939d9620aa9cf6d1be5651b927e

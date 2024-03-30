@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX5
+clean_make: Panasonic
+clean_model: DMC-LX5
+width: 2968
+height: 2754
+cpp: 1
+wb_coeffs: [501.0, 263.0, 439.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[10909.0, -4295.0, -948.0], [-1333.0, 9306.0, 2399.0], [22.0, 1738.0, 4582.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 220, 4, 0]
+blackareas: []
+orientation: Normal
+sha256data: ea03a5bdf50ae2b7bcc4aaf355b2ce71623ed8fadb69f94e62397b551a63ecba

@@ -1,0 +1,16 @@
+make: Hasselblad
+model: L1D-20c
+clean_make: Hasselblad
+clean_model: L1D-20c
+width: 5568
+height: 3648
+cpp: 1
+wb_coeffs: [2.8632813, 1.0, 1.7070314, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [4096, 4094, 4094, 4093]
+xyz_to_cam: [[0.731, -0.2746, -0.0646], [-0.2991, 1.0847, 0.2469], [0.0163, 0.0585, 0.6324], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 004d8c7bc63629a71763354fa9a442d566a798cd0724c3c660152580be59cf62

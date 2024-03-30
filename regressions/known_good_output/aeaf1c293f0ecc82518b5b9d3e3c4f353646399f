@@ -1,0 +1,16 @@
+make: Leaf
+model: Credo 40
+clean_make: Leaf
+clean_model: Credo 40
+width: 7372
+height: 5536
+cpp: 1
+wb_coeffs: [1.31208, 1.0, 1.40452, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[8035.0, 435.0, -962.0], [-6001.0, 13872.0, 2320.0], [-1159.0, 3065.0, 5434.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 16, 46, 36]
+blackareas: []
+orientation: Unknown
+sha256data: 3e6600f18f8db06b1c82ad5e440b41076b2f6bbe3a76f2f005fd2189c53f7d1f

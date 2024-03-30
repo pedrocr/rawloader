@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G950U
+clean_make: samsung
+clean_model: SM-G950U
+width: 4032
+height: 2268
+cpp: 1
+wb_coeffs: [1.965451, 1.0, 1.7594502, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.3671875, -0.6435547, -0.17773438], [-0.484375, 1.4707031, 0.17480469], [-0.078125, 0.22851563, 0.6308594], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: ae7f8e1f45b0458f7f8d493efc88719f3b56b699843af7e4d917ef073e370454

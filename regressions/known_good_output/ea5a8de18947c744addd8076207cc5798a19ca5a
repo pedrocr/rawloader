@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D4
+clean_make: Nikon
+clean_model: D4
+width: 4992
+height: 3292
+cpp: 1
+wb_coeffs: [2.0273438, 1.0, 1.4492188, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8598.0, -2848.0, -857.0], [-5618.0, 13606.0, 2195.0], [-1002.0, 1773.0, 7137.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 50, 0, 2]
+blackareas: []
+orientation: Normal
+sha256data: 0882cebb14fdbed0b095aea51e75c484c97daa252ec6c7d98cc9c5fcc3aee202

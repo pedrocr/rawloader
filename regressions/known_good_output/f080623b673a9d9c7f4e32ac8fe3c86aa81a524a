@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S50
+clean_make: Canon
+clean_model: PowerShot S50
+width: 2672
+height: 1968
+cpp: 1
+wb_coeffs: [1369.0, 799.0, 1477.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [129, 129, 129, 0]
+xyz_to_cam: [[8882.0, -2571.0, -863.0], [-6348.0, 14234.0, 2288.0], [-1516.0, 2172.0, 6569.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 44, 2, 12]
+blackareas: [(0, 2672, 1968, 2632)]
+orientation: Unknown
+sha256data: 29aa72b1c37f36c7b258b202e0844482e21111d318c0baa1135a688529cef429

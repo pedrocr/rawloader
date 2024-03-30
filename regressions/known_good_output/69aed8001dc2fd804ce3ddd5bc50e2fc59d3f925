@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: E-M1MarkII
+clean_make: OLYMPUS CORPORATION
+clean_model: E-M1MarkII
+width: 5240
+height: 3912
+cpp: 1
+wb_coeffs: [316.0, 256.0, 978.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [255, 255, 255, 255]
+xyz_to_cam: [[9383.0, -3170.0, -763.0], [-2457.0, 10702.0, 2020.0], [-384.0, 1236.0, 5552.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e7c0f86fc6979775c34560a3ffcf275c352a5ffdfefa9d3b6e2003cecf360bfa

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss X80
+clean_make: Canon
+clean_model: Kiss X80
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2255.0, 1024.0, 1444.0, NaN]
+whitelevels: [12279, 12279, 12279, 12279]
+blacklevels: [2055, 2051, 2046, 0]
+xyz_to_cam: [[6939.0, -1016.0, -866.0], [-4428.0, 12473.0, 2177.0], [-1175.0, 2178.0, 6162.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [50, 0, 0, 142]
+blackareas: [(0, 140, 3516, 0)]
+orientation: Normal
+sha256data: 7ec2f8f6791846ab56ce2e9b75093b1e99ec3c2f0a4da76ce6e9ab25a198254c

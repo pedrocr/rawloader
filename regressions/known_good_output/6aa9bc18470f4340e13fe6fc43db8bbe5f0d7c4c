@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Kiss X3
+clean_make: Canon
+clean_model: Kiss X3
+width: 4832
+height: 3204
+cpp: 1
+wb_coeffs: [2260.0, 1024.0, 1383.0, NaN]
+whitelevels: [15600, 15600, 15600, 15600]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[4763.0, 712.0, -646.0], [-6821.0, 14399.0, 2640.0], [-1921.0, 3276.0, 6561.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [30, 48, 32, 62]
+blackareas: []
+orientation: Normal
+sha256data: edad5ae6cfbd20ae5f7be112c63b7ce43b5a7ca6a5abb3ad3a8f4c72c2994409

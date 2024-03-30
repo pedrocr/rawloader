@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL SL1
+clean_make: Canon
+clean_model: EOS Rebel SL1
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [1893.0, 1024.0, 1846.0, NaN]
+whitelevels: [15000, 15000, 15000, 15000]
+blacklevels: [2048, 2048, 2048, 2048]
+xyz_to_cam: [[6602.0, -841.0, -939.0], [-4472.0, 12458.0, 2247.0], [-975.0, 2039.0, 6148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [52, 0, 0, 72]
+blackareas: []
+orientation: Normal
+sha256data: d82fcb3ac4dd95efc0d48682f204379cf68c7191a476303bdf7bbb475e2dbaa1

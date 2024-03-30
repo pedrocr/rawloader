@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ30
+clean_make: Panasonic
+clean_model: DMC-FZ30
+width: 3304
+height: 2458
+cpp: 1
+wb_coeffs: [411.0, 264.0, 406.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10976.0, -4029.0, -1141.0], [-7918.0, 15491.0, 2600.0], [-1670.0, 2071.0, 8246.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 16, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c2234229a9308518b32030d9884989f30613859e23a72a58e7e7f597b9abe5f5

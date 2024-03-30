@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 5D Mark II
+clean_make: Canon
+clean_model: EOS 5D Mark II
+width: 5792
+height: 3804
+cpp: 1
+wb_coeffs: [2485.0, 1024.0, 1589.0, NaN]
+whitelevels: [15600, 15600, 15600, 15600]
+blacklevels: [1023, 1024, 1024, 0]
+xyz_to_cam: [[4716.0, 603.0, -830.0], [-7798.0, 15474.0, 2480.0], [-1496.0, 1937.0, 6651.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [51, 0, 0, 158]
+blackareas: [(2, 5792, 50, 0), (0, 156, 3804, 0)]
+orientation: Normal
+sha256data: 818b7a3683314dc7cdad09eb6c74f3480a1c03857ab9e77cc81c6950e62b00b2

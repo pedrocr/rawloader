@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX1 IS
+clean_make: Canon
+clean_model: PowerShot SX1 IS
+width: 4152
+height: 2772
+cpp: 1
+wb_coeffs: [1576.0, 882.0, 1777.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 0]
+xyz_to_cam: [[6578.0, -259.0, -502.0], [-5974.0, 13030.0, 3309.0], [-308.0, 1058.0, 4970.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 2, 0, 192]
+blackareas: [(0, 188, 2772, 0)]
+orientation: Normal
+sha256data: 1269919b5a36c7000f0d1adb43106420aa2cd94102ebea6928b08189dab22694

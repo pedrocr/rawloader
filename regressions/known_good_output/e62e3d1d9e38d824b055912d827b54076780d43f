@@ -1,0 +1,16 @@
+make: SONY
+model: ILCE-6500
+clean_make: SONY
+clean_model: ILCE-6500
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2680.0, 1024.0, 1792.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5973.0, -1695.0, -419.0], [-3826.0, 11797.0, 2293.0], [-639.0, 1398.0, 5789.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 44ba66f1d53d6b2364d93588813f888dfcaa1f5b6eae5b50499f639d49b34ebf

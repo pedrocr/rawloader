@@ -1,0 +1,16 @@
+make: SAMSUNG TECHWIN Co.
+model: SAMSUNG GX20
+clean_make: SAMSUNG TECHWIN Co.
+clean_model: SAMSUNG GX20
+width: 4864
+height: 3136
+cpp: 1
+wb_coeffs: [1.609375, 1.0, 1.4453125, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.7716675, -1.7402954, -0.57792664], [-0.84503174, 1.9777985, 0.03768921], [0.045913696, -0.1977539, 1.1221313], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 42980549514127914beb41ad0ee9d19a76197599e95ec4ca6eff5a0083c080ac

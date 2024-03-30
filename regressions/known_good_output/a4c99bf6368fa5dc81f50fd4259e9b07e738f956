@@ -1,0 +1,16 @@
+make: motorola
+model: moto g(7) play
+clean_make: motorola
+clean_model: moto g(7) play
+width: 4208
+height: 3120
+cpp: 1
+wb_coeffs: [2.2857144, 1.0, 1.3473685, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.1328125, -1.4765625, -0.375], [-1.0703125, 2.1796875, -0.0078125], [0.0625, -0.15625, 1.3984375], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 376ce759834ec20faac9217fb7d1127996dd17ec2a7ca693283ba5410243f6d7

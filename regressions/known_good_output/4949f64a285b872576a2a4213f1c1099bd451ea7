@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON Df
+clean_make: Nikon
+clean_model: Df
+width: 4992
+height: 3292
+cpp: 1
+wb_coeffs: [1.9765625, 1.0, 1.5078125, NaN]
+whitelevels: [15520, 15520, 15520, 15520]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8598.0, -2848.0, -857.0], [-5618.0, 13606.0, 2195.0], [-1002.0, 1773.0, 7137.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 50, 0, 2]
+blackareas: []
+orientation: Rotate90
+sha256data: 2912fd65df989464c261d217cc134fc6c71ca4014ee555247650125e00c66d51

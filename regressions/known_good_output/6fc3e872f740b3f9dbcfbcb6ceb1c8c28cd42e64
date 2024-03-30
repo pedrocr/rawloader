@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A330
+clean_make: Sony
+clean_model: DSLR-A330
+width: 3880
+height: 2608
+cpp: 1
+wb_coeffs: [1800.0, 1024.0, 1584.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9847.0, -3091.0, -929.0], [-8485.0, 16346.0, 2225.0], [-714.0, 595.0, 7103.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 12ae8a39f44bba6c0080503480cb2c3d9789382d7f9bbec8147b7357a99704b8

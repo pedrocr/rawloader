@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: E-1
+clean_make: Olympus
+clean_model: E-1
+width: 2624
+height: 1966
+cpp: 1
+wb_coeffs: [432.0, 256.0, 286.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [65, 65, 65, 65]
+xyz_to_cam: [[11846.0, -4767.0, -945.0], [-7027.0, 15878.0, 1089.0], [-2699.0, 4122.0, 8311.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 48a755038aa94760a34f2e6dcededd882224a332ce6de5bd813b0b74fa7e72f3

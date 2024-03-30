@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P7100
+clean_make: Nikon
+clean_model: Coolpix P7100
+width: 3664
+height: 2744
+cpp: 1
+wb_coeffs: [1112.0, 1022.0, 3472.0, NaN]
+whitelevels: [3800, 3800, 3800, 3800]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[11053.0, -4269.0, -1024.0], [-1976.0, 10182.0, 2088.0], [-526.0, 1263.0, 4469.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 088c64a84480b4eef4eabbd3d08db29a42f6f594bfb01a05eab6fece2bf15233

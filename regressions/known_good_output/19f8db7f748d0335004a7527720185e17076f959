@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-M10
+clean_make: Olympus
+clean_model: E-M10
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [508.0, 256.0, 442.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[8380.0, -2630.0, -639.0], [-2887.0, 10725.0, 2496.0], [-627.0, 1427.0, 5438.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 24, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 1b4e3774d9a8bde3b419aa086d8eb3de501413ba94c78b74dcaf9a9376a6dfd5

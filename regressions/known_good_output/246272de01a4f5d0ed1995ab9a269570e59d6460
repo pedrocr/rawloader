@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1D Mark III
+clean_make: Canon
+clean_model: EOS-1D Mark III
+width: 3984
+height: 2622
+cpp: 1
+wb_coeffs: [2045.0, 1040.0, 1556.0, NaN]
+whitelevels: [15100, 15100, 15100, 15100]
+blacklevels: [1032, 1034, 1037, 0]
+xyz_to_cam: [[6291.0, -540.0, -976.0], [-8350.0, 16145.0, 2311.0], [-1714.0, 1858.0, 7326.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 0, 2, 78]
+blackareas: [(0, 76, 2622, 2)]
+orientation: Normal
+sha256data: d4d94a8488ef44b15431734685b27dba14a479ae7c1d04dd934aa3c1b2923cbe

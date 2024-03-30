@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M100
+clean_make: Canon
+clean_model: EOS M100
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1674.0, 1024.0, 1305.0, NaN]
+whitelevels: [16000, 16000, 16000, 16000]
+blacklevels: [2047, 2047, 2047, 0]
+xyz_to_cam: [[8532.0, -701.0, -1167.0], [-4095.0, 11879.0, 2508.0], [-797.0, 2424.0, 7010.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 250, 4056, 0)]
+orientation: Normal
+sha256data: 9f66a9a7329827dc58a536a12396fccf4d767a1a030b94bedd23760e307c19c3

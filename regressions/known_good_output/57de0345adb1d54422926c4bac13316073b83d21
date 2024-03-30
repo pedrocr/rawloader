@@ -1,0 +1,16 @@
+make: Leica Camera AG
+model: LEICA M10
+clean_make: Leica Camera AG
+clean_model: LEICA M10
+width: 5984
+height: 3992
+cpp: 1
+wb_coeffs: [2.0625, 1.0, 1.2421875, NaN]
+whitelevels: [15000, 15000, 15000, 15000]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.8059082, -0.2783203, -0.060546875], [-0.52905273, 1.4416504, 0.05517578], [-0.09350586, 0.30029297, 0.63671875], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 376a178c2f363416510c14217dd1aac4f7a27ca13b88c81ed347a23fb44521de

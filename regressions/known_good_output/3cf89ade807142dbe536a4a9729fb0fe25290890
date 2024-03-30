@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX1
+clean_make: Sony
+clean_model: DSC-RX1
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2416.0, 1024.0, 1592.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6344.0, -1612.0, -462.0], [-4863.0, 12477.0, 2681.0], [-865.0, 1786.0, 6899.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 18, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8e1cc04ca89c35bcb184511ac1e7582757c14ce7fa2693eb6740c93e6ce58849

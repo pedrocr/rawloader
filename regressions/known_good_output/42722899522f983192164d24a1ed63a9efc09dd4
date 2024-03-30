@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D5100
+clean_make: Nikon
+clean_model: D5100
+width: 4992
+height: 3280
+cpp: 1
+wb_coeffs: [1.65625, 1.0, 1.7382813, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8198.0, -2239.0, -724.0], [-4871.0, 12389.0, 2798.0], [-1043.0, 2050.0, 7181.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 46, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0612aecae89fde76b4079edd5fa04b0c1298f7c39f515502fef5feb54a3d4992

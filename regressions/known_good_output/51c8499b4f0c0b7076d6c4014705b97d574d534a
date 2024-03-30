@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G11
+clean_make: Canon
+clean_model: PowerShot G11
+width: 3744
+height: 2784
+cpp: 1
+wb_coeffs: [1536.0, 872.0, 1838.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 128, 0]
+xyz_to_cam: [[12177.0, -4817.0, -1069.0], [-1612.0, 9864.0, 2049.0], [-98.0, 850.0, 4471.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 56, 14, 10]
+blackareas: [(0, 3744, 2784, 3696)]
+orientation: Normal
+sha256data: aa746df435bc1e275e4cf0350df69ff04a2a2041890d484c8fb833c2aacaac4d

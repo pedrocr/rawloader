@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D1X
+clean_make: Nikon
+clean_model: D1X
+width: 4028
+height: 1324
+cpp: 1
+wb_coeffs: [2.3476563, 1.0, 1.140625, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7702.0, -2245.0, -975.0], [-9114.0, 17242.0, 1875.0], [-2679.0, 3055.0, 8521.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: b3318dd145ac0cff5e77b74294fc8e5cb7433e562cef5c8d89cd86657d9fd402

@@ -1,0 +1,16 @@
+make: motorola
+model: Moto G (5S) Plus
+clean_make: motorola
+clean_model: Moto G (5S) Plus
+width: 4208
+height: 3120
+cpp: 1
+wb_coeffs: [2.1333334, 1.0, 1.7534246, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.2421875, -1.546875, -0.390625], [-1.0703125, 2.1796875, -0.0078125], [0.0546875, -0.125, 1.1171875], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: ed5acf786bc132078d8653b157efa1cb74baa31bde8021d133100f3952982b1e

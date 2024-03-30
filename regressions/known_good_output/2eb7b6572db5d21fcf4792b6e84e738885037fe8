@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-620
+clean_make: Olympus
+clean_model: E-620
+width: 4100
+height: 3084
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [4015, 4015, 4015, 4015]
+blacklevels: [64, 65, 65, 65]
+xyz_to_cam: [[8453.0, -2198.0, -1092.0], [-7609.0, 15681.0, 2008.0], [-1725.0, 2337.0, 7824.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 4, 12, 0]
+blackareas: []
+orientation: Normal
+sha256data: 97230d68c1b73b05f2b69f88c56c193e88392e03950218b8d35f1e26ffe44568

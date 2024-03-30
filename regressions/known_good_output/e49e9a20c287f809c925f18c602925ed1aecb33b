@@ -1,0 +1,16 @@
+make: NIKON
+model: E5400
+clean_make: Nikon
+clean_model: E5400
+width: 2608
+height: 1950
+cpp: 1
+wb_coeffs: [559.0, 256.0, 378.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9349.0, -2987.0, -1001.0], [-7919.0, 15766.0, 2266.0], [-2098.0, 2680.0, 6839.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6fdb2ca7ca86790b48c1555e7f41f682b88315da36c74d7e9d2cb9e38ad5d3f4

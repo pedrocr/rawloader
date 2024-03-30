@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 400D DIGITAL
+clean_make: Canon
+clean_model: EOS 400D
+width: 3948
+height: 2622
+cpp: 1
+wb_coeffs: [2479.0, 1024.0, 1393.0, NaN]
+whitelevels: [4058, 4058, 4058, 4058]
+blacklevels: [258, 257, 256, 0]
+xyz_to_cam: [[7054.0, -1501.0, -990.0], [-8156.0, 15544.0, 2812.0], [-1278.0, 1414.0, 7796.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 42]
+blackareas: [(0, 40, 2622, 0)]
+orientation: Normal
+sha256data: ca3f1840d9d305bff5cc4224576e26c15bfeb538191e47bfc609916df8d4347a

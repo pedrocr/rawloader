@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D200
+clean_make: Nikon
+clean_model: D200
+width: 3904
+height: 2616
+cpp: 1
+wb_coeffs: [1.7265625, 1.0, 1.4335938, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8367.0, -2248.0, -763.0], [-8758.0, 16447.0, 2422.0], [-1527.0, 1550.0, 8053.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 2]
+blackareas: []
+orientation: Normal
+sha256data: 6dd0425ae1025a02468d215eb4b0cf41effc86f3d7f30d15d99911f9572efdbd

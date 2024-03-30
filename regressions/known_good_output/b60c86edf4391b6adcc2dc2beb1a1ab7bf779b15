@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX20 IS
+clean_make: Canon
+clean_model: Canon PowerShot SX20 IS
+width: 4080
+height: 3048
+cpp: 1
+wb_coeffs: [1.6270001, 0.90500003, 1.691, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 48, 24, 24]
+blackareas: []
+orientation: Normal
+sha256data: e3bcbf71c6b8180b909e49c1133f35c97e4629504128fcec67ae93e14ca96a10

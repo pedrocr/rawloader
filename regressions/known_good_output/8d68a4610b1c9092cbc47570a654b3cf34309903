@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS M
+clean_make: Canon
+clean_model: EOS M
+width: 5280
+height: 3528
+cpp: 1
+wb_coeffs: [1621.0, 1024.0, 2738.0, NaN]
+whitelevels: [11222, 11222, 11222, 11222]
+blacklevels: [2048, 2049, 2048, 0]
+xyz_to_cam: [[6602.0, -841.0, -939.0], [-4472.0, 12458.0, 2247.0], [-975.0, 2039.0, 6148.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [56, 0, 0, 76]
+blackareas: [(4, 5280, 48, 0), (0, 70, 3528, 0)]
+orientation: Normal
+sha256data: 4388d1f6fe885d197a37ff661ea60769839995e117cba66128ec2774e4daa9d5

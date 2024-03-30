@@ -1,0 +1,16 @@
+make: LEICA
+model: D-LUX (Typ 109)
+clean_make: Leica
+clean_model: D-LUX (Typ 109)
+width: 3248
+height: 3104
+cpp: 1
+wb_coeffs: [613.0, 256.0, 412.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[8844.0, -3538.0, -768.0], [-3709.0, 11762.0, 2200.0], [-698.0, 1792.0, 5220.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 144, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 913f0dc9ebf47793d10049253fa10e5d738df3be62ae3517071cc2d7c04da190

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS Rebel T7i
+clean_make: Canon
+clean_model: EOS Rebel T7i
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1817.0, 1024.0, 1964.0, NaN]
+whitelevels: [11892, 11892, 11892, 11892]
+blacklevels: [510, 511, 510, 0]
+xyz_to_cam: [[6970.0, -512.0, -968.0], [-4425.0, 12161.0, 2553.0], [-739.0, 1982.0, 5601.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [36, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 250, 4056, 0)]
+orientation: Normal
+sha256data: 875d1805eba7de1fa774d5dd8d596a4858c4a06ee6afd803c2000d7c022b889a

@@ -1,0 +1,16 @@
+make: LG Mobile
+model: LG-F800K
+clean_make: LG Mobile
+clean_model: LG-F800K
+width: 4656
+height: 3492
+cpp: 1
+wb_coeffs: [1.1636363, 1.0, 2.9767442, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.40625, -0.5546875, -0.453125], [-0.6171875, 1.7890625, -0.296875], [-0.03125, 0.203125, 0.484375], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 57974a611f09979b3f02dd2b17f1fcad8a62126cbe35683b23579aabca7ba78c

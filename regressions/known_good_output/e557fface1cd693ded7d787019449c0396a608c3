@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-1
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: PENTAX K-1
+width: 7392
+height: 4950
+cpp: 1
+wb_coeffs: [17600.0, 8192.0, 13248.0, NaN]
+whitelevels: [16315, 16315, 16315, 16315]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[8596.0, -2981.0, -639.0], [-4202.0, 12046.0, 2431.0], [-685.0, 1424.0, 6122.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 65fde08d57d44bd8b696100726ac8e1da7b790f6318a8f253cb078cdf84144e6

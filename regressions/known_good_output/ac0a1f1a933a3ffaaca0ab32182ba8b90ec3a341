@@ -1,0 +1,16 @@
+make: LG Mobile
+model: VS995
+clean_make: LG Mobile
+clean_model: VS995
+width: 4656
+height: 3492
+cpp: 1
+wb_coeffs: [1.9692308, 1.0, 1.8028169, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.4140625, -0.5546875, -0.453125], [-0.6171875, 1.7890625, -0.296875], [-0.03125, 0.203125, 0.4765625], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0e7320477ea8dda0b087a57b2a5e5e337cdf87ece6716f3c82ab1fec04ae178b

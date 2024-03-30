@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D300
+clean_make: Nikon
+clean_model: D300
+width: 4352
+height: 2868
+cpp: 1
+wb_coeffs: [1.6601563, 1.0, 1.3476563, NaN]
+whitelevels: [3808, 3808, 3808, 3808]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9030.0, -1992.0, -715.0], [-8465.0, 16302.0, 2255.0], [-2689.0, 3217.0, 8069.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f2c44e58e6396c9093b1c689e87a408c9c958f7e8af613da934834b020ac2b38

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 5D
+clean_make: Canon
+clean_model: EOS 5D
+width: 4476
+height: 2954
+cpp: 1
+wb_coeffs: [2158.0, 1024.0, 1382.0, NaN]
+whitelevels: [3650, 3650, 3650, 3650]
+blacklevels: [127, 127, 127, 0]
+xyz_to_cam: [[6347.0, -479.0, -972.0], [-8297.0, 15954.0, 2480.0], [-1968.0, 2131.0, 7649.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 0, 0, 90]
+blackareas: [(2, 4476, 32, 0), (0, 88, 2954, 0)]
+orientation: Normal
+sha256data: b6917b1c2e96fc4d0b28c25370fbfa01297466513e1193cb266f31f786ebbb0f

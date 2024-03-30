@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A3200 IS
+clean_make: Canon
+clean_model: Canon PowerShot A3200 IS
+width: 4416
+height: 3296
+cpp: 1
+wb_coeffs: [1.6539999, 0.93700004, 1.789, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[0.827547, -0.290458, -0.126086], [-0.012829, 0.530507, 0.050537], [0.005181, 0.048183, 0.245014], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [56, 0, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: b4bcc9e1dcc50cf89dea342e0a1261d3abf4e4826a7c05f526c104dd2b9adb44

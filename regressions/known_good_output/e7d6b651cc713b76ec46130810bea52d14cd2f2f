@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G960F
+clean_make: samsung
+clean_model: SM-G960F
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.9806577, 1.0, 1.4545455, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.1787109, -0.44433594, -0.16796875], [-0.4765625, 1.4863281, 0.10449219], [-0.080078125, 0.30664063, 0.69628906], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: a63ab88152dc7af461ebdc0375114f441fd1618ebf0ce2fa872383853eaeb63b

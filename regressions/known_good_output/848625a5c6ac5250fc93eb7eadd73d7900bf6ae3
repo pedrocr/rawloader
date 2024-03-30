@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S30
+clean_make: Canon
+clean_model: PowerShot S30
+width: 2144
+height: 1560
+cpp: 1
+wb_coeffs: [1776.0, 1066.0, 1455.0, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 0]
+xyz_to_cam: [[10566.0, -3652.0, -1129.0], [-6552.0, 14662.0, 2006.0], [-2197.0, 2581.0, 7670.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [8, 52, 2, 4]
+blackareas: [(0, 2144, 1560, 2094)]
+orientation: Unknown
+sha256data: c556aa77f7d2870e5f912543de8e4830c37d79bc6cd5a741592d62c3c8cc82db

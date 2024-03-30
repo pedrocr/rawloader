@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S200EXR
+clean_make: Fujifilm
+clean_model: FinePix S200EXR
+width: 2880
+height: 2128
+cpp: 1
+wb_coeffs: [637.0, 336.0, 629.0, NaN]
+whitelevels: [16250, 16250, 16250, 16250]
+blacklevels: [519, 519, 519, 519]
+xyz_to_cam: [[11401.0, -4498.0, -1312.0], [-5088.0, 12751.0, 2613.0], [-838.0, 1568.0, 5941.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 28, 0, 28]
+blackareas: []
+orientation: Normal
+sha256data: d09e6f947bbf2a526be683d6f86b4b8d96441ccf542f77282af624ecebf8518c

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-ZS100
+clean_make: Panasonic
+clean_model: DMC-ZS100
+width: 5488
+height: 3664
+cpp: 1
+wb_coeffs: [625.0, 256.0, 476.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [141, 141, 141, 141]
+xyz_to_cam: [[7790.0, -2736.0, -755.0], [-3452.0, 11870.0, 1769.0], [-628.0, 1647.0, 4898.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 034553b6af8e73259785c03971cbf23da628e70739d193e478fe6d47f2362a45

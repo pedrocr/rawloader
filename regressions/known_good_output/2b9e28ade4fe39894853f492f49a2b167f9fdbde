@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-P3
+clean_make: Olympus
+clean_model: E-P3
+width: 4080
+height: 3040
+cpp: 1
+wb_coeffs: [558.0, 256.0, 374.0, NaN]
+whitelevels: [3843, 3843, 3843, 3843]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[7575.0, -2159.0, -571.0], [-3722.0, 11341.0, 2725.0], [-1434.0, 2819.0, 6271.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 26, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 911db5b569c66dd21e196badb5da8b60d2b4d51418ba4decfa1b016b3a48297a

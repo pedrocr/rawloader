@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X-T1
+clean_make: Fujifilm
+clean_model: X-T1
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [581.0, 302.0, 482.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[8458.0, -2451.0, -855.0], [-4597.0, 12447.0, 2407.0], [-1475.0, 2482.0, 6526.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: 782b59f46cf8134e19624cb81c97fc47283118138ee8e08fb0e4e0c033607f7f

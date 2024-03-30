@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix S5200
+clean_make: Fujifilm
+clean_model: FinePix S5200
+width: 3228
+height: 3227
+cpp: 1
+wb_coeffs: [521.0, 320.0, 379.0, NaN]
+whitelevels: [15564, 15564, 15564, 15564]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9636.0, -2804.0, -988.0], [-7442.0, 15040.0, 2589.0], [-1803.0, 2311.0, 8621.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4664a18e5f43d33db1099811340800e2e1f6f22e1b1d6188e9bfa030cdbba60c

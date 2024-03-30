@@ -1,0 +1,16 @@
+make: OLYMPUS CORPORATION
+model: TG-4
+clean_make: Olympus
+clean_model: TG-4
+width: 4640
+height: 3472
+cpp: 1
+wb_coeffs: [458.0, 256.0, 406.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [255, 255, 255, 255]
+xyz_to_cam: [[11426.0, -4159.0, -1126.0], [-2066.0, 10678.0, 1593.0], [-120.0, 1327.0, 4998.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [8, 16, 8, 16]
+blackareas: []
+orientation: Normal
+sha256data: 1e392a869bd51f60e59c3dd54da61f3a311ea59502b93d286c0635607305caa7

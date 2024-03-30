@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K20D
+clean_make: PENTAX
+clean_model: PENTAX K20D
+width: 4864
+height: 3136
+cpp: 1
+wb_coeffs: [1.5820311, 1.0, 1.3164063, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.1381073, -0.3469391, -0.14871216], [-0.47669983, 1.3453827, 0.098968506], [-0.14581299, 0.31278992, 0.6712799], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 0396e5332fe6d92d8c44b81587bad214cddf0ebe6e4f551a291ddf02028e44ba

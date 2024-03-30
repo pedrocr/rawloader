@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X70
+clean_make: Fujifilm
+clean_model: X70
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [395.0, 302.0, 790.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[10450.0, -4329.0, -878.0], [-3217.0, 11105.0, 2421.0], [-752.0, 1758.0, 6519.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: 56ef4a9b347cbd616207cebc50a749d460eeac692719f869f87883b083933eb2

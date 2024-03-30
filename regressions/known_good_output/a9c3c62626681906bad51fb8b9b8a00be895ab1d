@@ -1,0 +1,16 @@
+make: Canon
+model: Canon DIGITAL IXUS 95 IS
+clean_make: Canon
+clean_model: Canon DIGITAL IXUS 95 IS
+width: 3720
+height: 2772
+cpp: 1
+wb_coeffs: [1.6299999, 0.907, 1.676, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.484685, -0.530958, -0.208054], [0.143142, 0.793552, 0.083907], [0.14629, -0.044679, 0.430414], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 28, 0, 8]
+blackareas: []
+orientation: Normal
+sha256data: cc738390bce9503d902c7ffd9c86620d92c877276b30e64f4ed08832144cd584

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-G85
+clean_make: Panasonic
+clean_model: DMC-G85
+width: 4816
+height: 3464
+cpp: 1
+wb_coeffs: [586.0, 256.0, 473.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7610.0, -2780.0, -576.0], [-4614.0, 12195.0, 2733.0], [-1375.0, 2393.0, 6490.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 208, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: db246aff7898d2ad664518971949250eb59ac8b2ea9c231bdc488a335c969151

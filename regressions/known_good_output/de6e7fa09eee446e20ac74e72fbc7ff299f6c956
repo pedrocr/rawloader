@@ -1,0 +1,16 @@
+make: KONICA MINOLTA
+model: DiMAGE A200
+clean_make: Minolta
+clean_model: DiMAGE A200
+width: 3280
+height: 2454
+cpp: 1
+wb_coeffs: [480.0, 255.0, 416.0, NaN]
+whitelevels: [3965, 3965, 3965, 3965]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8560.0, -2487.0, -986.0], [-8112.0, 15535.0, 2771.0], [-1209.0, 1324.0, 7743.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2e5a6884693ac158557b32459ac6125af3853b56d0eea195f249baa95acd0458

@@ -1,0 +1,16 @@
+make: HMD Global
+model: Nokia 7 plus
+clean_make: HMD Global
+clean_model: Nokia 7 plus
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.3333334, 0.99224806, 2.4150944, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.4765625, -1.71875, -0.4375], [-1.0703125, 2.1796875, -0.0078125], [0.0625, -0.140625, 1.296875], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1f2112f3b4c9a37d1032bbf9cdf28b7a7b478c1c85e99199255711ea9a699c6b

@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S90
+clean_make: Canon
+clean_model: PowerShot S90
+width: 3744
+height: 2784
+cpp: 1
+wb_coeffs: [1515.0, 882.0, 1840.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 128, 128, 128]
+xyz_to_cam: [[12374.0, -5016.0, -1049.0], [-1677.0, 9902.0, 2078.0], [-83.0, 852.0, 4683.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 54, 10, 10]
+blackareas: []
+orientation: Normal
+sha256data: 00525c04f18c677ee01f7a5bc95b2625ddf5275f604b5bbdec751653d7823893

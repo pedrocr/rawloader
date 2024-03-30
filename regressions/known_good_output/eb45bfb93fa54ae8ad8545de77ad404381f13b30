@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: E-P2
+clean_make: Olympus
+clean_model: E-P2
+width: 4100
+height: 3084
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [64, 64, 64, 65]
+xyz_to_cam: [[8343.0, -2050.0, -1021.0], [-7715.0, 15705.0, 2103.0], [-1831.0, 2380.0, 8235.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9d5e52163a6bb9339a58161df05589d88aec977a557ee903732e44bfa06a9125

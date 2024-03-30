@@ -1,0 +1,16 @@
+make: SONY
+model: ILCA-99M2
+clean_make: Sony
+clean_model: ILCA-99M2
+width: 8000
+height: 5320
+cpp: 1
+wb_coeffs: [2488.0, 1024.0, 1668.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[6660.0, -1918.0, -471.0], [-4613.0, 12398.0, 2485.0], [-649.0, 1433.0, 6447.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7c4bdf1e2e13896496ce80efae99e6a739fbfa7568cd95f92f786014764dd12b

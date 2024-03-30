@@ -1,0 +1,16 @@
+make: NIKON
+model: E8400
+clean_make: Nikon
+clean_model: E8400
+width: 3280
+height: 2454
+cpp: 1
+wb_coeffs: [566.0, 256.0, 404.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7842.0, -2320.0, -992.0], [-8154.0, 15718.0, 2599.0], [-1098.0, 1342.0, 7560.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 9416467dcb59d7a9155150d8fe4cac7c81e385ac9f83775c4ee5a1880e35fa53

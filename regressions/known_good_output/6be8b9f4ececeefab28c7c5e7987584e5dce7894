@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: XF1
+clean_make: Fujifilm
+clean_model: XF1
+width: 2944
+height: 2144
+cpp: 1
+wb_coeffs: [571.0, 321.0, 586.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [257, 257, 257, 257]
+xyz_to_cam: [[13509.0, -6199.0, -1254.0], [-4430.0, 12733.0, 1865.0], [-331.0, 1441.0, 5022.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 48, 0, 48]
+blackareas: []
+orientation: Normal
+sha256data: d90099a7c8c1eead5fb4d1d202897f92efa77d77a9ded999133fe7b8cbc8936c

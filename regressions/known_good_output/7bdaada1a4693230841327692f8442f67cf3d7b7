@@ -1,0 +1,16 @@
+make: HUAWEI
+model: WAS-LX1A
+clean_make: HUAWEI
+clean_model: WAS-LX1A
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [1.9941406, 1.0, 1.8701172, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: f918ee6973f23d100fcd45e3119a2ce0f2d9f6b9b92b52e7a45f877b662d9da2

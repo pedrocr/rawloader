@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 6D Mark II
+clean_make: Canon
+clean_model: EOS 6D Mark II
+width: 3120
+height: 2082
+cpp: 3
+wb_coeffs: [2081.0, 1024.0, 1817.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6875.0, -970.0, -932.0], [-4691.0, 12459.0, 2501.0], [-874.0, 1953.0, 5809.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: [(0, 9360, 40, 0), (0, 110, 2082, 0)]
+orientation: Normal
+sha256data: 7085ede2c61db46d4c45a332a57c72d71a7b3b44d394285f363943c5ebdb8f00

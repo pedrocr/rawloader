@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix X100
+clean_make: Fujifilm
+clean_model: FinePix X100
+width: 4448
+height: 2870
+cpp: 1
+wb_coeffs: [466.0, 302.0, 440.0, NaN]
+whitelevels: [4000, 4000, 4000, 4000]
+blacklevels: [254, 254, 254, 254]
+xyz_to_cam: [[12161.0, -4457.0, -1069.0], [-5034.0, 12874.0, 2400.0], [-795.0, 1724.0, 6904.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [1, 73, 1, 73]
+blackareas: []
+orientation: Normal
+sha256data: 0d8c2bc68d953afaa6e4657b14ec09025946f3a98e230b089509eeae89640884

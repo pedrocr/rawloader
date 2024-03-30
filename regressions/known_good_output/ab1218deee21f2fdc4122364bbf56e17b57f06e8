@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: FinePix HS10 HS11
+clean_make: Fujifilm
+clean_model: FinePix HS10 HS11
+width: 3664
+height: 2742
+cpp: 1
+wb_coeffs: [396.0, 256.0, 484.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [50, 50, 50, 50]
+xyz_to_cam: [[12440.0, -3954.0, -1183.0], [-1123.0, 9674.0, 1708.0], [-83.0, 1614.0, 4086.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6a37badfa16812d21bb5ff5f5e96543545354e5a0e4430459622ad09bd8790f3

@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LX10
+clean_make: Panasonic
+clean_model: DMC-LX10
+width: 5488
+height: 3664
+cpp: 1
+wb_coeffs: [473.0, 256.0, 705.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7790.0, -2736.0, -755.0], [-3452.0, 11870.0, 1769.0], [-628.0, 1647.0, 4898.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 50b0fd653d697c7282801df55bba7acf75d0e21d9c7a58d713ea274b4d859859

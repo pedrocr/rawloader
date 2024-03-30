@@ -1,0 +1,16 @@
+make: Autel Robotics
+model: XB015
+clean_make: Autel Robotics
+clean_model: XB015
+width: 4000
+height: 2250
+cpp: 1
+wb_coeffs: [1.8242184, 1.0, 1.7475582, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [3197, 3200, 3200, 3197]
+xyz_to_cam: [[0.9945, -0.355, -0.0868], [-0.2576, 1.0944, 0.1866], [-0.0426, 0.1697, 0.5299], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 55d54945bd9f2c79c95346abcc9183641fbde238222d49ad5efa510a2b5bad47

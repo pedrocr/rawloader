@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-S2
+clean_make: Pentax
+clean_model: K-S2
+width: 5504
+height: 3664
+cpp: 1
+wb_coeffs: [2.3984375, 1.0, 1.7617188, NaN]
+whitelevels: [3839, 3839, 3839, 3839]
+blacklevels: [256, 256, 256, 256]
+xyz_to_cam: [[0.80867004, -0.2541809, -0.115097046], [-0.38822937, 1.2349854, 0.16893005], [-0.08566284, 0.1515503, 0.6408081], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 14, 0, 2]
+blackareas: []
+orientation: Normal
+sha256data: 04ba76979ee9cddead84eac4623ada4d6a80c0054206fe11acc487283071d94b

@@ -1,0 +1,16 @@
+make: OLYMPUS OPTICAL CO.,LTD
+model: C5050Z
+clean_make: Olympus
+clean_model: C5050Z
+width: 2576
+height: 1925
+cpp: 1
+wb_coeffs: [350.0, 256.0, 412.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[10508.0, -3124.0, -1273.0], [-6079.0, 14294.0, 1901.0], [-1653.0, 2306.0, 6237.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 41c4e37d477000735e0550df1d7b8127aba0ba756634f17db9377ad1b05090ef

@@ -1,0 +1,16 @@
+make: PARROT
+model: Bebop 2
+clean_make: PARROT
+clean_model: Bebop 2
+width: 4096
+height: 3320
+cpp: 1
+wb_coeffs: [1.4352942, 1.0, 1.6039217, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [42, 42, 42, 42]
+xyz_to_cam: [[1.247, -0.1485, -0.0653], [-0.4211, 1.3116, 0.1145], [0.0283, 0.246, 0.8806], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 731ae9c12233b6933b76e7d39ad4b734abee054559daf80da906d1fa5fc6ba87

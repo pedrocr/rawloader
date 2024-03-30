@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS-1DS
+clean_make: Canon
+clean_model: EOS-1Ds
+width: 4082
+height: 2718
+cpp: 1
+wb_coeffs: [807.0, 512.0, 632.0, NaN]
+whitelevels: [3500, 3500, 3500, 3500]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[4374.0, 3631.0, -1743.0], [-7520.0, 15212.0, 2472.0], [-2892.0, 3632.0, 8161.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7481a1c264e097282cebae680fae766d81d937bd4a3d64996fb178cdd6c507e4

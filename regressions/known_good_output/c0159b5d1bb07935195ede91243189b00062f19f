@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ70
+clean_make: Panasonic
+clean_model: DMC-FZ70
+width: 4816
+height: 3472
+cpp: 1
+wb_coeffs: [400.0, 265.0, 540.0, NaN]
+whitelevels: [3941, 3941, 3941, 3941]
+blacklevels: [163, 163, 163, 163]
+xyz_to_cam: [[11532.0, -4324.0, -1066.0], [-2375.0, 10847.0, 1749.0], [-564.0, 1699.0, 4351.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 182, 0, 0]
+blackareas: []
+orientation: Rotate270
+sha256data: 2baa8a64c8345e38371028d39bad5e041e0e34f2ce652f0d30b73dad100db100

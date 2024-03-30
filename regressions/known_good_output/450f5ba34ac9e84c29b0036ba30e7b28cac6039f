@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 60D
+clean_make: Canon
+clean_model: EOS 60D
+width: 3888
+height: 2592
+cpp: 3
+wb_coeffs: [2189.0, 1024.0, 1574.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6719.0, -994.0, -925.0], [-4408.0, 12426.0, 2211.0], [-887.0, 2129.0, 6051.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: [(4, 11664, 50, 0), (0, 140, 2592, 0)]
+orientation: Normal
+sha256data: 6b2e43a17c32fc0bbe9688ce9682977b972d2a58bd07543a85f43f5a32d142c1

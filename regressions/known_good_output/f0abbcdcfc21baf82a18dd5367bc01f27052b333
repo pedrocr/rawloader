@@ -1,0 +1,16 @@
+make: asus
+model: ASUS_I01WD
+clean_make: asus
+clean_model: ASUS_I01WD
+width: 4224
+height: 3136
+cpp: 1
+wb_coeffs: [2.1200829, 1.0, 1.5875969, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [63, 63, 63, 63]
+xyz_to_cam: [[2.1484375, -1.4921875, -0.375], [-1.0703125, 2.1796875, -0.0078125], [0.0703125, -0.1640625, 1.5078125], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: e1a3041bbee787f7fabdfce72043928b578224b6af5aaba09021fa6535eb1d80

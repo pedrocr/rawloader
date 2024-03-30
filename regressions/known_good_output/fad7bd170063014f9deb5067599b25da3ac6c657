@@ -1,0 +1,16 @@
+make: Apple
+model: iPhone XS
+clean_make: Apple
+clean_model: iPhone XS
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.3063965, 1.0, 1.9379882, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [528, 528, 528, 528]
+xyz_to_cam: [[0.73683345, -0.21727708, -0.08725361], [-0.4603245, 1.2249075, 0.19741052], [-0.08208776, 0.13633142, 0.4730133], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1657cd68947bbfd174c3c0e5728531b10aea7208fd1df1177d2e6f7a7c72c54a

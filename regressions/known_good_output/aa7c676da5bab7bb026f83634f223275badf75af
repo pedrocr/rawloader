@@ -1,0 +1,16 @@
+make: HUAWEI
+model: HRY-LX1
+clean_make: HUAWEI
+clean_model: HRY-LX1
+width: 4160
+height: 3120
+cpp: 1
+wb_coeffs: [2.0265567, 1.0, 1.492674, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7a687884a317b3af3f9e94e04792c4c31e98b5fc72f28fe2162fd807bc2058cd

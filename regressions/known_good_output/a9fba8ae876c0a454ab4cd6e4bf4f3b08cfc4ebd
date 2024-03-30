@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G6
+clean_make: Canon
+clean_model: PowerShot G6
+width: 3160
+height: 2344
+cpp: 1
+wb_coeffs: [1302.0, 811.0, 1484.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [129, 129, 129, 0]
+xyz_to_cam: [[9877.0, -3775.0, -871.0], [-7613.0, 14807.0, 3072.0], [-1448.0, 1305.0, 7485.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [12, 4, 4, 44]
+blackareas: [(0, 40, 2344, 0)]
+orientation: Unknown
+sha256data: 17804ed2ff64873e7d24ca06c58a4c8d095aad1907affb938ebcd12b618fa7ac

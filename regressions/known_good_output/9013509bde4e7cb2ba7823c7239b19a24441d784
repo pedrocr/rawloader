@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX30 IS
+clean_make: Canon
+clean_model: Canon PowerShot SX30 IS
+width: 4464
+height: 3276
+cpp: 1
+wb_coeffs: [1.517, 0.95, 1.7019999, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.301431, -0.469837, -0.102652], [-0.200195, 0.961551, 0.238645], [-0.016441, 0.142319, 0.375979], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [10, 72, 12, 24]
+blackareas: []
+orientation: Normal
+sha256data: 196ed151eca5170ffa0497e94781577d67cad7864feaeb3790ffb8a0cc2afb3e

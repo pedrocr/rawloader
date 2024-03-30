@@ -1,0 +1,16 @@
+make: Minolta Co., Ltd.
+model: DiMAGE 7
+clean_make: Minolta
+clean_model: DiMAGE 7
+width: 2568
+height: 1928
+cpp: 1
+wb_coeffs: [430.0, 261.0, 363.0, NaN]
+whitelevels: [3965, 3965, 3965, 3965]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9144.0, -2777.0, -998.0], [-6676.0, 14556.0, 2281.0], [-2470.0, 3019.0, 7744.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: e9321b767f0f22e19df3b71d188cb06129032d64bd3d73b57a2410c85dc03055

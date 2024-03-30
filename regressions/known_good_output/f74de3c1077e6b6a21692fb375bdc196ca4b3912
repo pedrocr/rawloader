@@ -1,0 +1,16 @@
+make: Canon
+model: PowerShot A3300 IS
+clean_make: Canon
+clean_model: PowerShot A3300 IS
+width: 4704
+height: 3504
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1301431.0, -469837.0, -102652.0], [-200195.0, 961551.0, 238645.0], [-16441.0, 142319.0, 375979.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [16, 56, 8, 16]
+blackareas: []
+orientation: Unknown
+sha256data: 3aef4df3594e9d2dc9feb37421bd378087947410fae3bf797855d6c060b200e9

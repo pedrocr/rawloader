@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-1 Mark II
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: PENTAX K-1 Mark II
+width: 7392
+height: 4950
+cpp: 1
+wb_coeffs: [2.0585938, 1.0, 1.5078125, NaN]
+whitelevels: [16318, 16318, 16318, 16318]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.8978882, -0.28778076, -0.12594604], [-0.36117554, 1.220398, 0.15498352], [-0.091033936, 0.17123413, 0.63835144], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 10, 0, 6]
+blackareas: []
+orientation: Normal
+sha256data: 9f76fa2d161bb108e04f086d4d2baab6287da8784befe7ed7e9cf1d7fcdefa87

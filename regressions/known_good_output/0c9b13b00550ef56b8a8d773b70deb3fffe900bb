@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX500
+clean_make: Samsung
+clean_model: NX500
+width: 6496
+height: 4336
+cpp: 1
+wb_coeffs: [7152.0, 4064.0, 6464.0, NaN]
+whitelevels: [16100, 16100, 16100, 16100]
+blacklevels: [128, 128, 128, 128]
+xyz_to_cam: [[10686.0, -4042.0, -1052.0], [-3595.0, 13238.0, 276.0], [-464.0, 1259.0, 5931.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 03ae5b4254526f364df5307a235eaa44d3a0d208402f80dc689b65d7ed5e296b

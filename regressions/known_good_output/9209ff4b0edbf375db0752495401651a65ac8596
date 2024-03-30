@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 550D
+clean_make: Canon
+clean_model: EOS 550D
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2097.0, 1024.0, 1678.0, NaN]
+whitelevels: [15831, 15831, 15831, 15831]
+blacklevels: [2048, 2050, 2052, 0]
+xyz_to_cam: [[6941.0, -1164.0, -857.0], [-3825.0, 11597.0, 2534.0], [-416.0, 1540.0, 6039.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [54, 0, 0, 148]
+blackareas: [(4, 5344, 48, 0), (0, 140, 3516, 0)]
+orientation: Normal
+sha256data: b343e958d2bcfa7f98a633a1729d0ecb484b6334c6f6c187e3387e82b6e76d01

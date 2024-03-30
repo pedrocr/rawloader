@@ -1,0 +1,16 @@
+make: Leica Camera AG
+model: M Monochrom
+clean_make: Leica Camera AG
+clean_model: M Monochrom
+width: 5216
+height: 3472
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [220, 220, 220, 220]
+xyz_to_cam: [[0.412453, 0.35758, 0.180423], [0.212671, 0.71516, 0.072169], [0.019334, 0.119193, 0.950227], [0.0, 0.0, 0.0]]
+cfa: 
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 22eae88559ca1e0e289dd6b1a7fae7f02a85059d0451f264b85a692d84e40afe

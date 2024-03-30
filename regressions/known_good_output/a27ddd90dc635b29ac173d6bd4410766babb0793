@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 80D
+clean_make: Canon
+clean_model: Canon EOS 80D
+width: 6288
+height: 4056
+cpp: 1
+wb_coeffs: [1771.0, 1024.0, 1827.0, NaN]
+whitelevels: [11892, 11892, 11892, 11892]
+blacklevels: [511, 511, 512, 0]
+xyz_to_cam: [[7457.0, -671.0, -937.0], [-4849.0, 12495.0, 2643.0], [-1213.0, 2354.0, 5492.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 0, 0, 264]
+blackareas: [(0, 6288, 30, 0), (0, 260, 4056, 0)]
+orientation: Normal
+sha256data: e134ed67fe75e7976d6236f778d6b28cde3c80de7e9264e1ba684846f99fad27

@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D4S
+clean_make: Nikon
+clean_model: D4S
+width: 4936
+height: 3288
+cpp: 1
+wb_coeffs: [2.2578125, 1.0, 1.2578125, NaN]
+whitelevels: [15520, 15520, 15520, 15520]
+blacklevels: [768, 768, 768, 768]
+xyz_to_cam: [[8598.0, -2848.0, -857.0], [-5618.0, 13606.0, 2195.0], [-1002.0, 1773.0, 7137.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 4f3c8b05c858a1a2d578a85a2b8d08059f391edea4ecb342dcbe94d3745c9b62

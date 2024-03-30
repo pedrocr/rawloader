@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GX80
+clean_make: Panasonic
+clean_model: DMC-GX80
+width: 4816
+height: 3464
+cpp: 1
+wb_coeffs: [627.0, 256.0, 412.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7771.0, -3020.0, -629.0], [-4029.0, 11950.0, 2345.0], [-821.0, 1977.0, 6119.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 208, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 69701677cd76361b92e7390a29603d31e227996c9361bbf3fc4ea137a1119465

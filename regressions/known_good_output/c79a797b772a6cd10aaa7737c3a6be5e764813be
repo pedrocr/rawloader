@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX2000
+clean_make: Samsung
+clean_model: NX2000
+width: 5536
+height: 3714
+cpp: 1
+wb_coeffs: [9632.0, 4096.0, 6880.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7557.0, -2522.0, -739.0], [-4679.0, 12949.0, 1894.0], [-840.0, 1777.0, 5311.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [25, 11, 29, 45]
+blackareas: []
+orientation: Normal
+sha256data: 213f35a512ad57376b260c058455adeb17cad6c1dde44a977d3393390ee8679a

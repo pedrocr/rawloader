@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 450D
+clean_make: Canon
+clean_model: EOS 450D
+width: 4312
+height: 2876
+cpp: 1
+wb_coeffs: [2114.0, 1024.0, 1515.0, NaN]
+whitelevels: [14500, 14500, 14500, 14500]
+blacklevels: [1020, 1020, 1020, 1020]
+xyz_to_cam: [[5784.0, -262.0, -821.0], [-7539.0, 15064.0, 2672.0], [-1982.0, 2681.0, 7427.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 22]
+blackareas: []
+orientation: Normal
+sha256data: 4137fd9467b424f613671c4942b7864e64cb328151751f4b7784dbf74a7f018e

@@ -1,0 +1,16 @@
+make: Xiaomi
+model: Redmi Note 7
+clean_make: Xiaomi
+clean_model: Redmi Note 7
+width: 4000
+height: 3000
+cpp: 1
+wb_coeffs: [1.7534246, 1.0, 2.7826087, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.40625, -1.6640625, -0.421875], [-1.0703125, 2.1796875, -0.0078125], [0.0546875, -0.1328125, 1.21875], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 5546f8f507b3249dd005541cc224727a3ef1e55c28f458ae8ff4edf12ca24b2e

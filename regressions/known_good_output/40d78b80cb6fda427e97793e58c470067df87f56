@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ38
+clean_make: Panasonic
+clean_model: DMC-FZ38
+width: 4060
+height: 3018
+cpp: 1
+wb_coeffs: [407.0, 263.0, 541.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[9938.0, -2780.0, -890.0], [-4604.0, 12393.0, 2480.0], [-1117.0, 2304.0, 4620.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 44, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f36bad4d5d584060eefd281516ef5153ab602bcf773865782377656c9f1c1678

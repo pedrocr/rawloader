@@ -1,0 +1,16 @@
+make: LGE
+model: LG-H910
+clean_make: LGE
+clean_model: LG-H910
+width: 4656
+height: 3492
+cpp: 1
+wb_coeffs: [1.6623377, 1.007874, 2.3703704, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[1.4375, -0.5703125, -0.4609375], [-0.6171875, 1.7890625, -0.296875], [-0.03125, 0.2109375, 0.4921875], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 88ff20444996a3f9d4f642d401d6dd41ef146e23290d46cc9f511900fd10ea6c

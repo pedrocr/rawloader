@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D810
+clean_make: Nikon
+clean_model: D810
+width: 7380
+height: 4928
+cpp: 1
+wb_coeffs: [2.1601563, 1.0, 1.1835938, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [150, 150, 150, 150]
+xyz_to_cam: [[9369.0, -3195.0, -791.0], [-4488.0, 12430.0, 2301.0], [-893.0, 1796.0, 6872.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 010e9127b2e075dea0c8232fa675cc5e5ac5d02674273e04e4ee9ce47c1eb1ee

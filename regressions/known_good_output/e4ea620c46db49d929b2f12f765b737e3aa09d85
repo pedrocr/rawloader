@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 7D Mark II
+clean_make: Canon
+clean_model: EOS 7D Mark II
+width: 4104
+height: 2736
+cpp: 3
+wb_coeffs: [2171.0, 1024.0, 1603.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7268.0, -1082.0, -969.0], [-4186.0, 11839.0, 2663.0], [-825.0, 2029.0, 5839.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: [(0, 68, 2736, 4)]
+orientation: Normal
+sha256data: bb615b1f8ffbd775cf59c55ac5d3b93d95f9cb60be138771fb0421065ca58ef1

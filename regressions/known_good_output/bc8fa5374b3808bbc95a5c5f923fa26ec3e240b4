@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot A570 IS
+clean_make: Canon
+clean_model: Canon PowerShot A570 IS
+width: 3152
+height: 2340
+cpp: 1
+wb_coeffs: [2.1629999, 0.825, 1.3050001, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.528283, -0.144259, -0.085966], [-0.202789, 0.736563, 0.073008], [-0.02713, 0.107702, 0.264543], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [14, 6, 2, 38]
+blackareas: []
+orientation: Normal
+sha256data: 430ab39ac7ef0d22e19662d8ca2526c206bc257b547d17ee96bafb5588ae6ee1

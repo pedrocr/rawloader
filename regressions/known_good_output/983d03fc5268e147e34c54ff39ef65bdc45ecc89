@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-RX10M2
+clean_make: Sony
+clean_model: DSC-RX10M2
+width: 5504
+height: 3672
+cpp: 1
+wb_coeffs: [2056.0, 1024.0, 2908.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [800, 800, 800, 800]
+xyz_to_cam: [[6679.0, -1825.0, -745.0], [-5047.0, 13256.0, 1953.0], [-1580.0, 2422.0, 5183.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 8, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 2d5b961610e8b52e8caf7e7714c57c91adabd7666955d2cfde32016c50c2458f

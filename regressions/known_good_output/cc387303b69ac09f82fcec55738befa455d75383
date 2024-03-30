@@ -1,0 +1,16 @@
+make: SAMSUNG
+model: NX20
+clean_make: Samsung
+clean_model: NX20
+width: 5632
+height: 3720
+cpp: 1
+wb_coeffs: [9408.0, 4096.0, 7152.0, NaN]
+whitelevels: [3750, 3750, 3750, 3750]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6933.0, -2268.0, -753.0], [-4921.0, 13387.0, 1647.0], [-803.0, 1641.0, 6096.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [17, 71, 55, 89]
+blackareas: []
+orientation: Normal
+sha256data: bf1ad3e8db7780f7f72e744850935bf04379b406a5e78c8e432213f9f2f19353

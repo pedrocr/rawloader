@@ -1,0 +1,16 @@
+make: SONY
+model: DSC-R1
+clean_make: Sony
+clean_model: DSC-R1
+width: 3984
+height: 2608
+cpp: 1
+wb_coeffs: [500.0, 256.0, 385.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [511, 511, 511, 511]
+xyz_to_cam: [[8512.0, -2641.0, -694.0], [-8042.0, 15670.0, 2526.0], [-1821.0, 2117.0, 7414.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 60, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: a20eb3e8c43b2bb6452642c420306c91c09e264ea4fd2b8be9ce6b9172bcde72

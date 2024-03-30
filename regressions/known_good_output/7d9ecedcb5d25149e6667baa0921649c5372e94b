@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D80
+clean_make: Nikon
+clean_model: D80
+width: 3904
+height: 2616
+cpp: 1
+wb_coeffs: [1.859375, 1.0, 1.3242188, NaN]
+whitelevels: [3880, 3880, 3880, 3880]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8629.0, -2410.0, -883.0], [-9055.0, 16940.0, 2171.0], [-1490.0, 1363.0, 8520.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cbef991eb625071e2d1dc8a3602babd76a39cc68240f87bf8786a458dec4311f

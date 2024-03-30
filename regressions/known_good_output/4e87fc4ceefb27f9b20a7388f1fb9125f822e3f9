@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A580
+clean_make: Sony
+clean_model: DSLR-A580
+width: 4928
+height: 3280
+cpp: 1
+wb_coeffs: [2624.0, 1024.0, 1620.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5932.0, -1492.0, -411.0], [-4813.0, 12285.0, 2856.0], [-741.0, 1524.0, 6739.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 2, 2, 0]
+blackareas: []
+orientation: Normal
+sha256data: 8456a38ee7b841699abcc2db28920bc8e01c8a5e358414e906eabec2b4b4b2d5

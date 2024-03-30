@@ -1,0 +1,16 @@
+make: Kodak
+model: DCS760C
+clean_make: Kodak
+clean_model: DCS760C
+width: 3040
+height: 2016
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [3500, 3500, 3500, 3500]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[16623.0, -6309.0, -1411.0], [-4344.0, 13923.0, 323.0], [2285.0, 274.0, 2926.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Unknown
+sha256data: 021fb56eba677572f0b554ba016d973331cf36e0786ed3cd9904537c1629bb1a

@@ -1,0 +1,16 @@
+make: HUAWEI
+model: AUM-L29
+clean_make: HUAWEI
+clean_model: AUM-L29
+width: 4208
+height: 3120
+cpp: 1
+wb_coeffs: [1.6202532, 1.0, 2.064516, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[2.171875, -1.5078125, -0.3828125], [-1.0703125, 2.1796875, -0.0078125], [0.0625, -0.140625, 1.296875], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c21d97e0469f666ee76a2c9667aa72a78d80db39cab640a8285c98aba83c7bb5

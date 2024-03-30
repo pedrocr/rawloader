@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A450
+clean_make: Sony
+clean_model: DSLR-A450
+width: 4608
+height: 3072
+cpp: 1
+wb_coeffs: [2508.0, 1024.0, 1512.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[4950.0, -580.0, -103.0], [-5228.0, 12542.0, 3029.0], [-709.0, 1435.0, 7371.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: dccd002d84a25a657aee1f33ff9d35e46864798048a67d00c7e33a431e685be8

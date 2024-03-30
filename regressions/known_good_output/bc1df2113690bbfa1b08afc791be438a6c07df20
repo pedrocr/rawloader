@@ -1,0 +1,16 @@
+make: Google
+model: Pixel 3a
+clean_make: Google
+clean_model: Pixel 3a
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [2.235806, 1.0, 1.5306435, NaN]
+whitelevels: [16368, 16368, 16368, 16368]
+blacklevels: [1023, 1023, 1022, 1022]
+xyz_to_cam: [[1.6298, -0.7708, -0.2489], [-0.9956, 1.9269, 0.0401], [0.0482, -0.1686, 0.8591], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 208ca2a92aad33d92bf319a7e200322f154dbbd690a6a9c85f7f0ccf9655563f

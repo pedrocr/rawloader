@@ -1,0 +1,16 @@
+make: HUAWEI
+model: EVA-L09
+clean_make: HUAWEI
+clean_model: EVA-L09
+width: 3968
+height: 2976
+cpp: 1
+wb_coeffs: [1.9038461, 1.0, 2.2261906, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[2.209961, -1.3320313, -0.14160156], [-0.18945313, 1.2275391, -0.0546875], [-0.0234375, 0.18261719, 0.6035156], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 593e222d9ceefa65b2a9477f58987e2443fdccb7411e2b33bb093a0d62cea93c

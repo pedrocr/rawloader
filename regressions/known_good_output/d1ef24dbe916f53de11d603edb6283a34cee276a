@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX100 IS
+clean_make: Canon
+clean_model: Canon PowerShot SX100 IS
+width: 3336
+height: 2480
+cpp: 1
+wb_coeffs: [1.688, 0.881, 1.873, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [31, 31, 31, 31]
+xyz_to_cam: [[0.656793, -0.168702, -0.10803], [-0.002711, 0.661538, 0.037919], [0.077255, 0.048834, 0.241797], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [8, 34, 6, 10]
+blackareas: []
+orientation: Normal
+sha256data: c61b4906caf5d1aa7f01e1b4187cc50514a76ac82ca6940b1bc869fca7ccf218

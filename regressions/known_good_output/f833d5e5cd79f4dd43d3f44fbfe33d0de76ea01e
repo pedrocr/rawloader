@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot G2
+clean_make: Canon
+clean_model: PowerShot G2
+width: 2376
+height: 1728
+cpp: 1
+wb_coeffs: [1902.0, 1051.0, 1434.0, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [32, 32, 32, 0]
+xyz_to_cam: [[9087.0, -2693.0, -1049.0], [-6715.0, 14382.0, 2537.0], [-2291.0, 2819.0, 7790.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 52, 2, 12]
+blackareas: [(0, 2376, 1728, 2326)]
+orientation: Unknown
+sha256data: c9fb80d1602132402ae6ad08d3b849277880715aa0067024afa9ec8cfe954ab1

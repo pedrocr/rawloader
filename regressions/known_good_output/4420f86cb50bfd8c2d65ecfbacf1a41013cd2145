@@ -1,0 +1,16 @@
+make: KODAK
+model: DCS460D         FILE VERSION 3
+clean_make: Kodak
+clean_model: DCS460D
+width: 3072
+height: 2048
+cpp: 1
+wb_coeffs: [NaN, NaN, NaN, NaN]
+whitelevels: [6664, 6664, 6664, 6664]
+blacklevels: [7, 7, 7, 7]
+xyz_to_cam: [[10592.0, -2206.0, -967.0], [-1944.0, 11685.0, 230.0], [2206.0, 670.0, 1273.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 3, 0, 3]
+blackareas: []
+orientation: Unknown
+sha256data: 571fb2bc67f8d37d5cddcda6fade03e16e3be25a1ab63bd8e8675601391c674e

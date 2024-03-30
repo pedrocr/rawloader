@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A100
+clean_make: Sony
+clean_model: DSLR-A100
+width: 3881
+height: 2608
+cpp: 1
+wb_coeffs: [401.0, 256.0, 574.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[9437.0, -2811.0, -774.0], [-8405.0, 16215.0, 2290.0], [-710.0, 596.0, 7181.0], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: c5abce65d2242300f79aae865c4fe9259d45f9c44bf9f9ca481eab1f8d2b7fa2

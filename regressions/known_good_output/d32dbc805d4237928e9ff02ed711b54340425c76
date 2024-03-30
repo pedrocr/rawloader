@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot S40
+clean_make: Canon
+clean_model: PowerShot S40
+width: 2376
+height: 1728
+cpp: 1
+wb_coeffs: [1666.0, 831.0, 1103.0, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [32, 32, 32, 0]
+xyz_to_cam: [[8510.0, -2487.0, -940.0], [-6869.0, 14231.0, 2900.0], [-2318.0, 2829.0, 9013.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [6, 52, 2, 12]
+blackareas: [(0, 2376, 1728, 2326)]
+orientation: Unknown
+sha256data: f62b07544dcb765658d32f627c5e1c3a68cc0ef9ee69babd2678af18758c6313

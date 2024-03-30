@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-G70
+clean_make: Panasonic
+clean_model: DMC-G70
+width: 4816
+height: 3080
+cpp: 1
+wb_coeffs: [628.0, 256.0, 397.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[7610.0, -2780.0, -576.0], [-4614.0, 12195.0, 2733.0], [-1375.0, 2393.0, 6490.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 208, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6ad75960b636705c44316c38bf8372abb800961fe2c6eb1b46e9356a760469d9

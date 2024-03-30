@@ -1,0 +1,16 @@
+make: samsung
+model: SM-G973F
+clean_make: samsung
+clean_model: SM-G973F
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.2089728, 1.0, 2.4150944, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[1.5732422, -0.7939453, -0.34375], [-0.4794922, 1.6152344, -0.24902344], [-0.06738281, 0.32910156, 0.5214844], [0.0, 0.0, 0.0]]
+cfa: GRBG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Rotate90
+sha256data: 90ab2ff66b619ef111701326edaeba760ebe8be9ffde8b47d9eec457aa9bcc58

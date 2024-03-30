@@ -1,0 +1,16 @@
+make: SONY
+model: DSLR-A900
+clean_make: Sony
+clean_model: DSLR-A900
+width: 6080
+height: 4048
+cpp: 1
+wb_coeffs: [2688.0, 1024.0, 1516.0, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [32, 32, 32, 32]
+xyz_to_cam: [[5209.0, -1072.0, -397.0], [-8845.0, 16120.0, 2919.0], [-1618.0, 1803.0, 8654.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 721fbaa06905c2facf31e678f9664b5a05d2750de7d201cc9653935bdb1a52fa

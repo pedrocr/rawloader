@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS DIGITAL REBEL XS
+clean_make: Canon
+clean_model: Rebel XS
+width: 3948
+height: 2622
+cpp: 1
+wb_coeffs: [2056.0, 1024.0, 1680.0, NaN]
+whitelevels: [3600, 3600, 3600, 3600]
+blacklevels: [258, 257, 255, 0]
+xyz_to_cam: [[6771.0, -1139.0, -977.0], [-7818.0, 15123.0, 2928.0], [-1244.0, 1437.0, 7533.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [18, 0, 2, 42]
+blackareas: [(0, 41, 2622, 0)]
+orientation: Rotate270
+sha256data: 3b2afb541eabdba28212082b6c4e6e2b5042ba0865608202eacc1da7fad01607

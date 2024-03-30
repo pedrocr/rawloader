@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-LF1
+clean_make: Panasonic
+clean_model: DMC-LF1
+width: 4144
+height: 3016
+cpp: 1
+wb_coeffs: [499.0, 264.0, 493.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [143, 143, 143, 143]
+xyz_to_cam: [[9379.0, -3267.0, -816.0], [-3227.0, 11560.0, 1881.0], [-926.0, 1928.0, 5340.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 126, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 6024add585e59b2e58ed8dd32c225dba2d80659f7165b4814fde54fee0945509

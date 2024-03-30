@@ -1,0 +1,16 @@
+make: Panasonic
+model: DC-FZ82
+clean_make: Panasonic
+clean_model: DC-FZ82
+width: 5040
+height: 3688
+cpp: 1
+wb_coeffs: [402.0, 256.0, 475.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[8550.0, -2908.0, -842.0], [-3195.0, 11529.0, 1881.0], [-338.0, 1603.0, 4631.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 128, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 385823069d34506664a9279cc93208e8a19c3e8f244bcfa6e62e3a8c8e3a05e5

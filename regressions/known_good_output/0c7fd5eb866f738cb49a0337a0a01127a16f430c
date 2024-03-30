@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 5D Mark IV
+clean_make: Canon
+clean_model: Canon EOS 5D Mark IV
+width: 3360
+height: 2240
+cpp: 3
+wb_coeffs: [2036.0, 1024.0, 1509.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6446.0, -366.0, -864.0], [-4436.0, 12204.0, 2513.0], [-952.0, 2496.0, 6348.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: [(0, 130, 2240, 0)]
+orientation: Normal
+sha256data: 402f948b5298ab6902a3415b448c34f6502bf226c394072a961d79ec9fff89cc

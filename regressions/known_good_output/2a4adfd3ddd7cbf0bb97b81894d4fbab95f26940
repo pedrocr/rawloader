@@ -1,0 +1,16 @@
+make: Canon
+model: Canon PowerShot SX60 HS
+clean_make: Canon
+clean_model: PowerShot SX60 HS
+width: 4768
+height: 3516
+cpp: 1
+wb_coeffs: [1.6249999, 0.951, 1.592, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [127, 127, 127, 127]
+xyz_to_cam: [[1.3161, -0.5451, -0.1344], [-0.1989, 1.0654, 0.1531], [-0.0047, 0.1271, 0.4955], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [16, 8, 0, 96]
+blackareas: []
+orientation: Normal
+sha256data: 97b8bc9e25a7b1c5268b8fd6a264e61461e1c93c287fe63366ac2c49eeaed07f

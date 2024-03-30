@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T5
+clean_make: Canon
+clean_model: EOS Rebel T5
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2060.0, 1024.0, 1531.0, NaN]
+whitelevels: [12279, 12279, 12279, 12279]
+blacklevels: [2047, 2047, 2048, 0]
+xyz_to_cam: [[6461.0, -907.0, -882.0], [-4300.0, 12184.0, 2378.0], [-819.0, 1944.0, 5931.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [54, 0, 0, 146]
+blackareas: [(4, 5344, 48, 0), (0, 140, 3516, 0)]
+orientation: Normal
+sha256data: 1df141d681defb4706315ed135af763a42be25a83b02b376b6e3ee866c2d591a

@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A65V
+clean_make: Sony
+clean_model: SLT-A65V
+width: 6048
+height: 4024
+cpp: 1
+wb_coeffs: [2588.0, 1024.0, 1460.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5491.0, -1192.0, -363.0], [-4951.0, 12342.0, 2948.0], [-911.0, 1722.0, 7192.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 30, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 7878f158b07fe7a0f3a8b92000cc08559ce5b9ace49fd44f98599c9d393f97ff

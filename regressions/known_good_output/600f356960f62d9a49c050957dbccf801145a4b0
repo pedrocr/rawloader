@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-GH3
+clean_make: Panasonic
+clean_model: DMC-GH3
+width: 4816
+height: 3088
+cpp: 1
+wb_coeffs: [571.0, 265.0, 547.0, NaN]
+whitelevels: [3971, 3971, 3971, 3971]
+blacklevels: [142, 142, 142, 142]
+xyz_to_cam: [[6559.0, -1752.0, -491.0], [-3672.0, 11407.0, 2586.0], [-962.0, 1875.0, 5130.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 194, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 13b9569849edc8d2f58f0647c579eab9feae4da950185b92b47b4afe09782c04

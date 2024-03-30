@@ -1,0 +1,16 @@
+make: PENTAX Corporation
+model: PENTAX *ist DL
+clean_make: Pentax
+clean_model: *ist DL
+width: 3040
+height: 2024
+cpp: 1
+wb_coeffs: [11840.0, 8192.0, 12224.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [128, 127, 127, 128]
+xyz_to_cam: [[10829.0, -2838.0, -1115.0], [-8339.0, 15817.0, 2696.0], [-837.0, 680.0, 11939.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: fccf17fa7c461a5faf8ea8abfad9a1d6e9559f99d9812070a663530d44898d74

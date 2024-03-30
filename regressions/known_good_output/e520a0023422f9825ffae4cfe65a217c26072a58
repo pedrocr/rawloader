@@ -1,0 +1,16 @@
+make: PENTAX RICOH IMAGING
+model: PENTAX MX-1
+clean_make: PENTAX RICOH IMAGING
+clean_model: PENTAX MX-1
+width: 4016
+height: 3010
+cpp: 1
+wb_coeffs: [1.9140626, 1.0078125, 1.8867188, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[0.8804474, -0.25230408, -0.12376404], [-0.24230957, 1.162735, 0.08595276], [-0.06816101, 0.1773529, 0.47531128], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 64565dfdd1543f4b9825d78d0e5d2d57a70190625abe782b58425b15abe8f502

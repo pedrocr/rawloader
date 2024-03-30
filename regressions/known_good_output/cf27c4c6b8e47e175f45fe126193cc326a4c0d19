@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX K-3 Mark III
+clean_make: RICOH IMAGING COMPANY, LTD.
+clean_model: PENTAX K-3 Mark III
+width: 6304
+height: 4224
+cpp: 1
+wb_coeffs: [2.4609375, 1.0, 1.6914063, NaN]
+whitelevels: [16379, 16379, 16379, 16379]
+blacklevels: [64, 64, 64, 64]
+xyz_to_cam: [[0.7021942, -0.16221619, -0.08895874], [-0.46139526, 1.2727814, 0.20654297], [-0.06399536, 0.1428833, 0.56855774], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [34, 54, 30, 26]
+blackareas: []
+orientation: Normal
+sha256data: 841efe93ac968656cf0a3c6b361af557d40ea9ed4f3efbe551ee318d9eca70e2

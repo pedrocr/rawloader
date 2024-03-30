@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS 5D Mark III
+clean_make: Canon
+clean_model: EOS 5D Mark III
+width: 2880
+height: 1920
+cpp: 3
+wb_coeffs: [1694.0, 1024.0, 2212.0, NaN]
+whitelevels: [65535, 65535, 65535, 65535]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[6722.0, -635.0, -963.0], [-4287.0, 12460.0, 2028.0], [-908.0, 2162.0, 5668.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: [(2, 8640, 80, 0), (0, 120, 1920, 0)]
+orientation: Normal
+sha256data: 732b77cba36e6db1ab137bb35fabc24cbdb3c2432bf6a137c3536cafd00a6cd8

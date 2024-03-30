@@ -1,0 +1,16 @@
+make: Canon
+model: Canon EOS REBEL T3i
+clean_make: Canon
+clean_model: EOS Rebel T3i
+width: 5344
+height: 3516
+cpp: 1
+wb_coeffs: [2491.0, 1024.0, 1533.0, NaN]
+whitelevels: [13926, 13926, 13926, 13926]
+blacklevels: [2048, 2049, 2049, 0]
+xyz_to_cam: [[6461.0, -907.0, -882.0], [-4300.0, 12184.0, 2378.0], [-819.0, 1944.0, 5931.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [54, 0, 0, 146]
+blackareas: [(4, 5344, 48, 0), (0, 140, 3516, 0)]
+orientation: Normal
+sha256data: c04a1ad278b2a807f6efdd6b41ea9d9401080ec53b6b691c285b7fbd2bd3524f

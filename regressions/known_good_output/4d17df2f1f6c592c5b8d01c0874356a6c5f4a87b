@@ -1,0 +1,16 @@
+make: FUJIFILM
+model: X100T
+clean_make: Fujifilm
+clean_model: X100T
+width: 4992
+height: 3296
+cpp: 1
+wb_coeffs: [597.0, 302.0, 455.0, NaN]
+whitelevels: [16383, 16383, 16383, 16383]
+blacklevels: [1024, 1024, 1024, 1024]
+xyz_to_cam: [[10592.0, -4262.0, -1008.0], [-3514.0, 11355.0, 2465.0], [-870.0, 2025.0, 6386.0], [0.0, 0.0, 0.0]]
+cfa: RBGBRGGGRGGBGGBGGRBRGRBGGGBGGRGGRGGB
+crops: [0, 52, 0, 4]
+blackareas: []
+orientation: Normal
+sha256data: 158ac2344b94620bd769566d411ce1d608ed9378bf5d45998fadd02fc7d64991

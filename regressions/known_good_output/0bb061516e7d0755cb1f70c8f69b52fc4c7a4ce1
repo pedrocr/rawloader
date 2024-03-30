@@ -1,0 +1,16 @@
+make: RICOH IMAGING COMPANY, LTD.
+model: PENTAX KP
+clean_make: Pentax
+clean_model: KP
+width: 6112
+height: 4060
+cpp: 1
+wb_coeffs: [19936.0, 8192.0, 14528.0, NaN]
+whitelevels: [16254, 16254, 16254, 16254]
+blacklevels: [128, 128, 128, 128]
+xyz_to_cam: [[8617.0, -3228.0, -1034.0], [-4674.0, 12821.0, 2044.0], [-803.0, 1577.0, 5728.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: cc5b7b0167df3da4d6486ce60b5bb5cc845fd91f6cf96ebaac78618b981ad39f

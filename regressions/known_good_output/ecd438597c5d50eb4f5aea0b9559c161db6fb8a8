@@ -1,0 +1,16 @@
+make: PENTAX
+model: PENTAX K-01
+clean_make: PENTAX
+clean_model: PENTAX K-01
+width: 4960
+height: 3300
+cpp: 1
+wb_coeffs: [2.1796875, 1.0, 1.5859375, NaN]
+whitelevels: [4078, 4078, 4078, 4078]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[0.84181213, -0.25439453, -0.11273193], [-0.39953613, 1.2301178, 0.18806458], [-0.097732544, 0.17131042, 0.65127563], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [20, 16, 8, 8]
+blackareas: []
+orientation: Normal
+sha256data: 6be6a01dcad65c89e0e9067dd58d56ee0c6ec686c1747c3c11cc7302b6678072

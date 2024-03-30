@@ -1,0 +1,16 @@
+make: SONY
+model: SLT-A55V
+clean_make: Sony
+clean_model: SLT-A55V
+width: 4928
+height: 3280
+cpp: 1
+wb_coeffs: [2580.0, 1024.0, 1500.0, NaN]
+whitelevels: [16300, 16300, 16300, 16300]
+blacklevels: [512, 512, 512, 512]
+xyz_to_cam: [[5932.0, -1492.0, -411.0], [-4813.0, 12285.0, 2856.0], [-741.0, 1524.0, 6739.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 10188fea4e64ef05e1c62bfa0cc49b7a40b599e7ab6c35d8543b13854d81acd3

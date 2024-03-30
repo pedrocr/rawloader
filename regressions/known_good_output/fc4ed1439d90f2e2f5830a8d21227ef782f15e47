@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-TZ80
+clean_make: Panasonic
+clean_model: DMC-TZ80
+width: 5040
+height: 3688
+cpp: 1
+wb_coeffs: [510.0, 256.0, 471.0, NaN]
+whitelevels: [4095, 4095, 4095, 4095]
+blacklevels: [154, 154, 154, 154]
+xyz_to_cam: [[8550.0, -2908.0, -842.0], [-3195.0, 11529.0, 1881.0], [-338.0, 1603.0, 4631.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 126, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: f5fba78f2c6ce8ae4c7011ee19f91a485799713764bad1dd50f3f6c7af77e9a9

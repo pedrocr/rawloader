@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D7100
+clean_make: Nikon
+clean_model: D7100
+width: 6036
+height: 4020
+cpp: 1
+wb_coeffs: [2.2929688, 1.0, 1.6914063, NaN]
+whitelevels: [15892, 15892, 15892, 15892]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[8322.0, -3112.0, -1047.0], [-6367.0, 14342.0, 2179.0], [-988.0, 1638.0, 6394.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 668f4982e6eeca867a7bd448c7acee72203d102a737fe7bf32ca0ab650133e25

@@ -1,0 +1,16 @@
+make: OLYMPUS IMAGING CORP.
+model: XZ-1
+clean_make: Olympus
+clean_model: XZ-1
+width: 3680
+height: 2760
+cpp: 1
+wb_coeffs: [0.0, 256.0, 0.0, NaN]
+whitelevels: [3900, 3900, 3900, 3900]
+blacklevels: [67, 67, 67, 67]
+xyz_to_cam: [[10901.0, -4095.0, -1074.0], [-1141.0, 9208.0, 2293.0], [-62.0, 1417.0, 5158.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 2, 0]
+blackareas: []
+orientation: Normal
+sha256data: 1975c667dfdbb2a05a64e81e8b973db500f70df51c47bbe1d5c75378c8202cff

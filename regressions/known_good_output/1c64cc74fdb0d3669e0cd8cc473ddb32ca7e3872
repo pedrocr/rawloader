@@ -1,0 +1,16 @@
+make: Panasonic
+model: DMC-FZ50
+clean_make: Panasonic
+clean_model: DMC-FZ50
+width: 3690
+height: 2439
+cpp: 1
+wb_coeffs: [351.0, 263.0, 703.0, NaN]
+whitelevels: [3986, 3986, 3986, 3986]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7906.0, -2709.0, -594.0], [-6231.0, 13351.0, 3220.0], [-1922.0, 2631.0, 6537.0], [0.0, 0.0, 0.0]]
+cfa: BGGR
+crops: [0, 17, 5, 3]
+blackareas: []
+orientation: Normal
+sha256data: 867a956a20b1a3eaa69570e0aa7e9a2b4dbdeccaed98bdaad9e91086054d31e6

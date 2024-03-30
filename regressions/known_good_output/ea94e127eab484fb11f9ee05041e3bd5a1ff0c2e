@@ -1,0 +1,16 @@
+make: NIKON
+model: COOLPIX P340
+clean_make: Nikon
+clean_model: Coolpix P340
+width: 4032
+height: 3024
+cpp: 1
+wb_coeffs: [1.8242188, 1.0, 1.6601563, NaN]
+whitelevels: [3800, 3800, 3800, 3800]
+blacklevels: [200, 200, 200, 200]
+xyz_to_cam: [[10321.0, -3920.0, -931.0], [-2750.0, 11146.0, 1824.0], [-442.0, 1545.0, 5539.0], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: 16c91618dadaba8579f45c897e8346ef2d8a30538bd9a86d13d3685ccc35a803

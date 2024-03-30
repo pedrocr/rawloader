@@ -1,0 +1,16 @@
+make: NIKON CORPORATION
+model: NIKON D5000
+clean_make: Nikon
+clean_model: D5000
+width: 4352
+height: 2868
+cpp: 1
+wb_coeffs: [1.546875, 1.0, 1.4609375, NaN]
+whitelevels: [3767, 3767, 3767, 3767]
+blacklevels: [0, 0, 0, 0]
+xyz_to_cam: [[7309.0, -1403.0, -519.0], [-8474.0, 16008.0, 2622.0], [-2433.0, 2826.0, 8064.0], [0.0, 0.0, 0.0]]
+cfa: GBRG
+crops: [0, 0, 0, 0]
+blackareas: []
+orientation: Normal
+sha256data: d0f4b831c6c78f9237c0ce1fd8b11dca6c1271ba45cbc2aa18e581c7c94c5670

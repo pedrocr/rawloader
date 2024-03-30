@@ -1,0 +1,16 @@
+make: LGE
+model: Nexus 5X
+clean_make: LGE
+clean_model: Nexus 5X
+width: 4080
+height: 3028
+cpp: 1
+wb_coeffs: [2.0983605, 0.99224806, 1.6842105, NaN]
+whitelevels: [1023, 1023, 1023, 1023]
+blacklevels: [52, 52, 51, 52]
+xyz_to_cam: [[1.0, -0.2890625, -0.21875], [-0.5625, 1.6328125, -0.046875], [-0.0625, 0.2109375, 0.625], [0.0, 0.0, 0.0]]
+cfa: RGGB
+crops: [2, 0, 2, 48]
+blackareas: []
+orientation: Unknown
+sha256data: 7286b1d526be4340a39a692450bc457cac035be613d07788b2c67245b158a973
