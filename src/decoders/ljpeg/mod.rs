@@ -149,7 +149,7 @@ impl<'a> LjpegDecompressor<'a> {
       if marker == m(Marker::SOF3) {
         // Start of the frame, giving us the basic info
         sof.parse_sof(&mut input)?;
-        if sof.precision > 16 || sof.precision < 12 {
+        if sof.precision > 16 || sof.precision < 10 {
           return Err(format!("ljpeg: sof.precision {}", sof.precision).to_string())
         }
       } else if marker == m(Marker::DHT) {
@@ -264,6 +264,12 @@ impl<'a> LjpegDecompressor<'a> {
           c => return Err(format!("ljpeg: {} component files not supported", c).to_string()),
         }
       },
+      7 => {
+        match self.sof.cps {
+          3 => decode_jlpeg_predictor7_3components(self, out, x, stripwidth, width, height),
+          c => return Err(format!("ljpeg: predictor 7, {} component files not supported", c).to_string())
+        }
+      }
       8 => decode_hasselblad(self, out, width),
       p => return Err(format!("ljpeg: predictor {} not supported", p).to_string()),
     }
