@@ -55,60 +55,170 @@ struct FujiHeader {
     block_size: usize,
     blocks_in_row: usize,
     total_lines: usize,
+    lossless: bool,
+}
+
+// ---------------------------------------------------------------------------
+// Quantization table (one per gradient level)
+// ---------------------------------------------------------------------------
+#[derive(Clone)]
+struct FujiQTable {
+    q_table: Vec<i8>,
+    q_base: i32,
+    raw_bits: i32,
+    total_values: i32,
+    max_grad: i32,
+    q_grad_mult: i32,
 }
 
 // ---------------------------------------------------------------------------
 // Fuji params
 // ---------------------------------------------------------------------------
 struct FujiParams {
-    q_table: Vec<i8>,
-    q_point: [i32; 5],
+    qt: [FujiQTable; 4],  // qt[0] = main, qt[1..3] = lossy sub-tables
     max_bits: i32,
     min_value: i32,
-    raw_bits: i32,
-    total_values: i32,
-    max_diff: i32,
+    max_value: i32,
     line_width: usize,
+    lossless: bool,
 }
 
-fn get_gradient(q_point: &[i32; 5], cur_val: i32) -> i8 {
-    let v = cur_val - q_point[4];
-    let av = v.abs();
-    let mut grad: i32 = 0;
-    if av > 0 { grad = 1; }
-    if av >= q_point[1] { grad = 2; }
-    if av >= q_point[2] { grad = 3; }
-    if av >= q_point[3] { grad = 4; }
-    if v < 0 { grad = -grad; }
-    grad as i8
+fn log2ceil(mut val: i32) -> i32 {
+    let mut result = 0;
+    val -= 1;
+    if val > 0 {
+        loop {
+            result += 1;
+            val >>= 1;
+            if val == 0 { break; }
+        }
+    }
+    result
+}
+
+fn setup_qlut(max_value: i32, qp: &[i32; 5]) -> Vec<i8> {
+    let n = (2 * max_value + 1) as usize;
+    let mut qt = vec![0i8; n];
+    for (i, entry) in qt.iter_mut().enumerate() {
+        let cur_val = i as i32 - max_value;
+        *entry = if cur_val <= -qp[3] { -4 }
+        else if cur_val <= -qp[2] { -3 }
+        else if cur_val <= -qp[1] { -2 }
+        else if cur_val < -qp[0] { -1 }
+        else if cur_val <= qp[0] { 0 }
+        else if cur_val < qp[1] { 1 }
+        else if cur_val < qp[2] { 2 }
+        else if cur_val < qp[3] { 3 }
+        else { 4 };
+    }
+    qt
+}
+
+fn make_main_qtable(max_value: i32, q_base: i32) -> (FujiQTable, i32) {
+    let max_val_p1 = max_value + 1;
+    let mut qp = [0i32; 5];
+    qp[0] = q_base;
+    qp[1] = 3 * q_base + 0x12;
+    qp[2] = 5 * q_base + 0x43;
+    qp[3] = 7 * q_base + 0x114;
+    qp[4] = max_value;
+    if qp[1] >= max_val_p1 || qp[1] < q_base + 1 { qp[1] = q_base + 1; }
+    if qp[2] < qp[1] || qp[2] >= max_val_p1 { qp[2] = qp[1]; }
+    if qp[3] < qp[2] || qp[3] >= max_val_p1 { qp[3] = qp[2]; }
+
+    let total_values = (qp[4] + 2 * q_base) / (2 * q_base + 1) + 1;
+    let raw_bits = log2ceil(total_values);
+    let max_bits = 4 * log2ceil(qp[4] + 1);
+    let q_table = setup_qlut(max_value, &qp);
+
+    (FujiQTable {
+        q_table,
+        q_base,
+        raw_bits,
+        total_values,
+        max_grad: 0,
+        q_grad_mult: 9,
+    }, max_bits)
+}
+
+fn empty_qtable() -> FujiQTable {
+    FujiQTable { q_table: Vec::new(), q_base: 0, raw_bits: 0, total_values: 0, max_grad: 0, q_grad_mult: 0 }
 }
 
 impl FujiParams {
     fn new(header: &FujiHeader) -> Result<FujiParams, String> {
         let line_width = (header.block_size * 2) / 3;
-        let q_point: [i32; 5] = [0, 0x12, 0x43, 0x114, (1i32 << header.raw_bits) - 1];
         let min_value = 0x40i32;
+        let max_value = (1i32 << header.raw_bits) - 1;
 
-        let n = 2 * (1 << header.raw_bits);
-        let mut q_table = vec![0i8; n];
-        for i in 0..n {
-            q_table[i] = get_gradient(&q_point, i as i32);
+        if header.lossless {
+            let (qt0, max_bits) = make_main_qtable(max_value, 0);
+            Ok(FujiParams {
+                qt: [qt0, empty_qtable(), empty_qtable(), empty_qtable()],
+                max_bits, min_value, max_value, line_width, lossless: true,
+            })
+        } else {
+            // Lossy: qt[0] is the main table (re-initialized per line),
+            // qt[1..3] are fixed sub-tables for small gradients.
+            let (_, max_bits) = make_main_qtable(max_value, 0);
+
+            // Sub-table 1: q_base=0
+            let mut qp = [0i32; 5];
+            qp[0] = 0; qp[4] = max_value;
+            qp[1] = if max_value >= 0x12 { 0x12 } else { 1 };
+            qp[2] = if max_value >= 0x43 { 0x43 } else { qp[1] };
+            qp[3] = if max_value >= 0x114 { 0x114 } else { qp[2] };
+            let qt1 = FujiQTable {
+                q_table: setup_qlut(max_value, &qp),
+                q_base: 0, max_grad: 5, q_grad_mult: 3,
+                total_values: max_value + 1,
+                raw_bits: log2ceil(max_value + 1),
+            };
+
+            // Sub-table 2: q_base=1
+            qp[0] = 1;
+            qp[1] = if max_value >= 0x15 { 0x15 } else { 2 };
+            qp[2] = if max_value >= 0x48 { 0x48 } else { qp[1] };
+            qp[3] = if max_value >= 0x11B { 0x11B } else { qp[2] };
+            let tv2 = (max_value + 2) / 3 + 1;
+            let qt2 = FujiQTable {
+                q_table: setup_qlut(max_value, &qp),
+                q_base: 1, max_grad: 6, q_grad_mult: 3,
+                total_values: tv2,
+                raw_bits: log2ceil(tv2),
+            };
+
+            // Sub-table 3: q_base=2
+            qp[0] = 2;
+            qp[1] = if max_value >= 0x18 { 0x18 } else { 3 };
+            qp[2] = if max_value >= 0x4D { 0x4D } else { qp[1] };
+            qp[3] = if max_value >= 0x122 { 0x122 } else { qp[2] };
+            let tv3 = (max_value + 4) / 5 + 1;
+            let qt3 = FujiQTable {
+                q_table: setup_qlut(max_value, &qp),
+                q_base: 2, max_grad: 7, q_grad_mult: 3,
+                total_values: tv3,
+                raw_bits: log2ceil(tv3),
+            };
+
+            Ok(FujiParams {
+                qt: [empty_qtable(), qt1, qt2, qt3],
+                max_bits, min_value, max_value, line_width, lossless: false,
+            })
         }
+    }
 
-        let (total_values, raw_bits, max_bits, max_diff) = match q_point[4] {
-            0x3FFF => (0x4000, 14, 56, 256),
-            0xFFFF => (0x10000, 16, 64, 1024),
-            _ => return Err(format!("Unsupported raw_bits for compression: {}", header.raw_bits)),
-        };
-
-        Ok(FujiParams { q_table, q_point, max_bits, min_value, raw_bits, total_values, max_diff, line_width })
+    fn reinit_main_qtable(&mut self, q_base: i32) {
+        let (qt0, max_bits) = make_main_qtable(self.max_value, q_base);
+        self.qt[0] = qt0;
+        self.max_bits = max_bits;
     }
 
     #[inline(always)]
-    fn quant_gradient(&self, v1: i32, v2: i32) -> i32 {
-        let idx1 = (self.q_point[4] + v1) as usize;
-        let idx2 = (self.q_point[4] + v2) as usize;
-        9 * (self.q_table[idx1] as i32) + (self.q_table[idx2] as i32)
+    fn quant_gradient(&self, qt: &FujiQTable, v1: i32, v2: i32) -> i32 {
+        let idx1 = (self.max_value + v1) as usize;
+        let idx2 = (self.max_value + v2) as usize;
+        qt.q_grad_mult * (qt.q_table[idx1] as i32) + (qt.q_table[idx2] as i32)
     }
 }
 
@@ -119,6 +229,13 @@ impl FujiParams {
 struct GradPair {
     value1: i32,
     value2: i32,
+}
+
+// Gradient arrays for one row-group: main grads + 3 lossy sub-grad arrays
+#[derive(Clone)]
+struct FujiGrads {
+    grads: [GradPair; 41],
+    lossy_grads: [[GradPair; 5]; 3],
 }
 
 // ---------------------------------------------------------------------------
@@ -153,23 +270,54 @@ fn bit_diff(value1: i32, value2: i32) -> i32 {
     dec_bits.min(15)
 }
 
+// Select which q-table and grad array to use for even samples (lossy mode)
+#[inline(always)]
+fn select_qtable_even<'a, 'b>(
+    params: &'a FujiParams,
+    fg: &'b mut FujiGrads,
+    diff_sum: i32,
+) -> (&'a FujiQTable, &'b mut [GradPair]) {
+    for i in 1..4 {
+        if params.qt[0].q_base >= i as i32 && diff_sum <= params.qt[i].max_grad {
+            return (&params.qt[i], &mut fg.lossy_grads[i - 1]);
+        }
+    }
+    (&params.qt[0], &mut fg.grads)
+}
+
+// Select which q-table and grad array to use for odd samples (lossy mode)
+#[inline(always)]
+fn select_qtable_odd<'a, 'b>(
+    params: &'a FujiParams,
+    fg: &'b mut FujiGrads,
+    diff_sum: i32,
+) -> (&'a FujiQTable, &'b mut [GradPair]) {
+    for i in 1..4 {
+        if params.qt[0].q_base >= i as i32 && diff_sum <= params.qt[i].max_grad {
+            return (&params.qt[i], &mut fg.lossy_grads[i - 1]);
+        }
+    }
+    (&params.qt[0], &mut fg.grads)
+}
+
 #[inline(always)]
 fn fuji_decode_sample(
     pump: &mut BitPumpMSB,
     params: &FujiParams,
+    qt: &FujiQTable,
     grad: i32,
     interp_val: i32,
-    grads: &mut [GradPair; 41],
+    grads: &mut [GradPair],
 ) -> u16 {
     let gradient = grad.unsigned_abs() as usize;
     let sample_bits = fuji_zerobits(pump);
 
     let (code_bits, code_delta): (i32, i32);
-    if sample_bits < params.max_bits - params.raw_bits - 1 {
+    if sample_bits < params.max_bits - qt.raw_bits - 1 {
         code_bits = bit_diff(grads[gradient].value1, grads[gradient].value2);
         code_delta = sample_bits << code_bits;
     } else {
-        code_bits = params.raw_bits;
+        code_bits = qt.raw_bits;
         code_delta = 1;
     }
 
@@ -187,16 +335,18 @@ fn fuji_decode_sample(
     }
     grads[gradient].value2 += 1;
 
-    // Apply code to interpolation value
-    let mut result = if grad < 0 { interp_val - code } else { interp_val + code };
+    let q_mult = 2 * qt.q_base + 1;
 
-    if result < 0 {
-        result += params.total_values;
-    } else if result > params.q_point[4] {
-        result -= params.total_values;
+    // Apply code to interpolation value
+    let mut result = if grad < 0 { interp_val - code * q_mult } else { interp_val + code * q_mult };
+
+    if result < -qt.q_base {
+        result += qt.total_values * q_mult;
+    } else if result > qt.q_base + params.max_value {
+        result -= qt.total_values * q_mult;
     }
 
-    result.max(0).min(params.q_point[4]) as u16
+    result.max(0).min(params.max_value) as u16
 }
 
 // ---------------------------------------------------------------------------
@@ -215,10 +365,11 @@ fn set_l(lines: &mut [i32], stride: usize, row: usize, col: usize, val: u16) {
 // ---------------------------------------------------------------------------
 // Interpolation (prediction from neighbors)
 // ---------------------------------------------------------------------------
+// Even pixel neighbors. Returns (interp_val, grad, diff_rf_rb, diff_rc_rb)
 #[inline(always)]
-fn interpolation_even_inner(
-    lines: &[i32], stride: usize, params: &FujiParams, c: usize, col: usize,
-) -> (i32, i32) {
+fn even_neighbors(
+    lines: &[i32], stride: usize, c: usize, col: usize,
+) -> (i32, i32, i32, i32, i32) {
     let rb = l(lines, stride, c - 1, 1 + 2 * col);
     let rc = l(lines, stride, c - 1, 2 * col);
     let rd = l(lines, stride, c - 1, 2 * col + 2);
@@ -228,25 +379,24 @@ fn interpolation_even_inner(
     let d_rf_rb = (rf - rb).abs();
     let d_rd_rb = (rd - rb).abs();
 
-    let term0 = 2 * rb;
     let (term1, term2);
     if d_rc_rb > d_rf_rb.max(d_rd_rb) {
-        term1 = rf;
-        term2 = rd;
+        term1 = rf; term2 = rd;
     } else {
         term1 = if d_rd_rb > d_rc_rb.max(d_rf_rb) { rf } else { rd };
         term2 = rc;
     }
 
-    let interp_val = (term0 + term1 + term2) >> 2;
-    let grad = params.quant_gradient(rb - rf, rc - rb);
-    (grad, interp_val)
+    let interp_val = (2 * rb + term1 + term2) >> 2;
+    // v1 = Rb - Rf, v2 = Rc - Rb, diff_sum = |Rf-Rb| + |Rc-Rb|
+    (interp_val, rb - rf, rc - rb, d_rf_rb, d_rc_rb)
 }
 
+// Odd pixel neighbors. Returns (interp_val, v1, v2, diff_sum)
 #[inline(always)]
-fn interpolation_odd_inner(
-    lines: &[i32], stride: usize, params: &FujiParams, c: usize, col: usize,
-) -> (i32, i32) {
+fn odd_neighbors(
+    lines: &[i32], stride: usize, c: usize, col: usize,
+) -> (i32, i32, i32, i32) {
     let ra = l(lines, stride, c, 1 + 2 * col);
     let rb = l(lines, stride, c - 1, 1 + 2 * col + 1);
     let rc = l(lines, stride, c - 1, 1 + 2 * col);
@@ -254,16 +404,16 @@ fn interpolation_odd_inner(
     let rg = l(lines, stride, c, 1 + 2 * (col + 1));
 
     let mut interp_val = ra + rg;
-    let mn = rc.min(rd);
-    let mx = rc.max(rd);
-    if rb < mn || rb > mx {
+    if rb < rc.min(rd) || rb > rc.max(rd) {
         interp_val += 2 * rb;
         interp_val >>= 1;
     }
     interp_val >>= 1;
 
-    let grad = params.quant_gradient(rb - rc, rc - ra);
-    (grad, interp_val)
+    // v1 = Rb - Rc, v2 = Rc - Ra, diff_sum = |Rb-Rc| + |Rc-Ra|
+    let diff_rb_rc = (rb - rc).abs();
+    let diff_rc_ra = (rc - ra).abs();
+    (interp_val, rb - rc, rc - ra, diff_rb_rc + diff_rc_ra)
 }
 
 // ---------------------------------------------------------------------------
@@ -306,8 +456,8 @@ fn xtrans_decode_block(
     params: &FujiParams,
     lines: &mut [i32],
     stride: usize,
-    grad_even: &mut [[GradPair; 41]; 3],
-    grad_odd: &mut [[GradPair; 41]; 3],
+    grad_even: &mut [FujiGrads; 3],
+    grad_odd: &mut [FujiGrads; 3],
 ) {
     let half_lw = params.line_width / 2;
 
@@ -326,11 +476,19 @@ fn xtrans_decode_block(
                     let col = col_even[comp];
 
                     let sample = if is_interpolation(row, comp, i) {
-                        let (_, interp_val) = interpolation_even_inner(lines, stride, params, c, col);
-                        interp_val.max(0).min(params.q_point[4]) as u16
+                        let (interp_val, _, _, _, _) = even_neighbors(lines, stride, c, col);
+                        interp_val.max(0).min(params.max_value) as u16
                     } else {
-                        let (grad, interp_val) = interpolation_even_inner(lines, stride, params, c, col);
-                        fuji_decode_sample(pump, params, grad, interp_val, &mut grad_even[grad_idx])
+                        let (interp_val, v1, v2, d_rf_rb, d_rc_rb) = even_neighbors(lines, stride, c, col);
+                        if params.lossless {
+                            let grad = params.quant_gradient(&params.qt[0], v1, v2);
+                            fuji_decode_sample(pump, params, &params.qt[0], grad, interp_val, &mut grad_even[grad_idx].grads)
+                        } else {
+                            let diff_sum = d_rf_rb + d_rc_rb;
+                            let (qt, grads) = select_qtable_even(params, &mut grad_even[grad_idx], diff_sum);
+                            let grad = params.quant_gradient(qt, v1, v2);
+                            fuji_decode_sample(pump, params, qt, grad, interp_val, grads)
+                        }
                     };
 
                     set_l(lines, stride, c, 1 + 2 * col, sample);
@@ -344,8 +502,16 @@ fn xtrans_decode_block(
                     let c = if comp == 0 { c0 } else { c1 };
                     let col = col_odd[comp];
 
-                    let (grad, interp_val) = interpolation_odd_inner(lines, stride, params, c, col);
-                    let sample = fuji_decode_sample(pump, params, grad, interp_val, &mut grad_odd[grad_idx]);
+                    let sample = if params.lossless {
+                        let (interp_val, v1, v2, _) = odd_neighbors(lines, stride, c, col);
+                        let grad = params.quant_gradient(&params.qt[0], v1, v2);
+                        fuji_decode_sample(pump, params, &params.qt[0], grad, interp_val, &mut grad_odd[grad_idx].grads)
+                    } else {
+                        let (interp_val, v1, v2, diff_sum) = odd_neighbors(lines, stride, c, col);
+                        let (qt, grads) = select_qtable_odd(params, &mut grad_odd[grad_idx], diff_sum);
+                        let grad = params.quant_gradient(qt, v1, v2);
+                        fuji_decode_sample(pump, params, qt, grad, interp_val, grads)
+                    };
 
                     set_l(lines, stride, c, 1 + 2 * col + 1, sample);
                     col_odd[comp] += 1;
@@ -406,12 +572,36 @@ fn copy_line_to_xtrans(
 }
 
 // ---------------------------------------------------------------------------
+// Initialize main gradient arrays
+// ---------------------------------------------------------------------------
+fn init_main_grads(params: &FujiParams, grad_even: &mut [FujiGrads; 3], grad_odd: &mut [FujiGrads; 3]) {
+    let max_diff = 2.max((params.qt[0].total_values + 0x20) >> 6);
+    let init = GradPair { value1: max_diff, value2: 1 };
+    for j in 0..3 {
+        grad_even[j].grads = [init; 41];
+        grad_odd[j].grads = [init; 41];
+    }
+}
+
+fn init_lossy_grads(params: &FujiParams, grad_even: &mut [FujiGrads; 3], grad_odd: &mut [FujiGrads; 3]) {
+    for k in 0..3 {
+        let max_diff = 2.max((params.qt[k + 1].total_values + 0x20) >> 6);
+        let init = GradPair { value1: max_diff, value2: 1 };
+        for j in 0..3 {
+            grad_even[j].lossy_grads[k] = [init; 5];
+            grad_odd[j].lossy_grads[k] = [init; 5];
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
 // Strip decoder
 // ---------------------------------------------------------------------------
 fn decode_strip(
     src: &[u8],
     header: &FujiHeader,
-    params: &FujiParams,
+    params: &mut FujiParams,
+    q_bases: Option<&[u8]>,
     strip_width: usize,
     strip_offset_x: usize,
     out: &mut [u16],
@@ -421,9 +611,16 @@ fn decode_strip(
     let stride = params.line_width + 2;
     let mut lines = vec![0i32; LTOTAL * stride];
 
-    let init = GradPair { value1: params.max_diff, value2: 1 };
-    let mut grad_even = [[init; 41]; 3];
-    let mut grad_odd = [[init; 41]; 3];
+    let init_gp = GradPair { value1: 0, value2: 0 };
+    let init_fg = FujiGrads { grads: [init_gp; 41], lossy_grads: [[init_gp; 5]; 3] };
+    let mut grad_even = [init_fg.clone(), init_fg.clone(), init_fg.clone()];
+    let mut grad_odd = [init_fg.clone(), init_fg.clone(), init_fg.clone()];
+
+    if params.lossless {
+        init_main_grads(params, &mut grad_even, &mut grad_odd);
+    } else {
+        init_lossy_grads(params, &mut grad_even, &mut grad_odd);
+    }
 
     // Pad source for safe BitPump reads near end
     let mut padded = src.to_vec();
@@ -431,6 +628,15 @@ fn decode_strip(
     let mut pump = BitPumpMSB::new(&padded);
 
     for cur_line in 0..header.total_lines {
+        // For lossy: re-init main qtable and grads when q_base changes
+        if !params.lossless {
+            let q_base = q_bases.map_or(0, |qb| qb[cur_line] as i32);
+            if cur_line == 0 || q_base != params.qt[0].q_base {
+                params.reinit_main_qtable(q_base);
+                init_main_grads(params, &mut grad_even, &mut grad_odd);
+            }
+        }
+
         if cur_line > 0 {
             // Rotate: last 2 lines of each color → first 2
             for &(start, count) in &COLOR_RANGES {
@@ -470,9 +676,14 @@ pub fn decode_fuji_compressed(src: &[u8], width: usize, height: usize, dummy: bo
     let version = src[2];
     let raw_type = src[3];
 
-    if signature != 0x4953 || version != 1 {
-        return Err(format!("RAF compressed: bad header sig=0x{:04x} ver={}", signature, version));
+    if signature != 0x4953 {
+        return Err(format!("RAF compressed: bad header sig=0x{:04x}", signature));
     }
+    let lossless = match version {
+        1 => true,
+        0 => false,
+        _ => return Err(format!("RAF compressed: unknown version={}", version)),
+    };
     if raw_type != 16 {
         return Err(format!("RAF compressed: only X-Trans supported, got raw_type={}", raw_type));
     }
@@ -489,9 +700,9 @@ pub fn decode_fuji_compressed(src: &[u8], width: usize, height: usize, dummy: bo
     }
 
     let header = FujiHeader {
-        raw_bits, raw_height, raw_width, block_size, blocks_in_row, total_lines,
+        raw_bits, raw_height, raw_width, block_size, blocks_in_row, total_lines, lossless,
     };
-    let params = FujiParams::new(&header)?;
+    let mut params = FujiParams::new(&header)?;
 
     // Read block sizes
     let bs_off = 16;
@@ -504,13 +715,29 @@ pub fn decode_fuji_compressed(src: &[u8], width: usize, height: usize, dummy: bo
         block_sizes.push(BEu32(src, off) as usize);
     }
 
-    // Compute strip data start (with alignment padding)
+    // Compute offset after block sizes (with alignment padding)
     let raw_offset = 4 * blocks_in_row;
-    let padding = if raw_offset & 0xC != 0 { 0x10 - (raw_offset & 0xC) } else { 0 };
+    let padding = if raw_offset & 0xF != 0 { 0x10 - (raw_offset & 0xF) } else { 0 };
     let mut data_off = 16 + raw_offset + padding;
+
+    // Read q_bases for lossy
+    let q_bases: Option<Vec<u8>> = if !lossless {
+        let line_step = (total_lines + 0xF) & !0xF;
+        let total_q_bases = blocks_in_row * line_step;
+        if data_off + total_q_bases > src.len() {
+            return Err("RAF compressed: data too short for q_bases".to_string());
+        }
+        let qb = src[data_off..data_off + total_q_bases].to_vec();
+        data_off += total_q_bases;
+        Some(qb)
+    } else {
+        None
+    };
 
     // Allocate output
     let mut out = vec![0u16; width * height];
+
+    let line_step = (total_lines + 0xF) & !0xF;
 
     // Decode each strip
     for block in 0..blocks_in_row {
@@ -528,7 +755,9 @@ pub fn decode_fuji_compressed(src: &[u8], width: usize, height: usize, dummy: bo
         };
         let strip_offset_x = block_size * block;
 
-        decode_strip(strip_src, &header, &params, strip_width, strip_offset_x, &mut out, width, height);
+        let strip_q_bases = q_bases.as_ref().map(|qb| &qb[block * line_step..]);
+
+        decode_strip(strip_src, &header, &mut params, strip_q_bases, strip_width, strip_offset_x, &mut out, width, height);
 
         data_off = strip_end;
     }

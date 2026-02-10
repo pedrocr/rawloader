@@ -51,7 +51,7 @@ impl<'a> Decoder for RafDecoder<'a> {
         // Compressed RAF — find the Fuji compressed header (0x4953 signature)
         let mut comp_offset = None;
         for i in 0..src.len().saturating_sub(16).min(100000) {
-          if src[i] == 0x49 && src[i+1] == 0x53 && src[i+2] == 1 && (src[i+3] == 0 || src[i+3] == 16) {
+          if src[i] == 0x49 && src[i+1] == 0x53 && (src[i+2] == 0 || src[i+2] == 1) && (src[i+3] == 0 || src[i+3] == 16) {
             comp_offset = Some(i);
             break;
           }
