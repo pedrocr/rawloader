@@ -1,0 +1,9 @@
+make = "FUJIFILM"
+model = "X-H2"
+clean_make = "Fujifilm"
+clean_model = "X-H2"
+blackpoint = 1024
+whitepoint = 16383
+color_matrix = [11809, -5358, -1141, -4248, 12164, 2343, -514, 1097, 5848]
+color_pattern = "GGRGGBGGBGGRBRGRBGGGBGGRGGRGGBRBGBRG"
+crops = [0,0,0,0]

@@ -78,6 +78,7 @@ mod kdc;
 mod dcs;
 mod rw2;
 mod raf;
+mod fuji_compressed;
 mod dcr;
 mod dng;
 mod pef;
