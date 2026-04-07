@@ -5,7 +5,7 @@ use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 
 pub fn is_mrw(buf: &[u8]) -> bool {
-  BEu32(buf,0) == 0x004D524D
+  BEu32(buf,0) == Some(0x004D524D)
 }
 
 #[derive(Debug, Clone)]
@@ -22,7 +22,7 @@ pub struct MrwDecoder<'a> {
 
 impl<'a> MrwDecoder<'a> {
   pub fn new(buf: &'a [u8], rawloader: &'a RawLoader) -> MrwDecoder<'a> {
-    let data_offset: usize = (BEu32(buf, 4) + 8) as usize;
+    let data_offset: usize = (BEu32(buf, 4).unwrap_or(0) + 8) as usize;
     let mut raw_height: usize = 0;
     let mut raw_width: usize = 0;
     let mut packed = false;
@@ -32,18 +32,18 @@ impl<'a> MrwDecoder<'a> {
     let mut currpos: usize = 8;
     // At most we read 20 bytes from currpos so check we don't step outside that
     while currpos+20 < data_offset {
-      let tag: u32 = BEu32(buf,currpos);
-      let len: u32 = BEu32(buf,currpos+4);
-      
+      let tag: u32 = BEu32(buf,currpos).unwrap_or(0);
+      let len: u32 = BEu32(buf,currpos+4).unwrap_or(0);
+
       match tag {
         0x505244 => { // PRD
-          raw_height = BEu16(buf,currpos+16) as usize;
-          raw_width = BEu16(buf,currpos+18) as usize;
+          raw_height = BEu16(buf,currpos+16).unwrap_or(0) as usize;
+          raw_width = BEu16(buf,currpos+18).unwrap_or(0) as usize;
           packed = buf[currpos+24] == 12;
         }
         0x574247 => { // WBG
           for i in 0..4 {
-            wb_vals[i] = BEu16(buf, currpos+12+i*2);
+            wb_vals[i] = BEu16(buf, currpos+12+i*2).unwrap_or(0);
           }
         }
         0x545457 => { // TTW

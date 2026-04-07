@@ -56,7 +56,7 @@ pub use decoders::cfa::CFA;
 #[doc(hidden)] pub use decoders::RawLoader;
 
 lazy_static! {
-  static ref LOADER: RawLoader = decoders::RawLoader::new();
+  static ref LOADER: RawLoader = RawLoader::new();
 }
 
 use std::path::Path;
@@ -135,4 +135,40 @@ pub fn decode_unwrapped(reader: &mut dyn Read) -> Result<RawImageData,RawLoaderE
 #[doc(hidden)]
 pub fn decode_dummy(reader: &mut dyn Read) -> Result<RawImage,RawLoaderError> {
   LOADER.decode(reader, true).map_err(|err| RawLoaderError::new(err))
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  use std::io::Cursor;
+
+  #[test]
+  fn fuzz_fuji_short_buffer() {
+    // 8-byte FUJIFILM header with no room for offsets at positions 84/92/100
+    let buf = b"FUJIFILM".to_vec();
+    let result = decode(&mut Cursor::new(&buf));
+    assert!(result.is_err());
+  }
+
+  #[test]
+  fn fuzz_x3f_malicious_offset() {
+    // FOVb magic + 0xf1 padding — directory offset reads as huge value
+    let mut buf = vec![0xf1u8; 257];
+    buf[0..4].copy_from_slice(b"FOVb");
+    let result = decode(&mut Cursor::new(&buf));
+    assert!(result.is_err());
+  }
+
+  #[test]
+  fn fuzz_tiff_large_ifd_count() {
+    // Valid TIFF LE header pointing to IFD at offset 8,
+    // IFD claims 136 entries but buffer only holds ~84
+    let mut buf = vec![0u8; 1026];
+    buf[0..2].copy_from_slice(b"II");          // little-endian
+    buf[2] = 0x2a;                              // magic 42
+    buf[4] = 0x08;                              // IFD offset = 8
+    buf[8] = 136;                               // 136 entries
+    let result = decode(&mut Cursor::new(&buf));
+    assert!(result.is_err());
+  }
 }

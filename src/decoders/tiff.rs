@@ -124,13 +124,14 @@ pub struct TiffIFD<'a> {
 
 impl<'a> TiffIFD<'a> {
   pub fn new_file(buf: &'a[u8]) -> Result<TiffIFD<'a>, String> {
-    if buf[0..8] == b"FUJIFILM"[..] {
-      let ifd1 = TiffIFD::new_root(buf, (BEu32(buf, 84)+12) as usize)?;
+    if buf.get(0..8) == Some(&b"FUJIFILM"[..]) {
+      let off84 = BEu32(buf, 84).ok_or("FUJI: buffer too short for header offset at 84")?;
+      let ifd1 = TiffIFD::new_root(buf, (off84+12) as usize)?;
       let endian = ifd1.get_endian();
       let mut subifds = vec![ifd1];
       let mut entries = HashMap::new();
 
-      let ioffset = BEu32(buf, 100) as usize;
+      let ioffset = BEu32(buf, 100).ok_or("FUJI: buffer too short for IFD offset at 100")? as usize;
       match TiffIFD::new_root(buf, ioffset) {
         Ok(val) => {subifds.push(val);}
         Err(_) => {
@@ -145,7 +146,7 @@ impl<'a> TiffIFD<'a> {
           });
         },
       }
-      match TiffIFD::new_fuji(buf, BEu32(buf, 92) as usize) {
+      match TiffIFD::new_fuji(buf, BEu32(buf, 92).ok_or("FUJI: buffer too short for Fuji IFD offset at 92")? as usize) {
         Ok(val) => subifds.push(val),
         Err(_) => {}
       }
@@ -165,12 +166,12 @@ impl<'a> TiffIFD<'a> {
   pub fn new_root(buf: &'a[u8], offset: usize) -> Result<TiffIFD<'a>, String> {
     let mut subifds = Vec::new();
 
-    let endian = match LEu16(buf, offset) {
+    let endian = match LEu16(buf, offset).ok_or("TIFF: buffer too short for endian marker")? {
       0x4949 => LITTLE_ENDIAN,
       0x4d4d => BIG_ENDIAN,
       x => {return Err(format!("TIFF: don't know marker 0x{:x}", x).to_string())},
     };
-    let mut nextifd = endian.ru32(buf, offset+4) as usize;
+    let mut nextifd = endian.ru32(buf, offset+4).ok_or("TIFF: buffer too short for IFD offset")? as usize;
     for _ in 0..100 { // Never read more than 100 IFDs
       let ifd = TiffIFD::new(&buf[offset..], nextifd, 0, offset, 0, endian)?;
       nextifd = ifd.nextifd;
@@ -193,17 +194,27 @@ impl<'a> TiffIFD<'a> {
     let mut entries = HashMap::new();
     let mut subifds = Vec::new();
 
-    let num = e.ru16(buf, offset); // Directory entries in this IFD
+    let num = e.ru16(buf, offset).ok_or("TIFF: buffer too short for IFD entry count")?; // Directory entries in this IFD
     if num > 4000 {
       return Err(format!("too many entries in IFD ({})", num).to_string())
     }
+    // Validate that the buffer can hold all IFD entries plus the next-IFD pointer
+    let ifd_end = offset.checked_add(2 + (num as usize) * 12 + 4)
+      .ok_or("TIFF: IFD size overflow")?;
+    if ifd_end > buf.len() {
+      return Err(format!("TIFF: IFD with {} entries requires {} bytes, but only {} available",
+        num, ifd_end - offset, buf.len() - offset).to_string())
+    }
     for i in 0..num {
       let entry_offset: usize = offset + 2 + (i as usize)*12;
-      if Tag::n(e.ru16(buf, entry_offset)).is_none() {
+      if Tag::n(e.ru16(buf, entry_offset).unwrap_or(0)).is_none() {
         // Skip entries we don't know about to speedup decoding
         continue;
       }
-      let entry = TiffEntry::new(buf, entry_offset, base_offset, offset, e);
+      let entry = match TiffEntry::new(buf, entry_offset, base_offset, offset, e) {
+        Ok(e) => e,
+        Err(_) => continue, // Skip entries with out-of-bounds data
+      };
 
       if entry.tag == t(Tag::SubIFDs)
       || entry.tag == t(Tag::ExifIFDPointer)
@@ -235,7 +246,7 @@ impl<'a> TiffIFD<'a> {
     Ok(TiffIFD {
       entries: entries,
       subifds: subifds,
-      nextifd: e.ru32(buf, offset + (2+num*12) as usize) as usize,
+      nextifd: e.ru32(buf, offset + (2+num*12) as usize).unwrap_or(0) as usize,
       start_offset: start_offset,
       endian: e,
     })
@@ -243,13 +254,13 @@ impl<'a> TiffIFD<'a> {
 
   pub fn new_makernote(buf: &'a[u8], offset: usize, base_offset: usize, depth: u32, e: Endian) -> Result<TiffIFD<'a>, String> {
     let mut off = 0;
-    let data = &buf[offset..];
+    let data = buf.get(offset..).ok_or("TIFF: makernote offset out of bounds")?;
     let mut endian = e;
 
     // Olympus starts the makernote with their own name, sometimes truncated
-    if data[0..5] == b"OLYMP"[..] {
+    if data.get(0..5) == Some(&b"OLYMP"[..]) {
       off += 8;
-      if data[0..7] == b"OLYMPUS"[..] {
+      if data.get(0..7) == Some(&b"OLYMPUS"[..]) {
         off += 4;
       }
 
@@ -261,7 +272,8 @@ impl<'a> TiffIFD<'a> {
           entry.get_usize(0)
         } else { 0 };
         if ioff != 0 {
-          let iprocifd = TiffIFD::new(&buf[offset+ioff..], 0, ioff, 0, depth, endian)?;
+          let iprocifd = TiffIFD::new(buf.get(offset+ioff..).ok_or("TIFF: Olympus ImgProc offset out of bounds")?,
+            0, ioff, 0, depth, endian)?;
           mainifd.subifds.push(iprocifd);
         }
       }
@@ -270,33 +282,35 @@ impl<'a> TiffIFD<'a> {
     }
 
     // Epson starts the makernote with its own name
-    if data[0..5] == b"EPSON"[..] {
+    if data.get(0..5) == Some(&b"EPSON"[..]) {
       off += 8;
     }
 
     // Pentax makernote starts with AOC\0 - If it's there, skip it
-    if data[0..4] == b"AOC\0"[..] {
+    if data.get(0..4) == Some(&b"AOC\0"[..]) {
       off +=4;
     }
 
     // Pentax can also start with PENTAX and in that case uses different offsets
-    if data[0..6] == b"PENTAX"[..] {
+    if data.get(0..6) == Some(&b"PENTAX"[..]) {
       off += 8;
-      let endian = if data[off..off+2] == b"II"[..] {LITTLE_ENDIAN} else {BIG_ENDIAN};
-      return TiffIFD::new(&buf[offset..], 10, base_offset, 0, depth, endian)
+      let endian = if data.get(off..off+2) == Some(&b"II"[..]) {LITTLE_ENDIAN} else {BIG_ENDIAN};
+      return TiffIFD::new(buf.get(offset..).ok_or("TIFF: Pentax offset out of bounds")?,
+        10, base_offset, 0, depth, endian)
     }
 
-    if data[0..7] == b"Nikon\0\x02"[..] {
+    if data.get(0..7) == Some(&b"Nikon\0\x02"[..]) {
       off += 10;
-      let endian = if data[off..off+2] == b"II"[..] {LITTLE_ENDIAN} else {BIG_ENDIAN};
-      return TiffIFD::new(&buf[off+offset..], 8, base_offset, 0, depth, endian)
+      let endian = if data.get(off..off+2) == Some(&b"II"[..]) {LITTLE_ENDIAN} else {BIG_ENDIAN};
+      return TiffIFD::new(buf.get(off+offset..).ok_or("TIFF: Nikon offset out of bounds")?,
+        8, base_offset, 0, depth, endian)
     }
 
     // Some have MM or II to indicate endianness - read that
-    if data[off..off+2] == b"II"[..] {
+    if data.get(off..off+2) == Some(&b"II"[..]) {
       off +=2;
       endian = LITTLE_ENDIAN;
-    } if data[off..off+2] == b"MM"[..] {
+    } if data.get(off..off+2) == Some(&b"MM"[..]) {
       off +=2;
       endian = BIG_ENDIAN;
     }
@@ -306,34 +320,38 @@ impl<'a> TiffIFD<'a> {
 
   pub fn new_fuji(buf: &'a[u8], offset: usize) -> Result<TiffIFD<'a>, String> {
     let mut entries = HashMap::new();
-    let num = BEu32(buf, offset); // Directory entries in this IFD
+    let num = BEu32(buf, offset).ok_or("FUJI: buffer too short for directory count")?; // Directory entries in this IFD
     if num > 4000 {
       return Err(format!("too many entries in IFD ({})", num).to_string())
     }
     let mut off = offset+4;
     for _ in 0..num {
-      let tag = BEu16(buf, off);
-      let len = BEu16(buf, off+2);
+      let tag = match BEu16(buf, off) { Some(v) => v, None => break };
+      let len = match BEu16(buf, off+2) { Some(v) => v, None => break };
       if tag == t(Tag::ImageWidth) {
-        entries.insert(t(Tag::ImageWidth), TiffEntry {
-          tag: t(Tag::ImageWidth),
-          typ: 3, // Short
-          count: 2,
-          parent_offset: 0,
-          doffset: off+4,
-          data: &buf[off+4..off+8],
-          endian: BIG_ENDIAN,
-        });
+        if off + 8 <= buf.len() {
+          entries.insert(t(Tag::ImageWidth), TiffEntry {
+            tag: t(Tag::ImageWidth),
+            typ: 3, // Short
+            count: 2,
+            parent_offset: 0,
+            doffset: off+4,
+            data: &buf[off+4..off+8],
+            endian: BIG_ENDIAN,
+          });
+        }
       } else if tag == t(Tag::RafOldWB) {
-        entries.insert(t(Tag::RafOldWB), TiffEntry {
-          tag: t(Tag::RafOldWB),
-          typ: 3, // Short
-          count: 4,
-          parent_offset: 0,
-          doffset: off+4,
-          data: &buf[off+4..off+12],
-          endian: BIG_ENDIAN,
-        });
+        if off + 12 <= buf.len() {
+          entries.insert(t(Tag::RafOldWB), TiffEntry {
+            tag: t(Tag::RafOldWB),
+            typ: 3, // Short
+            count: 4,
+            parent_offset: 0,
+            doffset: off+4,
+            data: &buf[off+4..off+12],
+            endian: BIG_ENDIAN,
+          });
+        }
       }
       off += (len+4) as usize;
     }
@@ -394,32 +412,39 @@ impl<'a> TiffIFD<'a> {
 }
 
 impl<'a> TiffEntry<'a> {
-  pub fn new(buf: &'a[u8], offset: usize, base_offset: usize, parent_offset: usize, e: Endian) -> TiffEntry<'a> {
-    let tag = e.ru16(buf, offset);
-    let mut typ = e.ru16(buf, offset+2);
-    let count = e.ru32(buf, offset+4) as usize;
+  pub fn new(buf: &'a[u8], offset: usize, base_offset: usize, parent_offset: usize, e: Endian) -> Result<TiffEntry<'a>, String> {
+    let tag = e.ru16(buf, offset).unwrap_or(0);
+    let mut typ = e.ru16(buf, offset+2).unwrap_or(0);
+    let count = e.ru32(buf, offset+4).unwrap_or(0) as usize;
 
     // If we don't know the type assume byte data
     if typ == 0 || typ > 13 {
       typ = 1;
     }
 
-    let bytesize: usize = count << DATASHIFTS[typ as usize];
+    let bytesize: usize = count.checked_shl(DATASHIFTS[typ as usize] as u32)
+      .ok_or("TIFF: entry byte size overflow")?;
     let doffset: usize = if bytesize <= 4 {
       offset + 8
     } else {
-      (e.ru32(buf, offset+8) as usize) - base_offset
+      (e.ru32(buf, offset+8).unwrap_or(0) as usize).checked_sub(base_offset)
+        .ok_or("TIFF: entry data offset underflow")?
     };
 
-    TiffEntry {
+    let dend = doffset.checked_add(bytesize).ok_or("TIFF: entry data range overflow")?;
+    if dend > buf.len() {
+      return Err(format!("TIFF: entry data out of bounds ({} + {} > {})", doffset, bytesize, buf.len()))
+    }
+
+    Ok(TiffEntry {
       tag: tag,
       typ: typ,
       count: count,
       parent_offset: parent_offset,
       doffset: doffset,
-      data: &buf[doffset .. doffset+bytesize],
+      data: &buf[doffset .. dend],
       endian: e,
-    }
+    })
   }
 
   pub fn copy_with_new_data(&self, data: &'a[u8]) -> TiffEntry<'a> {
@@ -456,21 +481,21 @@ impl<'a> TiffEntry<'a> {
   pub fn get_usize(&self, idx: usize) -> usize { self.get_u32(idx) as usize }
 
   pub fn get_force_u32(&self, idx: usize) -> u32 {
-    self.endian.ru32(self.data, idx*4)
+    self.endian.ru32(self.data, idx*4).unwrap_or(0)
   }
 
   pub fn get_force_u16(&self, idx: usize) -> u16 {
-    self.endian.ru16(self.data, idx*2)
+    self.endian.ru16(self.data, idx*2).unwrap_or(0)
   }
 
   pub fn get_f32(&self, idx: usize) -> f32 {
     if self.typ == 5 { // Rational
-      let a = self.endian.ru32(self.data, idx*8) as f32;
-      let b = self.endian.ru32(self.data, idx*8+4) as f32;
+      let a = self.endian.ru32(self.data, idx*8).unwrap_or(0) as f32;
+      let b = self.endian.ru32(self.data, idx*8+4).unwrap_or(0) as f32;
       a / b
     } else if self.typ == 10 { // Signed Rational
-      let a = self.endian.ri32(self.data, idx*8) as f32;
-      let b = self.endian.ri32(self.data, idx*8+4) as f32;
+      let a = self.endian.ri32(self.data, idx*8).unwrap_or(0) as f32;
+      let b = self.endian.ri32(self.data, idx*8+4).unwrap_or(0) as f32;
       a / b
     } else {
       self.get_u32(idx) as f32

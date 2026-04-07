@@ -25,8 +25,8 @@ impl<'a> Decoder for IiqDecoder<'a> {
   fn image(&self, dummy: bool) -> Result<RawImage,String> {
     let camera = self.rawloader.check_supported(&self.tiff)?;
 
-    let off = LEu32(self.buffer, 16) as usize + 8;
-    let entries = LEu32(self.buffer, off);
+    let off = LEu32(self.buffer, 16).unwrap_or(0) as usize + 8;
+    let entries = LEu32(self.buffer, off).unwrap_or(0);
     let mut pos = 8;
 
     let mut wb_offset: usize = 0;
@@ -36,8 +36,8 @@ impl<'a> Decoder for IiqDecoder<'a> {
     let mut strip_offset: usize = 0;
     let mut black: u16 = 0;
     for _ in 0..entries {
-      let tag = LEu32(self.buffer, off+pos);
-      let data = LEu32(self.buffer, off+pos+12) as usize;
+      let tag = LEu32(self.buffer, off+pos).unwrap_or(0);
+      let data = LEu32(self.buffer, off+pos+12).unwrap_or(0) as usize;
       pos += 16;
       match tag {
         0x107 => wb_offset = data+8,
@@ -62,16 +62,16 @@ impl<'a> Decoder for IiqDecoder<'a> {
 
 impl<'a> IiqDecoder<'a> {
   fn get_wb(&self, wb_offset: usize) -> Result<[f32;4], String> {
-    Ok([LEf32(self.buffer, wb_offset),
-        LEf32(self.buffer, wb_offset+4),
-        LEf32(self.buffer, wb_offset+8), NAN])
+    Ok([LEf32(self.buffer, wb_offset).unwrap_or(0.0),
+        LEf32(self.buffer, wb_offset+4).unwrap_or(0.0),
+        LEf32(self.buffer, wb_offset+8).unwrap_or(0.0), NAN])
   }
 
   pub(crate) fn decode_compressed(buffer: &[u8], data_offset: usize, strip_offset: usize, width: usize, height: usize, dummy: bool) -> Vec<u16>{
     let lens: [u32; 10] = [8,7,6,9,11,10,5,12,14,13];
 
     decode_threaded(width, height, dummy, &(|out: &mut [u16], row| {
-      let offset = data_offset + LEu32(buffer, strip_offset+row*4) as usize;
+      let offset = data_offset + LEu32(buffer, strip_offset+row*4).unwrap_or(0) as usize;
       let mut pump = BitPumpMSB32::new(&buffer[offset..]);
       let mut pred = [0 as u32; 2];
       let mut len = [0 as u32; 2];

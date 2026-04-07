@@ -121,7 +121,7 @@ impl<'a> BitPump for BitPumpLSB<'a> {
   #[inline(always)]
   fn peek_bits(&mut self, num: u32) -> u32 {
     if num > self.nbits {
-      let inbits: u64 = LEu32(self.buffer, self.pos) as u64;
+      let inbits: u64 = LEu32(self.buffer, self.pos).unwrap_or(0) as u64;
       self.bits = ((inbits << 32) | (self.bits << (32-self.nbits))) >> (32-self.nbits);
       self.pos += 4;
       self.nbits += 32;
@@ -140,7 +140,7 @@ impl<'a> BitPump for BitPumpMSB<'a> {
   #[inline(always)]
   fn peek_bits(&mut self, num: u32) -> u32 {
     if num > self.nbits {
-      let inbits: u64 = BEu32(self.buffer, self.pos) as u64;
+      let inbits: u64 = BEu32(self.buffer, self.pos).unwrap_or(0) as u64;
       self.bits = (self.bits << 32) | inbits;
       self.pos += 4;
       self.nbits += 32;
@@ -159,7 +159,7 @@ impl<'a> BitPump for BitPumpMSB32<'a> {
   #[inline(always)]
   fn peek_bits(&mut self, num: u32) -> u32 {
     if num > self.nbits {
-      let inbits: u64 = LEu32(self.buffer, self.pos) as u64;
+      let inbits: u64 = LEu32(self.buffer, self.pos).unwrap_or(0) as u64;
       self.bits = (self.bits << 32) | inbits;
       self.pos += 4;
       self.nbits += 32;
@@ -183,7 +183,7 @@ impl<'a> BitPump for BitPumpJPEG<'a> {
          self.buffer[self.pos+1] != 0xff &&
          self.buffer[self.pos+2] != 0xff &&
          self.buffer[self.pos+3] != 0xff {
-        let inbits: u64 = BEu32(self.buffer, self.pos) as u64;
+        let inbits: u64 = BEu32(self.buffer, self.pos).unwrap_or(0) as u64;
         self.bits = (self.bits << 32) | inbits;
         self.pos += 4;
         self.nbits += 32;
@@ -260,7 +260,7 @@ impl<'a> ByteStream<'a> {
   }
 
   #[inline(always)]
-  pub fn peek_u16(&self) -> u16 { self.endian.ru16(self.buffer, self.pos) }
+  pub fn peek_u16(&self) -> u16 { self.endian.ru16(self.buffer, self.pos).unwrap_or(0) }
   #[inline(always)]
   pub fn get_u16(&mut self) -> u16 {
     let val = self.peek_u16();

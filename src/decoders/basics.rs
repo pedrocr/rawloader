@@ -1,4 +1,3 @@
-use byteorder::{BigEndian, LittleEndian, ByteOrder};
 use rayon::prelude::*;
 
 pub use crate::decoders::packed::*;
@@ -22,7 +21,7 @@ pub struct Endian {
 }
 
 impl Endian {
-  pub fn ri32(&self, buf: &[u8], pos: usize) -> i32 {
+  pub fn ri32(&self, buf: &[u8], pos: usize) -> Option<i32> {
     if self.big {
       BEi32(buf,pos)
     } else {
@@ -30,7 +29,7 @@ impl Endian {
     }
   }
 
-  pub fn ru32(&self, buf: &[u8], pos: usize) -> u32 {
+  pub fn ru32(&self, buf: &[u8], pos: usize) -> Option<u32> {
     if self.big {
       BEu32(buf,pos)
     } else {
@@ -38,7 +37,7 @@ impl Endian {
     }
   }
 
-  pub fn ru16(&self, buf: &[u8], pos: usize) -> u16 {
+  pub fn ru16(&self, buf: &[u8], pos: usize) -> Option<u16> {
     if self.big {
       BEu16(buf,pos)
     } else {
@@ -52,32 +51,39 @@ impl Endian {
 pub static BIG_ENDIAN: Endian = Endian{big: true};
 pub static LITTLE_ENDIAN: Endian = Endian{big: false};
 
-#[allow(non_snake_case)] #[inline] pub fn BEi32(buf: &[u8], pos: usize) -> i32 {
-  BigEndian::read_i32(&buf[pos..pos+4])
+#[allow(non_snake_case)] #[inline] pub fn BEi32(buf: &[u8], pos: usize) -> Option<i32> {
+  let s = buf.get(pos..pos+4)?;
+  Some(i32::from_be_bytes([s[0], s[1], s[2], s[3]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn LEi32(buf: &[u8], pos: usize) -> i32 {
-  LittleEndian::read_i32(&buf[pos..pos+4])
+#[allow(non_snake_case)] #[inline] pub fn LEi32(buf: &[u8], pos: usize) -> Option<i32> {
+  let s = buf.get(pos..pos+4)?;
+  Some(i32::from_le_bytes([s[0], s[1], s[2], s[3]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn BEu32(buf: &[u8], pos: usize) -> u32 {
-  BigEndian::read_u32(&buf[pos..pos+4])
+#[allow(non_snake_case)] #[inline] pub fn BEu32(buf: &[u8], pos: usize) -> Option<u32> {
+  let s = buf.get(pos..pos+4)?;
+  Some(u32::from_be_bytes([s[0], s[1], s[2], s[3]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn LEu32(buf: &[u8], pos: usize) -> u32 {
-  LittleEndian::read_u32(&buf[pos..pos+4])
+#[allow(non_snake_case)] #[inline] pub fn LEu32(buf: &[u8], pos: usize) -> Option<u32> {
+  let s = buf.get(pos..pos+4)?;
+  Some(u32::from_le_bytes([s[0], s[1], s[2], s[3]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn LEf32(buf: &[u8], pos: usize) -> f32 {
-  LittleEndian::read_f32(&buf[pos..pos+4])
+#[allow(non_snake_case)] #[inline] pub fn LEf32(buf: &[u8], pos: usize) -> Option<f32> {
+  let s = buf.get(pos..pos+4)?;
+  Some(f32::from_le_bytes([s[0], s[1], s[2], s[3]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn BEu16(buf: &[u8], pos: usize) -> u16 {
-  BigEndian::read_u16(&buf[pos..pos+2])
+#[allow(non_snake_case)] #[inline] pub fn BEu16(buf: &[u8], pos: usize) -> Option<u16> {
+  let s = buf.get(pos..pos+2)?;
+  Some(u16::from_be_bytes([s[0], s[1]]))
 }
 
-#[allow(non_snake_case)] #[inline] pub fn LEu16(buf: &[u8], pos: usize) -> u16 {
-  LittleEndian::read_u16(&buf[pos..pos+2])
+#[allow(non_snake_case)] #[inline] pub fn LEu16(buf: &[u8], pos: usize) -> Option<u16> {
+  let s = buf.get(pos..pos+2)?;
+  Some(u16::from_le_bytes([s[0], s[1]]))
 }
 
 pub fn decode_threaded<F>(width: usize, height: usize, dummy: bool, closure: &F) -> Vec<u16>

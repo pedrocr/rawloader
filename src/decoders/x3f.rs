@@ -5,7 +5,7 @@ use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 
 pub fn is_x3f(buf: &[u8]) -> bool {
-  buf[0..4] == b"FOVb"[..]
+  buf.get(0..4) == Some(&b"FOVb"[..])
 }
 
 //#[derive(Debug, Clone)]
@@ -33,13 +33,19 @@ struct X3fImage {
 
 impl X3fFile {
   fn new(buf: &Buffer) -> Result<X3fFile, String> {
-    let offset = LEu32(&buf.buf, buf.size-4) as usize;
+    if buf.size < 4 {
+      return Err("X3F: file too short".to_string())
+    }
+    let offset = LEu32(&buf.buf, buf.size-4).ok_or("X3F: can't read directory offset")? as usize;
+    if offset >= buf.size {
+      return Err(format!("X3F: directory offset {} out of bounds (size {})", offset, buf.size))
+    }
     let data = &buf.buf[offset..];
-    let version = LEu32(data, 4);
+    let version = LEu32(data, 4).ok_or("X3F: can't read directory version")?;
     if version < 0x00020000 {
       return Err(format!("X3F: Directory version too old {}", version).to_string())
     }
-    let entries = LEu32(data, 8) as usize;
+    let entries = LEu32(data, 8).ok_or("X3F: can't read directory entry count")? as usize;
     let mut dirs = Vec::new();
     let mut images = Vec::new();
     for i in 0..entries {
@@ -60,8 +66,11 @@ impl X3fFile {
 
 impl X3fDirectory {
   fn new(buf: &[u8], offset: usize) -> Result<X3fDirectory, String> {
+    if offset + 12 > buf.len() {
+      return Err(format!("X3F: directory entry at {} out of bounds", offset))
+    }
     let data = &buf[offset..];
-    let off = LEu32(data, 0) as usize;
+    let off = LEu32(data, 0).ok_or("X3F: can't read directory entry offset")? as usize;
     //let len = LEu32(data, 4) as usize;
     let name = String::from_utf8_lossy(&data[8..12]).to_string();
 
@@ -75,13 +84,16 @@ impl X3fDirectory {
 
 impl X3fImage {
   fn new(buf: &[u8], offset: usize) -> Result<X3fImage, String> {
+    if offset + 28 > buf.len() {
+      return Err(format!("X3F: image header at {} out of bounds", offset))
+    }
     let data = &buf[offset..];
 
     Ok(X3fImage {
-      typ:     LEu32(data,  8) as usize,
-      format:  LEu32(data, 12) as usize,
-      width:   LEu32(data, 16) as usize,
-      height:  LEu32(data, 20) as usize,
+      typ:     LEu32(data,  8).unwrap_or(0) as usize,
+      format:  LEu32(data, 12).unwrap_or(0) as usize,
+      width:   LEu32(data, 16).unwrap_or(0) as usize,
+      height:  LEu32(data, 20).unwrap_or(0) as usize,
       //pitch:   LEu32(data, 24) as usize,
       doffset: offset+28,
     })
@@ -96,14 +108,14 @@ pub struct X3fDecoder<'a> {
 }
 
 impl<'a> X3fDecoder<'a> {
-  pub fn new(buf: &'a Buffer, rawloader: &'a RawLoader) -> X3fDecoder<'a> {
-    let dir = X3fFile::new(buf).unwrap();
+  pub fn new(buf: &'a Buffer, rawloader: &'a RawLoader) -> Result<X3fDecoder<'a>, String> {
+    let dir = X3fFile::new(buf)?;
 
-    X3fDecoder {
+    Ok(X3fDecoder {
       buffer: &buf.buf,
       rawloader: rawloader,
       dir: dir,
-    }
+    })
   }
 }
 
@@ -113,8 +125,8 @@ impl<'a> Decoder for X3fDecoder<'a> {
         .iter()
         .find(|i| i.typ == 2 && i.format == 0x12)
         .ok_or("X3F: Couldn't find camera info".to_string())?;
-    let data = &self.buffer[caminfo.doffset+6..];
-    if data[0..4] != b"Exif"[..] {
+    let data = self.buffer.get(caminfo.doffset+6..).ok_or("X3F: camera info offset out of bounds")?;
+    if data.get(0..4) != Some(&b"Exif"[..]) {
       return Err("X3F: Couldn't find EXIF info".to_string())
     }
     let tiff = TiffIFD::new_root(self.buffer, caminfo.doffset+12)?;

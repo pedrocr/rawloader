@@ -156,7 +156,7 @@ impl<'a> BitPump for BitPumpPanasonic<'a> {
     if self.split {
       byte = (byte + 0x4000 - 0x2008) % 0x4000;
     }
-    let bits = LEu16(self.buffer, byte as usize + self.pos - 0x4000) as u32;
+    let bits = LEu16(self.buffer, byte as usize + self.pos - 0x4000).unwrap_or(0) as u32;
     (bits >> ((self.nbits-num) & 7)) & (0x0ffffffffu32 >> (32-num))
   }
 

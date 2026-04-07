@@ -40,21 +40,21 @@ pub struct CiffIFD<'a> {
 }
 
 pub fn is_ciff(buf: &[u8]) -> bool {
-  buf[6..14] == b"HEAPCCDR"[..]
+  buf.get(6..14) == Some(&b"HEAPCCDR"[..])
 }
 
 impl<'a> CiffIFD<'a> {
   pub fn new_file(buf: &'a Buffer) -> Result<CiffIFD<'a>,String> {
     let data = &buf.buf;
-    CiffIFD::new(data, LEu32(data,2) as usize, buf.size, 1)
+    CiffIFD::new(data, LEu32(data,2).unwrap_or(0) as usize, buf.size, 1)
   }
 
   pub fn new(buf: &'a[u8], start: usize, end: usize, depth: u32) -> Result<CiffIFD<'a>, String> {
     let mut entries = HashMap::new();
     let mut subifds = Vec::new();
 
-    let valuedata_size = LEu32(buf, end-4) as usize;
-    let dircount = LEu16(buf, start+valuedata_size) as usize;
+    let valuedata_size = LEu32(buf, end-4).unwrap_or(0) as usize;
+    let dircount = LEu16(buf, start+valuedata_size).unwrap_or(0) as usize;
 
     for i in 0..dircount {
       let entry_offset: usize = start+valuedata_size+2+i*10;
@@ -95,14 +95,14 @@ impl<'a> CiffIFD<'a> {
 
 impl<'a> CiffEntry<'a> {
   pub fn new(buf: &'a[u8], value_data: usize, offset: usize) -> Result<CiffEntry<'a>, String> {
-    let p = LEu16(buf, offset);
+    let p = LEu16(buf, offset).unwrap_or(0);
     let tag = p & 0x3fff;
     let datalocation = (p & 0xc000) as usize;
     let typ = p & 0x3800;
 
     let (bytesize, data_offset) = match datalocation {
       // Data is offset in value_data
-      0x0000 => (LEu32(buf, offset+2) as usize, LEu32(buf, offset+6) as usize + value_data),
+      0x0000 => (LEu32(buf, offset+2).unwrap_or(0) as usize, LEu32(buf, offset+6).unwrap_or(0) as usize + value_data),
       // Data is stored directly in entry
       0x4000 => (8, offset+2),
       val => return Err(format!("CIFF: Don't know about data location {:x}", val).to_string()),
@@ -140,13 +140,13 @@ impl<'a> CiffEntry<'a> {
   pub fn get_u32(&self, idx: usize) -> u32 {
     match self.typ {
       0x0000 | 0x8000                       => self.data[idx] as u32,
-      0x1000                                => LEu16(self.data, idx*2) as u32,
-      0x1800 | 0x2000 | 0x2800 | 0x3000     => LEu32(self.data, idx*4),
+      0x1000                                => LEu16(self.data, idx*2).unwrap_or(0) as u32,
+      0x1800 | 0x2000 | 0x2800 | 0x3000     => LEu32(self.data, idx*4).unwrap_or(0),
       _ => panic!("Trying to read typ {} for a u32", self.typ),
     }
   }
 
   pub fn get_usize(&self, idx: usize) -> usize { self.get_u32(idx) as usize }
   pub fn get_f32(&self, idx: usize) -> f32 { self.get_u32(idx) as f32 }
-  pub fn get_force_u16(&self, idx: usize) -> u16 { LEu16(self.data, idx*2) }
+  pub fn get_force_u16(&self, idx: usize) -> u16 { LEu16(self.data, idx*2).unwrap_or(0) }
 }

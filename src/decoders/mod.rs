@@ -429,7 +429,7 @@ impl RawLoader {
     }
 
     if x3f::is_x3f(buffer) {
-      let dec = Box::new(x3f::X3fDecoder::new(buf, &self));
+      let dec = Box::new(x3f::X3fDecoder::new(buf, &self)?);
       return Ok(dec as Box<dyn Decoder>);
     }
 

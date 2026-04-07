@@ -201,8 +201,8 @@ impl<'a> NefDecoder<'a> {
           }
 
           let off = if version == 0x204 { 6 } else { 14 };
-          Ok([BEu16(&buf, off) as f32, BEu16(&buf, off+2) as f32,
-              BEu16(&buf, off+6) as f32, NAN])
+          Ok([BEu16(&buf, off).unwrap_or(0) as f32, BEu16(&buf, off+2).unwrap_or(0) as f32,
+              BEu16(&buf, off+6).unwrap_or(0) as f32, NAN])
         },
         x => Err(format!("NEF: Don't know about WB version 0x{:x}", x).to_string()),
       }
@@ -278,7 +278,7 @@ impl<'a> NefDecoder<'a> {
         points[i] = ((points[i-i%step] as usize * (step - i % step) +
                      points[i-i%step+step] as usize * (i%step)) / step) as u16;
       }
-      split = endian.ru16(meta, 562) as usize;
+      split = endian.ru16(meta, 562).unwrap_or(0) as usize;
     } else if v0 != 70 && csize <= 0x4001 {
       for i in 0..csize {
         points[i] = stream.get_u16();
@@ -339,7 +339,7 @@ impl<'a> NefDecoder<'a> {
 
     decode_threaded(width*3, height, dummy, &(|out: &mut [u16], row| {
       let inb = &src[row*width*3..];
-      let mut random = BEu32(inb, 0);
+      let mut random = BEu32(inb, 0).unwrap_or(0);
       for (o, i) in out.chunks_exact_mut(6).zip(inb.chunks_exact(6)) {
         let g1: u16 = i[0] as u16;
         let g2: u16 = i[1] as u16;

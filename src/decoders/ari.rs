@@ -24,9 +24,9 @@ impl<'a> AriDecoder<'a> {
 
 impl<'a> Decoder for AriDecoder<'a> {
   fn image(&self, dummy: bool) -> Result<RawImage,String> {
-    let offset = LEu32(self.buffer, 8) as usize;
-    let width = LEu32(self.buffer, 20) as usize;
-    let height = LEu32(self.buffer, 24) as usize;
+    let offset = LEu32(self.buffer, 8).unwrap_or(0) as usize;
+    let width = LEu32(self.buffer, 20).unwrap_or(0) as usize;
+    let height = LEu32(self.buffer, 24).unwrap_or(0) as usize;
     let model = String::from_utf8_lossy(&self.buffer[668..]).split_terminator("\0").next().unwrap_or("").to_string();
     let camera = self.rawloader.check_supported_with_everything("ARRI", &model, "")?;
     let src = &self.buffer[offset..];
@@ -39,6 +39,6 @@ impl<'a> Decoder for AriDecoder<'a> {
 
 impl<'a> AriDecoder<'a> {
   fn get_wb(&self) -> Result<[f32;4], String> {
-    Ok([LEf32(self.buffer, 100), LEf32(self.buffer, 104), LEf32(self.buffer, 108), NAN])
+    Ok([LEf32(self.buffer, 100).unwrap_or(0.0), LEf32(self.buffer, 104).unwrap_or(0.0), LEf32(self.buffer, 108).unwrap_or(0.0), NAN])
   }
 }

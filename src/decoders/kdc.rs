@@ -74,8 +74,8 @@ impl<'a> KdcDecoder<'a> {
         if levels.count() != 734 && levels.count() != 1502 {
           Err("KDC: Levels count is off".to_string())
         } else {
-          let r = BEu16(levels.get_data(), 148) as f32;
-          let b = BEu16(levels.get_data(), 150) as f32;
+          let r = BEu16(levels.get_data(), 148).unwrap_or(0) as f32;
+          let b = BEu16(levels.get_data(), 150).unwrap_or(0) as f32;
           Ok([r / 256.0, 1.0, b / 256.0, NAN])
         }
       },

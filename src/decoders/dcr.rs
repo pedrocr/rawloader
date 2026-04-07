@@ -51,9 +51,9 @@ impl<'a> DcrDecoder<'a> {
     let dcrwb = fetch_tag!(self.tiff, Tag::DcrWB);
     if dcrwb.count() >= 46 {
       let levels = dcrwb.get_data();
-      Ok([2048.0 / BEu16(levels,40) as f32,
-          2048.0 / BEu16(levels,42) as f32,
-          2048.0 / BEu16(levels,44) as f32,
+      Ok([2048.0 / BEu16(levels,40).unwrap_or(1) as f32,
+          2048.0 / BEu16(levels,42).unwrap_or(1) as f32,
+          2048.0 / BEu16(levels,44).unwrap_or(1) as f32,
           NAN])
     } else {
       Ok([NAN,NAN,NAN,NAN])

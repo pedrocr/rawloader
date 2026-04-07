@@ -41,8 +41,8 @@ impl<'a> ErfDecoder<'a> {
     if levels.count() != 256 {
       Err("ERF: Levels count is off".to_string())
     } else {
-      let r = BEu16(levels.get_data(), 48) as f32;
-      let b = BEu16(levels.get_data(), 50) as f32;
+      let r = BEu16(levels.get_data(), 48).unwrap_or(0) as f32;
+      let b = BEu16(levels.get_data(), 50).unwrap_or(0) as f32;
       Ok([r * 508.0 * 1.078 / 65536.0, 1.0, b * 382.0 * 1.173 / 65536.0, NAN])
     }
   }

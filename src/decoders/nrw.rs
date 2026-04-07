@@ -63,12 +63,12 @@ impl<'a> NrwDecoder<'a> {
           56
         };
 
-        Ok([(LEu32(data, offset) << 2) as f32,
-            (LEu32(data, offset+4) + LEu32(data, offset+8)) as f32,
-            (LEu32(data, offset+12) << 2) as f32,
+        Ok([(LEu32(data, offset).unwrap_or(0) << 2) as f32,
+            (LEu32(data, offset+4).unwrap_or(0) + LEu32(data, offset+8).unwrap_or(0)) as f32,
+            (LEu32(data, offset+12).unwrap_or(0) << 2) as f32,
             NAN])
       } else {
-        Ok([BEu16(data,1248) as f32, 256.0, BEu16(data,1250) as f32, NAN])
+        Ok([BEu16(data,1248).unwrap_or(0) as f32, 256.0, BEu16(data,1250).unwrap_or(0) as f32, NAN])
       }
     } else {
       Err("NRW: Don't know how to fetch WB".to_string())

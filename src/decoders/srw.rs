@@ -78,7 +78,7 @@ impl<'a> SrwDecoder<'a> {
 
     for row in 0..height {
       let mut len: [u32; 4] = [if row < 2 {7} else {4}; 4];
-      let loffset = LEu32(loffsets, row*4) as usize;
+      let loffset = LEu32(loffsets, row*4).unwrap_or(0) as usize;
       let mut pump = BitPumpMSB32::new(&buf[loffset..]);
 
       let img      = width*row;

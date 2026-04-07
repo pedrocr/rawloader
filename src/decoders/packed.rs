@@ -3,7 +3,7 @@ use crate::decoders::basics::*;
 pub fn decode_8bit_wtable(buf: &[u8], tbl: &LookupTable, width: usize, height: usize, dummy: bool) -> Vec<u16> {
   decode_threaded(width, height, dummy,&(|out: &mut [u16], row| {
     let inb = &buf[(row*width)..];
-    let mut random = LEu32(inb, 0);
+    let mut random = LEu32(inb, 0).unwrap_or(0);
 
     for (o, i) in out.chunks_exact_mut(1).zip(inb.chunks_exact(1)) {
       o[0] = tbl.dither(i[0] as u16, &mut random);
@@ -239,7 +239,7 @@ pub fn decode_12le_unpacked(buf: &[u8], width: usize, height: usize, dummy: bool
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = LEu16(bytes, 0) & 0x0fff;
+      out[i] = LEu16(bytes, 0).unwrap_or(0) & 0x0fff;
     }
   }))
 }
@@ -249,7 +249,7 @@ pub fn decode_12be_unpacked(buf: &[u8], width: usize, height: usize, dummy: bool
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = BEu16(bytes, 0) & 0x0fff;
+      out[i] = BEu16(bytes, 0).unwrap_or(0) & 0x0fff;
     }
   }))
 }
@@ -259,7 +259,7 @@ pub fn decode_12be_unpacked_left_aligned(buf: &[u8], width: usize, height: usize
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = BEu16(bytes, 0) >> 4;
+      out[i] = BEu16(bytes, 0).unwrap_or(0) >> 4;
     }
   }))
 }
@@ -269,7 +269,7 @@ pub fn decode_12le_unpacked_left_aligned(buf: &[u8], width: usize, height: usize
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = LEu16(bytes, 0) >> 4;
+      out[i] = LEu16(bytes, 0).unwrap_or(0) >> 4;
     }
   }))
 }
@@ -279,7 +279,7 @@ pub fn decode_14le_unpacked(buf: &[u8], width: usize, height: usize, dummy: bool
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = LEu16(bytes, 0) & 0x3fff;
+      out[i] = LEu16(bytes, 0).unwrap_or(0) & 0x3fff;
     }
   }))
 }
@@ -289,7 +289,7 @@ pub fn decode_14be_unpacked(buf: &[u8], width: usize, height: usize, dummy: bool
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = BEu16(bytes, 0) & 0x3fff;
+      out[i] = BEu16(bytes, 0).unwrap_or(0) & 0x3fff;
     }
   }))
 }
@@ -299,7 +299,7 @@ pub fn decode_16le(buf: &[u8], width: usize, height: usize, dummy: bool) -> Vec<
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = LEu16(bytes, 0);
+      out[i] = LEu16(bytes, 0).unwrap_or(0);
     }
   }))
 }
@@ -309,7 +309,7 @@ pub fn decode_16le_skiplines(buf: &[u8], width: usize, height: usize, dummy: boo
     let inb = &buf[(row*width*4)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = LEu16(bytes, 0);
+      out[i] = LEu16(bytes, 0).unwrap_or(0);
     }
   }))
 }
@@ -319,7 +319,7 @@ pub fn decode_16be(buf: &[u8], width: usize, height: usize, dummy: bool) -> Vec<
     let inb = &buf[(row*width*2)..];
 
     for (i, bytes) in (0..width).zip(inb.chunks_exact(2)) {
-      out[i] = BEu16(bytes, 0);
+      out[i] = BEu16(bytes, 0).unwrap_or(0);
     }
   }))
 }

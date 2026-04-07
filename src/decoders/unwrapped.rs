@@ -2,9 +2,9 @@ use crate::decoders::*;
 use crate::decoders::basics::*;
 
 pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
-  let decoder = LEu16(&buffer.buf, 0);
-  let width   = LEu16(&buffer.buf, 2) as usize;
-  let height  = LEu16(&buffer.buf, 4) as usize;
+  let decoder = LEu16(&buffer.buf, 0).unwrap_or(0);
+  let width   = LEu16(&buffer.buf, 2).unwrap_or(0) as usize;
+  let height  = LEu16(&buffer.buf, 4).unwrap_or(0) as usize;
   let data    = &buffer.buf[6..];
 
   if width > 64 || height > 64 {
@@ -16,7 +16,7 @@ pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
       let table = {
         let mut t: [u16;256] = [0;256];
         for i in 0..256 {
-          t[i] = LEu16(data, i*2);
+          t[i] = LEu16(data, i*2).unwrap_or(0);
         }
         LookupTable::new(&t)
       };
@@ -47,7 +47,7 @@ pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
     22  => {
       let mut curve: [usize;6] = [ 0, 0, 0, 0, 0, 4095 ];
       for i in 0..4 {
-        curve[i+1] = (LEu16(data, i*2) & 0xfff) as usize;
+        curve[i+1] = (LEu16(data, i*2).unwrap_or(0) & 0xfff) as usize;
       }
 
       let curve = arw::ArwDecoder::calculate_curve(curve);
@@ -55,8 +55,8 @@ pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
       Ok(RawImageData::Integer(arw::ArwDecoder::decode_arw2(data, width, height, &curve, false)))
     },
     23  => {
-      let key    = LEu32(data, 0);
-      let length = LEu16(data, 4) as usize;
+      let key    = LEu32(data, 0).unwrap_or(0);
+      let length = LEu16(data, 4).unwrap_or(0) as usize;
       let data   = &data[10..];
 
       if length > 5000 {
@@ -81,7 +81,7 @@ pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
       let table = {
         let mut t = [0u16;1024];
         for i in 0..1024 {
-          t[i] = LEu16(data, i*2);
+          t[i] = LEu16(data, i*2).unwrap_or(0);
         }
         LookupTable::new(&t)
       };
@@ -121,7 +121,7 @@ pub fn decode_unwrapped(buffer: &Buffer) -> Result<RawImageData,String> {
     50  => decode_nef(data, width, height, BIG_ENDIAN, 12),
     51  => decode_nef(data, width, height, BIG_ENDIAN, 14),
     52  => {
-      let coeffs = [LEf32(data,0), LEf32(data,4), LEf32(data,8), LEf32(data,12)];
+      let coeffs = [LEf32(data,0).unwrap_or(0.0), LEf32(data,4).unwrap_or(0.0), LEf32(data,8).unwrap_or(0.0), LEf32(data,12).unwrap_or(0.0)];
       let data = &data[16..];
       Ok(RawImageData::Integer(nef::NefDecoder::decode_snef_compressed(data, coeffs, width, height, false)))
     },

@@ -114,12 +114,12 @@ impl<'a> ArwDecoder<'a> {
     let mut wb_coeffs: [f32;4] = [0.0, 0.0, 0.0, NAN];
     // At most we read 20 bytes from currpos so check we don't step outside that
     while currpos+20 < buf.len() {
-      let tag: u32 = BEu32(buf,currpos);
-      let len: usize = LEu32(buf,currpos+4) as usize;
+      let tag: u32 = BEu32(buf,currpos).unwrap_or(0);
+      let len: usize = LEu32(buf,currpos+4).unwrap_or(0) as usize;
       if tag == 0x574247 { // WBG
-        wb_coeffs[0] = LEu16(buf, currpos+12) as f32;
-        wb_coeffs[1] = LEu16(buf, currpos+14) as f32;
-        wb_coeffs[2] = LEu16(buf, currpos+18) as f32;
+        wb_coeffs[0] = LEu16(buf, currpos+12).unwrap_or(0) as f32;
+        wb_coeffs[1] = LEu16(buf, currpos+14).unwrap_or(0) as f32;
+        wb_coeffs[2] = LEu16(buf, currpos+18).unwrap_or(0) as f32;
         break;
       }
       currpos += len+8;
@@ -150,9 +150,9 @@ impl<'a> ArwDecoder<'a> {
 
       // Replicate the dcraw contortions to get the "decryption" key
       let offset = (self.buffer[key_off] as usize)*4;
-      let first_key = BEu32(self.buffer, key_off+offset);
+      let first_key = BEu32(self.buffer, key_off+offset).unwrap_or(0);
       let head = ArwDecoder::sony_decrypt(self.buffer, head_off, 40, first_key);
-      let second_key = LEu32(&head, 22);
+      let second_key = LEu32(&head, 22).unwrap_or(0);
 
       // "Decrypt" the whole image buffer
       let image_data = ArwDecoder::sony_decrypt(self.buffer, off, len, second_key);
@@ -290,7 +290,7 @@ impl<'a> ArwDecoder<'a> {
     for i in 0..(length/4+1) {
       let p = i + 127;
       pad[p & 127] = pad[(p+1) & 127] ^ pad[(p+1+64) & 127];
-      let output = LEu32(buf, offset+i*4) ^ pad[p & 127];
+      let output = LEu32(buf, offset+i*4).unwrap_or(0) ^ pad[p & 127];
       out.push(((output >>  0) & 0xff) as u8);
       out.push(((output >>  8) & 0xff) as u8);
       out.push(((output >> 16) & 0xff) as u8);
