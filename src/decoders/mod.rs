@@ -24,8 +24,9 @@ macro_rules! fetch_ifd {
 macro_rules! alloc_image_plain {
   ($width:expr, $height:expr, $dummy: expr) => (
     {
-      if $width * $height > 500000000 || $width > 50000 || $height > 50000 {
-        panic!("rawloader: surely there's no such thing as a >500MP or >50000 px wide/tall image!");
+      let pixels = ($width as u64).checked_mul($height as u64).unwrap_or(u64::MAX);
+      if pixels > 500000000 || $width > 50000 || $height > 50000 {
+        panic!("rawloader: image dimensions exceed limits ({}x{})", $width, $height);
       }
       if $dummy {
         vec![0]

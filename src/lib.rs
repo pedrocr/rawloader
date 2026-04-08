@@ -56,7 +56,7 @@ pub use decoders::cfa::CFA;
 #[doc(hidden)] pub use decoders::RawLoader;
 
 lazy_static! {
-  static ref LOADER: RawLoader = decoders::RawLoader::new();
+  static ref LOADER: RawLoader = RawLoader::new();
 }
 
 use std::path::Path;
