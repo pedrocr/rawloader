@@ -341,6 +341,71 @@ pub fn ok_image_with_black_white(camera: Camera, width: usize, height: usize, wb
   Ok(img)
 }
 
+/// Optional resource limits for decoding.
+///
+/// Every field is `Option` so callers can set only the limits they care
+/// about. Unset fields impose no limit and add zero overhead — if all
+/// dimension fields are `None`, the extra metadata probe is skipped
+/// entirely and behavior matches `decode()`.
+///
+/// # Example
+///
+/// ```no_run
+/// use rawloader::Limits;
+///
+/// // Reject anything over 50MP without allocating the pixel buffer
+/// let limits = Limits {
+///     max_pixels: Some(50_000_000),
+///     ..Limits::default()
+/// };
+/// let image = rawloader::decode_file_with_limits("photo.cr2", &limits)?;
+/// # Ok::<(), rawloader::RawLoaderError>(())
+/// ```
+#[derive(Debug, Clone, Copy, Default)]
+pub struct Limits {
+  /// Maximum total pixels (`width × height`). `None` = no limit.
+  ///
+  /// When set, `decode_with_limits` runs a cheap metadata-only pass to
+  /// get dimensions and rejects the file before allocating the pixel
+  /// buffer if `width × height` exceeds this value.
+  pub max_pixels: Option<u64>,
+
+  /// Maximum width or height in pixels. `None` = no limit.
+  ///
+  /// Checked during the same metadata probe as `max_pixels`.
+  pub max_side: Option<u64>,
+
+  /// Maximum input buffer size in bytes. `None` = no limit.
+  ///
+  /// Checked after the input is read into memory but before any decoding.
+  /// Use this to bound peak memory from the input buffer itself.
+  pub max_input_bytes: Option<u64>,
+}
+
+impl Limits {
+  /// True if any dimension limit is set. When false,
+  /// `decode_with_limits` skips the metadata probe entirely.
+  fn needs_dimension_probe(&self) -> bool {
+    self.max_pixels.is_some() || self.max_side.is_some()
+  }
+
+  fn check_dimensions(&self, width: usize, height: usize) -> Result<(), String> {
+    let (w, h) = (width as u64, height as u64);
+    if let Some(max) = self.max_pixels {
+      let pixels = w.checked_mul(h).ok_or_else(|| format!("image {}x{} overflows", w, h))?;
+      if pixels > max {
+        return Err(format!("image {}x{} = {} pixels exceeds limit of {}", w, h, pixels, max))
+      }
+    }
+    if let Some(max) = self.max_side {
+      if w > max || h > max {
+        return Err(format!("image dimension {}x{} exceeds max side {}", w, h, max))
+      }
+    }
+    Ok(())
+  }
+}
+
 /// The struct that holds all the info about the cameras and is able to decode a file
 #[derive(Debug, Clone)]
 pub struct RawLoader {
@@ -519,12 +584,48 @@ impl RawLoader {
     decoder.image(dummy)
   }
 
+  fn decode_with_limits_unsafe(&self, buffer: &Buffer, limits: &Limits) -> Result<RawImage,String> {
+    if let Some(max) = limits.max_input_bytes {
+      if buffer.size as u64 > max {
+        return Err(format!("input size {} exceeds limit of {}", buffer.size, max))
+      }
+    }
+    // Only run the metadata probe if there's a dimension limit to check.
+    // If none are set, decode_with_limits has the same overhead as decode().
+    if limits.needs_dimension_probe() {
+      let probe = self.decode_unsafe(buffer, true)?;
+      limits.check_dimensions(probe.width, probe.height)?;
+    }
+    self.decode_unsafe(buffer, false)
+  }
+
   /// Decodes an input into a RawImage
   pub fn decode(&self, reader: &mut dyn Read, dummy: bool) -> Result<RawImage,String> {
     let buffer = Buffer::new(reader)?;
 
     match panic::catch_unwind(|| {
       self.decode_unsafe(&buffer, dummy)
+    }) {
+      Ok(val) => val,
+      Err(_) => Err(format!("Caught a panic while decoding.{}", BUG).to_string()),
+    }
+  }
+
+  /// Decodes an input into a RawImage, enforcing resource limits.
+  ///
+  /// When `limits` has any dimension limit set (`max_pixels` or `max_side`),
+  /// this probes the file in dummy mode first to get dimensions, checks
+  /// them, and only then does the real decode. Files exceeding the limits
+  /// return `Err` without allocating the pixel buffer.
+  ///
+  /// When all dimension limits are `None`, no probe runs and this has the
+  /// same cost as `decode()`. Only `max_input_bytes` (a cheap size check)
+  /// is applied in that case.
+  pub fn decode_with_limits(&self, reader: &mut dyn Read, limits: &Limits) -> Result<RawImage,String> {
+    let buffer = Buffer::new(reader)?;
+
+    match panic::catch_unwind(|| {
+      self.decode_with_limits_unsafe(&buffer, limits)
     }) {
       Ok(val) => val,
       Err(_) => Err(format!("Caught a panic while decoding.{}", BUG).to_string()),
@@ -539,6 +640,16 @@ impl RawLoader {
     };
     let mut buffered_file = BufReader::new(file);
     self.decode(&mut buffered_file, false)
+  }
+
+  /// Decodes a file into a RawImage, enforcing resource limits.
+  pub fn decode_file_with_limits(&self, path: &Path, limits: &Limits) -> Result<RawImage,String> {
+    let file = match File::open(path) {
+      Ok(val) => val,
+      Err(e) => {return Err(e.to_string())},
+    };
+    let mut buffered_file = BufReader::new(file);
+    self.decode_with_limits(&mut buffered_file, limits)
   }
 
   // Decodes an unwrapped input (just the image data with minimal metadata) into a RawImage
