@@ -5,7 +5,7 @@ use crate::decoders::tiff::*;
 use crate::decoders::basics::*;
 
 pub fn is_x3f(buf: &[u8]) -> bool {
-  buf[0..4] == b"FOVb"[..]
+  buf.get(0..4) == Some(b"FOVb".as_slice())
 }
 
 //#[derive(Debug, Clone)]
@@ -33,7 +33,13 @@ struct X3fImage {
 
 impl X3fFile {
   fn new(buf: &Buffer) -> Result<X3fFile, String> {
+    if buf.size < 4 {
+      return Err("X3F: File too small".to_string())
+    }
     let offset = LEu32(&buf.buf, buf.size-4) as usize;
+    if offset >= buf.size {
+      return Err(format!("X3F: Directory offset {} out of bounds (size {})", offset, buf.size))
+    }
     let data = &buf.buf[offset..];
     let version = LEu32(data, 4);
     if version < 0x00020000 {
@@ -96,14 +102,14 @@ pub struct X3fDecoder<'a> {
 }
 
 impl<'a> X3fDecoder<'a> {
-  pub fn new(buf: &'a Buffer, rawloader: &'a RawLoader) -> X3fDecoder<'a> {
-    let dir = X3fFile::new(buf).unwrap();
+  pub fn new(buf: &'a Buffer, rawloader: &'a RawLoader) -> Result<X3fDecoder<'a>, String> {
+    let dir = X3fFile::new(buf)?;
 
-    X3fDecoder {
+    Ok(X3fDecoder {
       buffer: &buf.buf,
       rawloader: rawloader,
       dir: dir,
-    }
+    })
   }
 }
 
