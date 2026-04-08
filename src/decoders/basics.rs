@@ -53,31 +53,31 @@ pub static BIG_ENDIAN: Endian = Endian{big: true};
 pub static LITTLE_ENDIAN: Endian = Endian{big: false};
 
 #[allow(non_snake_case)] #[inline] pub fn BEi32(buf: &[u8], pos: usize) -> i32 {
-  BigEndian::read_i32(&buf[pos..pos+4])
+  pos.checked_add(4).and_then(|end| buf.get(pos..end)).map(BigEndian::read_i32).unwrap_or(0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn LEi32(buf: &[u8], pos: usize) -> i32 {
-  LittleEndian::read_i32(&buf[pos..pos+4])
+  pos.checked_add(4).and_then(|end| buf.get(pos..end)).map(LittleEndian::read_i32).unwrap_or(0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn BEu32(buf: &[u8], pos: usize) -> u32 {
-  BigEndian::read_u32(&buf[pos..pos+4])
+  pos.checked_add(4).and_then(|end| buf.get(pos..end)).map(BigEndian::read_u32).unwrap_or(0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn LEu32(buf: &[u8], pos: usize) -> u32 {
-  LittleEndian::read_u32(&buf[pos..pos+4])
+  pos.checked_add(4).and_then(|end| buf.get(pos..end)).map(LittleEndian::read_u32).unwrap_or(0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn LEf32(buf: &[u8], pos: usize) -> f32 {
-  LittleEndian::read_f32(&buf[pos..pos+4])
+  pos.checked_add(4).and_then(|end| buf.get(pos..end)).map(LittleEndian::read_f32).unwrap_or(0.0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn BEu16(buf: &[u8], pos: usize) -> u16 {
-  BigEndian::read_u16(&buf[pos..pos+2])
+  pos.checked_add(2).and_then(|end| buf.get(pos..end)).map(BigEndian::read_u16).unwrap_or(0)
 }
 
 #[allow(non_snake_case)] #[inline] pub fn LEu16(buf: &[u8], pos: usize) -> u16 {
-  LittleEndian::read_u16(&buf[pos..pos+2])
+  pos.checked_add(2).and_then(|end| buf.get(pos..end)).map(LittleEndian::read_u16).unwrap_or(0)
 }
 
 pub fn decode_threaded<F>(width: usize, height: usize, dummy: bool, closure: &F) -> Vec<u16>
@@ -163,3 +163,78 @@ mod chunks_exact {
   }
 }
 #[cfg(needs_chunks_exact)] pub use self::chunks_exact::*;
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  // Reference implementations — the original panicking versions.
+  // If checked helpers return different values for in-bounds reads,
+  // something is wrong.
+  fn ref_BEu32(buf: &[u8], pos: usize) -> u32 {
+    BigEndian::read_u32(&buf[pos..pos+4])
+  }
+  fn ref_LEu32(buf: &[u8], pos: usize) -> u32 {
+    LittleEndian::read_u32(&buf[pos..pos+4])
+  }
+  fn ref_BEu16(buf: &[u8], pos: usize) -> u16 {
+    BigEndian::read_u16(&buf[pos..pos+2])
+  }
+  fn ref_LEu16(buf: &[u8], pos: usize) -> u16 {
+    LittleEndian::read_u16(&buf[pos..pos+2])
+  }
+
+  // Checked helpers must return identical values to unchecked for all in-bounds reads
+  #[test]
+  fn checked_helpers_match_unchecked_for_valid_data() {
+    // Structured data with known byte values
+    let buf: Vec<u8> = (0..=255).collect();
+
+    for pos in 0..buf.len()-3 {
+      assert_eq!(BEu32(&buf, pos), ref_BEu32(&buf, pos),
+        "BEu32 mismatch at pos {}", pos);
+      assert_eq!(LEu32(&buf, pos), ref_LEu32(&buf, pos),
+        "LEu32 mismatch at pos {}", pos);
+    }
+    for pos in 0..buf.len()-1 {
+      assert_eq!(BEu16(&buf, pos), ref_BEu16(&buf, pos),
+        "BEu16 mismatch at pos {}", pos);
+      assert_eq!(LEu16(&buf, pos), ref_LEu16(&buf, pos),
+        "LEu16 mismatch at pos {}", pos);
+    }
+  }
+
+  // Out-of-bounds reads return 0, not garbage
+  #[test]
+  fn checked_helpers_return_zero_on_oob() {
+    let buf = [0xDE, 0xAD, 0xBE, 0xEF];
+
+    // Exactly at boundary — last valid position for u32
+    assert_eq!(BEu32(&buf, 0), 0xDEADBEEF);
+    // One past — OOB
+    assert_eq!(BEu32(&buf, 1), 0);
+    assert_eq!(BEu32(&buf, 100), 0);
+    assert_eq!(LEu32(&buf, 1), 0);
+
+    // Last valid position for u16
+    assert_eq!(BEu16(&buf, 2), 0xBEEF);
+    assert_eq!(BEu16(&buf, 3), 0);
+    assert_eq!(LEu16(&buf, 3), 0);
+
+    // Empty buffer
+    let empty: &[u8] = &[];
+    assert_eq!(BEu32(empty, 0), 0);
+    assert_eq!(LEu16(empty, 0), 0);
+    assert_eq!(LEf32(empty, 0), 0.0);
+  }
+
+  // usize overflow in pos+4 must not wrap around and read from the start
+  #[test]
+  fn checked_helpers_no_wraparound_on_huge_pos() {
+    let buf = [0xFF; 8];
+    assert_eq!(BEu32(&buf, usize::MAX), 0);
+    assert_eq!(LEu16(&buf, usize::MAX), 0);
+    assert_eq!(BEu32(&buf, usize::MAX - 2), 0);
+  }
+
+}

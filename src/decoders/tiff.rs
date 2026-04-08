@@ -124,7 +124,10 @@ pub struct TiffIFD<'a> {
 
 impl<'a> TiffIFD<'a> {
   pub fn new_file(buf: &'a[u8]) -> Result<TiffIFD<'a>, String> {
-    if buf[0..8] == b"FUJIFILM"[..] {
+    if buf.get(0..8) == Some(b"FUJIFILM".as_slice()) {
+      if buf.len() < 108 {
+        return Err("FUJIFILM: header too short".to_string())
+      }
       let ifd1 = TiffIFD::new_root(buf, (BEu32(buf, 84)+12) as usize)?;
       let endian = ifd1.get_endian();
       let mut subifds = vec![ifd1];
@@ -140,6 +143,7 @@ impl<'a> TiffIFD<'a> {
             count: 1,
             parent_offset: 0,
             doffset: 100,
+            #[allow(clippy::indexing_slicing)] // buf.len() >= 108 checked on line 128
             data: &buf[100..104],
             endian: BIG_ENDIAN,
           });
@@ -164,6 +168,9 @@ impl<'a> TiffIFD<'a> {
 
   pub fn new_root(buf: &'a[u8], offset: usize) -> Result<TiffIFD<'a>, String> {
     let mut subifds = Vec::new();
+    if offset >= buf.len() {
+      return Err(format!("TIFF: root offset {} out of bounds ({})", offset, buf.len()))
+    }
 
     let endian = match LEu16(buf, offset) {
       0x4949 => LITTLE_ENDIAN,
@@ -172,6 +179,7 @@ impl<'a> TiffIFD<'a> {
     };
     let mut nextifd = endian.ru32(buf, offset+4) as usize;
     for _ in 0..100 { // Never read more than 100 IFDs
+      #[allow(clippy::indexing_slicing)] // offset < buf.len() checked above
       let ifd = TiffIFD::new(&buf[offset..], nextifd, 0, offset, 0, endian)?;
       nextifd = ifd.nextifd;
       subifds.push(ifd);
@@ -197,13 +205,20 @@ impl<'a> TiffIFD<'a> {
     if num > 4000 {
       return Err(format!("too many entries in IFD ({})", num).to_string())
     }
+    let needed = offset + 2 + (num as usize) * 12 + 4;
+    if needed > buf.len() {
+      return Err(format!("IFD at offset {} with {} entries needs {} bytes but buffer is {}", offset, num, needed, buf.len()))
+    }
     for i in 0..num {
       let entry_offset: usize = offset + 2 + (i as usize)*12;
       if Tag::n(e.ru16(buf, entry_offset)).is_none() {
         // Skip entries we don't know about to speedup decoding
         continue;
       }
-      let entry = TiffEntry::new(buf, entry_offset, base_offset, offset, e);
+      let entry = match TiffEntry::new(buf, entry_offset, base_offset, offset, e) {
+        Ok(e) => e,
+        Err(_) => continue, // Skip entries with invalid data ranges
+      };
 
       if entry.tag == t(Tag::SubIFDs)
       || entry.tag == t(Tag::ExifIFDPointer)
@@ -243,13 +258,17 @@ impl<'a> TiffIFD<'a> {
 
   pub fn new_makernote(buf: &'a[u8], offset: usize, base_offset: usize, depth: u32, e: Endian) -> Result<TiffIFD<'a>, String> {
     let mut off = 0;
+    if offset >= buf.len() {
+      return Err("Makernote offset out of bounds".to_string())
+    }
+    #[allow(clippy::indexing_slicing)] // offset < buf.len() checked above
     let data = &buf[offset..];
     let mut endian = e;
 
     // Olympus starts the makernote with their own name, sometimes truncated
-    if data[0..5] == b"OLYMP"[..] {
+    if data.get(0..5) == Some(b"OLYMP".as_slice()) {
       off += 8;
-      if data[0..7] == b"OLYMPUS"[..] {
+      if data.get(0..7) == Some(b"OLYMPUS".as_slice()) {
         off += 4;
       }
 
@@ -261,8 +280,11 @@ impl<'a> TiffIFD<'a> {
           entry.get_usize(0)
         } else { 0 };
         if ioff != 0 {
-          let iprocifd = TiffIFD::new(&buf[offset+ioff..], 0, ioff, 0, depth, endian)?;
-          mainifd.subifds.push(iprocifd);
+          if offset+ioff < buf.len() {
+            #[allow(clippy::indexing_slicing)] // offset+ioff < buf.len() checked above
+            let iprocifd = TiffIFD::new(&buf[offset+ioff..], 0, ioff, 0, depth, endian)?;
+            mainifd.subifds.push(iprocifd);
+          }
         }
       }
 
@@ -270,33 +292,38 @@ impl<'a> TiffIFD<'a> {
     }
 
     // Epson starts the makernote with its own name
-    if data[0..5] == b"EPSON"[..] {
+    if data.get(0..5) == Some(b"EPSON".as_slice()) {
       off += 8;
     }
 
     // Pentax makernote starts with AOC\0 - If it's there, skip it
-    if data[0..4] == b"AOC\0"[..] {
+    if data.get(0..4) == Some(b"AOC\0".as_slice()) {
       off +=4;
     }
 
     // Pentax can also start with PENTAX and in that case uses different offsets
-    if data[0..6] == b"PENTAX"[..] {
+    if data.get(0..6) == Some(b"PENTAX".as_slice()) {
       off += 8;
-      let endian = if data[off..off+2] == b"II"[..] {LITTLE_ENDIAN} else {BIG_ENDIAN};
+      let endian = if data.get(off..off+2) == Some(b"II".as_slice()) {LITTLE_ENDIAN} else {BIG_ENDIAN};
+      #[allow(clippy::indexing_slicing)] // offset <= buf.len() since data = &buf[offset..]
       return TiffIFD::new(&buf[offset..], 10, base_offset, 0, depth, endian)
     }
 
-    if data[0..7] == b"Nikon\0\x02"[..] {
+    if data.get(0..7) == Some(b"Nikon\0\x02".as_slice()) {
       off += 10;
-      let endian = if data[off..off+2] == b"II"[..] {LITTLE_ENDIAN} else {BIG_ENDIAN};
-      return TiffIFD::new(&buf[off+offset..], 8, base_offset, 0, depth, endian)
+      let endian = if data.get(off..off+2) == Some(b"II".as_slice()) {LITTLE_ENDIAN} else {BIG_ENDIAN};
+      if off+offset < buf.len() {
+        #[allow(clippy::indexing_slicing)] // off+offset < buf.len() checked above
+        return TiffIFD::new(&buf[off+offset..], 8, base_offset, 0, depth, endian)
+      }
+      return Err("Nikon makernote offset out of bounds".to_string())
     }
 
     // Some have MM or II to indicate endianness - read that
-    if data[off..off+2] == b"II"[..] {
+    if data.get(off..off+2) == Some(b"II".as_slice()) {
       off +=2;
       endian = LITTLE_ENDIAN;
-    } if data[off..off+2] == b"MM"[..] {
+    } if data.get(off..off+2) == Some(b"MM".as_slice()) {
       off +=2;
       endian = BIG_ENDIAN;
     }
@@ -312,26 +339,31 @@ impl<'a> TiffIFD<'a> {
     }
     let mut off = offset+4;
     for _ in 0..num {
+      if off+4 > buf.len() { break }
       let tag = BEu16(buf, off);
       let len = BEu16(buf, off+2);
-      if tag == t(Tag::ImageWidth) {
+      if tag == t(Tag::ImageWidth) && off+8 <= buf.len() {
+        #[allow(clippy::indexing_slicing)] // off+8 <= buf.len() checked above
+        let data = &buf[off+4..off+8];
         entries.insert(t(Tag::ImageWidth), TiffEntry {
           tag: t(Tag::ImageWidth),
           typ: 3, // Short
           count: 2,
           parent_offset: 0,
           doffset: off+4,
-          data: &buf[off+4..off+8],
+          data,
           endian: BIG_ENDIAN,
         });
-      } else if tag == t(Tag::RafOldWB) {
+      } else if tag == t(Tag::RafOldWB) && off+12 <= buf.len() {
+        #[allow(clippy::indexing_slicing)] // off+12 <= buf.len() checked above
+        let data = &buf[off+4..off+12];
         entries.insert(t(Tag::RafOldWB), TiffEntry {
           tag: t(Tag::RafOldWB),
           typ: 3, // Short
           count: 4,
           parent_offset: 0,
           doffset: off+4,
-          data: &buf[off+4..off+12],
+          data,
           endian: BIG_ENDIAN,
         });
       }
@@ -381,11 +413,7 @@ impl<'a> TiffIFD<'a> {
 
   pub fn find_first_ifd(&self, tag: Tag) -> Option<&TiffIFD> {
     let ifds = self.find_ifds_with_tag(tag);
-    if ifds.len() == 0 {
-      None
-    } else {
-      Some(ifds[0])
-    }
+    ifds.first().copied()
   }
 
   pub fn get_endian(&self) -> Endian { self.endian }
@@ -394,7 +422,7 @@ impl<'a> TiffIFD<'a> {
 }
 
 impl<'a> TiffEntry<'a> {
-  pub fn new(buf: &'a[u8], offset: usize, base_offset: usize, parent_offset: usize, e: Endian) -> TiffEntry<'a> {
+  pub fn new(buf: &'a[u8], offset: usize, base_offset: usize, parent_offset: usize, e: Endian) -> Result<TiffEntry<'a>, String> {
     let tag = e.ru16(buf, offset);
     let mut typ = e.ru16(buf, offset+2);
     let count = e.ru32(buf, offset+4) as usize;
@@ -404,22 +432,32 @@ impl<'a> TiffEntry<'a> {
       typ = 1;
     }
 
-    let bytesize: usize = count << DATASHIFTS[typ as usize];
+    let shift = DATASHIFTS.get(typ as usize).copied().unwrap_or(0);
+    let bytesize: usize = count.checked_shl(shift as u32)
+      .ok_or_else(|| format!("TIFF: entry byte size overflow for tag {} count {}", tag, count))?;
     let doffset: usize = if bytesize <= 4 {
       offset + 8
     } else {
-      (e.ru32(buf, offset+8) as usize) - base_offset
+      (e.ru32(buf, offset+8) as usize).checked_sub(base_offset)
+        .ok_or_else(|| format!("TIFF: entry data offset underflow for tag {}", tag))?
     };
 
-    TiffEntry {
+    let end = doffset.checked_add(bytesize)
+      .ok_or_else(|| format!("TIFF: entry data range overflow for tag {}", tag))?;
+    if end > buf.len() {
+      return Err(format!("TIFF: entry data for tag {} at {}..{} exceeds buffer size {}", tag, doffset, end, buf.len()))
+    }
+
+    Ok(TiffEntry {
       tag: tag,
       typ: typ,
       count: count,
       parent_offset: parent_offset,
       doffset: doffset,
-      data: &buf[doffset .. doffset+bytesize],
+      #[allow(clippy::indexing_slicing)] // end <= buf.len() checked above
+      data: &buf[doffset .. end],
       endian: e,
-    }
+    })
   }
 
   pub fn copy_with_new_data(&self, data: &'a[u8]) -> TiffEntry<'a> {
@@ -429,7 +467,12 @@ impl<'a> TiffEntry<'a> {
   }
 
   pub fn copy_offset_from_parent(&self, buffer: &'a[u8]) -> TiffEntry<'a> {
-    self.copy_with_new_data(&buffer[self.parent_offset+self.doffset..])
+    // Clamp to buffer bounds — callers get an empty/truncated slice for
+    // inconsistent offsets rather than a panic. Downstream reads via the
+    // checked endian helpers will return 0 for the missing data.
+    let off = self.parent_offset.saturating_add(self.doffset).min(buffer.len());
+    #[allow(clippy::indexing_slicing)] // off <= buffer.len() via .min()
+    self.copy_with_new_data(&buffer[off..])
   }
 
   pub fn doffset(&self) -> usize { self.doffset }
@@ -439,17 +482,23 @@ impl<'a> TiffEntry<'a> {
 
   pub fn get_u16(&self, idx: usize) -> u16 {
     match self.typ {
-      1                  => self.data[idx] as u16,
+      1 | 2 | 6 | 7      => self.data.get(idx).copied().unwrap_or(0) as u16,
       3 | 8              => self.get_force_u16(idx),
-      _ => panic!("Trying to read typ {} for a u32", self.typ),
+      4 | 9 | 13         => self.get_force_u32(idx) as u16,
+      5 | 10             => self.get_force_u32(idx) as u16, // numerator of rational
+      11 | 12            => 0, // FLOAT/DOUBLE — no meaningful u16
+      _ => unreachable!(), // typ normalized to 1..=13 in TiffEntry::new()
     }
   }
 
   pub fn get_u32(&self, idx: usize) -> u32 {
     match self.typ {
-      1 | 3 | 8          => self.get_u16(idx) as u32,
-      4 | 7 | 9 | 13     => self.get_force_u32(idx),
-      _ => panic!("Trying to read typ {} for a u32", self.typ),
+      1 | 2 | 6 | 7      => self.data.get(idx).copied().unwrap_or(0) as u32,
+      3 | 8              => self.get_force_u16(idx) as u32,
+      4 | 9 | 13         => self.get_force_u32(idx),
+      5 | 10             => self.get_force_u32(idx), // numerator of rational
+      11 | 12            => 0, // FLOAT/DOUBLE — no meaningful u32
+      _ => unreachable!(), // typ normalized to 1..=13 in TiffEntry::new()
     }
   }
 
@@ -483,9 +532,10 @@ impl<'a> TiffEntry<'a> {
       Some(p) => p,
       None => self.data.len(),
     };
-    match str::from_utf8(&self.data[0..len]) {
+    #[allow(clippy::indexing_slicing)] // len <= self.data.len() from position()/len()
+    match str::from_utf8(&self.data[..len]) {
       Ok(val) => val.trim(),
-      Err(err) => std::panic::panic_any(err),
+      Err(_) => "",
     }
   }
 
