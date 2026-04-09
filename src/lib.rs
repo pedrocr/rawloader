@@ -52,11 +52,12 @@ pub use decoders::RawImage;
 pub use decoders::RawImageData;
 pub use decoders::Orientation;
 pub use decoders::cfa::CFA;
+pub use decoders::Limits;
 #[doc(hidden)] pub use decoders::Buffer;
 #[doc(hidden)] pub use decoders::RawLoader;
 
 lazy_static! {
-  static ref LOADER: RawLoader = decoders::RawLoader::new();
+  static ref LOADER: RawLoader = RawLoader::new();
 }
 
 use std::path::Path;
@@ -116,6 +117,33 @@ pub fn decode_file<P: AsRef<Path>>(path: P) -> Result<RawImage,RawLoaderError> {
 /// ```
 pub fn decode(reader: &mut dyn Read) -> Result<RawImage,RawLoaderError> {
   LOADER.decode(reader, false).map_err(|err| RawLoaderError::new(err))
+}
+
+/// Decode with caller-specified resource limits.
+///
+/// Every field of [`Limits`] is optional. When any dimension limit is set,
+/// the file is probed in metadata-only mode first and rejected before
+/// allocating the pixel buffer if the limits are exceeded. When no
+/// dimension limits are set, the probe is skipped and this has the same
+/// cost as [`decode`].
+///
+/// # Example
+///
+/// ```rust,ignore
+/// let limits = rawloader::Limits {
+///     max_pixels: Some(50_000_000),
+///     ..Default::default()
+/// };
+/// let image = rawloader::decode_with_limits(&mut file, &limits)?;
+/// ```
+pub fn decode_with_limits(reader: &mut dyn Read, limits: &Limits) -> Result<RawImage,RawLoaderError> {
+  LOADER.decode_with_limits(reader, limits).map_err(|err| RawLoaderError::new(err))
+}
+
+/// Decode a file with caller-specified resource limits.
+/// See [`decode_with_limits`] for semantics.
+pub fn decode_file_with_limits<P: AsRef<Path>>(path: P, limits: &Limits) -> Result<RawImage,RawLoaderError> {
+  LOADER.decode_file_with_limits(path.as_ref(), limits).map_err(|err| RawLoaderError::new(err))
 }
 
 // Used to force lazy_static initializations. Useful for fuzzing.
