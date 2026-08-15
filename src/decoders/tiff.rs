@@ -347,7 +347,7 @@ impl<'a> TiffIFD<'a> {
     })
   }
 
-  pub fn find_entry(&self, tag: Tag) -> Option<&TiffEntry> {
+  pub fn find_entry(&self, tag: Tag) -> Option<&TiffEntry<'a>> {
     if self.entries.contains_key(&t(tag)) {
       self.entries.get(&t(tag))
     } else {
@@ -365,7 +365,7 @@ impl<'a> TiffIFD<'a> {
     self.find_entry(tag).is_some()
   }
 
-  pub fn find_ifds_with_tag(&self, tag: Tag) -> Vec<&TiffIFD> {
+  pub fn find_ifds_with_tag(&self, tag: Tag) -> Vec<&TiffIFD<'a>> {
     let mut ifds = Vec::new();
     if self.entries.contains_key(&t(tag)) {
       ifds.push(self);
@@ -379,7 +379,7 @@ impl<'a> TiffIFD<'a> {
     ifds
   }
 
-  pub fn find_first_ifd(&self, tag: Tag) -> Option<&TiffIFD> {
+  pub fn find_first_ifd(&self, tag: Tag) -> Option<&TiffIFD<'a>> {
     let ifds = self.find_ifds_with_tag(tag);
     if ifds.len() == 0 {
       None

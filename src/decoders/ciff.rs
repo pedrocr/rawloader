@@ -78,7 +78,7 @@ impl<'a> CiffIFD<'a> {
     })
   }
 
-  pub fn find_entry(&self, tag: CiffTag) -> Option<&CiffEntry> {
+  pub fn find_entry(&self, tag: CiffTag) -> Option<&CiffEntry<'a>> {
     if self.entries.contains_key(&ct(tag)) {
       self.entries.get(&ct(tag))
     } else {

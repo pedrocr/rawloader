@@ -9,7 +9,7 @@ pub struct BitPumpLSB<'a> {
 }
 
 impl<'a> BitPumpLSB<'a> {
-  pub fn new(src: &'a [u8]) -> BitPumpLSB {
+  pub fn new(src: &'a [u8]) -> BitPumpLSB<'a> {
     BitPumpLSB {
       buffer: src,
       pos: 0,
@@ -28,7 +28,7 @@ pub struct BitPumpMSB<'a> {
 }
 
 impl<'a> BitPumpMSB<'a> {
-  pub fn new(src: &'a [u8]) -> BitPumpMSB {
+  pub fn new(src: &'a [u8]) -> BitPumpMSB<'a> {
     BitPumpMSB {
       buffer: src,
       pos: 0,
@@ -47,7 +47,7 @@ pub struct BitPumpMSB32<'a> {
 }
 
 impl<'a> BitPumpMSB32<'a> {
-  pub fn new(src: &'a [u8]) -> BitPumpMSB32 {
+  pub fn new(src: &'a [u8]) -> BitPumpMSB32<'a> {
     BitPumpMSB32 {
       buffer: src,
       pos: 0,
@@ -72,7 +72,7 @@ pub struct BitPumpJPEG<'a> {
 }
 
 impl<'a> BitPumpJPEG<'a> {
-  pub fn new(src: &'a [u8]) -> BitPumpJPEG {
+  pub fn new(src: &'a [u8]) -> BitPumpJPEG<'a> {
     BitPumpJPEG {
       buffer: src,
       pos: 0,
@@ -239,7 +239,7 @@ pub struct ByteStream<'a> {
 }
 
 impl<'a> ByteStream<'a> {
-  pub fn new(src: &'a [u8], endian: Endian) -> ByteStream {
+  pub fn new(src: &'a [u8], endian: Endian) -> ByteStream<'a> {
     ByteStream {
       buffer: src,
       pos: 0,
