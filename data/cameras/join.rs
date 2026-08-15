@@ -33,6 +33,7 @@ fn main() {
     out.write_all(b"\n").unwrap();
   }
 
+  println!("cargo:rustc-check-cfg=cfg(needs_chunks_exact)");
   // Check for a minimum version
   if version().unwrap() < Version::parse("1.31.0").unwrap() {
       println!("cargo:rustc-cfg=needs_chunks_exact");
