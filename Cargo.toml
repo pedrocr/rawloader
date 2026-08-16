@@ -25,7 +25,7 @@ toml = "1"
 rustc_version = "0.4"
 
 [dev-dependencies]
-sha2 = "0.10"
+sha2 = "0.11"
 hex = "0.4"
 
 [profile.release]
