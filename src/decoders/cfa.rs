@@ -26,6 +26,8 @@ pub struct CFA {
   pub width: usize,
   /// Height of the repeating pattern
   pub height: usize,
+  /// Number of colors in the pattern
+  pub num_colors: usize,
 
   pattern: [[usize;48];48],
 }
@@ -62,11 +64,13 @@ impl CFA {
       _ => panic!("Unknown CFA size \"{}\"", patname),
     };
     let mut pattern: [[usize;48];48] = [[0;48];48];
+    let mut num_colors = 0;
+    let mut colors = [false; 4];
 
     if width > 0 {
       // copy the pattern into the top left
       for (i,c) in patname.bytes().enumerate() {
-        pattern[i/width][i%width] = match c {
+         let color = match c {
           b'R' => 0,
           b'G' => 1,
           b'B' => 2,
@@ -78,6 +82,11 @@ impl CFA {
               panic!("Unknown CFA color \"{}\" in pattern \"{}\"", unknown_char, patname)
           },
         };
+        pattern[i/width][i%width] = color;
+        if !colors[color] {
+            colors[color] = true;
+            num_colors += 1;
+        }
       }
 
       // extend the pattern into the full matrix
@@ -93,6 +102,7 @@ impl CFA {
       pattern: pattern,
       width: width,
       height: height,
+      num_colors: num_colors,
     }
   }
 
@@ -146,6 +156,7 @@ impl CFA {
       pattern: pattern,
       width: self.width,
       height: self.height,
+      num_colors: self.num_colors,
     }
   }
 
