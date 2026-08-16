@@ -3,7 +3,6 @@ use std::io::{Read, BufReader};
 use std::fs::File;
 use std::panic;
 use std::path::Path;
-use toml::Value;
 
 macro_rules! fetch_tag {
   ($tiff:expr, $tag:expr) => (
@@ -351,7 +350,7 @@ pub struct RawLoader {
 impl RawLoader {
   /// Creates a new raw loader using the camera information included in the library
   pub fn new() -> RawLoader {
-    let toml = match CAMERAS_TOML.parse::<Value>() {
+    let toml = match CAMERAS_TOML.parse::<toml::Table>() {
       Ok(val) => val,
       Err(e) => panic!("Error parsing all.toml: {:?}", e),
     };

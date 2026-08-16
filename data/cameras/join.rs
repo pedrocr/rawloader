@@ -6,7 +6,6 @@ use std::path::Path;
 extern crate glob;
 use self::glob::glob;
 extern crate toml;
-use toml::Value;
 extern crate rustc_version;
 use rustc_version::{version, Version};
   
@@ -23,7 +22,7 @@ fn main() {
     f.read_to_string(&mut toml).unwrap();
 
     {
-      match toml.parse::<Value>() {
+      match toml.parse::<toml::Table>() {
         Ok(_) => {},
         Err(e) => panic!("Error parsing {:?}: {:?}", path, e),
       };
