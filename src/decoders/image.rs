@@ -9,10 +9,14 @@ pub struct RawImage {
   pub make: String,
   /// camera model as encoded in the file
   pub model: String,
+  /// official camera model
+  pub canonical_model: String,
   /// make cleaned up to be consistent and short
   pub clean_make: String,
   /// model cleaned up to be consistent and short
   pub clean_model: String,
+  /// official model cleaned up to be consistent and short
+  pub clean_canonical_model: String,
   /// width of the full image
   pub width: usize,
   /// height of the full image
@@ -94,8 +98,10 @@ impl RawImage {
     RawImage {
       make: camera.make.clone(),
       model: camera.model.clone(),
+      canonical_model: camera.canonical_model.clone(),
       clean_make: camera.clean_make.clone(),
       clean_model: camera.clean_model.clone(),
+      clean_canonical_model: camera.clean_canonical_model.clone(),
       width: width,
       height: height,
       cpp: 1,
